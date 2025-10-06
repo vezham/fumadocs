@@ -58,22 +58,46 @@ const defaultMdxComponents = {
   a: Link as FC<AnchorHTMLAttributes<HTMLAnchorElement>>,
   img: Image,
   h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Heading as="h1" {...props} />
+    <div>
+      FROM @vezham/mdx/h1
+      <Heading as="h1" {...props} />
+    </div>
+    // <Heading as="h1" {...props} />
   ),
   h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Heading as="h2" {...props} />
+    <div>
+      FROM @vezham/mdx/h2
+      <Heading as="h2" {...props} />
+    </div>
+    // <Heading as="h2" {...props} />
   ),
   h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Heading as="h3" {...props} />
+    <div>
+      FROM @vezham/mdx/h3
+      <Heading as="h3" {...props} />
+    </div>
+    // <Heading as="h3" {...props} />
   ),
   h4: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Heading as="h4" {...props} />
+    <div>
+      FROM @vezham/mdx/h4
+      <Heading as="h4" {...props} />
+    </div>
+    // <Heading as="h4" {...props} />
   ),
   h5: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Heading as="h5" {...props} />
+    <div>
+      FROM @vezham/mdx/h5
+      <Heading as="h5" {...props} />
+    </div>
+    // <Heading as="h5" {...props} />
   ),
   h6: (props: HTMLAttributes<HTMLHeadingElement>) => (
-    <Heading as="h6" {...props} />
+    <div>
+      FROM @vezham/mdx/h6
+      <Heading as="h6" {...props} />
+    </div>
+    // <Heading as="h6" {...props} />
   ),
   table: Table,
   Callout,
