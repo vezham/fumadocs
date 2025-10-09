@@ -3,10 +3,8 @@ import type { MDXComponents } from 'mdx/types';
 import { openapi } from '@/src/lib/openapi';
 import { APIPage } from 'fumadocs-openapi/ui';
 
-export function getMDXComponents(components?: MDXComponents): MDXComponents {
-  return {
+export const getMDXComponents = (components?: MDXComponents): MDXComponents => ({
     ...defaultMdxComponents,
     APIPage: (props) => <APIPage {...openapi.getAPIPageProps(props)} />,
     ...components,
-  };
-}
+  })

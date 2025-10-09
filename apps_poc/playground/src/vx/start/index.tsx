@@ -18,8 +18,7 @@ type Props = {
 export const defineConfig = ({ children }: Props) => {
   return (
     <html lang="en" className={`${inter.className} ${mono.variable}`} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
-        {/* wjdlz/TODO: move this body class */}
+      <body>
         <RootProvider>{children}</RootProvider>
       </body>
     </html>

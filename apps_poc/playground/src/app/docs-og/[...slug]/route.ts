@@ -2,23 +2,22 @@ import { generateOGImage } from 'fumadocs-ui/og';
 import { source } from '@/src/lib/source';
 import { notFound } from 'next/navigation';
 
-export async function GET(
-  _req: Request,
-  { params }: { params: Promise<{ slug: string[] }> },
-) {
+type Props = { params: Promise<{ slug: string[] }> }
+
+export const GET = async(_req: Request, { params }: Props) => {
   const { slug } = await params;
   const page = source.getPage(slug.slice(0, -1));
   if (!page) notFound();
 
+  const {title, description} = page.data
+
   return generateOGImage({
-    title: page.data.title,
-    description: page.data.description,
+    title,
+    description
   });
 }
 
-export function generateStaticParams() {
-  return source.generateParams().map((page) => ({
+export const generateStaticParams = () => source.generateParams().map((page) => ({
     ...page,
     slug: [...page.slug, 'image.png'],
   }));
-}

@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 export default () => (
     <main
+      className='flex flex-col min-h-screen'
       style={{
         flex: 1,
         display: 'flex',

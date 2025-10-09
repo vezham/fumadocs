@@ -1,7 +1,7 @@
 'use client';
 import { useId } from 'react';
 
-export function Logo() {
+export const Logo = () => {
   const id = useId();
 
   return (

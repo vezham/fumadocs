@@ -1,27 +1,18 @@
-import { RootProvider } from 'fumadocs-ui/provider';
-import './global.css';
-import { Inter, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
 
-const inter = Inter({
-  subsets: ['latin'],
-});
+import { defineConfig } from '@vx/start';
+import './global.css';
 
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-});
+type Props = {
+  children: ReactNode
+}
 
-export default function Layout({ children }: { children: ReactNode }) {
-  return (
-    <html
-      lang="en"
-      className={`${inter.className} ${mono.variable}`}
-      suppressHydrationWarning
-    >
-      <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
-      </body>
-    </html>
-  );
+export default ({ children }: Props) => 
+  defineConfig({
+    children
+  })
+
+export const metadata = {
+  title: 'Home | Playground',
+  description: 'App for Vezham Playground',
 }

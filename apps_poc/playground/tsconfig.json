@@ -26,15 +26,16 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@vx/start": ["./src/start"],
-      "@pages/*": ["./src/vx-pages/*"]
+      "@vx/start": ["./src/vx/start"],
+      "@pages/*": ["./src/vx-pages/*"],
+      "@components/*": ["./src/components/*"]
     }
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
     "next-env.d.ts",
+    ".next/types/**/*.ts",
     "./dist/types/**/*.ts"
   ],
   "exclude": [

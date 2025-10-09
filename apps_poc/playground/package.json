@@ -6,7 +6,7 @@
     "serve": "bash ./bin/server.sh",
     "preview": "bash ./bin/server.sh start",
     "build": "next build",
-    "build:docs": "bun ./scripts/generate-docs.ts",
+    "build:docs": "bun ./scripts/generators/docs.ts",
     "dev": "next dev --turbo",
     "start": "next start",
     "types:check": "fumadocs-mdx && tsc --noEmit"

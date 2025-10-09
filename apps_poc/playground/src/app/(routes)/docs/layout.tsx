@@ -1,12 +1,14 @@
 import { source } from '@/src/lib/source';
 import { DocsLayout } from 'fumadocs-ui/layouts/notebook';
 import type { ReactNode } from 'react';
-import { baseOptions } from '@/src/lib/layout.shared';
+import { baseOptions } from '@/src/lib/layout-shared';
 
-export default function RootDocsLayout({ children }: { children: ReactNode }) {
-  return (
-    <DocsLayout tree={source.pageTree} {...baseOptions()}>
+type Props = {
+  children: ReactNode
+}
+
+export default ({ children }: Props) =>  (
+    <DocsLayout {...baseOptions()} tree={source.pageTree} >
       {children}
     </DocsLayout>
-  );
-}
+  )

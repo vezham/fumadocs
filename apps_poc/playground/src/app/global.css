@@ -1,13 +1,8 @@
-@import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
-@import 'fumadocs-openapi/css/preset.css';
-
-/* wjdlz/NOTE: above imports will be hosted from @vx/styles */
+@import '../vx/styles/index.css'
 /* @import '../../../../packages/vx/styles'; */
 
 /* You can add global styles to this file, and also import other style files */
 
-:root {
+/* :root {
   --fd-layout-width: 1600px;
-}
+} */

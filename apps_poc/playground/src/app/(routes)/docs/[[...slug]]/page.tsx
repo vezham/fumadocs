@@ -1,4 +1,3 @@
-// @ts-nocheck // wjdlz:TODO: need to chk
 import { source } from '@/src/lib/source';
 import {
   DocsBody,
@@ -7,25 +6,24 @@ import {
   DocsTitle,
 } from 'fumadocs-ui/page';
 import { notFound } from 'next/navigation';
-import { getMDXComponents } from '@/src/mdx-components';
+import { getMDXComponents } from '@components/mdx';
 import type { Metadata } from 'next';
 
-export default async function Page(props: {
-  params: Promise<{ slug?: string[] }>;
-}) {
+type Props = {
+  params: Promise<{ slug?: string[] }>
+}
+
+export default async (props: Props) => {
   const params = await props.params;
   const page = source.getPage(params.slug);
+  if (!page)  notFound()
 
-  if (!page) {
-    notFound();
-  }
-
-  const MDX = page.data.body;
+  const {toc, full, title, description, body: MDX} = page.data
 
   return (
-    <DocsPage toc={page.data.toc} full={page.data.full}>
-      <DocsTitle>{page.data.title}</DocsTitle>
-      <DocsDescription>{page.data.description}</DocsDescription>
+    <DocsPage toc={toc} full={full}>
+      <DocsTitle>{title}</DocsTitle>
+      <DocsDescription>{description}</DocsDescription>
       <DocsBody>
         <MDX components={getMDXComponents()} />
       </DocsBody>
@@ -33,21 +31,20 @@ export default async function Page(props: {
   );
 }
 
-export async function generateStaticParams() {
-  return source.generateParams();
-}
+export const generateStaticParams = async () => source.generateParams()
 
-export async function generateMetadata(props: {
-  params: Promise<{ slug?: string[] }>;
-}) {
+export const generateMetadata = async (props: Props) => {
   const params = await props.params;
   const page = source.getPage(params.slug);
   if (!page) notFound();
+
+  const {title, description} = page.data
+
   const image = ['/docs-og', ...(params.slug ?? []), 'image.png'].join('/');
 
   return {
-    title: page.data.title,
-    description: page.data.description,
+    title,
+    description,
     openGraph: {
       images: image,
     },
