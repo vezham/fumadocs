@@ -17,7 +17,7 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "plugins": [
       {
@@ -25,10 +25,18 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"],
-      "@vx/start": ["./src/vx/start"],
-      "@pages/*": ["./src/vx-pages/*"],
-      "@components/*": ["./src/components/*"]
+      "@/*": [
+        "./*"
+      ],
+      "@vx/start": [
+        "./src/vx/start"
+      ],
+      "@pages/*": [
+        "./src/vx-pages/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ]
     }
   },
   "include": [
@@ -36,7 +44,8 @@
     "**/*.tsx",
     "next-env.d.ts",
     ".next/types/**/*.ts",
-    "./dist/types/**/*.ts"
+    "dist/types/**/*.ts",
+    "dist/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
