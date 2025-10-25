@@ -1,9 +1,11 @@
 {
+  "title": "Home",
+  "description": "A demo for Fumadocs OpenAPI",
+  "root": true,
+  "icon": "Shapes",
   "pages": [
-    "---API Documentation---",
+    "---Documentation & References---",
     "index",
-    "...",
-    "---References---",
-    "...(api)"
+    "..."
   ]
 }

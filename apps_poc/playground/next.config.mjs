@@ -8,7 +8,7 @@ const config = {
   distDir: './dist', // Changes the build output directory to `./dist/`.
   reactStrictMode: true,
   images:{
-    remotePatterns: [new URL('https://static.cdn.vezham.com/**')],
+    remotePatterns: [new URL('https://static.cdn.vezham.com/**'), new URL('https://mdg.imgix.net/assets/images/tux.png?auto=format&fit=clip&q=40&w=100'), new URL('https://mdg.imgix.net/assets/images/**')],
   }
 };
 

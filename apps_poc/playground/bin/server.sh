@@ -23,7 +23,7 @@ pre_setup(){
 
 main() {
     pre_setup
-    next $serve --hostname $hostname --port $port
+    next $serve --hostname $hostname --port $port # NODE_OPTIONS=--max-old-space-size=12288 
 }
 
 # Run main function
