@@ -28,13 +28,13 @@ export default () => (
       <p>
         You can open{' '}
         <Link
-          href="/docs"
+          href="/docs/overview"
           style={{
             fontWeight: '600',
             textDecoration: 'underline',
           }}
         >
-          /docs
+          /docs/overview
         </Link>{' '}
         and see the documentation.
       </p>

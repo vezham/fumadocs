@@ -2,7 +2,8 @@ import * as OpenAPI from 'fumadocs-openapi';
 import { rimraf } from 'rimraf';
 import { openapi } from '@/src/lib/openapi';
 
-const out = './content/docs/(api)';
+// const out = './content/docs/(api)';
+const out = './content/docs/openapi/vezham-demo/(generated)'
 
 async function main() {
   // wjdlz/NOTE: clean generated files/dir
