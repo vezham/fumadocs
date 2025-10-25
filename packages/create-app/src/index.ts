@@ -18,8 +18,8 @@ import {
   managers,
   type PackageManager,
 } from './auto-install';
-import { create, type Template, templates } from './create-app';
-import { cwd } from './constants';
+import { create, type Template, TemplatePlugin } from './create-app';
+import { cwd, templates } from './constants';
 import { program } from 'commander';
 
 program.argument('[name]', 'the project name');
@@ -39,9 +39,9 @@ program.option('--no-git', 'Disable auto Git repository initialization');
 
 program.option(
   '--template <name>',
-  `template to choose: ${templates.join(', ')}`,
+  `template to choose: ${templates.map((v) => v.value).join(', ')}`,
   (value) => {
-    if (!templates.includes(value as Template)) {
+    if (!templates.some((item) => item.value === value)) {
       throw new Error(`Invalid template: ${value}.`);
     }
 
@@ -95,29 +95,7 @@ async function main(config: Options): Promise<void> {
         return select<Template>({
           message: 'Choose a template',
           initialValue: '+next+fuma-docs-mdx',
-          options: [
-            {
-              value: '+next+fuma-docs-mdx',
-              label: 'Next.js: Fumadocs MDX',
-              hint: 'recommended',
-            },
-            {
-              value: '+next+content-collections',
-              label: 'Next.js: Content Collections',
-            },
-            {
-              value: 'waku',
-              label: 'Waku: Fumadocs MDX',
-            },
-            {
-              value: 'react-router',
-              label: 'React Router: Fumadocs MDX (not RSC)',
-            },
-            {
-              value: 'tanstack-start',
-              label: 'Tanstack Start: Fumadocs MDX (not RSC)',
-            },
-          ],
+          options: templates,
         });
       },
       src: async (v): Promise<SrcOption | symbol> => {
@@ -145,6 +123,10 @@ async function main(config: Options): Promise<void> {
           initialValue: false,
           options: [
             {
+              value: false,
+              label: 'Disabled',
+            },
+            {
               value: 'eslint',
               label: 'ESLint',
             },
@@ -152,9 +134,22 @@ async function main(config: Options): Promise<void> {
               value: 'biome',
               label: 'Biome',
             },
+          ],
+        });
+      },
+      search: () => {
+        return select({
+          message: 'Choose a search solution?',
+          options: [
             {
-              value: false,
-              label: 'Disabled',
+              value: 'orama' as const,
+              label: 'Default',
+              hint: 'local search powered by Orama, recommended',
+            },
+            {
+              value: 'orama-cloud' as const,
+              label: 'Orama Cloud',
+              hint: '3rd party search solution, signup needed',
             },
           ],
         });
@@ -209,17 +204,22 @@ async function main(config: Options): Promise<void> {
 
   const info = spinner();
   info.start(`Generating Project`);
+  const plugins: TemplatePlugin[] = [];
+
+  if (options.search === 'orama-cloud') {
+    const { oramaCloud } = await import('./plugins/orama-cloud');
+    plugins.push(oramaCloud());
+  }
 
   await create({
     packageManager: manager,
-    tailwindcss: true,
     template: options.template,
     outputDir: dest,
     installDeps: options.installDeps,
     lint: options.lint as LintOption,
     useSrcDir: options.src as SrcOption,
     initializeGit: config.git ?? true,
-
+    plugins,
     log: (message) => {
       info.message(message);
     },

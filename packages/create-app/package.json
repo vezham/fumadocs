@@ -1,6 +1,6 @@
 {
   "name": "create-fumadocs-app",
-  "version": "15.8.3",
+  "version": "16.0.2",
   "description": "Create a new documentation site with Fumadocs",
   "keywords": [
     "NextJs",
@@ -26,17 +26,19 @@
     "dev": "tsup --watch",
     "lint": "eslint .",
     "postpublish": "echo \"Updating template repo\" && bash ./scripts/update-git-repo.sh",
-    "types:check": "tsc --noEmit"
+    "types:check": "tsc --noEmit",
+    "sync": "bun ./scripts/sync.ts"
   },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
     "commander": "^14.0.1",
     "picocolors": "^1.1.1",
-    "tinyexec": "^1.0.1"
+    "tinyexec": "^1.0.1",
+    "ts-morph": "^27.0.2"
   },
   "devDependencies": {
     "@types/cross-spawn": "^6.0.6",
-    "@types/node": "24.6.2",
+    "@types/node": "24.9.1",
     "eslint-config-custom": "workspace:*",
     "tinyglobby": "^0.2.15",
     "tsconfig": "workspace:*",

@@ -7,7 +7,7 @@ import type {
   HighlightOptionsCommon,
   HighlightOptionsThemes,
 } from 'fumadocs-core/highlight';
-import type { MediaAdapter } from '@/media/adapter';
+import type { MediaAdapter } from '@/requests/media/adapter';
 import type { MethodInformation } from '@/types';
 import type { OpenAPIV3, OpenAPIV3_1 } from 'openapi-types';
 import {
@@ -69,6 +69,18 @@ export interface SharedOpenAPIOptions {
   showResponseSchema?: boolean;
 
   mediaAdapters?: Record<string, MediaAdapter>;
+
+  /**
+   * Customise page content
+   */
+  content?: {
+    /**
+     * Show examples under the generated content of JSON schemas.
+     *
+     * @defaultValue false
+     */
+    showExampleInFields?: boolean;
+  };
 }
 
 export interface OpenAPIOptions extends SharedOpenAPIOptions {

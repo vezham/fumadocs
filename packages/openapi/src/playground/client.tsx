@@ -19,6 +19,8 @@ import type {
 import {
   Controller,
   FormProvider,
+  get,
+  set,
   useForm,
   useFormContext,
 } from 'react-hook-form';
@@ -46,7 +48,7 @@ import {
   CollapsibleTrigger,
 } from 'fumadocs-ui/components/ui/collapsible';
 import { ChevronDown, LoaderCircle } from 'lucide-react';
-import { encodeRequestData, type RequestData } from '@/requests/_shared';
+import { encodeRequestData } from '@/requests/media/encode';
 import { buttonVariants } from 'fumadocs-ui/components/ui/button';
 import { cn } from 'fumadocs-ui/utils/cn';
 import {
@@ -59,7 +61,6 @@ import {
   useRequestInitialData,
 } from '@/ui/contexts/code-example';
 import { useEffectEvent } from 'fumadocs-core/utils/use-effect-event';
-import { useOnChange } from 'fumadocs-core/utils/use-on-change';
 import {
   Select,
   SelectContent,
@@ -69,6 +70,7 @@ import {
 } from '@/ui/components/select';
 import { labelVariants } from '@/ui/components/input';
 import type { ParsedSchema } from '@/utils/schema';
+import type { RequestData } from '@/requests/types';
 
 interface FormValues {
   path: Record<string, unknown>;
@@ -153,7 +155,7 @@ export default function Client({
   ...rest
 }: ClientProps) {
   const { server } = useServerSelectContext();
-  const requestData = useRequestInitialData();
+  const { key: requestDataKey, data: requestData } = useRequestInitialData();
   const updater = useRequestDataUpdater();
   const fieldInfoMap = useMemo(() => new Map<string, FieldInfo>(), []);
   const { mediaAdapters } = useApiContext();
@@ -201,47 +203,14 @@ export default function Client({
     );
   });
 
-  function initAuthValues(values: FormValues, inputs: AuthField[]) {
-    for (const item of inputs) {
-      manipulateValues(values, item.fieldName, () => {
-        const stored = localStorage.getItem(AuthPrefix + item.original.id);
-
-        if (stored) {
-          const parsed = JSON.parse(stored);
-          if (typeof parsed === typeof item.defaultValue) return parsed;
-        }
-
-        return item.defaultValue;
-      });
-    }
-
-    return values;
-  }
-
-  useOnChange(defaultValues, () => {
+  const onUpdateDefaults = useEffectEvent(() => {
     fieldInfoMap.clear();
     form.reset(initAuthValues(defaultValues, inputs));
   });
 
-  useOnChange(inputs, (current, previous) => {
-    form.reset((values) => {
-      for (const item of previous) {
-        if (current.some(({ original }) => original.id === item.original.id)) {
-          continue;
-        }
-
-        manipulateValues(values, item.fieldName, () => undefined);
-      }
-
-      return initAuthValues(values, current);
-    });
-  });
-
   const onUpdateDebounced = useEffectEvent((values: FormValues) => {
     for (const item of inputs) {
-      const value = item.fieldName
-        .split('.')
-        .reduce((v, seg) => v[seg as keyof object], values as object);
+      const value = get(values, item.fieldName);
 
       if (value) {
         localStorage.setItem(
@@ -261,6 +230,10 @@ export default function Client({
   });
 
   useEffect(() => {
+    onUpdateDefaults();
+  }, [requestDataKey]);
+
+  useEffect(() => {
     let timer: number | null = null;
 
     const subscription = form.subscribe({
@@ -278,11 +251,25 @@ export default function Client({
         );
       },
     });
-    form.reset((values) => initAuthValues(values, inputs));
 
     return () => subscription();
     // eslint-disable-next-line react-hooks/exhaustive-deps -- mounted once only
   }, []);
+
+  useEffect(() => {
+    form.reset((values) => initAuthValues(values, inputs));
+
+    return () => {
+      form.reset((values) => {
+        for (const item of inputs) {
+          set(values, item.fieldName, undefined);
+        }
+
+        return values;
+      });
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- mounted once only
+  }, [inputs]);
 
   const onSubmit = form.handleSubmit((value) => {
     testQuery.start(mapInputs(value));
@@ -540,44 +527,6 @@ interface AuthField {
   mapOutput?: (values: unknown) => unknown;
 }
 
-/**
- * manipulate values without mutating the original object
- *
- * @returns a new manipulated object
- */
-function manipulateValues<T extends object>(
-  values: T,
-  fieldName: string,
-  update: (v: unknown) => unknown,
-  clone = false,
-): T {
-  const root = clone ? { ...values } : values;
-  let current = root as Record<string, unknown>;
-  const segments = fieldName.split('.');
-
-  for (let i = 0; i < segments.length; i++) {
-    const segment = segments[i];
-
-    if (i !== segments.length - 1) {
-      let v = current[segment] as Record<string, unknown>;
-      if (clone) v = { ...v };
-
-      current[segment] = v;
-      current = v;
-      continue;
-    }
-
-    const updated = update(current[segment]);
-    if (updated === undefined) {
-      delete current[segment];
-    } else {
-      current[segment] = updated;
-    }
-  }
-
-  return root;
-}
-
 function useAuthInputs(securities?: SecurityEntry[]) {
   const inputs = useMemo(() => {
     const result: AuthField[] = [];
@@ -723,16 +672,36 @@ function useAuthInputs(securities?: SecurityEntry[]) {
   }, [securities]);
 
   const mapInputs = (values: FormValues) => {
+    const cloned = structuredClone(values);
+
     for (const item of inputs) {
       if (!item.mapOutput) continue;
 
-      values = manipulateValues(values, item.fieldName, item.mapOutput, true);
+      set(cloned, item.fieldName, item.mapOutput(get(values, item.fieldName)));
     }
 
-    return values;
+    return cloned;
   };
 
   return { inputs, mapInputs };
+}
+
+function initAuthValues(values: FormValues, inputs: AuthField[]) {
+  for (const item of inputs) {
+    const stored = localStorage.getItem(AuthPrefix + item.original.id);
+
+    if (stored) {
+      const parsed = JSON.parse(stored);
+      if (typeof parsed === typeof item.defaultValue) {
+        set(values, item.fieldName, parsed);
+        continue;
+      }
+    }
+
+    set(values, item.fieldName, item.defaultValue);
+  }
+
+  return values;
 }
 
 function renderCustomField(

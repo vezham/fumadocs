@@ -10,8 +10,8 @@ export default defineConfig({
   target: 'es2022',
   format: 'esm',
   entry: [
-    'src/{toc,link,breadcrumb,sidebar,dynamic-link,hide-if-empty}.tsx',
-    'src/{server,source,mdx-plugins,page-tree}/index.ts',
+    'src/{toc,link,breadcrumb,dynamic-link,hide-if-empty}.tsx',
+    'src/{source,mdx-plugins,page-tree}/index.ts',
     'src/{negotiation,content}/*',
     'src/source/plugins/lucide-icons.ts',
     'src/search/{index,client,server,algolia,orama-cloud}.ts',

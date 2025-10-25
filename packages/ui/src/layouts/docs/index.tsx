@@ -31,7 +31,6 @@ import {
   type BaseLayoutProps,
   BaseLinkItem,
   getLinks,
-  type IconItemType,
   type LinkItemType,
 } from '@/layouts/shared';
 import {
@@ -52,7 +51,6 @@ import {
   LargeSearchToggle,
   SearchToggle,
 } from '@/components/layout/search-toggle';
-import { HideIfEmpty } from 'fumadocs-core/hide-if-empty';
 import {
   getSidebarTabs,
   type GetSidebarTabsOptions,
@@ -106,6 +104,7 @@ export function DocsLayout({
   tabMode = 'auto',
   i18n = false,
   children,
+  tree,
   ...props
 }: DocsLayoutProps) {
   const tabs = useMemo(() => {
@@ -113,13 +112,13 @@ export function DocsLayout({
       return sidebarTabs;
     }
     if (typeof sidebarTabs === 'object') {
-      return getSidebarTabs(props.tree, sidebarTabs);
+      return getSidebarTabs(tree, sidebarTabs);
     }
     if (sidebarTabs !== false) {
-      return getSidebarTabs(props.tree);
+      return getSidebarTabs(tree);
     }
     return [];
-  }, [sidebarTabs, props.tree]);
+  }, [tree, sidebarTabs]);
   const links = getLinks(props.links ?? [], props.githubUrl);
   const sidebarVariables = cn(
     'md:[--fd-sidebar-width:268px] lg:[--fd-sidebar-width:286px]',
@@ -138,9 +137,7 @@ export function DocsLayout({
     } = sidebarProps;
     if (component) return component;
 
-    const iconLinks = links.filter(
-      (item): item is IconItemType => item.type === 'icon',
-    );
+    const iconLinks = links.filter((item) => item.type === 'icon');
 
     const viewport = (
       <SidebarViewport>
@@ -244,32 +241,40 @@ export function DocsLayout({
           {banner}
         </SidebarHeader>
         {viewport}
-        <HideIfEmpty as={SidebarFooter}>
-          <div className="flex text-fd-muted-foreground items-center empty:hidden">
-            {i18n ? (
-              <LanguageToggle>
-                <Languages className="size-4.5" />
-              </LanguageToggle>
-            ) : null}
-            {iconLinks.map((item, i) => (
-              <BaseLinkItem
-                key={i}
-                item={item}
-                className={cn(
-                  buttonVariants({ size: 'icon-sm', color: 'ghost' }),
-                )}
-                aria-label={item.label}
-              >
-                {item.icon}
-              </BaseLinkItem>
-            ))}
-            {themeSwitch.enabled !== false &&
-              (themeSwitch.component ?? (
-                <ThemeToggle className="ms-auto p-0" mode={themeSwitch.mode} />
+        {(i18n ||
+          iconLinks.length > 0 ||
+          themeSwitch?.enabled !== false ||
+          footer) && (
+          <SidebarFooter>
+            <div className="flex text-fd-muted-foreground items-center empty:hidden">
+              {i18n && (
+                <LanguageToggle>
+                  <Languages className="size-4.5" />
+                </LanguageToggle>
+              )}
+              {iconLinks.map((item, i) => (
+                <BaseLinkItem
+                  key={i}
+                  item={item}
+                  className={cn(
+                    buttonVariants({ size: 'icon-sm', color: 'ghost' }),
+                  )}
+                  aria-label={item.label}
+                >
+                  {item.icon}
+                </BaseLinkItem>
               ))}
-          </div>
-          {footer}
-        </HideIfEmpty>
+              {themeSwitch.enabled !== false &&
+                (themeSwitch.component ?? (
+                  <ThemeToggle
+                    className="ms-auto p-0"
+                    mode={themeSwitch.mode}
+                  />
+                ))}
+            </div>
+            {footer}
+          </SidebarFooter>
+        )}
       </SidebarContent>
     );
 
@@ -289,7 +294,7 @@ export function DocsLayout({
   }
 
   return (
-    <TreeContextProvider tree={props.tree}>
+    <TreeContextProvider tree={tree}>
       <NavProvider transparentMode={transparentMode}>
         {nav.enabled !== false &&
           (nav.component ?? (
@@ -323,7 +328,7 @@ export function DocsLayout({
         <LayoutBody
           {...props.containerProps}
           className={cn(
-            'md:[&_#nd-page_article]:pt-12 xl:[--fd-toc-width:286px] xl:[&_#nd-page_article]:px-8',
+            'md:[&_#nd-page_article]:pt-12 xl:[&_#nd-page_article]:px-8',
             sidebarEnabled && sidebarVariables,
             props.containerProps?.className,
           )}

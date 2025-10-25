@@ -36,7 +36,9 @@ export function RootToggle({
 
   const item = selected ? (
     <>
-      <div className="size-9 shrink-0 md:size-5">{selected.icon}</div>
+      <div className="size-9 shrink-0 empty:hidden md:size-5">
+        {selected.icon}
+      </div>
       <div>
         <p className="text-sm font-medium">{selected.title}</p>
         <p className="text-[13px] text-fd-muted-foreground empty:hidden md:hidden">
@@ -62,7 +64,7 @@ export function RootToggle({
           <ChevronsUpDown className="shrink-0 ms-auto size-4 text-fd-muted-foreground" />
         </PopoverTrigger>
       )}
-      <PopoverContent className="flex flex-col gap-1 w-(--radix-popover-trigger-width) overflow-hidden p-1">
+      <PopoverContent className="flex flex-col gap-1 w-(--radix-popover-trigger-width) p-1 fd-scroll-container">
         {options.map((item) => {
           const isActive = selected && item.url === selected.url;
           if (!isActive && item.unlisted) return;
@@ -78,7 +80,7 @@ export function RootToggle({
                 item.props?.className,
               )}
             >
-              <div className="shrink-0 size-9 md:mt-1 md:mb-auto md:size-5">
+              <div className="shrink-0 size-9 md:mt-1 md:mb-auto md:size-5 empty:hidden">
                 {item.icon}
               </div>
               <div>

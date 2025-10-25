@@ -80,10 +80,9 @@ export function HideIfEmpty<Props extends HTMLAttributes<HTMLElement>>({
 
   const init = (id: string) => {
     const element = getElement(id);
-    if (element) element.hidden = isEmpty(element);
-
-    const script = document.currentScript;
-    if (script) script.parentNode?.removeChild(script);
+    if (element) {
+      element.hidden = isEmpty(element);
+    }
   };
 
   return (
@@ -93,14 +92,13 @@ export function HideIfEmpty<Props extends HTMLAttributes<HTMLElement>>({
         data-fd-if-empty={id}
         hidden={empty ?? false}
       />
-      {empty === undefined && (
-        <script
-          nonce={nonce}
-          dangerouslySetInnerHTML={{
-            __html: `{${getElement};${isEmpty};(${init})("${id}")}`,
-          }}
-        />
-      )}
+      <script
+        suppressHydrationWarning
+        nonce={nonce}
+        dangerouslySetInnerHTML={{
+          __html: `{${getElement};${isEmpty};(${init})("${id}")}`,
+        }}
+      />
     </>
   );
 }

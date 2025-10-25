@@ -17,7 +17,7 @@ import {
   getAPIExamples,
 } from '@/render/operation/api-example';
 import { MethodLabel } from '@/ui/components/method-label';
-import { type SampleGenerator } from '@/requests/_shared';
+import { type SampleGenerator } from '@/requests/types';
 import { getTypescriptSchema } from '@/utils/get-typescript-schema';
 import { CopyResponseTypeScript } from '@/ui/client';
 import { SelectTab, SelectTabs, SelectTabTrigger } from '@/ui/select-tabs';
@@ -116,7 +116,7 @@ export function Operation({
               <Schema
                 name="body"
                 as="body"
-                schema={(content.schema ?? {}) as ResolvedSchema}
+                root={(content.schema ?? {}) as ResolvedSchema}
                 required={body.required}
                 readOnly={method.method === 'GET'}
                 writeOnly={method.method !== 'GET'}
@@ -159,7 +159,7 @@ export function Operation({
             <Schema
               key={param.name}
               name={param.name}
-              schema={
+              root={
                 {
                   ...param.schema,
                   description: param.description ?? param.schema?.description,
@@ -290,16 +290,19 @@ async function ResponseAccordion({
 }) {
   const response = operation.responses![status];
   const { generateTypeScriptSchema } = ctx;
-  const contentTypes = response.content
-    ? Object.entries(response.content)
-    : null;
+  const contentTypes = response.content ? Object.entries(response.content) : [];
 
   return (
-    <SelectTabs defaultValue={contentTypes?.[0][0]}>
+    <SelectTabs defaultValue={contentTypes.at(0)?.[0]}>
       <AccordionHeader>
         <AccordionTrigger className="font-mono">{status}</AccordionTrigger>
-        {contentTypes && (
+        {contentTypes.length > 1 && (
           <SelectTabTrigger items={contentTypes.map((v) => v[0])} />
+        )}
+        {contentTypes.length === 1 && (
+          <p className="text-[13px] text-fd-muted-foreground">
+            {contentTypes[0][0]}
+          </p>
         )}
       </AccordionHeader>
 
@@ -323,10 +326,10 @@ async function ResponseAccordion({
             <SelectTab key={type} value={type} className="my-2">
               {ts && <CopyResponseTypeScript code={ts} />}
               {schema && (
-                <div className="border px-3 py-2 rounded-lg overflow-auto max-h-[400px]">
+                <div className="border px-3 py-2 rounded-lg">
                   <Schema
                     name="response"
-                    schema={schema as ResolvedSchema}
+                    root={schema as ResolvedSchema}
                     as="body"
                     readOnly
                     ctx={ctx}

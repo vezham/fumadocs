@@ -1,27 +1,28 @@
-import type { CompiledMDXFile, DocMap, LazyDocMap, MetaMap } from './types';
 import type {
   MetaData,
   PageData,
   Source,
   VirtualFile,
 } from 'fumadocs-core/source';
-import { type BaseCreate, fromConfigBase } from '@/runtime/vite/base';
+import {
+  type BaseCreate,
+  type CompiledMDXFile,
+  type DocMap,
+  fromConfigBase,
+  type LazyDocMap,
+  type MetaMap,
+} from '@/runtime/vite/base';
 import * as path from 'node:path';
 import {
   type AsyncDocCollectionEntry,
+  createDocMethods,
   type DocCollectionEntry,
   type DocData,
   type FileInfo,
   type MetaCollectionEntry,
-  missingProcessedMarkdown,
 } from '@/runtime/shared';
-import fs from 'node:fs/promises';
 
-// for server-side usage of renderers
-export { createClientLoader, toClientRenderer } from './browser';
-
-export type { ClientLoader, ClientLoaderOptions } from './browser';
-export type * from './types';
+export * from './base';
 
 export interface ServerCreate<Config> extends BaseCreate<Config> {
   sourceAsync: <DocOut extends PageData, MetaOut extends MetaData>(
@@ -71,16 +72,8 @@ export function fromConfig<Config>(): ServerCreate<Config> {
   ): DocCollectionEntry<Frontmatter> {
     return {
       ...mapDocData(entry),
-      info,
-      async getText(type) {
-        if (type === 'raw') {
-          return (await fs.readFile(info.fullPath)).toString();
-        }
-
-        if (typeof entry._markdown !== 'string') missingProcessedMarkdown();
-        return entry._markdown;
-      },
       ...entry.frontmatter,
+      ...createDocMethods(info, async () => entry),
     };
   }
 
@@ -91,18 +84,9 @@ export function fromConfig<Config>(): ServerCreate<Config> {
   ): AsyncDocCollectionEntry<Frontmatter> {
     return {
       ...head,
-      info,
+      ...createDocMethods(info, content),
       async load() {
         return mapDocData(await content());
-      },
-      async getText(type) {
-        if (type === 'raw') {
-          return (await fs.readFile(info.fullPath)).toString();
-        }
-
-        const entry = await content();
-        if (typeof entry._markdown !== 'string') missingProcessedMarkdown();
-        return entry._markdown;
       },
     };
   }

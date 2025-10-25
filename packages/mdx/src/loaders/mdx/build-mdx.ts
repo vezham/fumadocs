@@ -2,7 +2,7 @@ import { createProcessor, type ProcessorOptions } from '@mdx-js/mdx';
 import type { VFile } from 'vfile';
 import { remarkInclude } from '@/loaders/mdx/remark-include';
 import type { StructuredData } from 'fumadocs-core/mdx-plugins';
-import type { TableOfContents } from 'fumadocs-core/server';
+import type { TOCItemType } from 'fumadocs-core/toc';
 import type { FC } from 'react';
 import type { MDXProps } from 'mdx/types';
 import {
@@ -29,7 +29,7 @@ interface BuildMDXOptions extends ProcessorOptions {
   data?: Record<string, unknown>;
 
   _compiler?: CompilerOptions;
-  postprocess?: PostprocessOptions;
+  postprocess?: Partial<PostprocessOptions>;
 }
 
 export interface CompilerOptions {
@@ -39,7 +39,7 @@ export interface CompilerOptions {
 export interface CompiledMDXProperties<Frontmatter = Record<string, unknown>> {
   frontmatter: Frontmatter;
   structuredData: StructuredData;
-  toc: TableOfContents;
+  toc: TOCItemType[];
   default: FC<MDXProps>;
 
   /**
@@ -48,6 +48,7 @@ export interface CompiledMDXProperties<Frontmatter = Record<string, unknown>> {
   lastModified?: Date;
   extractedReferences?: ExtractedReference[];
   _markdown?: string;
+  _mdast?: string;
 }
 
 export interface FumadocsDataMap {
@@ -107,6 +108,7 @@ export async function buildMDX(
           [
             remarkPostprocess,
             {
+              _format: format,
               ...options.postprocess,
               valueToExport: [
                 ...(options.postprocess?.valueToExport ?? []),
@@ -115,6 +117,7 @@ export async function buildMDX(
                 'frontmatter',
                 'lastModified',
                 '_markdown',
+                '_mdast',
               ],
             } satisfies PostprocessOptions,
           ],

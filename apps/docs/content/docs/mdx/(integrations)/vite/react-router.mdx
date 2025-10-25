@@ -5,6 +5,10 @@ description: Use Fumadocs MDX with React Router
 
 ## Setup
 
+<div className="fd-steps [&_h3]:fd-step">
+
+### Installation
+
 ```npm
 npm i fumadocs-mdx fumadocs-core @types/mdx
 ```
@@ -17,9 +21,21 @@ Create the configuration file:
 
 Add the Vite plugin:
 
-<include cwd meta='title="vite.config.ts"'>
-  ../../examples/react-router/vite.config.ts
-</include>
+```ts title="vite.config.ts"
+import { defineConfig } from 'vite';
+import mdx from 'fumadocs-mdx/vite';
+import * as MdxConfig from './source.config';
+
+export default defineConfig({
+  plugins: [
+    // [!code ++]
+    mdx(MdxConfig),
+    // ...
+  ],
+});
+```
+
+<include>./.shared.mdx</include>
 
 ### Integrate with Fumadocs
 
@@ -29,11 +45,13 @@ To integrate with Fumadocs, make a `lib/source.ts` file:
   ../../examples/react-router/app/lib/source.ts
 </include>
 
-The `source.generated.ts` file will be generated when you run development server or production build.
+The `.source` folder will be generated when you run development server or production build.
 
 ### Done
 
-The configuration is now finished.
+You can now write content in `content/docs` folder.
+
+</div>
 
 ## Examples
 
@@ -46,7 +64,7 @@ For example:
 ```tsx
 import type { Route } from './+types/page';
 import { source } from '@/lib/source';
-import { docs } from '../../source.generated';
+import { docs } from '@/.source';
 import { toClientRenderer } from 'fumadocs-mdx/runtime/vite';
 
 export async function loader({ params }: Route.LoaderArgs) {
@@ -74,11 +92,4 @@ export default function Page(props: Route.ComponentProps) {
 
   return <Content />;
 }
-```
-
-Note that you can import the `source.generated.ts` file directly, it's useful to access compiled content without `loader()`.
-
-```ts
-import { docs } from './source.generated';
-console.log(docs);
 ```
