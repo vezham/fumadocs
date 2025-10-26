@@ -1,5 +1,4 @@
-import { i18n } from '@/src/lib/i18n';
-import { defineI18nUI } from 'fumadocs-ui/i18n';
+import { defineI18nUI, Translations } from 'fumadocs-ui/i18n';
 import { RootProvider } from 'fumadocs-ui/provider/next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
@@ -13,33 +12,49 @@ const mono = JetBrains_Mono({
   variable: '--font-mono',
 });
 
-type Props = {
-  children: ReactNode
+// Language extends string = string
+type Language = string
+
+interface I18nConfig {
+    /**
+     * Supported locale codes.
+     *
+     * A page tree will be built for each language.
+     */
+    languages: Language[];
+    /**
+     * Default locale if not specified
+     */
+    defaultLanguage: Language;
+    /**
+     * the fallback language when the page has no translations available for a given locale.
+     *
+     * Default to ``defaultLanguage`, no fallback when set to `null`.
+     */
+    // fallbackLanguage?: Language | null;
 }
 
-const { provider } = defineI18nUI(i18n, {
+interface i18n {
+  locale: I18nConfig
   translations: {
-    en: {
-      displayName: 'English',
-    },
-    cn: {
-      displayName: 'Chinese',
-      toc: '目錄',
-      search: '搜尋文檔',
-      lastUpdate: '最後更新於',
-      searchNoResult: '沒有結果',
-      previousPage: '上一頁',
-      nextPage: '下一頁',
-      chooseLanguage: '選擇語言',
-    },
-  },
-});
+      [K in Language]?: Partial<Translations> & { displayName?: string };
+    }
+}
 
-export const defineConfig = ({ children }: Props) => {
+type Props = {
+  children: ReactNode
+  i18n: i18n
+}
+
+export const defineConfig = ({ children, i18n }: Props) => {
+  const { provider } = defineI18nUI(i18n.locale, {
+    translations: i18n.translations
+  });
+
   const lang = 'en';
   
   return (
-    <html lang="en" className={`${inter.className} ${mono.variable}`} suppressHydrationWarning>
+    <html lang={lang} className={`${inter.className} ${mono.variable}`} suppressHydrationWarning>
       <body>
         <RootProvider i18n={provider(lang)}>{children}</RootProvider>
       </body>
