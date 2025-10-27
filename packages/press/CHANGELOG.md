@@ -1,5 +1,23 @@
 # fumapress
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies [ee4ad3d]
+  - fumadocs-mdx@13.0.2
+
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies [56332df]
+- Updated dependencies [91add4f]
+- Updated dependencies [cffd4c2]
+  - fumadocs-mdx@13.0.1
+  - fumadocs-core@16.0.3
+  - fumadocs-ui@16.0.3
+
 ## 0.0.6
 
 ### Patch Changes

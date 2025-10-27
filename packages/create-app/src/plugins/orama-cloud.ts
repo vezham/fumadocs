@@ -1,16 +1,13 @@
-import { TemplatePlugin } from '@/create-app';
+import { TemplatePlugin } from '@/index';
 import { copy, pick, writeFile } from '@/utils';
 import path from 'node:path';
 import { depVersions, sourceDir } from '@/constants';
 import fs from 'node:fs/promises';
-import { createSourceFile } from '@/transform/shared';
-import { addTanstackPrerender } from '@/transform/tanstack-start';
 import {
-  addReactRouterRoute,
-  filterReactRouterRoute,
-  removeReactRouterPrerenderExclude,
-} from '@/transform/react-router';
-import { addSearchDialog } from '@/transform/provider';
+  reactRouterRoutes,
+  rootProvider,
+  tanstackStartRoutes,
+} from '@/transform';
 
 export function oramaCloud(): TemplatePlugin {
   return {
@@ -19,7 +16,7 @@ export function oramaCloud(): TemplatePlugin {
         ...packageJson,
         scripts: {
           ...packageJson.scripts,
-          build: `${packageJson.scripts.build} && bun scripts/sync-content.ts`,
+          build: `${packageJson.scripts!.build} && bun scripts/sync-content.ts`,
         },
         dependencies: {
           ...packageJson.dependencies,
@@ -35,72 +32,47 @@ This project uses Orama Cloud for 3rd party search solution.
 See https://fumadocs.dev/docs/headless/search/orama-cloud for integrating Orama Cloud to Fumadocs.`;
     },
     async afterWrite() {
-      const { dest, template, options } = this;
-      const appDir = path.join(dest, options.useSrcDir ? 'src' : '.');
+      const { dest, appDir, template } = this;
       await copy(path.join(sourceDir, 'template/+orama-cloud/@root'), dest);
       await copy(path.join(sourceDir, 'template/+orama-cloud/@app'), appDir);
 
+      await rootProvider(this, (mod) =>
+        mod.addSearchDialog('@/components/search'),
+      );
+
       if (template.value === 'tanstack-start') {
-        await Promise.all([
-          fluent(
-            createSourceFile(path.join(dest, 'vite.config.ts')),
-            (file) => addTanstackPrerender(file, ['/static.json']),
-            (file) => file.save(),
-          ),
-          fs
-            .unlink(path.join(dest, 'src/routes/api/search.ts'))
-            .catch(() => null),
-          writeFile(
-            path.join(dest, 'src/routes/static[.]json.ts'),
-            route.tanstack,
-          ),
-          updateRootProvider(path.join(dest, 'src/routes/__root.tsx')),
-        ]);
+        await tanstackStartRoutes(this, (mod) => {
+          mod.addRoute({
+            path: 'static[.]json.ts',
+            route: '/static.json',
+            code: route.tanstack,
+            prerender: true,
+          });
+          mod.removeRoute({
+            path: 'api/search.ts',
+            route: '/api/search',
+          });
+        });
       } else if (template.value.startsWith('react-router')) {
-        await Promise.all([
-          fluent(
-            createSourceFile(path.join(dest, 'app/routes.ts')),
-            (file) =>
-              filterReactRouterRoute(file, ({ path }) => path !== 'api/search'),
-            (file) =>
-              addReactRouterRoute(file, [
-                {
-                  path: 'static.json',
-                  entry: 'routes/static.ts',
-                },
-              ]),
-            (file) => file.save(),
-          ),
-          fluent(
-            createSourceFile(path.join(dest, 'react-router.config.ts')),
-            (file) => removeReactRouterPrerenderExclude(file, ['/api/search']),
-            (file) => file.save(),
-          ),
-          fs.unlink(path.join(dest, 'app/docs/search.ts')).catch(() => null),
-          writeFile(
-            path.join(dest, 'app/routes/static.ts'),
+        await reactRouterRoutes(this, (mod) => {
+          mod.addRoute(
+            'static.json',
+            'routes/static.ts',
             route['react-router'],
-          ),
-          updateRootProvider(path.join(dest, 'app/root.tsx')),
-        ]);
+          );
+          mod.removeRoute('api/search');
+        });
       } else if (template.value.startsWith('+next')) {
         await Promise.all([
           fs
             .unlink(path.join(appDir, 'app/api/search/route.ts'))
             .catch(() => null),
           writeFile(path.join(appDir, 'app/static.json/route.ts'), route.next),
-          updateRootProvider(path.join(appDir, 'app/layout.tsx')),
         ]);
       } else {
         await Promise.all([
-          fs
-            .unlink(path.join(dest, 'src/pages/api/search.ts'))
-            .catch(() => null),
-          writeFile(
-            path.join(dest, 'src/pages/api/static.json.ts'),
-            route.waku,
-          ),
-          updateRootProvider(path.join(dest, 'src/components/provider.tsx')),
+          fs.unlink(path.join(appDir, 'pages/api/search.ts')).catch(() => null),
+          writeFile(path.join(appDir, 'pages/static.json.ts'), route.waku),
         ]);
       }
 
@@ -142,25 +114,6 @@ void main();`,
       );
     },
   };
-}
-
-async function updateRootProvider(rootPath: string) {
-  await fluent(
-    createSourceFile(rootPath),
-    (file) => addSearchDialog(file),
-    (file) => file.save(),
-  );
-}
-
-async function fluent<T>(
-  value: T | Promise<T>,
-  ...actions: ((value: T) => void | Promise<void>)[]
-): Promise<T> {
-  for (const action of actions) {
-    await action(await value);
-  }
-
-  return value;
 }
 
 const route = {

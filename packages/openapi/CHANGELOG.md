@@ -1,5 +1,21 @@
 # @fuma-docs/openapi
 
+## 9.6.5
+
+### Patch Changes
+
+- d9d73f3: Support `groupBy` function value
+- Updated dependencies [99971c7]
+  - fumadocs-core@16.0.4
+  - fumadocs-ui@16.0.4
+
+## 9.6.4
+
+### Patch Changes
+
+- fumadocs-core@16.0.3
+- fumadocs-ui@16.0.3
+
 ## 9.6.3
 
 ### Patch Changes
