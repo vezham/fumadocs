@@ -18,7 +18,7 @@ const colors = {
     'color-mix(in oklab, var(--color-fd-foreground) 90%, transparent)',
   '--tw-prose-headings': 'var(--color-fd-foreground)',
   '--tw-prose-lead': `var(--color-fd-foreground)`,
-  '--tw-prose-links': `var(--color-fd-foreground)`,
+  '--tw-prose-links': `var(--color-fd-link)`,
   '--tw-prose-bold': `var(--color-fd-foreground)`,
   '--tw-prose-counters': `var(--color-fd-muted-foreground)`,
   '--tw-prose-bullets': `var(--color-fd-muted-foreground)`,
@@ -196,6 +196,12 @@ export const DEFAULT: Config = {
         borderTopWidth: '1px',
         marginTop: em(48, 16),
         marginBottom: em(48, 16),
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        background:
+          'linear-gradient(266deg, transparent, #627282 60%, transparent)',
+        width: '80%',
+        height: '2px',
       },
       p: {
         marginTop: em(20, 16),
@@ -203,7 +209,7 @@ export const DEFAULT: Config = {
       },
       strong: {
         color: 'var(--tw-prose-bold)',
-        fontWeight: '500',
+        fontWeight: '600',
       },
       'a strong': {
         color: 'inherit',
@@ -258,8 +264,8 @@ export const DEFAULT: Config = {
         marginTop: em(32, 20),
         marginBottom: em(32, 20),
         paddingInlineStart: em(20, 20),
-        fontWeight: '500',
-        fontStyle: 'italic',
+        // fontStyle: 'italic',
+        fontWeight: '400',
         color: 'var(--tw-prose-quotes)',
         borderInlineStartWidth: '0.25rem',
         borderInlineStartColor: 'var(--tw-prose-quote-borders)',
@@ -267,16 +273,18 @@ export const DEFAULT: Config = {
       },
       'blockquote p:first-of-type::before': {
         content: 'open-quote',
+        fontWeight: '900',
       },
       'blockquote p:last-of-type::after': {
         content: 'close-quote',
+        fontWeight: '900',
       },
       h1: {
         color: 'var(--tw-prose-headings)',
         fontWeight: '800',
         fontSize: 'var(--text-3xl)',
-        marginTop: '0',
-        marginBottom: em(32, 36),
+        marginTop: em(8, 16),
+        marginBottom: em(8, 16),
         lineHeight: round(40 / 36),
       },
       'h1 strong': {
@@ -286,8 +294,8 @@ export const DEFAULT: Config = {
       h2: {
         color: 'var(--tw-prose-headings)',
         fontSize: em(24, 16),
-        marginTop: em(48, 24),
-        marginBottom: em(24, 24),
+        marginTop: em(8, 16),
+        marginBottom: em(8, 16),
         lineHeight: round(32 / 24),
         fontWeight: '600',
       },
@@ -299,8 +307,8 @@ export const DEFAULT: Config = {
         color: 'var(--tw-prose-headings)',
         fontWeight: '600',
         fontSize: em(20, 16),
-        marginTop: em(32, 20),
-        marginBottom: em(12, 20),
+        marginTop: em(8, 16),
+        marginBottom: em(8, 16),
         lineHeight: round(32 / 20),
       },
       'h3 strong': {
@@ -310,7 +318,7 @@ export const DEFAULT: Config = {
       h4: {
         color: 'var(--tw-prose-headings)',
         fontWeight: '600',
-        marginTop: em(24, 16),
+        marginTop: em(8, 16),
         marginBottom: em(8, 16),
         lineHeight: round(24 / 16),
       },
@@ -318,16 +326,15 @@ export const DEFAULT: Config = {
         fontWeight: '700',
         color: 'inherit',
       },
+      h5: {
+        marginTop: em(8, 16),
+        marginBottom: em(8, 16),
+      },
+      h6: {
+        marginTop: em(8, 16),
+        marginBottom: em(8, 16),
+      },
       'hr + *': {
-        marginTop: '0',
-      },
-      'h2 + *': {
-        marginTop: '0',
-      },
-      'h3 + *': {
-        marginTop: '0',
-      },
-      'h4 + *': {
         marginTop: '0',
       },
       img: {
@@ -362,13 +369,19 @@ export const DEFAULT: Config = {
       },
       code: {
         padding: '3px',
-        border: 'solid 1px',
-        fontSize: '13px',
-        borderColor: `var(--color-fd-border)`,
-        borderRadius: '5px',
-        fontWeight: '400',
-        background: `var(--color-fd-muted)`,
+        // border: 'solid 1px',
+        // fontSize: '13px',
+        // borderColor: `var(--color-fd-border)`,
+        // borderRadius: '5px',
+        fontWeight: '800',
+        // background: `var(--color-fd-muted)`,
         color: 'var(--tw-prose-code)',
+      },
+      'code::before': {
+        content: 'open-quote',
+      },
+      'code::after': {
+        content: 'close-quote',
       },
       'a code': {
         color: 'inherit',
@@ -427,13 +440,14 @@ export const DEFAULT: Config = {
         color: 'var(--tw-prose-links)',
         transition: 'opacity .2s',
         fontWeight: '500',
-        textDecoration: 'underline',
+        // textDecoration: 'underline',
         textUnderlineOffset: '3.5px',
-        textDecorationColor: 'var(--color-fd-primary)',
-        textDecorationThickness: '1.5px',
+        // textDecorationColor: 'var(--color-fd-primary)',
+        // textDecorationThickness: '1.5px',
       },
       'a:not([data-card]):hover': {
         opacity: '80%',
+        textDecoration: 'underline',
       },
     },
     colors,

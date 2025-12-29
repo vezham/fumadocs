@@ -18,16 +18,21 @@ export function Heading<T extends Types = 'h1'>({
 
   return (
     <As
-      className={cn('flex scroll-m-28 flex-row items-center gap-2', className)}
+      className={cn(
+        'flex flex-row scroll-m-28 items-center gap-2 group',
+        className,
+      )}
       {...props}
     >
-      <a data-card="" href={`#${props.id}`} className="peer">
+      <div className="absolute">
+        <Link
+          aria-label="Link to section"
+          className="-ml-5 flex items-center size-3.5 shrink-0 text-fd-muted-foreground opacity-0 transition-opacity group-hover:opacity-100"
+        />
+      </div>
+      <a data-card="" href={`#${props.id}`}>
         {props.children}
       </a>
-      <Link
-        aria-label="Link to section"
-        className="size-3.5 shrink-0 text-fd-muted-foreground opacity-0 transition-opacity peer-hover:opacity-100"
-      />
     </As>
   );
 }
