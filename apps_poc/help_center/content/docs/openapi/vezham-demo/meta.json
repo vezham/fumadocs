@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "title": "Vezham Demo",
+  "description": "Handbook on OpenAPI",
+  "icon": "Shapes",
+  "pages": [
+    "index",
+    "overview",
+    "...",
+    "---API Documentation---",
+    "...(generated)"
+  ]
+}

@@ -264,7 +264,6 @@ export const DEFAULT: Config = {
         marginTop: em(32, 20),
         marginBottom: em(32, 20),
         paddingInlineStart: em(20, 20),
-        // fontStyle: 'italic',
         fontWeight: '400',
         color: 'var(--tw-prose-quotes)',
         borderInlineStartWidth: '0.25rem',
@@ -369,19 +368,16 @@ export const DEFAULT: Config = {
       },
       code: {
         padding: '3px',
-        // border: 'solid 1px',
-        // fontSize: '13px',
-        // borderColor: `var(--color-fd-border)`,
-        // borderRadius: '5px',
-        fontWeight: '800',
-        // background: `var(--color-fd-muted)`,
+        fontWeight: '400',
         color: 'var(--tw-prose-code)',
       },
       'code::before': {
         content: 'open-quote',
+        fontWeight: '800',
       },
       'code::after': {
         content: 'close-quote',
+        fontWeight: '800',
       },
       'a code': {
         color: 'inherit',
@@ -440,10 +436,7 @@ export const DEFAULT: Config = {
         color: 'var(--tw-prose-links)',
         transition: 'opacity .2s',
         fontWeight: '500',
-        // textDecoration: 'underline',
         textUnderlineOffset: '3.5px',
-        // textDecorationColor: 'var(--color-fd-primary)',
-        // textDecorationThickness: '1.5px',
       },
       'a:not([data-card]):hover': {
         opacity: '80%',
