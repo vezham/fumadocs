@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-basehub",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "The official BaseHub integration for Fumadocs",
   "keywords": [
     "Docs",
@@ -48,7 +48,7 @@
     "@types/react": "*",
     "basehub": "9.x.x",
     "react": "^19.2.0",
-    "@vx-oss/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "@types/react": {

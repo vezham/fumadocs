@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-local-content",
-  "version": "0.2.1",
+  "version": "1.0.1",
   "description": "Shared building blocks for local content sources in Fumadocs",
   "keywords": [
     "Docs",
@@ -59,7 +59,7 @@
     "@types/react": "*",
     "react": "^19.2.0",
     "vite": "^7.0.0 || ^8.0.0",
-    "@vx-oss/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "@types/react": {

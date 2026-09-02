@@ -1,6 +1,6 @@
 {
   "name": "create-vx-oss-docs-versions",
-  "version": "16.1.22",
+  "version": "1.0.1",
   "private": true,
   "description": "Used to track dependency versions in create-vx-oss-docs",
   "dependencies": {

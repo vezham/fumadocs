@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-twoslash",
-  "version": "3.3.0",
+  "version": "1.0.1",
   "description": "Typescript Twoslash Integration for Fumadocs",
   "keywords": [
     "Docs",
@@ -72,8 +72,8 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "shiki": "4.x.x",
-    "@vx-oss/docs-core": "^1.0.0",
-    "@vx-oss/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1",
+    "@vx-oss/docs-react": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "@types/react": {

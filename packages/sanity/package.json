@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-sanity",
-  "version": "0.2.2",
+  "version": "1.0.1",
   "description": "The official Sanity integration for Fumadocs",
   "keywords": [
     "Docs",
@@ -60,7 +60,7 @@
     "next-sanity": "^12.4.0 || ^13.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vx-oss/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "@sanity/types": {

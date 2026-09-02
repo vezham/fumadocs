@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-asyncapi",
-  "version": "0.3.3",
+  "version": "1.0.1",
   "description": "Generate docs for your AsyncAPI spec",
   "keywords": [
     "Docs",
@@ -70,8 +70,8 @@
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vx-oss/docs-core": "^1.0.0",
-    "@vx-oss/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1",
+    "@vx-oss/docs-react": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "json-schema-typed": {

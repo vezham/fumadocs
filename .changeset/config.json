@@ -2,10 +2,48 @@
   "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "vezham/fumadocs" }
+    {
+      "repo": "vezham/fumadocs"
+    }
   ],
   "commit": false,
-  "fixed": [["@vx-oss/docs-core", "@vx-oss/docs-react"]],
+  "fixed": [
+    [
+      "@vx-oss/docs-api",
+      "@vx-oss/docs-asyncapi",
+      "@vx-oss/docs-base-ui",
+      "@vx-oss/docs-basehub",
+      "@vx-oss/docs-cli",
+      "@vx-oss/docs-content",
+      "@vx-oss/docs-content-collections",
+      "@vx-oss/docs-core",
+      "@vx-oss/docs-docgen",
+      "@vx-oss/docs-epub",
+      "@vx-oss/docs-graphql",
+      "@vx-oss/docs-image-size",
+      "@vx-oss/docs-language",
+      "@vx-oss/docs-local-content",
+      "@vx-oss/docs-local-html",
+      "@vx-oss/docs-local-md",
+      "@vx-oss/docs-mdx",
+      "@vx-oss/docs-mdx-remote",
+      "@vx-oss/docs-notion",
+      "@vx-oss/docs-obsidian",
+      "@vx-oss/docs-openapi",
+      "@vx-oss/docs-preview",
+      "@vx-oss/docs-python",
+      "@vx-oss/docs-react",
+      "@vx-oss/docs-sanity",
+      "@vx-oss/docs-satteri",
+      "@vx-oss/docs-shadcn",
+      "@vx-oss/docs-stf",
+      "@vx-oss/docs-story",
+      "@vx-oss/docs-tailwind",
+      "@vx-oss/docs-twoslash",
+      "@vx-oss/docs-typescript",
+      "create-vx-oss-docs"
+    ]
+  ],
   "linked": [],
   "access": "public",
   "baseBranch": "timeline",
@@ -13,5 +51,8 @@
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
-  "ignore": ["docs", "example-*", "create-vx-oss-docs*", "@vx-oss/docs-base-ui"]
+  "ignore": [
+    "docs",
+    "example-*"
+  ]
 }

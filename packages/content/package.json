@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-content",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "The Fuma Content adapter for Fumadocs",
   "keywords": [
     "Docs",
@@ -46,6 +46,6 @@
   },
   "peerDependencies": {
     "fuma-content": "^1.2.3",
-    "@vx-oss/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1"
   }
 }

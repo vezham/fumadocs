@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-preview",
-  "version": "0.2.0",
+  "version": "1.0.1",
   "description": "Opinionated Fumadocs for fast content preview",
   "keywords": [
     "Docs",
@@ -91,7 +91,7 @@
     "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
-    "@vx-oss/docs-react": "*"
+    "@vx-oss/docs-react": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "@vx-oss/docs-react": {

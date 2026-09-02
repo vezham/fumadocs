@@ -105,7 +105,7 @@
     "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
-    "@vx-oss/docs-satteri": "0.x.x",
+    "@vx-oss/docs-satteri": "^1.0.1",
     "@types/mdast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
@@ -115,7 +115,7 @@
     "rolldown": "*",
     "satteri": "^0.10.5",
     "vite": "7.x.x || 8.x.x",
-    "@vx-oss/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "@vx-oss/docs-satteri": {

@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-local-md",
-  "version": "0.3.4",
+  "version": "1.0.1",
   "description": "The local Markdown files content source for Fumadocs",
   "keywords": [
     "Docs",
@@ -79,7 +79,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "unified": "*",
-    "@vx-oss/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "unified": {

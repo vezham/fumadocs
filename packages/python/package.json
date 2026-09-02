@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-python",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The built-in Python docgen for Fumadocs",
   "keywords": [
     "Docs",
@@ -78,8 +78,8 @@
     "@types/mdx": "*",
     "@types/react": "*",
     "react": "19.x.x",
-    "@vx-oss/docs-core": "^1.0.0",
-    "@vx-oss/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1",
+    "@vx-oss/docs-react": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "@types/hast": {

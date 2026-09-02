@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-mdx-remote",
-  "version": "1.5.1",
+  "version": "1.0.1",
   "description": "The remote MDX files adapter for Fumadocs",
   "keywords": [
     "Docs",
@@ -60,7 +60,7 @@
     "@types/mdx": "*",
     "@types/react": "*",
     "react": "18.x.x || 19.x.x",
-    "@vx-oss/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "@types/mdx": {

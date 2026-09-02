@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-api",
-  "version": "0.2.6",
+  "version": "1.0.1",
   "description": "Shared utils for API docs generation",
   "keywords": [
     "Docs",
@@ -86,8 +86,8 @@
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vx-oss/docs-core": "^1.0.0",
-    "@vx-oss/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.1",
+    "@vx-oss/docs-react": "^1.0.1"
   },
   "peerDependenciesMeta": {
     "json-schema-typed": {
