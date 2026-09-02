@@ -109,11 +109,11 @@ jobs:
       - name: 🟠 · 🧩 Setup Node & pnpm
         uses: vezham/vx-deployer/.github/actions/common/setup-install@timeline
 
-      - name: 🔵 · 🎨 Format • Prettier
-        # shell: bash
-        # # pnpm format
-        # run: |
-        #   pnpm lint:format
+      # - name: 🔵 · 🎨 Format • Prettier
+      #   shell: bash
+      #   # pnpm format
+      #   run: |
+      #     pnpm lint:format
 
   tests:
     runs-on: ubuntu-latest
