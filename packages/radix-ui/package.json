@@ -1,18 +1,22 @@
 {
   "name": "@vezham/docs-react",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "The Radix UI version of Fumadocs UI",
   "keywords": [
     "Docs",
     "Fumadocs"
   ],
-  "homepage": "https://fumadocs.dev",
+  "homepage": "https://vezham.com",
   "bugs": {
-    "url": "https://github.com/fuma-nama/fumadocs/issues"
+    "url": "https://github.com/vezham/fumadocs/issues"
   },
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/radix-ui"
+  },
   "files": [
     "css",
     "dist"

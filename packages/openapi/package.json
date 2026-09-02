@@ -1,15 +1,19 @@
 {
   "name": "@vezham/docs-openapi",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Generate MDX docs for your OpenAPI spec",
   "keywords": [
     "Docs",
     "fumadocs"
   ],
-  "homepage": "https://fumadocs.dev",
+  "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/openapi"
+  },
   "files": [
     "css",
     "dist"
