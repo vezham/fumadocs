@@ -1,5 +1,11 @@
 ## @fumadocs/story@1.2.0
 
+## 1.0.1
+
+### Patch Changes
+
+- [`31ccc75`](https://github.com/vezham/fumadocs/commit/31ccc75403db783088821eede56ef6b1f85e435b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Rename the forked docs packages under the @vezham scope.
+
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
