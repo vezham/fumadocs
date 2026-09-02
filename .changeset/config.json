@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    { "repo": "vezham/fumadocs" }
+  ],
+  "commit": false,
+  "fixed": [["@vezham/docs-core", "@vezham/docs-react"]],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "timeline",
+  "updateInternalDependencies": "patch",
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  },
+  "ignore": ["docs", "example-*", "create-fumadocs-*", "@fumadocs/base-ui"]
+}

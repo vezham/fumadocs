@@ -30,7 +30,7 @@ export interface LLMsOptions {
    * - `string`: the output Markdown.
    * - `function`: a component: Markdown content is kept as authored source, while JSX elements
    *   stay as JSX, receiving their original props and resolving from `props.components`.
-   *   Render it with `renderToMarkdown` from `fumadocs-core/server`, where a component
+   *   Render it with `renderToMarkdown` from `@vezham/docs-core/server`, where a component
    *   can call `asMarkdown()` to define its own Markdown form.
    *
    * @default string
@@ -151,7 +151,7 @@ function buildTree(spans: JsxSpan[], edits: readonly SourceEdit[]): JsxSpan[] {
 
 function toComponentCode(as: string, body: string, hasJsx: boolean): string {
   return [
-    `import { asMarkdown as _asMarkdown${hasJsx ? ', jsxComponents as _jsxComponents' : ''} } from "fumadocs-core/server";`,
+    `import { asMarkdown as _asMarkdown${hasJsx ? ', jsxComponents as _jsxComponents' : ''} } from "@vezham/docs-core/server";`,
     `export function ${as}(props) {`,
     '  if (!_asMarkdown()) return null;',
     ...(hasJsx ? ['  const _c = _jsxComponents(props.components);'] : []),

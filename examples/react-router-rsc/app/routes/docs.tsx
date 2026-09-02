@@ -1,8 +1,8 @@
 import type { Route } from './+types/docs';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
 import { source } from '@/lib/source';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
+import defaultMdxComponents from '@vezham/docs-react/mdx';
 import { baseOptions } from '@/lib/layout.shared';
 
 export function ServerComponent({ params }: Route.ComponentProps) {

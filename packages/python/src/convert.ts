@@ -1,9 +1,9 @@
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { mdxToMarkdown } from 'mdast-util-mdx';
-import { remarkGfm } from 'fumadocs-core/mdx-plugins/remark-gfm';
+import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
 import { remark } from 'remark';
-import { getSlugs } from 'fumadocs-core/source';
+import { getSlugs } from '@vezham/docs-core/source';
 import type { ModuleInterface } from './generated';
 import { buildPages, type BuiltPage } from './build';
 import type { PythonGroupBy } from './source';

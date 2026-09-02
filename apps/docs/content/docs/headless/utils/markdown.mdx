@@ -5,10 +5,10 @@ description: Render React elements into Markdown.
 
 ## Overview
 
-`fumadocs-core/server` renders React Server Components, into a Markdown document:
+`@vezham/docs-core/server` renders React Server Components, into a Markdown document:
 
 ```tsx tab="Input"
-import { renderToMarkdown } from 'fumadocs-core/server';
+import { renderToMarkdown } from '@vezham/docs-core/server';
 
 const text = await renderToMarkdown(
   <div>
@@ -35,7 +35,7 @@ It powers the component exported by [Remark LLMs](/docs/headless/mdx/remark-llms
 Components define their own Markdown form. Calling `asMarkdown()` during render is the opt-in: it returns `true` when the component is being rendered into Markdown, and the HTML elements it returns are converted.
 
 ```tsx
-import { asMarkdown, md } from 'fumadocs-core/server';
+import { asMarkdown, md } from '@vezham/docs-core/server';
 
 function Callout({ title, children }) {
   if (asMarkdown()) return md.linePrefix('> ')`**${title}**\n${children}`;
@@ -66,7 +66,7 @@ Two variants return the content as a block:
 Render a page element into Markdown, or `undefined` when its component doesn't call `asMarkdown()`.
 
 ```tsx
-import { renderRoute } from 'fumadocs-core/server';
+import { renderRoute } from '@vezham/docs-core/server';
 
 const text = await renderRoute(<Page params={params} />);
 ```

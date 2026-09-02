@@ -1,4 +1,4 @@
-import { RootProvider } from 'fumadocs-ui/provider/next';
+import { RootProvider } from '@vezham/docs-react/provider/next';
 import './global.css';
 import { Inter } from 'next/font/google';
 import { DevClient } from '@fumadocs/local-html/dev/react-client';

@@ -1,4 +1,4 @@
-import { defineCollections } from 'fumadocs-mdx/macro';
+import { defineCollections } from '@vezham/docs-mdx/macro';
 
 export const docs = defineCollections({
   type: 'doc',

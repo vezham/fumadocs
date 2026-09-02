@@ -1,8 +1,8 @@
 'use client';
 import type { ComponentProps } from 'react';
 import { RootProvider as BaseProvider } from '@/provider/base';
-import { WakuProvider } from 'fumadocs-core/framework/waku';
-import type { Framework } from 'fumadocs-core/framework';
+import { WakuProvider } from '@vezham/docs-core/framework/waku';
+import type { Framework } from '@vezham/docs-core/framework';
 
 export interface RootProviderProps extends ComponentProps<typeof BaseProvider> {
   /**

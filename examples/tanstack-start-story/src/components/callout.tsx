@@ -1,4 +1,4 @@
-import { Callout } from 'fumadocs-ui/components/callout';
+import { Callout } from '@vezham/docs-react/components/callout';
 import type { ComponentProps } from 'react';
 
 export function CalloutStory(

@@ -19,7 +19,7 @@ import { EnumValueList } from '../components/enum-values';
 import { DirectiveList, ReferenceLink, TypeAnnotation } from '../components/type-annotation';
 import { resolveOperationLink, resolveTypeLink, useRenderContext } from '../contexts/api';
 import { Braces, CornerUpLeft, Import, Layers, Variable } from 'lucide-react';
-import Link from 'fumadocs-core/link';
+import Link from '@vezham/docs-core/link';
 
 export function TypeDocs({
   name,

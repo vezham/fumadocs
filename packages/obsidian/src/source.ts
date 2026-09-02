@@ -6,15 +6,15 @@ import {
   type ContentIntegration,
   type LocalSource,
 } from '@fumadocs/local-content';
-import { remarkGfm } from 'fumadocs-core/mdx-plugins/remark-gfm';
-import { remarkHeading, type RemarkHeadingOptions } from 'fumadocs-core/mdx-plugins/remark-heading';
-import { remarkImage, type RemarkImageOptions } from 'fumadocs-core/mdx-plugins/remark-image';
-import { remarkStructure, type StructureOptions } from 'fumadocs-core/mdx-plugins/remark-structure';
-import { rehypeCode, type RehypeCodeOptions } from 'fumadocs-core/mdx-plugins/rehype-code';
-import { rehypeToc, type RehypeTocOptions } from 'fumadocs-core/mdx-plugins/rehype-toc';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
-import type { MetaData, PageData } from 'fumadocs-core/source';
-import * as defaultSchemas from 'fumadocs-core/source/schema';
+import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
+import { remarkHeading, type RemarkHeadingOptions } from '@vezham/docs-core/mdx-plugins/remark-heading';
+import { remarkImage, type RemarkImageOptions } from '@vezham/docs-core/mdx-plugins/remark-image';
+import { remarkStructure, type StructureOptions } from '@vezham/docs-core/mdx-plugins/remark-structure';
+import { rehypeCode, type RehypeCodeOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
+import { rehypeToc, type RehypeTocOptions } from '@vezham/docs-core/mdx-plugins/rehype-toc';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { MetaData, PageData } from '@vezham/docs-core/source';
+import * as defaultSchemas from '@vezham/docs-core/source/schema';
 import remarkParse from 'remark-parse';
 import remarkRehype, { type Options as RemarkRehypeOptions } from 'remark-rehype';
 import { glob } from 'tinyglobby';

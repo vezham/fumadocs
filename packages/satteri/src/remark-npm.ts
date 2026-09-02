@@ -1,7 +1,7 @@
 import { defineMdastPlugin } from 'satteri';
 import convert from 'npm-to-yarn';
-import { generateCodeBlockTabs } from 'fumadocs-core/mdx-plugins/codeblock-utils';
-import type { CodeBlockTabsOptions } from 'fumadocs-core/mdx-plugins/codeblock-utils';
+import { generateCodeBlockTabs } from '@vezham/docs-core/mdx-plugins/codeblock-utils';
+import type { CodeBlockTabsOptions } from '@vezham/docs-core/mdx-plugins/codeblock-utils';
 
 interface PackageManager {
   name: string;

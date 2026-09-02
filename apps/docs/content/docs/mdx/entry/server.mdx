@@ -9,7 +9,7 @@ While you can access the collections directly from entry file, we suggest using 
 
 ```ts tab="Docs (Meta + Doc)"
 import { docs } from 'collections/server';
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 
 // raw collection
 console.log(docs);
@@ -22,8 +22,8 @@ export const source = loader({
 
 ```ts tab="Doc"
 import { blogPosts } from 'collections/server';
-import { toFumadocsSource } from 'fumadocs-mdx/runtime/server';
-import { loader } from 'fumadocs-core/source';
+import { toFumadocsSource } from '@vezham/docs-mdx/runtime/server';
+import { loader } from '@vezham/docs-core/source';
 
 // raw collection
 console.log(blogPosts);

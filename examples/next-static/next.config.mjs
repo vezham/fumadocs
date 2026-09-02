@@ -1,4 +1,4 @@
-import { createMDX } from 'fumadocs-mdx/next';
+import { createMDX } from '@vezham/docs-mdx/next';
 
 const withMDX = createMDX();
 

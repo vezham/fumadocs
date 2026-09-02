@@ -9,14 +9,14 @@ import {
   useMemo,
 } from 'react';
 import type { GraphQLField, GraphQLNamedType } from 'graphql';
-import { remarkGfm } from 'fumadocs-core/mdx-plugins/remark-gfm';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
+import defaultMdxComponents from '@vezham/docs-react/mdx';
 import { remark } from 'remark';
 import remarkRehype from 'remark-rehype';
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime';
 import * as JsxRuntime from 'react/jsx-runtime';
-import { defaultShikiFactory } from 'fumadocs-core/highlight/shiki/full';
-import type { ShikiFactory } from 'fumadocs-core/highlight/shiki';
+import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
+import type { ShikiFactory } from '@vezham/docs-core/highlight/shiki';
 import type { BundledTheme, CodeOptionsThemes, CodeToHastOptionsCommon } from 'shiki';
 import type { RenderContext } from '@/types';
 import type { PlaygroundRequest, PlaygroundResult } from '@/playground/fetcher';

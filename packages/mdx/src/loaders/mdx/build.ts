@@ -1,5 +1,5 @@
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
-import type { TOCItemType } from 'fumadocs-core/toc';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { TOCItemType } from '@vezham/docs-core/toc';
 import type { FC } from 'react';
 import type { MDXProps } from 'mdx/types';
 import type { Core } from '@/core';
@@ -32,7 +32,7 @@ export interface CompiledMDXProperties<Frontmatter = Record<string, unknown>> {
    * Enable from `postprocess` option.
    *
    * A component with `output: 'function'` in `includeProcessedMarkdown`,
-   * render it with `renderToMarkdown` from `fumadocs-core/server`.
+   * render it with `renderToMarkdown` from `@vezham/docs-core/server`.
    */
   _markdown?: string | FC<MDXProps>;
   /**

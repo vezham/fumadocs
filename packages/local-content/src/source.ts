@@ -4,7 +4,7 @@ import type {
   PageData,
   StaticSource,
   VirtualFile,
-} from 'fumadocs-core/source';
+} from '@vezham/docs-core/source';
 import path from 'node:path';
 import { createStorage } from './storage';
 import type { ContentIntegration, ParsedFile } from './integration';

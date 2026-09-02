@@ -3,7 +3,7 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "fumadocs-mdx/macro": ["./src/macro/index.ts"],
+      "@vezham/docs-mdx/macro": ["./src/macro/index.ts"],
       "@fumadocs/satteri/*": ["../satteri/dist/*"]
     },
     "types": ["@types/node", "@types/mdx", "@fumadocs/satteri"],

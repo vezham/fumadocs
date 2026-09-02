@@ -19,7 +19,7 @@ Create the server from source object.
 
 ```ts title="app/api/search/route.ts (Next.js)"
 import { source } from '@/lib/source';
-import { flexsearchFromSource } from 'fumadocs-core/search/flexsearch';
+import { flexsearchFromSource } from '@vezham/docs-core/search/flexsearch';
 
 export const { GET } = flexsearchFromSource(source);
 ```
@@ -32,7 +32,7 @@ Usually, it is provided by your content source (e.g. Fumadocs MDX). You can also
 
 ```ts title="app/api/search/route.ts (Next.js)"
 import { source } from '@/lib/source';
-import { flexsearch } from 'fumadocs-core/search/flexsearch';
+import { flexsearch } from '@vezham/docs-core/search/flexsearch';
 
 export const { GET } = flexsearch({
   indexes: source.getPages().map((page) => ({
@@ -53,15 +53,15 @@ You can search documents using:
 - **Search Client**:
 
 ```ts twoslash
-import { useDocsSearch } from 'fumadocs-core/search/client';
-import { fetchClient } from 'fumadocs-core/search/client/fetch';
+import { useDocsSearch } from '@vezham/docs-core/search/client';
+import { fetchClient } from '@vezham/docs-core/search/client/fetch';
 
 const client = useDocsSearch({
   client: fetchClient(),
 });
 ```
 
-<auto-type-table type='import("fumadocs-core/search/client/fetch").FetchOptions' />
+<auto-type-table type='import("@vezham/docs-core/search/client/fetch").FetchOptions' />
 
 ## Configurations
 
@@ -71,7 +71,7 @@ Support filtering results by tag, it's useful for implementing multi-docs simila
 
 ```ts
 import { source } from '@/lib/source';
-import { flexsearchFromSource } from 'fumadocs-core/search/flexsearch';
+import { flexsearchFromSource } from '@vezham/docs-core/search/flexsearch';
 
 const server = flexsearchFromSource(source, {
   buildIndex(page) {
@@ -94,8 +94,8 @@ and update your search client:
 - **Search Client**: pass a tag to `fetchClient`.
 
 ```ts
-import { useDocsSearch } from 'fumadocs-core/search/client';
-import { fetchClient } from 'fumadocs-core/search/client/fetch';
+import { useDocsSearch } from '@vezham/docs-core/search/client';
+import { fetchClient } from '@vezham/docs-core/search/client/fetch';
 
 const client = useDocsSearch({
   client: fetchClient({
@@ -110,7 +110,7 @@ To support usage with static site, use `staticGET` from search server and make t
 
 ```ts title="app/api/search/route.ts (Next.js)"
 import { source } from '@/lib/source';
-import { flexsearchFromSource } from 'fumadocs-core/search/flexsearch';
+import { flexsearchFromSource } from '@vezham/docs-core/search/flexsearch';
 
 // statically cached [!code highlight:2]
 export const revalidate = false;
@@ -126,8 +126,8 @@ and update your search clients:
 - **Search Client**: change your client adapter.
 
   ```ts
-  import { useDocsSearch } from 'fumadocs-core/search/client';
-  import { flexsearchStaticClient } from 'fumadocs-core/search/client/flexsearch-static';
+  import { useDocsSearch } from '@vezham/docs-core/search/client';
+  import { flexsearchStaticClient } from '@vezham/docs-core/search/client/flexsearch-static';
 
   const client = useDocsSearch({
     client: flexsearchStaticClient({
@@ -137,7 +137,7 @@ and update your search clients:
   });
   ```
 
-  <auto-type-table type='import("fumadocs-core/search/client/flexsearch-static").FlexsearchStaticOptions' />
+  <auto-type-table type='import("@vezham/docs-core/search/client/flexsearch-static").FlexsearchStaticOptions' />
 
 <Callout type='warn' title="Be Careful">
 
@@ -154,7 +154,7 @@ Flexsearch doesn't require configurations to work for other languages, but you c
 
 ```ts title="app/api/search/route.ts" tab="From Source"
 import { source } from '@/lib/source';
-import { flexsearchFromSource } from 'fumadocs-core/search/flexsearch';
+import { flexsearchFromSource } from '@vezham/docs-core/search/flexsearch';
 import { Charset } from 'flexsearch';
 
 const server = flexsearchFromSource(source, {
@@ -167,7 +167,7 @@ const server = flexsearchFromSource(source, {
 
 ```ts tab="From Search Indexes"
 import { source } from '@/lib/source';
-import { flexsearchI18n } from 'fumadocs-core/search/flexsearch';
+import { flexsearchI18n } from '@vezham/docs-core/search/flexsearch';
 import { i18n } from '@/lib/i18n';
 import { Charset } from 'flexsearch';
 

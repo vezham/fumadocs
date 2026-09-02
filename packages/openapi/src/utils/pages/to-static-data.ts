@@ -1,7 +1,7 @@
 import type { Document, OperationObject } from '@/types';
 import Slugger from 'github-slugger';
-import type { TOCItemType } from 'fumadocs-core/toc';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
+import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
 import type { GeneratedPageProps } from './builder';
 import { idToTitle } from '@fumadocs/api-docs/utils/id-to-title';
 import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';

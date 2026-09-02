@@ -1,6 +1,6 @@
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import * as icons from 'lucide-static';
-import { defineDocs } from 'fumadocs-mdx/macro';
+import { defineDocs } from '@vezham/docs-mdx/macro';
 import { i18n } from '@/lib/i18n';
 
 export const docs = defineDocs({

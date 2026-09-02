@@ -66,7 +66,7 @@ export interface LLMsOptions extends StringifyOptions {
    * - `string`: the output Markdown.
    * - `function`: a component: Markdown content is still stringified at compile time, while JSX
    *   elements are kept as JSX, receiving their original props and resolving from `props.components`.
-   *   Render it with `renderToMarkdown` from `fumadocs-core/server`, where a component
+   *   Render it with `renderToMarkdown` from `@vezham/docs-core/server`, where a component
    *   can call `asMarkdown()` to define its own Markdown form.
    *
    * @default string
@@ -307,7 +307,7 @@ function jsxToEstree(as: string, chunks: JsxChunk[]): MdxjsEsm {
               ]
             : []),
         ],
-        source: literal('fumadocs-core/server'),
+        source: literal('@vezham/docs-core/server'),
       },
       {
         type: 'ExportNamedDeclaration',

@@ -3,7 +3,7 @@ import { Fragment, type ReactNode, useEffect, useMemo, useState, type ComponentP
 import { ChevronDown, CircleX, SignpostIcon } from 'lucide-react';
 import type { FetchResponseResult, FetchResult } from '@/playground/fetcher';
 import { useStatusInfo } from '../status-info';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import { cn } from '@/utils/cn';
 import { ClientCodeBlock } from '@/ui/components/codeblock';
 import { useTranslations } from '@fuma-translate/react';

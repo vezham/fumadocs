@@ -1,5 +1,5 @@
-import { RootProvider } from 'fumadocs-ui/provider/next';
-import 'fumadocs-ui/style.css';
+import { RootProvider } from '@vezham/docs-react/provider/next';
+import '@vezham/docs-react/style.css';
 import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
 

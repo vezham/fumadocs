@@ -24,8 +24,8 @@ description: Using Typesense with Fumadocs UI.
      SearchDialogList,
      SearchDialogOverlay,
      type SharedProps,
-   } from 'fumadocs-ui/components/dialog/search';
-   import { useI18n } from 'fumadocs-ui/contexts/i18n';
+   } from '@vezham/docs-react/components/dialog/search';
+   import { useI18n } from '@vezham/docs-react/contexts/i18n';
    import { Client } from 'typesense';
    import { useTypesenseSearch } from 'typesense-fumadocs-adapter/client';
 
@@ -39,7 +39,7 @@ description: Using Typesense with Fumadocs UI.
      const { search, setSearch, query } = useTypesenseSearch({
        typesenseCollectionName: `YOUR_TYPESENSE_COLLECTION_NAME`,
        locale,
-       legacy: false, // optional, set to true for fumadocs-ui version < 16.6.0
+       legacy: false, // optional, set to true for @vezham/docs-react version < 16.6.0
        client,
      });
 
@@ -88,7 +88,7 @@ import {
   type SharedProps,
   TagsList,
   TagsListItem,
-} from 'fumadocs-ui/components/dialog/search';
+} from '@vezham/docs-react/components/dialog/search';
 import { useState } from 'react';
 import { useTypesenseSearch } from 'typesense-fumadocs-adapter/client';
 

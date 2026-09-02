@@ -26,7 +26,7 @@ ${processed}`;
 It requires `includeProcessedMarkdown` to be enabled:
 
 ```ts title="source.config.ts"
-import { defineDocs } from 'fumadocs-mdx/config';
+import { defineDocs } from '@vezham/docs-mdx/config';
 
 export const docs = defineDocs({
   docs: {
@@ -46,7 +46,7 @@ You can generate it from page tree using Loader API.
 
 ```ts tab="Next.js" title="app/llms.txt/route.ts"
 import { source } from '@/lib/source';
-import { llms } from 'fumadocs-core/source';
+import { llms } from '@vezham/docs-core/source';
 
 // cached forever
 export const revalidate = false;
@@ -67,7 +67,7 @@ export default [
 
 ```ts tab="React Router" title="app/routes/llms.ts"
 import { source } from '@/lib/source';
-import { llms } from 'fumadocs-core/source';
+import { llms } from '@vezham/docs-core/source';
 
 export function loader() {
   return new Response(llms(source).index());
@@ -77,7 +77,7 @@ export function loader() {
 ```ts tab="Tanstack Start" title="src/routes/llms[.]txt.ts"
 import { createFileRoute } from '@tanstack/react-router';
 import { source } from '@/lib/source';
-import { llms } from 'fumadocs-core/source';
+import { llms } from '@vezham/docs-core/source';
 
 export const Route = createFileRoute('/llms.txt')({
   server: {
@@ -92,7 +92,7 @@ export const Route = createFileRoute('/llms.txt')({
 
 ```ts tab="Waku" title="pages/_api/llms.txt.ts"
 import { source } from '@/lib/source';
-import { llms } from 'fumadocs-core/source';
+import { llms } from '@vezham/docs-core/source';
 
 export function GET() {
   return new Response(llms(source).index());
@@ -255,7 +255,7 @@ export async function loader({ params }: Route.LoaderArgs) {
 ```
 
 ```ts tab="React Router" title="app/root.tsx"
-import { rewritePath } from 'fumadocs-core/negotiation';
+import { rewritePath } from '@vezham/docs-core/negotiation';
 import type { Route } from './+types/root';
 
 // [!code ++:20]
@@ -383,7 +383,7 @@ To serve the Markdown content instead for AI agents, you can leverage the `Accep
 
 ```ts title="proxy.ts (Next.js)"
 import { NextRequest, NextResponse } from 'next/server';
-import { isMarkdownPreferred, rewritePath } from 'fumadocs-core/negotiation';
+import { isMarkdownPreferred, rewritePath } from '@vezham/docs-core/negotiation';
 
 const { rewrite: rewriteLLM } = rewritePath('/docs{/*path}', '/llms.mdx/docs{/*path}');
 
@@ -505,12 +505,12 @@ INKEEP_API_KEY="..."
 Add the component & trigger to docs layout:
 
 ```tsx
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
 // import the installed components, e.g.
 import { AISearch, AISearchPanel, AISearchTrigger } from '@/components/ai/search';
 import { MessageCircleIcon } from 'lucide-react';
 // or import your own button styles
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (

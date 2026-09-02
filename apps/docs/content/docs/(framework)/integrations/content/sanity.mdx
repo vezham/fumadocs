@@ -70,7 +70,7 @@ npm i @fumadocs/sanity
 ```
 
 ```ts title="lib/source.ts" tab="Next.js (live preview)"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { createSanitySource } from '@fumadocs/sanity';
 // the live preview client
 import { sanityFetch } from '@/sanity/lib/live';
@@ -93,7 +93,7 @@ export async function getSource() {
 ```
 
 ```ts title="lib/source.ts" tab="Others"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { createSanitySource } from '@fumadocs/sanity';
 // the Sanity client
 import { client } from '@/sanity/lib/client';
@@ -124,7 +124,7 @@ Now update references to your `source` with the `getSource()` function like:
 ```tsx
 import { getSource } from '@/lib/source';
 import { CustomPortableText } from '@/components/sanity';
-import { DocsPage, DocsBody, DocsDescription, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsPage, DocsBody, DocsDescription, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
 
 // [!code highlight]
 const source = await getSource();
@@ -156,7 +156,7 @@ If you are not using React Server Components, `renderToc` can be imported separa
 import { getSource } from '@/lib/source';
 import { renderToc } from '@fumadocs/sanity/client';
 import { CustomPortableText } from '@/components/sanity';
-import { DocsPage, DocsBody, DocsDescription, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsPage, DocsBody, DocsDescription, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
 
 // where you return server payload
 export async function serverPayload(slugs: string[]) {

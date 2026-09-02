@@ -1,9 +1,9 @@
 'use client';
 
-import { type OramaCloudOptions, useDocsSearch } from 'fumadocs-core/search/client';
-import { oramaCloudClient } from 'fumadocs-core/search/client/orama-cloud';
+import { type OramaCloudOptions, useDocsSearch } from '@vezham/docs-core/search/client';
+import { oramaCloudClient } from '@vezham/docs-core/search/client/orama-cloud';
 import { type ReactNode, useMemo, useState } from 'react';
-import { useOnChange } from 'fumadocs-core/utils/use-on-change';
+import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
 import {
   SearchDialog,
   SearchDialogClose,
@@ -18,7 +18,7 @@ import {
   TagsList,
   TagsListItem,
 } from './search';
-import type { SortedResult } from 'fumadocs-core/search';
+import type { SortedResult } from '@vezham/docs-core/search';
 import type { SearchLink, TagItem } from '@/contexts/search';
 import { useI18n } from '@/contexts/i18n';
 

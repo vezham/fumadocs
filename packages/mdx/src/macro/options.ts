@@ -15,7 +15,7 @@ export interface MacroOptions {
  */
 export type MacroPluginOption = MacroOptions | false;
 
-export const MacroModuleId = 'fumadocs-mdx/macro';
+export const MacroModuleId = '@vezham/docs-mdx/macro';
 
 export interface ResolvedMacroOptions {
   include: string[];

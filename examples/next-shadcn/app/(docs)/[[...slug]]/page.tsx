@@ -1,9 +1,9 @@
 import { source } from '@/lib/source';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
-import { createRelativeLink } from 'fumadocs-ui/mdx';
+import { createRelativeLink } from '@vezham/docs-react/mdx';
 import { createShadcnDocs } from '@fumadocs/shadcn';
 import { Snippet } from '@fumadocs/shadcn/rsc';
 

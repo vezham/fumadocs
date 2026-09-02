@@ -1,6 +1,6 @@
 import { getPageImageUrl, getPageMarkdownUrl, source } from '@/lib/source';
 import { PageProps } from 'waku/router';
-import { createRelativeLink } from 'fumadocs-ui/mdx';
+import { createRelativeLink } from '@vezham/docs-react/mdx';
 import {
   DocsBody,
   DocsDescription,
@@ -8,7 +8,7 @@ import {
   DocsTitle,
   MarkdownCopyButton,
   ViewOptionsPopover,
-} from 'fumadocs-ui/layouts/docs/page';
+} from '@vezham/docs-react/layouts/docs/page';
 import { unstable_notFound } from 'waku/router/server';
 import { gitConfig } from '@/lib/shared';
 import { getMDXComponents } from '@/components/mdx';

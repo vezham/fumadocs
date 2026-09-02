@@ -1,5 +1,5 @@
-import type { RehypeTOCItemType, StructuredData } from 'fumadocs-core/mdx-plugins';
-import type { TOCItemType } from 'fumadocs-core/toc';
+import type { RehypeTOCItemType, StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { TOCItemType } from '@vezham/docs-core/toc';
 import type { Root } from 'hast';
 import { type Evaluater, toJsxRuntime } from 'hast-util-to-jsx-runtime';
 import type { MDXComponents } from 'mdx/types';

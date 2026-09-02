@@ -1,7 +1,7 @@
-import { loader, type MetaData, type StaticSource, type VirtualFile } from 'fumadocs-core/source';
+import { loader, type MetaData, type StaticSource, type VirtualFile } from '@vezham/docs-core/source';
 import { getPosts } from '@/lib/query';
 import type { Post } from '@/lib/types';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
 
 const PageTag = 'page';
 const RootCategory = 'docs';

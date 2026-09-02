@@ -1,6 +1,6 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from '@tanstack/react-router';
 import appCss from '@/styles/app.css?url';
-import { RootProvider } from 'fumadocs-ui/provider/tanstack';
+import { RootProvider } from '@vezham/docs-react/provider/tanstack';
 import { DevClient } from '@fumadocs/local-md/dev/react-client';
 
 export const Route = createRootRoute({

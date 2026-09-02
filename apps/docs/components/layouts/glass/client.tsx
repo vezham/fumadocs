@@ -1,7 +1,7 @@
 'use client';
 
 import { useAISearchContext } from '@/components/inkeep/search';
-import { GlassLayout, GlassLayoutProps } from 'fumadocs-ui/layouts/glass';
+import { GlassLayout, GlassLayoutProps } from '@vezham/docs-react/layouts/glass';
 
 export function ClientGlassLayout(props: GlassLayoutProps) {
   const { open, setOpen } = useAISearchContext();

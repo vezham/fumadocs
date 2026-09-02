@@ -1,5 +1,5 @@
-import { loader } from 'fumadocs-core/source';
-import { defineDocs } from 'fumadocs-mdx/macro';
+import { loader } from '@vezham/docs-core/source';
+import { defineDocs } from '@vezham/docs-mdx/macro';
 import { i18n } from '#/lib/i18n.ts';
 
 export const docs = defineDocs({

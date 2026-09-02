@@ -144,7 +144,7 @@ Some common questions you may encounter.
     Finally, update the base URL of pages in `source.ts`:
 
 ```ts title="lib/source.ts"
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 
 export const source = loader({
   baseUrl: '/info', // to the new value [!code highlight]
@@ -173,7 +173,7 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   resolve: {
     // add other Fumadocs deps as needed
-    noExternal: ['fumadocs-core', 'fumadocs-ui', 'fumadocs-openapi', '@fumadocs/base-ui'],
+    noExternal: ['@vezham/docs-core', '@vezham/docs-react', '@vezham/docs-openapi', '@fumadocs/base-ui'],
   },
 });
 ```

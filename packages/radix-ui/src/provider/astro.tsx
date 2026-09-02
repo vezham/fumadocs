@@ -1,9 +1,9 @@
 'use client';
 import type { ComponentProps } from 'react';
 import { RootProvider as BaseProvider } from '@/provider/base';
-import { AstroProvider } from 'fumadocs-core/framework/astro';
-import type { AstroProviderProps } from 'fumadocs-core/framework/astro';
-import type { Framework } from 'fumadocs-core/framework';
+import { AstroProvider } from '@vezham/docs-core/framework/astro';
+import type { AstroProviderProps } from '@vezham/docs-core/framework/astro';
+import type { Framework } from '@vezham/docs-core/framework';
 
 export interface RootProviderProps extends ComponentProps<typeof BaseProvider> {
   /**

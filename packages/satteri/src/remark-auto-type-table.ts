@@ -7,7 +7,7 @@ import type {
   MdxJsxExpressionAttributeNode as MdxJsxExpressionAttribute,
   MdxJsxFlowElement,
 } from 'satteri';
-import { highlightHast, type HighlightHastOptions } from 'fumadocs-core/highlight';
+import { highlightHast, type HighlightHastOptions } from '@vezham/docs-core/highlight';
 import {
   createGenerator,
   type DocEntry,

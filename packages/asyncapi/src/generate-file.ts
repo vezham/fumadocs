@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import * as path from 'node:path';
 import { generateDocument, type PagesToTextOptions, toText } from './utils/pages/to-text';
 import type { AsyncAPIServer } from '@/server';
-import { createGetUrl, getSlugs, PathUtils } from 'fumadocs-core/source';
+import { createGetUrl, getSlugs, PathUtils } from '@vezham/docs-core/source';
 import { createAutoPreset, type SchemaToPagesOptions } from '@/utils/pages/preset-auto';
 import { fromSchema, type OutputGroup, type OutputEntry } from '@/utils/pages/builder';
 import type { DistributiveOmit } from './types';

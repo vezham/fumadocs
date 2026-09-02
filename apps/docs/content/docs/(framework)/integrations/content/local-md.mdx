@@ -29,7 +29,7 @@ Install the package:
 Create a `localMd` instance and connect it to Fumadocs:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { localMd } from '@fumadocs/local-md';
 
 const docs = localMd({
@@ -52,7 +52,7 @@ You may pass `frontmatterSchema` and `metaSchema` to customize the validation sc
 
 ```ts title="lib/source.ts"
 import { localMd } from '@fumadocs/local-md';
-import { pageSchema, metaSchema } from 'fumadocs-core/source/schema';
+import { pageSchema, metaSchema } from '@vezham/docs-core/source/schema';
 
 const docs = localMd({
   dir: 'content/docs',
@@ -77,7 +77,7 @@ For example, in a docs layout:
 
 ```tsx title="app/docs/layout.tsx"
 import { getSource } from '@/lib/source';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
 
 export default async function Layout({ children }: LayoutProps<'/docs'>) {
   const docs = await getSource();
@@ -156,7 +156,7 @@ You can use `staticSource()` when you only need a one-time snapshot without reva
 It works with a normal `loader()` instead of only `dynamicLoader()`:
 
 ```ts title="lib/source.ts"
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { localMd } from '@fumadocs/local-md';
 
 const docs = localMd({
@@ -177,7 +177,7 @@ If you're already using Fumadocs MDX for local docs content, migrating is usuall
 With Fumadocs MDX, a common setup looks like:
 
 ```ts tab="source.config.ts"
-import { defineDocs, defineConfig } from 'fumadocs-mdx/config';
+import { defineDocs, defineConfig } from '@vezham/docs-mdx/config';
 
 export const docs = defineDocs({
   dir: 'content/docs',
@@ -188,7 +188,7 @@ export default defineConfig();
 
 ```ts tab="lib/source.ts"
 import { docs } from 'collections/server';
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 
 export const source = loader({
   baseUrl: '/docs',
@@ -201,7 +201,7 @@ export const source = loader({
 With `@fumadocs/local-md`, you can replace that setup with:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { watchWithDevServer } from '@fumadocs/local-md/dev/ws';
 import { localMd } from '@fumadocs/local-md';
 
@@ -232,7 +232,7 @@ Finally, update references to your `source` object with `getSource()`:
 
 ```tsx title="app/docs/layout.tsx"
 import { getSource } from '@/lib/source';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
 
 export default async function Layout({ children }: LayoutProps<'/docs'>) {
   // [!code --]
@@ -295,11 +295,11 @@ For example, in Tanstack Start:
 
 ```tsx title="src/routes/docs/$.tsx"
 import { createFileRoute, notFound } from '@tanstack/react-router';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
 import { createServerFn } from '@tanstack/react-start';
 import { getSource } from '@/lib/source';
-import { DocsBody, DocsPage } from 'fumadocs-ui/layouts/docs/page';
-import { useFumadocsLoader } from 'fumadocs-core/source/client';
+import { DocsBody, DocsPage } from '@vezham/docs-react/layouts/docs/page';
+import { useFumadocsLoader } from '@vezham/docs-core/source/client';
 import { useMemo } from 'react';
 import { useMDXComponents } from '@/components/mdx';
 import { rendererFromSerialized } from '@fumadocs/local-md/client';

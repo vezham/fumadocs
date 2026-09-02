@@ -92,13 +92,13 @@ export const registry: Registry = {
     },
   ],
   dependencies: {
-    'fumadocs-core': null,
-    'fumadocs-ui': null,
-    'fumadocs-openapi': null,
+    '@vezham/docs-core': null,
+    '@vezham/docs-react': null,
+    '@vezham/docs-openapi': null,
     '@fumadocs/api-docs': null,
     '@fumari/stf': null,
     react: null,
-    // dev dependency of `fumadocs-openapi` (inlined on build), but needed by vendored files
+    // dev dependency of `@vezham/docs-openapi` (inlined on build), but needed by vendored files
     'fast-content-type-parse': '^3.0.0',
   },
 };

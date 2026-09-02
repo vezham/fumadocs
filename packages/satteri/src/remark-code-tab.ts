@@ -5,7 +5,7 @@ import {
   generateCodeBlockTabs,
   parseCodeBlockAttributes,
   type CodeBlockTabsOptions,
-} from 'fumadocs-core/mdx-plugins/codeblock-utils';
+} from '@vezham/docs-core/mdx-plugins/codeblock-utils';
 
 type TabType = 'CodeBlockTabs' | 'Tabs';
 

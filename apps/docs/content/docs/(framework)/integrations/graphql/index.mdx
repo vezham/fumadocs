@@ -17,8 +17,8 @@ Add the following line:
 
 ```css title="Tailwind CSS"
 @import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import '@vezham/docs-react/css/neutral.css';
+@import '@vezham/docs-react/css/preset.css';
 /* [!code ++] */
 @import '@fumadocs/graphql/css/preset.css';
 ```
@@ -58,7 +58,7 @@ See [`createGraphQL()`](/docs/integrations/graphql/server) & [`createGraphQLPage
 Integrate into [Loader API](/docs/headless/source-api/source) to generate pages, without generating real files.
 
 ```ts title="lib/source.ts"
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { docs } from 'collections/server';
 import { graphql } from '@/lib/graphql';
 

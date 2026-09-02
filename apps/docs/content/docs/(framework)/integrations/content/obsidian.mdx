@@ -28,8 +28,8 @@ The components from `fumadocs-obsidian/ui` are styled with Tailwind CSS. Add the
 
 ```css title="Tailwind CSS"
 @import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import '@vezham/docs-react/css/neutral.css';
+@import '@vezham/docs-react/css/preset.css';
 /* [!code ++] */
 @import 'fumadocs-obsidian/css/preset.css';
 ```
@@ -39,7 +39,7 @@ The components from `fumadocs-obsidian/ui` are styled with Tailwind CSS. Add the
 Create an Obsidian source and pass it to `dynamicLoader()`:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { obsidian } from 'fumadocs-obsidian';
 
 const vault = obsidian({
@@ -68,9 +68,9 @@ Then load and render a page:
 ```tsx title="app/docs/[[...slug]]/page.tsx"
 import { getSource } from '@/lib/source';
 import { notFound } from 'next/navigation';
-import defaultMdxComponents, { createRelativeLink } from 'fumadocs-ui/mdx';
+import defaultMdxComponents, { createRelativeLink } from '@vezham/docs-react/mdx';
 import * as ObsidianComponents from 'fumadocs-obsidian/ui';
-import { DocsBody, DocsPage } from 'fumadocs-ui/layouts/docs/page';
+import { DocsBody, DocsPage } from '@vezham/docs-react/layouts/docs/page';
 
 export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
   const source = await getSource();
@@ -130,7 +130,7 @@ if (import.meta.env.DEV) watchWithVite(vault);
 Use `staticSource()` when the vault only needs to be read once:
 
 ```ts title="lib/source.ts"
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { obsidian } from 'fumadocs-obsidian';
 
 const vault = obsidian({
@@ -149,7 +149,7 @@ Use Standard Schema-compatible validators to customize page frontmatter and `met
 
 ```ts title="lib/source.ts"
 import { frontmatterSchema, obsidian } from 'fumadocs-obsidian';
-import { metaSchema } from 'fumadocs-core/source/schema';
+import { metaSchema } from '@vezham/docs-core/source/schema';
 import { z } from 'zod';
 
 const vault = obsidian({

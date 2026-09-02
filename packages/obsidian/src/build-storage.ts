@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { frontmatter } from 'fumadocs-core/content/md/frontmatter';
+import { frontmatter } from '@vezham/docs-core/content/md/frontmatter';
 import { slash } from '@/utils/slash';
 
 export interface VaultFile {

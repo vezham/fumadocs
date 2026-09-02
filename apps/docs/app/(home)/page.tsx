@@ -13,7 +13,7 @@ import {
   TimerIcon,
 } from 'lucide-react';
 import { Marquee } from '@/app/(home)/marquee';
-import { ServerCodeBlock } from 'fumadocs-ui/components/codeblock.rsc';
+import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
 import {
   Hero,
   AgnosticBackground,
@@ -596,19 +596,19 @@ function ForEngineers() {
         <div className="mt-auto flex flex-col gap-2 @container mask-[linear-gradient(to_bottom,white,transparent)]">
           {[
             {
-              name: 'fumadocs-mdx',
+              name: '@vezham/docs-mdx',
               description: 'Use MDX in your React framework elegantly.',
             },
             {
-              name: 'fumadocs-core',
+              name: '@vezham/docs-core',
               description: 'Headless library for building docs + handling content.',
             },
             {
-              name: 'fumadocs-ui',
+              name: '@vezham/docs-react',
               description: 'UI library for building docs.',
             },
             {
-              name: 'fumadocs-openapi',
+              name: '@vezham/docs-openapi',
               description: 'Extend Fumadocs to render OpenAPI docs.',
             },
             {
@@ -665,8 +665,8 @@ function ForEngineers() {
             title: 'Fumadocs MDX',
           }}
           code={`
-import { loader } from 'fumadocs-core/source';
-import { defineDocs } from 'fumadocs-mdx/macro';
+import { loader } from '@vezham/docs-core/source';
+import { defineDocs } from '@vezham/docs-mdx/macro';
 
 const docs = defineDocs({
   dir: 'content/docs',

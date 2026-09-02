@@ -9,19 +9,19 @@ import {
   type FC,
   type ReactNode,
 } from 'react';
-import { remarkGfm } from 'fumadocs-core/mdx-plugins/remark-gfm';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
+import defaultMdxComponents from '@vezham/docs-react/mdx';
 import { remark } from 'remark';
 import remarkRehype from 'remark-rehype';
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime';
 import * as JsxRuntime from 'react/jsx-runtime';
 import { PageContent } from './api-page';
-import { defaultShikiFactory } from 'fumadocs-core/highlight/shiki/full';
+import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
 import { generate } from '@fumari/json-schema-ts';
 import { ClientCodeBlock } from './components/codeblock';
 import { dereferenceBundledDocument } from '@/utils/document/dereference';
 import { getRaw } from '@scalar/json-magic/magic-proxy';
-import type { ShikiFactory } from 'fumadocs-core/highlight/shiki';
+import type { ShikiFactory } from '@vezham/docs-core/highlight/shiki';
 import type { JSONSchema } from 'json-schema-typed';
 import type { CodeToHastOptionsCommon, CodeOptionsThemes, BundledTheme } from 'shiki';
 import type { GeneratedPageProps, OperationItem } from '@/utils/pages/builder';

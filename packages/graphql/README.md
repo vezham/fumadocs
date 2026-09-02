@@ -25,8 +25,8 @@ Add the generated pages to your source:
 
 ```ts
 // lib/source.ts
-import { loader } from 'fumadocs-core/source';
-import { defineDocs } from 'fumadocs-mdx/macro';
+import { loader } from '@vezham/docs-core/source';
+import { defineDocs } from '@vezham/docs-mdx/macro';
 import { graphql } from './graphql';
 
 const docs = defineDocs({

@@ -10,7 +10,7 @@ import {
   CodeBlockTabs,
   CodeBlockTabsList,
   CodeBlockTabsTrigger,
-} from 'fumadocs-ui/components/codeblock';
+} from '@vezham/docs-react/components/codeblock';
 import { ResponseTabs } from './response-tabs';
 import { useRenderContext, useServerContext } from '@/ui/contexts/api';
 import {

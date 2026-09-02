@@ -6,9 +6,9 @@ import {
   type SourceOptions,
   type WatchableSource,
 } from '@fumadocs/local-content';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
-import type { DynamicSource, MetaData, PageData, StaticSource } from 'fumadocs-core/source';
-import * as defaultSchemas from 'fumadocs-core/source/schema';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { DynamicSource, MetaData, PageData, StaticSource } from '@vezham/docs-core/source';
+import * as defaultSchemas from '@vezham/docs-core/source/schema';
 import type { Element, Root } from 'hast';
 import { visit } from 'unist-util-visit';
 import { parseHtml, processHtml, textOf, type ProcessHtmlOptions } from './html/compiler';

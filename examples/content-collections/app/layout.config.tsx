@@ -1,4 +1,4 @@
-import { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {

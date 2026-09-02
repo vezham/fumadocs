@@ -55,23 +55,23 @@
     "@types/node": "26.3.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-ui": "workspace:@fumadocs/base-ui@*",
     "mdast-util-mdx": "^3.0.0",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
-    "vfile": "^6.0.3"
+    "vfile": "^6.0.3",
+    "@vezham/docs-core": "workspace:*",
+    "@vezham/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/estree": "*",
     "@types/hast": "*",
     "@types/mdast": "*",
     "@types/react": "*",
-    "fumadocs-core": "^16.7.0",
-    "fumadocs-ui": "^16.7.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "@vezham/docs-core": "^16.7.0",
+    "@vezham/docs-react": "^16.7.0"
   },
   "peerDependenciesMeta": {
     "@types/estree": {
@@ -86,7 +86,7 @@
     "@types/react": {
       "optional": true
     },
-    "fumadocs-ui": {
+    "@vezham/docs-react": {
       "optional": true
     }
   }

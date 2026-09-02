@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { createFromSource } from 'fumadocs-core/search/server';
+import { createFromSource } from '@vezham/docs-core/search/server';
 import { getStructuredData, source } from '@/lib/source';
 
 const server = createFromSource(source, {

@@ -11,10 +11,10 @@ import {
   SearchDialogList,
   SearchDialogOverlay,
   type SharedProps,
-} from 'fumadocs-ui/components/dialog/search';
-import { useDocsSearch } from 'fumadocs-core/search/client';
-import { algoliaClient } from 'fumadocs-core/search/client/algolia';
-import { useI18n } from 'fumadocs-ui/contexts/i18n';
+} from '@vezham/docs-react/components/dialog/search';
+import { useDocsSearch } from '@vezham/docs-core/search/client';
+import { algoliaClient } from '@vezham/docs-core/search/client/algolia';
+import { useI18n } from '@vezham/docs-react/contexts/i18n';
 
 const appId = 'replace me';
 const apiKey = 'replace me';

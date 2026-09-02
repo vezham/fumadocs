@@ -5,7 +5,7 @@ import { FieldKey, useArray, useDataEngine, useFieldValue, useObject } from '@fu
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/select';
 import { Input, labelVariants } from '@/components/input';
 import { cn } from '@/utils/cn';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import { FormatFlags } from '@/schema/to-string';
 import {
   anyFields,

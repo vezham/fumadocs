@@ -1,10 +1,10 @@
 import type { RichTextItemResponse } from '@notionhq/client';
 import { cn } from 'cnfast';
-import type { HighlightOptions } from 'fumadocs-core/highlight';
-import { CalloutContainer } from 'fumadocs-ui/components/callout';
-import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
-import { ServerCodeBlock } from 'fumadocs-ui/components/codeblock.rsc';
-import { Heading } from 'fumadocs-ui/components/heading';
+import type { HighlightOptions } from '@vezham/docs-core/highlight';
+import { CalloutContainer } from '@vezham/docs-react/components/callout';
+import { CodeBlock, Pre } from '@vezham/docs-react/components/codeblock';
+import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
+import { Heading } from '@vezham/docs-react/components/heading';
 import { ChevronRight } from 'lucide-react';
 import { Fragment, type ComponentType, type CSSProperties, type ReactNode } from 'react';
 import {

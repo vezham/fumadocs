@@ -3,8 +3,8 @@ import { type ReactNode, useMemo } from 'react';
 import { useTranslations } from '@fuma-translate/react';
 import { AnchorSection } from '@fumadocs/api-docs/auto-anchor/client';
 import { isRequiredArgument } from 'graphql';
-import { Callout } from 'fumadocs-ui/components/callout';
-import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+import { Callout } from '@vezham/docs-react/components/callout';
+import { Tab, Tabs } from '@vezham/docs-react/components/tabs';
 import {
   getCustomDirectives,
   getOperationField,

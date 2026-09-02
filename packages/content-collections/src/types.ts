@@ -1,4 +1,4 @@
-import type { MetaData, PageData } from 'fumadocs-core/source';
+import type { MetaData, PageData } from '@vezham/docs-core/source';
 import type { Meta } from '@content-collections/core';
 
 export interface BaseMetaData extends MetaData {

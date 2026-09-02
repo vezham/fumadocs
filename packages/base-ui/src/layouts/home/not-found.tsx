@@ -2,7 +2,7 @@
 
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/utils/cn';
-import Link from 'fumadocs-core/link';
+import Link from '@vezham/docs-core/link';
 import { HomeIcon } from 'lucide-react';
 import { useTranslations } from '@fuma-translate/react';
 

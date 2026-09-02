@@ -28,7 +28,7 @@ export const toc = [{
     url: "#hello-world",
     depth: 2
 }];
-import { asMarkdown as _asMarkdown, jsxComponents as _jsxComponents } from "fumadocs-core/server";
+import { asMarkdown as _asMarkdown, jsxComponents as _jsxComponents } from "@vezham/docs-core/server";
 export function _markdown(props) {
     if (!_asMarkdown()) return null;
     const _c = _jsxComponents(props.components);

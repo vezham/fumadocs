@@ -1,7 +1,7 @@
 'use client';
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslations } from '@fuma-translate/react';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import {
   ChevronDown,
   CircleCheck,

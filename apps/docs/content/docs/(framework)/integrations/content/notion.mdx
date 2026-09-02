@@ -20,8 +20,8 @@ Install the integration and the official Notion client:
 Import the renderer's Tailwind CSS source after the Fumadocs UI styles:
 
 ```css title="app/global.css"
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import '@vezham/docs-react/css/neutral.css';
+@import '@vezham/docs-react/css/preset.css';
 /* [!code ++] */
 @import '@fumadocs/notion/css/preset.css';
 ```
@@ -62,7 +62,7 @@ export const notion = createNotion({
 Pass `notion.dynamicSource()` to `dynamicLoader()` and expose the loader through `getSource()`:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { notion } from '@/lib/notion';
 
 const source = dynamicLoader(
@@ -99,7 +99,7 @@ Use the loader in your layout to build the page tree:
 
 ```tsx title="app/docs/layout.tsx"
 import { getSource } from '@/lib/source';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
 
 export default async function Layout({ children }: LayoutProps<'/docs'>) {
   const source = await getSource();
@@ -118,7 +118,7 @@ import {
   blocksToTableOfContents,
   createNotionFileUrlResolver,
 } from '@fumadocs/notion';
-import { DocsPage, DocsBody, DocsDescription, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsPage, DocsBody, DocsDescription, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
 
 export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
   const { slug = [] } = await params;

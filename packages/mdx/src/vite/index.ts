@@ -23,7 +23,7 @@ function createMacroEvaluator(root: string): MacroEvaluator {
       root,
       plugins: [
         {
-          name: 'fumadocs-mdx:macro-config',
+          name: '@vezham/docs-mdx:macro-config',
           transform: {
             order: 'pre',
             async handler(code, id) {
@@ -48,7 +48,7 @@ function createMacroEvaluator(root: string): MacroEvaluator {
 
 export interface PluginOptions extends Pick<CoreOptions, 'configPath' | 'outDir' | 'plugins'> {
   /**
-   * Configure the macro API (`fumadocs-mdx/macro`), or `false` to disable it.
+   * Configure the macro API (`@vezham/docs-mdx/macro`), or `false` to disable it.
    *
    * `macro.include` is passed to the
    * [`id` filter](https://vite.dev/guide/api-plugin#hook-filters) of the transform hook.
@@ -89,18 +89,18 @@ export default function mdx(
   const { updateViteConfig = true } = pluginOptions;
   let managed: ManagedCore;
   const metaPlugin: Plugin = {
-    name: 'fumadocs-mdx:meta',
+    name: '@vezham/docs-mdx:meta',
   };
   const mdxPlugin: Plugin = {
-    name: 'fumadocs-mdx:mdx',
+    name: '@vezham/docs-mdx:mdx',
   };
   const macroPlugin: Plugin = {
-    name: 'fumadocs-mdx:macro',
+    name: '@vezham/docs-mdx:macro',
   };
 
   return [
     {
-      name: 'fumadocs-mdx',
+      name: '@vezham/docs-mdx',
       async config(config, env) {
         managed = createManagedCore(config.root ?? process.cwd(), forcedConfig, pluginOptions);
         const core = managed.core;

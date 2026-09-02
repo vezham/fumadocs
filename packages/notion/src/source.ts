@@ -6,8 +6,8 @@ import {
   type PageObjectResponse,
   type QueryDataSourceParameters,
 } from '@notionhq/client';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
-import type { DynamicSource, MetaData, PageData, VirtualFile } from 'fumadocs-core/source';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { DynamicSource, MetaData, PageData, VirtualFile } from '@vezham/docs-core/source';
 import path from 'node:path';
 import { blocksToStructuredData, richTextToPlainText, type NotionBlock } from './blocks';
 import { cache } from 'react';

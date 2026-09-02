@@ -62,7 +62,7 @@ You can automatically sync your documentation by adding a sync script to your `p
 Create an API route to handle search requests server-side:
 
 ```ts title="app/api/search/route.ts"
-import { createMixedbreadSearchAPI } from 'fumadocs-core/search/mixedbread';
+import { createMixedbreadSearchAPI } from '@vezham/docs-core/search/mixedbread';
 import Mixedbread from '@mixedbread/sdk';
 
 const client = new Mixedbread({
@@ -81,8 +81,8 @@ export const { GET } = createMixedbreadSearchAPI({
 - **Search Client**:
 
   ```ts
-  import { useDocsSearch } from 'fumadocs-core/search/client';
-  import { fetchClient } from 'fumadocs-core/search/client/fetch';
+  import { useDocsSearch } from '@vezham/docs-core/search/client';
+  import { fetchClient } from '@vezham/docs-core/search/client/fetch';
 
   const client = useDocsSearch({
     client: fetchClient({
@@ -113,8 +113,8 @@ And update your search client:
 - **Search Client**: You can add the tag filter like:
 
   ```ts
-  import { useDocsSearch } from 'fumadocs-core/search/client';
-  import { fetchClient } from 'fumadocs-core/search/client/fetch';
+  import { useDocsSearch } from '@vezham/docs-core/search/client';
+  import { fetchClient } from '@vezham/docs-core/search/client/fetch';
 
   const { search, setSearch, query } = useDocsSearch({
     client: fetchClient({

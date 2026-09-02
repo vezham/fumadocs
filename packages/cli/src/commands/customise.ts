@@ -40,8 +40,8 @@ export async function customise(config: LoadedConfig, connector: RegistryConnect
                 targets: [{ subRegistry, name: 'layouts/docs' }],
                 print() {
                   printLayout(
-                    ['fumadocs-ui/layouts/docs', '@/layouts/docs'],
-                    ['fumadocs-ui/layouts/docs/page', '@/layouts/docs/page'],
+                    ['@vezham/docs-react/layouts/docs', '@/layouts/docs'],
+                    ['@vezham/docs-react/layouts/docs/page', '@/layouts/docs/page'],
                   );
                 },
               },
@@ -54,8 +54,8 @@ export async function customise(config: LoadedConfig, connector: RegistryConnect
                 targets: [{ subRegistry, name: 'layouts/notebook' }],
                 print() {
                   printLayout(
-                    ['fumadocs-ui/layouts/notebook', '@/layouts/notebook'],
-                    ['fumadocs-ui/layouts/notebook/page', '@/layouts/notebook/page'],
+                    ['@vezham/docs-react/layouts/notebook', '@/layouts/notebook'],
+                    ['@vezham/docs-react/layouts/notebook/page', '@/layouts/notebook/page'],
                   );
                 },
               },
@@ -68,8 +68,8 @@ export async function customise(config: LoadedConfig, connector: RegistryConnect
                 targets: [{ subRegistry, name: 'layouts/flux' }],
                 print() {
                   printLayout(
-                    ['fumadocs-ui/layouts/flux', '@/layouts/flux'],
-                    ['fumadocs-ui/layouts/flux/page', '@/layouts/flux/page'],
+                    ['@vezham/docs-react/layouts/flux', '@/layouts/flux'],
+                    ['@vezham/docs-react/layouts/flux/page', '@/layouts/flux/page'],
                   );
                 },
               },
@@ -82,8 +82,8 @@ export async function customise(config: LoadedConfig, connector: RegistryConnect
                 targets: [{ subRegistry, name: 'layouts/glass' }],
                 print() {
                   printLayout(
-                    ['fumadocs-ui/layouts/glass', '@/layouts/glass'],
-                    ['fumadocs-ui/layouts/glass/page', '@/layouts/glass/page'],
+                    ['@vezham/docs-react/layouts/glass', '@/layouts/glass'],
+                    ['@vezham/docs-react/layouts/glass/page', '@/layouts/glass/page'],
                   );
                 },
               },
@@ -95,7 +95,7 @@ export async function customise(config: LoadedConfig, connector: RegistryConnect
                 id: 'home',
                 targets: [{ subRegistry, name: 'layouts/home' }],
                 print() {
-                  printLayout(['fumadocs-ui/layouts/home', `@/layouts/home`]);
+                  printLayout(['@vezham/docs-react/layouts/home', `@/layouts/home`]);
                 },
               },
               hint: 'the layout for other non-docs pages',
@@ -122,8 +122,8 @@ export async function customise(config: LoadedConfig, connector: RegistryConnect
                 targets: [{ name: 'layouts/docs-min' }],
                 print() {
                   printLayout(
-                    ['fumadocs-ui/layouts/docs', '@/layouts/docs'],
-                    ['fumadocs-ui/layouts/docs/page', '@/layouts/docs/page'],
+                    ['@vezham/docs-react/layouts/docs', '@/layouts/docs'],
+                    ['@vezham/docs-react/layouts/docs/page', '@/layouts/docs/page'],
                   );
                 },
               },

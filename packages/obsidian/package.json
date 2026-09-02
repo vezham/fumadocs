@@ -62,22 +62,22 @@
     "@types/node": "26.3.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
-    "fumadocs-core": "workspace:*",
     "mdast-util-mdx": "^3.0.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.11",
+    "@vezham/docs-core": "workspace:*"
   },
   "peerDependencies": {
     "@types/hast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
-    "fumadocs-core": "^16.8.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "@vezham/docs-core": "^16.8.0"
   },
   "peerDependenciesMeta": {
     "@types/hast": {

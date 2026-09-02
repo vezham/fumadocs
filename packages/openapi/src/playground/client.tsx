@@ -22,7 +22,7 @@ import {
 } from '@fumadocs/api-docs/components/collapsible';
 import { ChevronDown, LoaderCircle, PlusIcon } from 'lucide-react';
 import { encodeRequestData } from '@/requests/media/encode';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import { cn } from '@/utils/cn';
 import {
   anyFields,
@@ -62,7 +62,7 @@ import { useOperationContext } from '@/ui/operation/context';
 import { OAuthDialog, OAuthDialogContent, OAuthDialogTrigger } from './components/oauth-dialog';
 import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
 import { useAuth } from './auth';
-import { useOnChange } from 'fumadocs-core/utils/use-on-change';
+import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
 import { Spinner } from '@fumadocs/api-docs/components/spinner';
 import { joinURL, resolveServerUrl } from '@fumadocs/api-docs/utils/url';
 
@@ -113,7 +113,7 @@ export interface PlaygroundClientOptions {
    * render the parameter inputs of API endpoint.
    *
    * for updating values, use:
-   * - the `Custom.useController()` from `fumadocs-openapi/playground/client`.
+   * - the `Custom.useController()` from `@vezham/docs-openapi/playground/client`.
    *
    * Recommended types packages: `json-schema-typed`.
    */

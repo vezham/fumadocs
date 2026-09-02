@@ -1,5 +1,5 @@
 import { getSource } from '@/lib/source';
-import { DocsPage, DocsBody, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsPage, DocsBody, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 

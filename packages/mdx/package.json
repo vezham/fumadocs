@@ -1,5 +1,5 @@
 {
-  "name": "fumadocs-mdx",
+  "name": "@vezham/docs-mdx",
   "version": "15.4.0",
   "description": "The built-in source for Fumadocs",
   "keywords": [
@@ -86,7 +86,6 @@
     "@types/node": "^26.3.0",
     "@types/picomatch": "^4.0.3",
     "@types/react": "^19.2.18",
-    "fumadocs-core": "workspace:*",
     "mdast-util-directive": "^3.1.0",
     "next": "^16.3.3",
     "react": "^19.2.8",
@@ -98,20 +97,21 @@
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "vite": "^8.2.2",
-    "webpack": "^5.109.2"
+    "webpack": "^5.109.2",
+    "@vezham/docs-core": "workspace:*"
   },
   "peerDependencies": {
     "@fumadocs/satteri": "0.x.x",
     "@types/mdast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
-    "fumadocs-core": "^16.15.3",
     "mdast-util-directive": "*",
     "next": "^15.3.0 || ^16.0.0",
     "react": "^19.2.0",
     "rolldown": "*",
     "satteri": "^0.10.5",
-    "vite": "7.x.x || 8.x.x"
+    "vite": "7.x.x || 8.x.x",
+    "@vezham/docs-core": "^16.15.3"
   },
   "peerDependenciesMeta": {
     "@fumadocs/satteri": {

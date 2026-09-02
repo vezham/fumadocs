@@ -12,8 +12,8 @@ The `remarkLLMs` plugin stringifies the processed Markdown AST to plain Markdown
 Enable `includeProcessedMarkdown` in your collection config, Fumadocs MDX runs `remarkLLMs` internally when this is set.
 
 ```ts title="source.config.ts"
-import { defineDocs } from 'fumadocs-mdx/config';
-import { type LLMsOptions } from 'fumadocs-core/mdx-plugins/remark-llms';
+import { defineDocs } from '@vezham/docs-mdx/config';
+import { type LLMsOptions } from '@vezham/docs-core/mdx-plugins/remark-llms';
 
 const llmsOptions: LLMsOptions = {
   // options...
@@ -36,7 +36,7 @@ When using the MDX Compiler (or a custom pipeline), add the plugin:
 
 ```ts
 import { compile } from '@mdx-js/mdx';
-import { remarkLLMs, type LLMsOptions } from 'fumadocs-core/mdx-plugins/remark-llms';
+import { remarkLLMs, type LLMsOptions } from '@vezham/docs-core/mdx-plugins/remark-llms';
 
 const llmsOptions: LLMsOptions = {
   // The output will be exported as `_markdown`
@@ -56,7 +56,7 @@ The `output` option controls the form of the export:
 - `function`: a component. Markdown content is still stringified at compile time, while JSX elements stay as JSX, receiving their original props.
 
 ```ts
-import { type LLMsOptions } from 'fumadocs-core/mdx-plugins/remark-llms';
+import { type LLMsOptions } from '@vezham/docs-core/mdx-plugins/remark-llms';
 
 const llmsOptions: LLMsOptions = {
   // [!code ++]
@@ -74,10 +74,10 @@ const text = await page.data.getText('processed', {
 });
 ```
 
-Otherwise, render it with `renderToMarkdown` from `fumadocs-core/server`, elements resolve from `props.components`:
+Otherwise, render it with `renderToMarkdown` from `@vezham/docs-core/server`, elements resolve from `props.components`:
 
 ```tsx
-import { renderToMarkdown } from 'fumadocs-core/server';
+import { renderToMarkdown } from '@vezham/docs-core/server';
 
 const text = await renderToMarkdown(<Markdown components={{ Callout }} />);
 ```
@@ -85,7 +85,7 @@ const text = await renderToMarkdown(<Markdown components={{ Callout }} />);
 A component defines its own Markdown form by calling `asMarkdown()` during render:
 
 ```tsx
-import { asMarkdown, md } from 'fumadocs-core/server';
+import { asMarkdown, md } from '@vezham/docs-core/server';
 
 function Callout({ title, children }) {
   if (asMarkdown()) return md.linePrefix('> ')`**${title}**\n${children}`;
@@ -110,7 +110,7 @@ Placeholders let you keep certain MDX components in the stringified output as sp
 List component names to treat as placeholders:
 
 ```ts
-import { type LLMsOptions } from 'fumadocs-core/mdx-plugins/remark-llms';
+import { type LLMsOptions } from '@vezham/docs-core/mdx-plugins/remark-llms';
 
 const llmsOptions: LLMsOptions = {
   // [!code ++]
@@ -129,7 +129,7 @@ In the exported Markdown, `<Callout>` and `<Card>` will appear as placeholder to
 For full control, use the `stringify` option and with the `placeholder()` helper:
 
 ```ts
-import { placeholder, type LLMsOptions } from 'fumadocs-core/mdx-plugins/remark-llms';
+import { placeholder, type LLMsOptions } from '@vezham/docs-core/mdx-plugins/remark-llms';
 
 const llmsOptions: LLMsOptions = {
   stringify(node, parent, state, info) {
@@ -145,7 +145,7 @@ const llmsOptions: LLMsOptions = {
 Use `renderPlaceholder()` from the runtime module to replace placeholder tokens with custom output:
 
 ```ts
-import { renderPlaceholder } from 'fumadocs-core/mdx-plugins/remark-llms.runtime';
+import { renderPlaceholder } from '@vezham/docs-core/mdx-plugins/remark-llms.runtime';
 
 const markdown = await getExportedMarkdown(); // e.g. from _markdown
 
@@ -188,5 +188,5 @@ Some paragraph.
 ## Options
 
 <auto-type-table
-  type="import('fumadocs-core/mdx-plugins/remark-llms').LLMsOptions"
+  type="import('@vezham/docs-core/mdx-plugins/remark-llms').LLMsOptions"
 />

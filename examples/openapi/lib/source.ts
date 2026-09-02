@@ -1,6 +1,6 @@
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { openapi } from './openapi';
-import { defineDocs } from 'fumadocs-mdx/macro';
+import { defineDocs } from '@vezham/docs-mdx/macro';
 
 const docs = defineDocs({
   dir: 'content/docs',

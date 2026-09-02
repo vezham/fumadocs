@@ -6,10 +6,10 @@ import {
   Scripts,
   ScrollRestoration,
 } from 'react-router';
-import { RootProvider } from 'fumadocs-ui/provider/react-router';
+import { RootProvider } from '@vezham/docs-react/provider/react-router';
 import type { Route } from './+types/root';
 import './app.css';
-import { isMarkdownPreferred, rewritePath } from 'fumadocs-core/negotiation';
+import { isMarkdownPreferred, rewritePath } from '@vezham/docs-core/negotiation';
 import NotFound from './routes/not-found';
 import { docsContentRoute, docsRoute } from '@/lib/shared';
 

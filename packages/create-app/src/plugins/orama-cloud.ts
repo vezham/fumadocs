@@ -83,7 +83,7 @@ See https://fumadocs.dev/docs/headless/search/orama-cloud for integrating Orama 
 
       await writeFile(
         path.join(dest, 'scripts/sync-content.ts'),
-        `import { type OramaDocument, sync } from 'fumadocs-core/search/orama-cloud';
+        `import { type OramaDocument, sync } from '@vezham/docs-core/search/orama-cloud';
 import * as fs from 'node:fs/promises';
 import { OramaCloud } from '@orama/core';
 
@@ -154,7 +154,7 @@ export const GET: APIRoute = async () => {
 };
 
 const astroExportSearchIndexes = `import { getStructuredData, source } from '@/lib/source';
-import type { OramaDocument } from 'fumadocs-core/search/orama-cloud';
+import type { OramaDocument } from '@vezham/docs-core/search/orama-cloud';
 
 export async function exportSearchIndexes() {
   return source.getPages().map((page) => {

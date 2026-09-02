@@ -2,9 +2,9 @@ import type { ComponentProps, ReactNode } from 'react';
 import { cva } from 'class-variance-authority';
 import { cn } from 'cnfast';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './collapsible';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import { ChevronRight } from 'lucide-react';
-import { highlight } from 'fumadocs-core/highlight';
+import { highlight } from '@vezham/docs-core/highlight';
 import { badgeVariants } from '../badge';
 
 const cardVariants = cva('bg-fd-card rounded-lg text-sm my-6 p-3 border');
@@ -144,4 +144,4 @@ async function InlineCode({
   });
 }
 
-export { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+export { Tab, Tabs } from '@vezham/docs-react/components/tabs';

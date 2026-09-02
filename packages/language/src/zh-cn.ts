@@ -1,8 +1,8 @@
-import type { TranslationPreset } from 'fumadocs-core/i18n';
-import type { Translations as UITranslations } from 'fumadocs-ui/i18n';
-import type { Translations as OpenAPITranslations } from 'fumadocs-openapi/i18n';
+import type { TranslationPreset } from '@vezham/docs-core/i18n';
+import type { Translations as UITranslations } from '@vezham/docs-react/i18n';
+import type { Translations as OpenAPITranslations } from '@vezham/docs-openapi/i18n';
 import type { Translations as AsyncAPITranslations } from '@fumadocs/asyncapi/i18n';
-import type { Translations as StoryTranslations } from '@fumadocs/story/i18n';
+import type { Translations as StoryTranslations } from '@vezham/docs-story/i18n';
 import type { Translations as APIDocsTranslations } from '@fumadocs/api-docs/i18n';
 
 type Translations = UITranslations &
@@ -13,7 +13,7 @@ type Translations = UITranslations &
 
 const translations = {
   displayName: '简体中文',
-  // fumadocs-ui
+  // @vezham/docs-react
   'Ask AI(AI chat button)': '询问 AI',
   'Back to Home(404 not found page)': '返回首页',
   'Choose a language(language switcher)': '选择语言',
@@ -91,7 +91,7 @@ const translations = {
   'Upload(playground)': '上传',
   'Value in(schema UI)': '值于',
 
-  // fumadocs-openapi
+  // @vezham/docs-openapi
   'Access Token(playground)': '访问令牌',
   'Authenticate using username and password.(OAuth dialog)': '使用用户名和密码进行验证。',
   'Authenticate with 3rd party services(OAuth dialog)': '通过第三方服务进行验证',
@@ -195,7 +195,7 @@ const translations = {
   'Payload(operation page)': '有效载荷',
   'Reply(operation page)': '回复',
 
-  // @fumadocs/story
+  // @vezham/docs-story
   'Encountered error when rendering the component.(story error boundary)': '渲染组件时发生错误。',
   'Enter bigint(story arguments form)': '输入 bigint',
   'Enter date(story arguments form)': '输入日期',

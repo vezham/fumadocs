@@ -1,8 +1,8 @@
-import type * as Breadcrumb from 'fumadocs-core/breadcrumb';
-import type * as TOC from 'fumadocs-core/toc';
-import type * as Search from 'fumadocs-core/search';
-import type * as PageTree from 'fumadocs-core/page-tree';
-import type * as MDX from 'fumadocs-core/mdx-plugins';
+import type * as Breadcrumb from '@vezham/docs-core/breadcrumb';
+import type * as TOC from '@vezham/docs-core/toc';
+import type * as Search from '@vezham/docs-core/search';
+import type * as PageTree from '@vezham/docs-core/page-tree';
+import type * as MDX from '@vezham/docs-core/mdx-plugins';
 
 export type SortedResult = Search.SortedResult;
 

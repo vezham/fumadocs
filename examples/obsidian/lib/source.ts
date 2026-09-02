@@ -1,4 +1,4 @@
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { obsidian } from 'fumadocs-obsidian';
 
 const vault = obsidian({

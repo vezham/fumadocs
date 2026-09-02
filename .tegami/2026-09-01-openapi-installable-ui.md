@@ -1,6 +1,6 @@
 ---
 packages:
-  npm:fumadocs-openapi: minor
+  npm:@vezham/docs-openapi: minor
 ---
 
 ## Support installing the API playground via Fumadocs CLI
@@ -23,5 +23,5 @@ schemaUI: {
 
 ## New exports
 
-- OpenAPI schema types from `fumadocs-openapi` (e.g. `OperationObject`, `HttpMethods`).
-- `useRenderContext`, `useServerContext` and `useOperationContext` from `fumadocs-openapi/ui`.
+- OpenAPI schema types from `@vezham/docs-openapi` (e.g. `OperationObject`, `HttpMethods`).
+- `useRenderContext`, `useServerContext` and `useOperationContext` from `@vezham/docs-openapi/ui`.

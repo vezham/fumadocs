@@ -20,7 +20,7 @@ const mdxLoader = toNode(mdxLoaderGlob, createMdxLoader(configLoader));
 const metaLoader = toNode(metaLoaderGlob, createMetaLoader(configLoader));
 
 /**
- * @deprecated use the `register()` function from `fumadocs-mdx/node` instead.
+ * @deprecated use the `register()` function from `@vezham/docs-mdx/node` instead.
  */
 export const load: LoadHook = (url, context, nextLoad) => {
   return mdxLoader(url, context, (v, ctx) => metaLoader(v, { ...context, ...ctx }, nextLoad));

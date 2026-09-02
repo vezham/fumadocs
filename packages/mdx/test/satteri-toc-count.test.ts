@@ -6,7 +6,7 @@ import { buildConfig, type LoadedConfig } from '@/config/build';
 import { createCore } from '@/core';
 import { buildMDX } from '@/loaders/mdx/build';
 import { applySatteriPreset } from '@fumadocs/satteri/preset';
-import { rehypeCodeDefaultOptions } from 'fumadocs-core/mdx-plugins/rehype-code';
+import { rehypeCodeDefaultOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
 
 const baseDir = path.dirname(fileURLToPath(import.meta.url));
 

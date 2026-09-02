@@ -1,5 +1,5 @@
 import {Fragment as _Fragment, jsx as _jsx, jsxs as _jsxs} from "react/jsx-runtime";
-import {asMarkdown as _asMarkdown, jsxComponents as _jsxComponents} from "fumadocs-core/server";
+import {asMarkdown as _asMarkdown, jsxComponents as _jsxComponents} from "@vezham/docs-core/server";
 export function _markdown(props) {
   if (!_asMarkdown()) return null;
   const _c = _jsxComponents(props.components);

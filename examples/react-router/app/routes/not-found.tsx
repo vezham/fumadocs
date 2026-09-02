@@ -1,7 +1,7 @@
 import type { Route } from './+types/not-found';
-import { HomeLayout } from 'fumadocs-ui/layouts/home';
+import { HomeLayout } from '@vezham/docs-react/layouts/home';
 import { baseOptions } from '@/lib/layout.shared';
-import { DefaultNotFound } from 'fumadocs-ui/layouts/home/not-found';
+import { DefaultNotFound } from '@vezham/docs-react/layouts/home/not-found';
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: 'Not Found' }];

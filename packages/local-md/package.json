@@ -58,13 +58,13 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "@types/unist": "^3.0.3",
-    "fumadocs-core": "workspace:*",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "unified": "^11.0.5",
-    "vite": "^8.2.2"
+    "vite": "^8.2.2",
+    "@vezham/docs-core": "workspace:*"
   },
   "peerDependencies": {
     "@types/estree": "*",
@@ -72,10 +72,10 @@
     "@types/hast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
-    "fumadocs-core": "^16.8.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "unified": "*"
+    "unified": "*",
+    "@vezham/docs-core": "^16.8.0"
   },
   "peerDependenciesMeta": {
     "unified": {

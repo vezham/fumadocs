@@ -61,21 +61,21 @@
     "@types/node": "^26.3.0",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-ui": "workspace:@fumadocs/base-ui@*",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.11",
+    "@vezham/docs-core": "workspace:*",
+    "@vezham/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/hast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
-    "fumadocs-core": "^16.8.0",
-    "fumadocs-ui": "15.x.x || 16.x.x",
-    "react": "19.x.x"
+    "react": "19.x.x",
+    "@vezham/docs-core": "^16.8.0",
+    "@vezham/docs-react": "15.x.x || 16.x.x"
   },
   "peerDependenciesMeta": {
     "@types/hast": {

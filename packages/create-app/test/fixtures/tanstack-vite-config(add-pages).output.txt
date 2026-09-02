@@ -3,7 +3,7 @@ import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import { defineConfig } from 'vite';
 import tsConfigPaths from 'vite-tsconfig-paths';
 import tailwindcss from '@tailwindcss/vite';
-import { fumadocsMdx } from 'fumadocs-mdx/vite';
+import { fumadocsMdx } from '@vezham/docs-mdx/vite';
 
 export default defineConfig({
   server: {

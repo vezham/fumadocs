@@ -71,19 +71,19 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "fuma-cli": "^0.1.1",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-ui": "workspace:@fumadocs/base-ui@*",
     "json-schema-typed": "^8.0.2",
     "tsconfig": "workspace:*",
-    "tsdown": "0.22.14"
+    "tsdown": "0.22.14",
+    "@vezham/docs-core": "workspace:*",
+    "@vezham/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
-    "fumadocs-core": "^16.9.0",
-    "fumadocs-ui": "^16.9.0",
     "json-schema-typed": "*",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "@vezham/docs-core": "^16.9.0",
+    "@vezham/docs-react": "^16.9.0"
   },
   "peerDependenciesMeta": {
     "json-schema-typed": {

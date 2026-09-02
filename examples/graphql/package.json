@@ -10,13 +10,13 @@
   },
   "dependencies": {
     "@fumadocs/graphql": "workspace:*",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-mdx": "workspace:*",
-    "fumadocs-ui": "workspace:@fumadocs/base-ui@*",
     "graphql": "^17.0.2",
     "next": "16.3.3",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "@vezham/docs-core": "workspace:*",
+    "@vezham/docs-mdx": "workspace:*",
+    "@vezham/docs-react": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",

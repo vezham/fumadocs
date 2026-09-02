@@ -46,9 +46,9 @@ const paper = tegami({
     },
   },
   packages: {
-    'fumadocs-ui': { group: 'fumadocs' },
+    '@vezham/docs-react': { group: 'fumadocs' },
     '@fumadocs/base-ui': { group: 'fumadocs' },
-    'fumadocs-core': { group: 'fumadocs' },
+    '@vezham/docs-core': { group: 'fumadocs' },
     'create-fumadocs-app': { group: 'cli' },
     'create-fumadocs-versions': { group: 'cli' },
   },
@@ -64,9 +64,9 @@ function updateStackblitzVersions() {
   const root = dirname(fileURLToPath(import.meta.url));
 
   const packageDirs = {
-    'fumadocs-core': 'packages/core',
-    'fumadocs-mdx': 'packages/mdx',
-    'fumadocs-ui': 'packages/radix-ui',
+    '@vezham/docs-core': 'packages/core',
+    '@vezham/docs-mdx': 'packages/mdx',
+    '@vezham/docs-react': 'packages/radix-ui',
   };
 
   const stackblitzPath = join(root, 'examples/stackblitz/package.json');

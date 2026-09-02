@@ -1,6 +1,6 @@
 import type { Element, Root } from 'hast';
 import { visit, SKIP } from 'unist-util-visit';
-import type { RehypeCodeOptions } from 'fumadocs-core/mdx-plugins/rehype-code';
+import type { RehypeCodeOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
 
 const LanguagePrefix = 'language-';
 
@@ -50,7 +50,7 @@ export async function highlightCode(tree: Root, options?: RehypeCodeOptions): Pr
 
   const [{ unified }, { rehypeCode }] = await Promise.all([
     import('unified'),
-    import('fumadocs-core/mdx-plugins/rehype-code'),
+    import('@vezham/docs-core/mdx-plugins/rehype-code'),
   ]);
 
   return unified()

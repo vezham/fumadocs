@@ -15,13 +15,13 @@ async function compile(source: string) {
 
 describe('remark-npm', () => {
   it('expands package-install blocks into package manager tabs', async () => {
-    const code = await compile('```package-install\nfumadocs-core\n```');
+    const code = await compile('```package-install\n@vezham/docs-core\n```');
 
     expect(code).toContain('CodeBlockTabs');
-    expect(code).toContain('npm install fumadocs-core');
-    expect(code).toContain('pnpm add fumadocs-core');
-    expect(code).toContain('yarn add fumadocs-core');
-    expect(code).toContain('bun add fumadocs-core');
+    expect(code).toContain('npm install @vezham/docs-core');
+    expect(code).toContain('pnpm add @vezham/docs-core');
+    expect(code).toContain('yarn add @vezham/docs-core');
+    expect(code).toContain('bun add @vezham/docs-core');
   });
 
   it('keeps full npm commands as-is', async () => {

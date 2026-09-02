@@ -1,5 +1,5 @@
 {
-  "name": "fumadocs-core",
+  "name": "@vezham/docs-core",
   "version": "16.15.4",
   "description": "The React.js library for building a documentation website",
   "keywords": [

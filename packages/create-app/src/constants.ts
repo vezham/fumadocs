@@ -95,4 +95,4 @@ for (const workspace of workspaces) {
   depVersions[workspace.name as keyof typeof depVersions] = workspace.version;
 }
 
-depVersions['fumadocs-ui'] = `npm:${basePkg.name}@${basePkg.version}`;
+depVersions['@vezham/docs-react'] = `npm:${basePkg.name}@${basePkg.version}`;

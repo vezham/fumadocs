@@ -1,4 +1,4 @@
-import type { LoaderConfig, LoaderOutput } from 'fumadocs-core/source';
+import type { LoaderConfig, LoaderOutput } from '@vezham/docs-core/source';
 
 export interface EpubConfig<Config extends LoaderConfig = LoaderConfig> {
   /** Book title */

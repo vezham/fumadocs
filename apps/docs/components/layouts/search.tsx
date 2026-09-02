@@ -12,16 +12,16 @@ import {
   SearchDialogOverlay,
   type SearchItemType,
   type SharedProps,
-} from 'fumadocs-ui/components/dialog/search';
-import { useDocsSearch } from 'fumadocs-core/search/client';
-import { fetchClient } from 'fumadocs-core/search/client/fetch';
+} from '@vezham/docs-react/components/dialog/search';
+import { useDocsSearch } from '@vezham/docs-core/search/client';
+import { fetchClient } from '@vezham/docs-core/search/client/fetch';
 import { useMemo, useState } from 'react';
-import { Popover, PopoverContent, PopoverTrigger } from 'fumadocs-ui/components/ui/popover';
+import { Popover, PopoverContent, PopoverTrigger } from '@vezham/docs-react/components/ui/popover';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import { cn } from '@/lib/cn';
-import { useTreeContext } from 'fumadocs-ui/contexts/tree';
-import type { Item, Node } from 'fumadocs-core/page-tree';
+import { useTreeContext } from '@vezham/docs-react/contexts/tree';
+import type { Item, Node } from '@vezham/docs-core/page-tree';
 import { useRouter } from 'next/navigation';
 
 const items = [

@@ -8,9 +8,9 @@ import {
   type Source,
   type VirtualFile,
   type LoaderOutput,
-} from 'fumadocs-core/source';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins/remark-structure';
-import type { TOCItemType } from 'fumadocs-core/toc';
+} from '@vezham/docs-core/source';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins/remark-structure';
+import type { TOCItemType } from '@vezham/docs-core/toc';
 import { loadSchema, type GraphQLSchemaInput, type LoadedSchema } from '@/utils/load-schema';
 import type { Awaitable } from '@/types';
 import {

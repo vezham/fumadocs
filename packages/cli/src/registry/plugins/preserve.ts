@@ -1,7 +1,7 @@
 import type { InstallerPlugin } from 'fuma-cli/registry/installer';
 
 /**
- * keep references to `fumadocs-ui/layouts/*` components as original, unless the user is installing them directly.
+ * keep references to `@vezham/docs-react/layouts/*` components as original, unless the user is installing them directly.
  */
 export function pluginPreserveLayouts(): InstallerPlugin {
   const layoutNames = [
@@ -48,7 +48,7 @@ export function pluginPreserveLayouts(): InstallerPlugin {
       // skip if direct install or unrelated to layout component
       if (isDirectInstall || !(specifier in layoutComps)) return specifier;
 
-      return `fumadocs-ui/${layoutComps[specifier]}`;
+      return `@vezham/docs-react/${layoutComps[specifier]}`;
     },
   };
 }

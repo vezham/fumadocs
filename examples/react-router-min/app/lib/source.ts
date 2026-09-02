@@ -1,5 +1,5 @@
-import { loader } from 'fumadocs-core/source';
-import { defineDocs } from 'fumadocs-mdx/macro';
+import { loader } from '@vezham/docs-core/source';
+import { defineDocs } from '@vezham/docs-mdx/macro';
 
 export const docs = defineDocs({
   dir: 'content/docs',

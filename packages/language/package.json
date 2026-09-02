@@ -32,21 +32,21 @@
   "devDependencies": {
     "@fumadocs/api-docs": "workspace:*",
     "@fumadocs/asyncapi": "workspace:*",
-    "@fumadocs/story": "workspace:*",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-openapi": "workspace:*",
-    "fumadocs-ui": "workspace:@fumadocs/base-ui@*",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "@vezham/docs-core": "workspace:*",
+    "@vezham/docs-openapi": "workspace:*",
+    "@vezham/docs-react": "workspace:*",
+    "@vezham/docs-story": "workspace:*"
   },
   "peerDependencies": {
     "@fumadocs/api-docs": "*",
     "@fumadocs/asyncapi": "*",
-    "@fumadocs/story": "*",
-    "fumadocs-core": "*",
-    "fumadocs-openapi": "*",
-    "fumadocs-ui": "*"
+    "@vezham/docs-core": "*",
+    "@vezham/docs-openapi": "*",
+    "@vezham/docs-react": "*",
+    "@vezham/docs-story": "*"
   },
   "peerDependenciesMeta": {
     "@fumadocs/api-docs": {
@@ -55,16 +55,16 @@
     "@fumadocs/asyncapi": {
       "optional": true
     },
-    "@fumadocs/story": {
+    "@vezham/docs-core": {
       "optional": true
     },
-    "fumadocs-core": {
+    "@vezham/docs-openapi": {
       "optional": true
     },
-    "fumadocs-openapi": {
+    "@vezham/docs-react": {
       "optional": true
     },
-    "fumadocs-ui": {
+    "@vezham/docs-story": {
       "optional": true
     }
   }

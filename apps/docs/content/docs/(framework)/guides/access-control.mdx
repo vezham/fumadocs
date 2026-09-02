@@ -15,7 +15,7 @@ For example, this setup with Fumadocs MDX allows only MDX files with frontmatter
 
 ```ts title="lib/source.ts"
 import { docs } from 'collections/server';
-import { loader, update } from 'fumadocs-core/source';
+import { loader, update } from '@vezham/docs-core/source';
 
 const filteredSource = update(docs.toFumadocsSource())
   .files((files) =>
@@ -38,7 +38,7 @@ Or with more complicated setup, you may turn `source` into a factory function.
 
 ```ts tab="lib/source.ts"
 import { docs } from 'collections/server';
-import { loader, update } from 'fumadocs-core/source';
+import { loader, update } from '@vezham/docs-core/source';
 
 // uncached, it's better to cache it in-memory for real use case.
 export function createSource(permission: 'public' | 'admin') {

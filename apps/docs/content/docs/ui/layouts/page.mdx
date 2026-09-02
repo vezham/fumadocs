@@ -13,7 +13,7 @@ Footer, and Breadcrumb.
 Import it according to your layout.
 
 ```tsx title="page.tsx" tab="Docs Layout"
-import { DocsPage, DocsDescription, DocsTitle, DocsBody } from 'fumadocs-ui/layouts/docs/page';
+import { DocsPage, DocsDescription, DocsTitle, DocsBody } from '@vezham/docs-react/layouts/docs/page';
 
 <DocsPage>
   <DocsTitle>title</DocsTitle>
@@ -26,7 +26,7 @@ import { DocsPage, DocsDescription, DocsTitle, DocsBody } from 'fumadocs-ui/layo
 ```
 
 ```tsx title="page.tsx" tab="Notebook Layout"
-import { DocsPage, DocsDescription, DocsTitle, DocsBody } from 'fumadocs-ui/layouts/notebook/page';
+import { DocsPage, DocsDescription, DocsTitle, DocsBody } from '@vezham/docs-react/layouts/notebook/page';
 
 <DocsPage>
   <DocsTitle>title</DocsTitle>
@@ -50,7 +50,7 @@ This will render the title in the MDX body.
 Show GitHub link, and shortcut links for AIs.
 
 ```tsx
-import { DocsPage, ViewOptionsPopover } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage, ViewOptionsPopover } from '@vezham/docs-react/layouts/<layout>/page';
 
 const githubUrl = `https://github.com/fuma-nama/fumadocs/blob/main/content/docs/${page.path}`
 
@@ -64,7 +64,7 @@ const githubUrl = `https://github.com/fuma-nama/fumadocs/blob/main/content/docs/
 Display last updated time of the page.
 
 ```tsx
-import { DocsPage, PageLastUpdate } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage, PageLastUpdate } from '@vezham/docs-react/layouts/<layout>/page';
 
 const lastModifiedTime: Date | undefined;
 
@@ -97,7 +97,7 @@ For Github hosted documents, you can use
 the [`getGithubLastEdit`](/docs/headless/utils/git-last-edit) utility.
 
 ```tsx
-import { getGithubLastEdit } from 'fumadocs-core/content/github';
+import { getGithubLastEdit } from '@vezham/docs-core/content/github';
 
 const lastModifiedTime = await getGithubLastEdit({
   owner: 'fuma-nama',
@@ -119,7 +119,7 @@ To extend the page to fill up all available space, pass `full` to the page compo
 This will force TOC to be shown as a popover.
 
 ```tsx
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 
 <DocsPage full>...</DocsPage>;
 ```
@@ -132,7 +132,7 @@ For Markdown and MDX documents, You can obtain it using the
 [TOC Utility](/docs/headless/utils/get-toc). Content sources like Fumadocs MDX offer this out-of-the-box.
 
 ```tsx
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 
 <DocsPage toc={headings}>...</DocsPage>;
 ```
@@ -140,7 +140,7 @@ import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
 You can customize it with `tableOfContent`, or with `tableOfContentPopover` on smaller devices.
 
 ```tsx title="page.tsx"
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 
 return (
   <DocsPage tableOfContent={options} tableOfContentPopover={options}>
@@ -149,14 +149,14 @@ return (
 );
 ```
 
-<auto-type-table type="import('fumadocs-ui/layouts/docs/page/slots/toc').TOCProps" />
+<auto-type-table type="import('@vezham/docs-react/layouts/docs/page/slots/toc').TOCProps" />
 
 #### Style
 
 You can choose another style for TOC, like `clerk` inspired by https://clerk.com:
 
 ```tsx
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 
 <DocsPage
   tableOfContent={{
@@ -195,7 +195,7 @@ import type {
   TOCProps,
   TOCPopoverProps,
   TOCProviderProps,
-} from 'fumadocs-ui/layouts/<layout>/page/slots/toc';
+} from '@vezham/docs-react/layouts/<layout>/page/slots/toc';
 
 export function TOCProvider({ toc, children }: TOCProviderProps) {
   // receive TOC items, you can pass it down via React contexts
@@ -233,19 +233,19 @@ Footer is a navigation element that has two buttons to jump to the next and prev
 Customize the footer with the `footer` prop:
 
 ```tsx
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 
 <DocsPage footer={options}>...</DocsPage>;
 ```
 
-<auto-type-table type="Omit<import('fumadocs-ui/layouts/docs/page').FooterProps, keyof React.ComponentProps<'div'>>" />
+<auto-type-table type="Omit<import('@vezham/docs-react/layouts/docs/page').FooterProps, keyof React.ComponentProps<'div'>>" />
 
 #### Replace Footer
 
 To replace the component:
 
 ```tsx tab="page.tsx"
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 import { Footer } from './my-footer';
 
 <DocsPage
@@ -257,7 +257,7 @@ import { Footer } from './my-footer';
 
 ```tsx tab="my-footer.tsx"
 'use client';
-import type { FooterProps } from 'fumadocs-ui/layouts/<layout>/page/slots/footer';
+import type { FooterProps } from '@vezham/docs-react/layouts/<layout>/page/slots/footer';
 
 export function Footer(props: FooterProps) {
   return <div>Hello World</div>;
@@ -285,19 +285,19 @@ A navigation element, shown only when user is navigating in folders.
 Customize the breadcrumb with the `breadcrumb` option:
 
 ```tsx
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 
 <DocsPage breadcrumb={options}>...</DocsPage>;
 ```
 
-<auto-type-table type="Omit<import('fumadocs-ui/layouts/docs/page').BreadcrumbProps, keyof React.ComponentProps<'div'>>" />
+<auto-type-table type="Omit<import('@vezham/docs-react/layouts/docs/page').BreadcrumbProps, keyof React.ComponentProps<'div'>>" />
 
 #### Replace Breadcrumb
 
 To replace the component:
 
 ```tsx tab="page.tsx"
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 import { Breadcrumb } from './my-breadcrumb';
 
 <DocsPage
@@ -309,7 +309,7 @@ import { Breadcrumb } from './my-breadcrumb';
 
 ```tsx tab="my-breadcrumb.tsx"
 'use client';
-import type { BreadcrumbProps } from 'fumadocs-ui/layouts/<layout>/page/slots/breadcrumb';
+import type { BreadcrumbProps } from '@vezham/docs-react/layouts/<layout>/page/slots/breadcrumb';
 
 export function Breadcrumb(props: BreadcrumbProps) {
   return <div>Hello World</div>;
@@ -337,7 +337,7 @@ Container controls the article wrapper around breadcrumb, body, and footer.
 To replace the page container:
 
 ```tsx tab="page.tsx"
-import { DocsPage } from 'fumadocs-ui/layouts/<layout>/page';
+import { DocsPage } from '@vezham/docs-react/layouts/<layout>/page';
 import { Container } from './my-container';
 
 <DocsPage

@@ -2,8 +2,8 @@ import react from '@vitejs/plugin-react';
 import { tanstackStart } from '@tanstack/react-start/plugin/vite';
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
-import { fumadocsMdx } from 'fumadocs-mdx/vite';
-import story from '@fumadocs/story/vite';
+import { fumadocsMdx } from '@vezham/docs-mdx/vite';
+import story from '@vezham/docs-story/vite';
 
 export default defineConfig({
   server: {

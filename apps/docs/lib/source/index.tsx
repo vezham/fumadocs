@@ -1,10 +1,10 @@
-import { type LoaderPlugin, loader } from 'fumadocs-core/source';
-import { lucideIconsPlugin } from 'fumadocs-core/source/lucide-icons';
+import { type LoaderPlugin, loader } from '@vezham/docs-core/source';
+import { lucideIconsPlugin } from '@vezham/docs-core/source/lucide-icons';
 import { openapi } from '@/lib/openapi';
 import { asyncapi } from '../asyncapi';
 import { graphql } from '../graphql';
-import { defineCollections, defineDocs } from 'fumadocs-mdx/macro';
-import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
+import { defineCollections, defineDocs } from '@vezham/docs-mdx/macro';
+import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
 import z from 'zod';
 import {
   createFileSystemGeneratorCache,
@@ -18,7 +18,7 @@ import { remarkSteps } from '@fumadocs/satteri/remark-steps';
 import { remarkBlockId } from '@fumadocs/satteri/remark-block-id';
 import { remarkTs2js } from '@fumadocs/satteri/remark-ts2js';
 import { remarkAutoTypeTable } from '@fumadocs/satteri/remark-auto-type-table';
-import { rehypeCodeDefaultOptions } from 'fumadocs-core/mdx-plugins/rehype-code';
+import { rehypeCodeDefaultOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
 import { transformerTwoslash } from 'fumadocs-twoslash';
 import { createFileSystemTypesCache } from 'fumadocs-twoslash/cache-fs';
 import type { MdastPluginDefinition } from 'satteri';
@@ -157,7 +157,7 @@ const blog = defineCollections({
   }),
   async: true,
   async satteriOptions() {
-    const { rehypeCodeDefaultOptions } = await import('fumadocs-core/mdx-plugins/rehype-code');
+    const { rehypeCodeDefaultOptions } = await import('@vezham/docs-core/mdx-plugins/rehype-code');
 
     return {
       rehypeCodeOptions: isLint

@@ -16,7 +16,7 @@ import { createMacroMatcher, resolveMacroOptions, type MacroPluginOption } from 
 
 export interface CreateMDXOptions extends Pick<CoreOptions, 'configPath' | 'outDir'> {
   /**
-   * Configure the macro API (`fumadocs-mdx/macro`), or `false` to disable it.
+   * Configure the macro API (`@vezham/docs-mdx/macro`), or `false` to disable it.
    *
    * `macro.include` is a list of glob patterns.
    */
@@ -66,11 +66,11 @@ export function createMDX(options: CreateMDXOptions = {}) {
                 pattern,
                 {
                   condition: {
-                    content: /['"]fumadocs-mdx\/macro['"]/,
+                    content: /['"]@vezham/docs-mdx\/macro['"]/,
                   },
                   loaders: [
                     {
-                      loader: 'fumadocs-mdx/webpack/macro',
+                      loader: '@vezham/docs-mdx/webpack/macro',
                       options: turbopackLoaderOptions as unknown as TurbopackLoaderOptions,
                     },
                   ],
@@ -81,7 +81,7 @@ export function createMDX(options: CreateMDXOptions = {}) {
         '*.{md,mdx}': {
           loaders: [
             {
-              loader: 'fumadocs-mdx/webpack/mdx',
+              loader: '@vezham/docs-mdx/webpack/mdx',
               options: turbopackLoaderOptions as unknown as TurbopackLoaderOptions,
             },
           ],
@@ -93,7 +93,7 @@ export function createMDX(options: CreateMDXOptions = {}) {
           },
           loaders: [
             {
-              loader: 'fumadocs-mdx/webpack/meta',
+              loader: '@vezham/docs-mdx/webpack/meta',
               options: turbopackLoaderOptions as unknown as TurbopackLoaderOptions,
             },
           ],
@@ -106,7 +106,7 @@ export function createMDX(options: CreateMDXOptions = {}) {
           },
           loaders: [
             {
-              loader: 'fumadocs-mdx/webpack/meta',
+              loader: '@vezham/docs-mdx/webpack/meta',
               options: turbopackLoaderOptions as unknown as TurbopackLoaderOptions,
             },
           ],
@@ -133,7 +133,7 @@ export function createMDX(options: CreateMDXOptions = {}) {
             enforce: 'pre',
             use: [
               {
-                loader: 'fumadocs-mdx/webpack/macro',
+                loader: '@vezham/docs-mdx/webpack/macro',
                 options: loaderOptions,
               },
             ],
@@ -146,7 +146,7 @@ export function createMDX(options: CreateMDXOptions = {}) {
             use: [
               options.defaultLoaders.babel,
               {
-                loader: 'fumadocs-mdx/webpack/mdx',
+                loader: '@vezham/docs-mdx/webpack/mdx',
                 options: loaderOptions,
               },
             ],
@@ -157,7 +157,7 @@ export function createMDX(options: CreateMDXOptions = {}) {
             enforce: 'pre',
             use: [
               {
-                loader: 'fumadocs-mdx/webpack/meta',
+                loader: '@vezham/docs-mdx/webpack/meta',
                 options: loaderOptions,
               },
             ],

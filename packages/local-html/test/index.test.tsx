@@ -4,7 +4,7 @@ import os from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { renderToStaticMarkup } from 'react-dom/server';
-import type { TOCItemType } from 'fumadocs-core/toc';
+import type { TOCItemType } from '@vezham/docs-core/toc';
 import { localHtml } from '@/index';
 import { parseHtml, processHtml } from '@/html/compiler';
 import { fromAst } from '@/html/renderer';

@@ -26,13 +26,13 @@ import { RequestTabs } from './request-tabs';
 import { cn } from '@/utils/cn';
 import { getExampleRequests } from '../../utils/get-example-requests';
 import { SelectTabs, SelectTabTrigger, SelectTab } from '@fumadocs/api-docs/components/select-tab';
-import { Callout } from 'fumadocs-ui/components/callout';
+import { Callout } from '@vezham/docs-react/components/callout';
 import { AnchorSection } from '@fumadocs/api-docs/auto-anchor/client';
 import { Heading } from '@/ui/components/heading';
 import { Markdown } from '../components/markdown';
 import { ServerProvider, useRenderContext } from '../contexts/api';
-import { useCopyButton } from 'fumadocs-ui/utils/use-copy-button';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { useCopyButton } from '@vezham/docs-react/utils/use-copy-button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import { Check, Copy } from 'lucide-react';
 import PlaygroundClient from '@/playground/client';
 

@@ -1,5 +1,5 @@
 import type { RenderContext } from '@/types';
-import { defaultShikiFactory } from 'fumadocs-core/highlight/shiki/full';
+import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
 import { createCodeUsageGeneratorRegistry } from '@/requests/generators';
 import { registerDefault } from '@/requests/generators/all';
 import { dereferenceBundledDocument } from '@/utils/document/dereference';

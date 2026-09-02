@@ -1,8 +1,8 @@
-import type { TOCItemType } from 'fumadocs-core/toc';
+import type { TOCItemType } from '@vezham/docs-core/toc';
 import Slugger from 'github-slugger';
 import parse, { type DOMNode, domToReact } from 'html-react-parser';
-import { Heading } from 'fumadocs-ui/components/heading';
-import { ServerCodeBlock } from 'fumadocs-ui/components/codeblock.rsc';
+import { Heading } from '@vezham/docs-react/components/heading';
+import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
 
 export function renderFromHtml(content: string) {
   const toc: TOCItemType[] = [];

@@ -28,7 +28,7 @@ Install the package:
 Create a `localHtml` instance and connect it to Fumadocs:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { localHtml } from '@fumadocs/local-html';
 
 const pages = localHtml({
@@ -53,7 +53,7 @@ The returned source from `pagesLoader.get()` is a normal [content loader](/docs/
 
 ```tsx title="app/docs/[[...slug]]/page.tsx"
 import { getSource } from '@/lib/source';
-import { DocsPage, DocsBody, DocsTitle, DocsDescription } from 'fumadocs-ui/page';
+import { DocsPage, DocsBody, DocsTitle, DocsDescription } from '@vezham/docs-react/page';
 import { notFound } from 'next/navigation';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
@@ -224,7 +224,7 @@ You can use `staticSource()` when you only need a one-time snapshot without reva
 It works with a normal `loader()` instead of only `dynamicLoader()`:
 
 ```ts title="lib/source.ts"
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { localHtml } from '@fumadocs/local-html';
 
 const pages = localHtml({

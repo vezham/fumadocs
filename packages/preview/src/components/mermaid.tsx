@@ -1,4 +1,4 @@
-import { CodeBlock, Pre } from 'fumadocs-ui/components/codeblock';
+import { CodeBlock, Pre } from '@vezham/docs-react/components/codeblock';
 
 export async function Mermaid({ chart }: { chart: string }) {
   const { renderMermaidSVG } = await import('beautiful-mermaid');

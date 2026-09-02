@@ -1,9 +1,9 @@
 'use client';
 import { Drawer } from '@base-ui/react/drawer';
-import type * as PageTree from 'fumadocs-core/page-tree';
+import type * as PageTree from '@vezham/docs-core/page-tree';
 import { type IconItemType, isLinkItemActive, type LinkItemType } from '@/layouts/shared';
 import { useTreeContext, useTreePath } from '@/contexts/tree';
-import Link from 'fumadocs-core/link';
+import Link from '@vezham/docs-core/link';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import {
   cloneElement,
@@ -23,11 +23,11 @@ import {
   SidebarIcon,
   XIcon,
 } from 'lucide-react';
-import { useOnChange } from 'fumadocs-core/utils/use-on-change';
+import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
 import { cn } from '@/utils/cn';
 import { ScrollArea, ScrollViewport } from '@/components/ui/scroll-area';
 import { buttonVariants } from '@/components/ui/button';
-import { usePathname } from 'fumadocs-core/framework';
+import { usePathname } from '@vezham/docs-core/framework';
 import { useTranslations } from '@fuma-translate/react';
 import { useGlassLayout } from '..';
 import { LayoutTabsDropdown } from '../layout-tabs';

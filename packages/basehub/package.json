@@ -33,18 +33,18 @@
     "@types/react": "^19.2.18",
     "basehub": "9.6.0",
     "fuma-cli": "^0.1.1",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-ui": "workspace:@fumadocs/base-ui@*",
     "react": "^19.2.8",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "@vezham/docs-core": "workspace:*",
+    "@vezham/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
     "basehub": "9.x.x",
-    "fumadocs-core": "^16.8.0",
-    "react": "^19.2.0"
+    "react": "^19.2.0",
+    "@vezham/docs-core": "^16.8.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {

@@ -4,7 +4,7 @@ import type { MacroPluginOption } from '@/macro/options';
 
 export interface NodeLoaderOptions extends Pick<CoreOptions, 'configPath' | 'outDir' | 'plugins'> {
   /**
-   * Configure the macro API (`fumadocs-mdx/macro`), or `false` to disable it.
+   * Configure the macro API (`@vezham/docs-mdx/macro`), or `false` to disable it.
    *
    * `macro.include` patterns are matched with picomatch against paths relative to cwd.
    */

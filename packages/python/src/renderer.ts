@@ -1,5 +1,5 @@
-import type { RehypeTOCItemType, StructuredData } from 'fumadocs-core/mdx-plugins';
-import type { TOCItemType } from 'fumadocs-core/toc';
+import type { RehypeTOCItemType, StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { TOCItemType } from '@vezham/docs-core/toc';
 import type { Expression } from 'estree';
 import type { Root } from 'hast';
 import { type Components, type Evaluater, toJsxRuntime } from 'hast-util-to-jsx-runtime';
@@ -7,7 +7,7 @@ import type { MDXComponents } from 'mdx/types';
 import type { ReactNode } from 'react';
 import * as JsxRuntime from 'react/jsx-runtime';
 import * as PythonComponents from './components';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
+import defaultMdxComponents from '@vezham/docs-react/mdx';
 
 export interface PythonRendererOptions {
   tree: Root;

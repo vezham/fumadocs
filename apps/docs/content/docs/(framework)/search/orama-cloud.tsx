@@ -11,11 +11,11 @@ import {
   SearchDialogList,
   SearchDialogOverlay,
   type SharedProps,
-} from 'fumadocs-ui/components/dialog/search';
-import { useDocsSearch } from 'fumadocs-core/search/client';
-import { oramaCloudClient } from 'fumadocs-core/search/client/orama-cloud';
+} from '@vezham/docs-react/components/dialog/search';
+import { useDocsSearch } from '@vezham/docs-core/search/client';
+import { oramaCloudClient } from '@vezham/docs-core/search/client/orama-cloud';
 import { OramaCloud } from '@orama/core';
-import { useI18n } from 'fumadocs-ui/contexts/i18n';
+import { useI18n } from '@vezham/docs-react/contexts/i18n';
 
 const orama = new OramaCloud({
   projectId: '',

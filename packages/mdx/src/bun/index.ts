@@ -22,7 +22,7 @@ import { slash } from '@/utils/codegen';
 
 export interface MdxPluginOptions extends Pick<CoreOptions, 'configPath' | 'outDir' | 'plugins'> {
   /**
-   * Configure the macro API (`fumadocs-mdx/macro`), or `false` to disable it.
+   * Configure the macro API (`@vezham/docs-mdx/macro`), or `false` to disable it.
    */
   macro?: MacroPluginOption;
 
@@ -63,7 +63,7 @@ export function createMdxPlugin(options: MdxPluginOptions = {}): BunPlugin {
   const macroOptions = resolveMacroOptions(options.macro);
 
   return {
-    name: 'bun-plugin-fumadocs-mdx',
+    name: 'bun-plugin-@vezham/docs-mdx',
     async setup(build) {
       const core = createCore({
         environment: 'bun',

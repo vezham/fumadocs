@@ -4,10 +4,10 @@ import * as __fd_glob_3 from "./generate-index/folder/test.mdx?collection=blogs"
 import * as __fd_glob_2 from "./generate-index/index.mdx?collection=blogs"
 import * as __fd_glob_1 from "./generate-index/folder/test.mdx?collection=docs"
 import * as __fd_glob_0 from "./generate-index/index.mdx?collection=docs"
-import { server } from 'fumadocs-mdx/runtime/server';
+import { server } from '@vezham/docs-mdx/runtime/server';
 import type * as Config from './config';
 
-const create = server<typeof Config, import("fumadocs-mdx/runtime/types").InternalTypeConfig & {
+const create = server<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
     docs: {
       /**
@@ -19,7 +19,7 @@ const create = server<typeof Config, import("fumadocs-mdx/runtime/types").Intern
       /**
        * extracted references (e.g. hrefs, paths), useful for analyzing relationships between pages.
        */
-      extractedReferences: import("fumadocs-mdx").ExtractedReference[];
+      extractedReferences: import("@vezham/docs-mdx").ExtractedReference[];
     } & {
       /**
        * Last modified date of document file, obtained from version control.
@@ -36,10 +36,10 @@ export const blogs = await create.doc("blogs", "packages/mdx/test/fixtures/gener
 
 ```ts title="dynamic.ts"
 // @ts-nocheck
-import { dynamic } from 'fumadocs-mdx/runtime/dynamic';
+import { dynamic } from '@vezham/docs-mdx/runtime/dynamic';
 import * as Config from './config';
 
-const create = await dynamic<typeof Config, import("fumadocs-mdx/runtime/types").InternalTypeConfig & {
+const create = await dynamic<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
     docs: {
       /**
@@ -51,7 +51,7 @@ const create = await dynamic<typeof Config, import("fumadocs-mdx/runtime/types")
       /**
        * extracted references (e.g. hrefs, paths), useful for analyzing relationships between pages.
        */
-      extractedReferences: import("fumadocs-mdx").ExtractedReference[];
+      extractedReferences: import("@vezham/docs-mdx").ExtractedReference[];
     } & {
       /**
        * Last modified date of document file, obtained from version control.
@@ -64,10 +64,10 @@ const create = await dynamic<typeof Config, import("fumadocs-mdx/runtime/types")
 
 ```ts title="browser.ts"
 // @ts-nocheck
-import { browser } from 'fumadocs-mdx/runtime/browser';
+import { browser } from '@vezham/docs-mdx/runtime/browser';
 import type * as Config from './config';
 
-const create = browser<typeof Config, import("fumadocs-mdx/runtime/types").InternalTypeConfig & {
+const create = browser<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
     docs: {
       /**
@@ -79,7 +79,7 @@ const create = browser<typeof Config, import("fumadocs-mdx/runtime/types").Inter
       /**
        * extracted references (e.g. hrefs, paths), useful for analyzing relationships between pages.
        */
-      extractedReferences: import("fumadocs-mdx").ExtractedReference[];
+      extractedReferences: import("@vezham/docs-mdx").ExtractedReference[];
     } & {
       /**
        * Last modified date of document file, obtained from version control.

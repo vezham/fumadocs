@@ -1,8 +1,8 @@
 'use client';
 import type { ComponentProps } from 'react';
 import { RootProvider as BaseProvider } from '@/provider/base';
-import { TanstackProvider } from 'fumadocs-core/framework/tanstack';
-import type { Framework } from 'fumadocs-core/framework';
+import { TanstackProvider } from '@vezham/docs-core/framework/tanstack';
+import type { Framework } from '@vezham/docs-core/framework';
 
 export interface RootProviderProps extends ComponentProps<typeof BaseProvider> {
   /**

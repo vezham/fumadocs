@@ -23,7 +23,7 @@ Export the search indexes by pre-rendering a static route.
 
 ```ts title="lib/export-search-indexes.ts"
 import { source } from '@/lib/source';
-import { findPath } from 'fumadocs-core/page-tree';
+import { findPath } from '@vezham/docs-core/page-tree';
 import type { DocumentRecord } from 'typesense-fumadocs-adapter';
 
 export async function exportSearchIndexes() {
@@ -175,7 +175,7 @@ To support internationalization, make sure to add a `locale` value to each docum
 
 ```ts title="lib/export-search-indexes.ts"
 import { source } from '@/lib/source';
-import { findPath } from 'fumadocs-core/page-tree';
+import { findPath } from '@vezham/docs-core/page-tree';
 import type { DocumentRecord } from 'typesense-fumadocs-adapter';
 
 export async function exportSearchIndexes() {
@@ -196,7 +196,7 @@ export async function exportSearchIndexes() {
 And update your search client:
 
 ```ts
-import { useI18n } from 'fumadocs-ui/contexts/i18n';
+import { useI18n } from '@vezham/docs-react/contexts/i18n';
 import { useTypesenseSearch } from 'typesense-fumadocs-adapter/client';
 
 const { locale } = useI18n();

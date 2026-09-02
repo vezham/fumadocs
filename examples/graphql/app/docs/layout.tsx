@@ -1,5 +1,5 @@
 import { source } from '@/lib/source';
-import { GlassLayout } from 'fumadocs-ui/layouts/glass';
+import { GlassLayout } from '@vezham/docs-react/layouts/glass';
 import type { ReactNode } from 'react';
 import { baseOptions } from '@/lib/layout.shared';
 

@@ -46,15 +46,15 @@
   "devDependencies": {
     "@types/mdast": "^4.0.4",
     "@types/node": "26.3.0",
-    "fumadocs-core": "workspace:*",
     "rimraf": "^6.0.0",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
-    "vfile": "^6.0.3"
+    "vfile": "^6.0.3",
+    "@vezham/docs-core": "workspace:*"
   },
   "peerDependencies": {
-    "fumadocs-core": "^16.8.0"
+    "@vezham/docs-core": "^16.8.0"
   },
   "engines": {
     "node": ">=18"

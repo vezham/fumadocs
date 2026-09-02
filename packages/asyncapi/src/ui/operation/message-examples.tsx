@@ -13,7 +13,7 @@ import {
   CodeBlockTabs,
   CodeBlockTabsList,
   CodeBlockTabsTrigger,
-} from 'fumadocs-ui/components/codeblock';
+} from '@vezham/docs-react/components/codeblock';
 
 export function MessageExamples({
   message,

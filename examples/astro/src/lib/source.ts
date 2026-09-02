@@ -1,8 +1,8 @@
-import type { StaticSource } from 'fumadocs-core/source';
-import { loader } from 'fumadocs-core/source';
+import type { StaticSource } from '@vezham/docs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { type CollectionEntry, getCollection } from 'astro:content';
 import * as path from 'node:path';
-import { structure, type StructuredData } from 'fumadocs-core/mdx-plugins';
+import { structure, type StructuredData } from '@vezham/docs-core/mdx-plugins';
 
 export const source = loader({
   source: await createMySource(),

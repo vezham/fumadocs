@@ -8,10 +8,10 @@ import {
   ScrollRestoration,
   useParams,
 } from 'react-router';
-import { RootProvider } from 'fumadocs-ui/provider/react-router';
+import { RootProvider } from '@vezham/docs-react/provider/react-router';
 import type { Route } from './+types/root';
 import './app.css';
-import { i18nProvider, uiTranslations } from 'fumadocs-ui/i18n';
+import { i18nProvider, uiTranslations } from '@vezham/docs-react/i18n';
 import { i18n } from '@/lib/i18n';
 import NotFound from './routes/not-found';
 

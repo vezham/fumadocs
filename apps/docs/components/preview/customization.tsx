@@ -1,4 +1,4 @@
-import { ServerCodeBlock } from 'fumadocs-ui/components/codeblock.rsc';
+import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
 
 export function Customization() {
   return (

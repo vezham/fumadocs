@@ -10,8 +10,8 @@ import {
   type FC,
   type ReactNode,
 } from 'react';
-import { remarkGfm } from 'fumadocs-core/mdx-plugins/remark-gfm';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
+import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
+import defaultMdxComponents from '@vezham/docs-react/mdx';
 import { remark } from 'remark';
 import remarkRehype from 'remark-rehype';
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime';
@@ -25,7 +25,7 @@ import { getRaw } from '@scalar/json-magic/magic-proxy';
 import { AuthProvider } from '@/playground/auth';
 import { registerDefault } from '@/requests/generators/all';
 import { createCodeUsageGeneratorRegistry } from '@/requests/generators';
-import type { ShikiFactory } from 'fumadocs-core/highlight/shiki';
+import type { ShikiFactory } from '@vezham/docs-core/highlight/shiki';
 import type { GeneratedPageProps } from '@/utils/pages/builder';
 import { Markdown } from './components/markdown';
 import { Schema, type SchemaUIOptions } from '@fumadocs/api-docs/components/schema';

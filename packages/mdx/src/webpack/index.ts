@@ -12,7 +12,7 @@ export interface WebpackLoaderOptions {
   isDev: boolean;
 
   /**
-   * whether the macro API (`fumadocs-mdx/macro`) is enabled
+   * whether the macro API (`@vezham/docs-mdx/macro`) is enabled
    */
   macro?: boolean;
 }

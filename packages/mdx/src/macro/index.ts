@@ -1,7 +1,7 @@
 import type { StandardJSONSchemaV1, StandardSchemaV1 } from '@standard-schema/spec';
 import type { ProcessorOptions } from '@mdx-js/mdx';
-import type { MetaData, PageData } from 'fumadocs-core/source';
-import type { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
+import type { MetaData, PageData } from '@vezham/docs-core/source';
+import type { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
 import type { CollectionSchema } from '@/config/define';
 import type { BuildEnvironment } from '@/config/build';
 import type { ExtractedReference, PostprocessOptions } from '@/loaders/mdx/remark-postprocess';
@@ -126,7 +126,7 @@ export interface DefineMetaCollectionsOptions<
 
 function macroError(): Error {
   return new Error(
-    '[MDX] this macro was not compiled by the bundler plugin of `fumadocs-mdx`. To use `fumadocs-mdx/macro`, set the `include` option on your bundler plugin, and make sure this module matches its patterns.',
+    '[MDX] this macro was not compiled by the bundler plugin of `@vezham/docs-mdx`. To use `@vezham/docs-mdx/macro`, set the `include` option on your bundler plugin, and make sure this module matches its patterns.',
   );
 }
 

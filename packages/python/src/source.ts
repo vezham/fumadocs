@@ -1,9 +1,9 @@
 import fs from 'node:fs/promises';
-import { rehypeCode, type RehypeCodeOptions } from 'fumadocs-core/mdx-plugins/rehype-code';
-import { rehypeToc } from 'fumadocs-core/mdx-plugins/rehype-toc';
-import { remarkHeading } from 'fumadocs-core/mdx-plugins/remark-heading';
-import { remarkStructure } from 'fumadocs-core/mdx-plugins/remark-structure';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
+import { rehypeCode, type RehypeCodeOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
+import { rehypeToc } from '@vezham/docs-core/mdx-plugins/rehype-toc';
+import { remarkHeading } from '@vezham/docs-core/mdx-plugins/remark-heading';
+import { remarkStructure } from '@vezham/docs-core/mdx-plugins/remark-structure';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
 import type {
   DynamicSource,
   LoaderOutput,
@@ -12,7 +12,7 @@ import type {
   PageData,
   StaticSource,
   VirtualFile,
-} from 'fumadocs-core/source';
+} from '@vezham/docs-core/source';
 import type { Root } from 'hast';
 import remarkRehype from 'remark-rehype';
 import { unified, type PluggableList } from 'unified';

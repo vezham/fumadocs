@@ -3,7 +3,7 @@ import type {
   PortableTextBlock,
   PortableTextTypeComponent,
 } from '@portabletext/react';
-import { Step, Steps } from 'fumadocs-ui/components/steps';
+import { Step, Steps } from '@vezham/docs-react/components/steps';
 
 export interface StepValue {
   _key?: string;

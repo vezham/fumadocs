@@ -55,14 +55,14 @@ export async function GET(request: Request): Promise<Response> {
   if (!versionPattern.test(version)) {
     return Response.json(
       {
-        error: 'Only fumadocs-ui versions around 16.x.x are supported',
+        error: 'Only @vezham/docs-react versions around 16.x.x are supported',
         received: version,
       },
       { status: 400 },
     );
   }
 
-  const tag = `fumadocs-ui@${version}`;
+  const tag = `@vezham/docs-react@${version}`;
 
   try {
     const commitSha = await resolveTagCommitSha(tag);

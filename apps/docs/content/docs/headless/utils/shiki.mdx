@@ -10,7 +10,7 @@ Fumadocs use its own Shiki factory API to manage internal Shiki instances.
 You can customize it for special purposes like using fine-grained bundles, for example:
 
 ```ts
-import { createShikiFactory } from 'fumadocs-core/highlight/shiki';
+import { createShikiFactory } from '@vezham/docs-core/highlight/shiki';
 
 export const myShikiFactory = createShikiFactory({
   async init(options) {
@@ -30,7 +30,7 @@ Then pass it to different modules/features:
 
 ```tsx tab="Dynamic CodeBlock (UI)"
 'use client';
-import * as Base from 'fumadocs-ui/dynamic-codeblock.core';
+import * as Base from '@vezham/docs-react/dynamic-codeblock.core';
 
 export type DynamicCodeblockProps = Omit<Base.DynamicCodeblockProps, 'highlighter'>;
 
@@ -40,7 +40,7 @@ export function DynamicCodeBlock(props: DynamicCodeblockProps) {
 ```
 
 ```ts tab="Rehype Code (Core)"
-import { createRehypeCode } from 'fumadocs-core/mdx-plugins/rehype-code.core';
+import { createRehypeCode } from '@vezham/docs-core/mdx-plugins/rehype-code.core';
 
 const rehypeCode = createRehypeCode(myShikiFactory);
 ```

@@ -10,7 +10,7 @@ import { Input, labelVariants } from '@fumadocs/api-docs/components/input';
 import { useQuery } from '@/utils/use-query';
 import { type ReactNode, useMemo, useState } from 'react';
 import { cn } from '@/utils/cn';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import {
   Select,
   SelectContent,

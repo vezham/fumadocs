@@ -1,4 +1,4 @@
-import { register } from 'fumadocs-mdx/node';
+import { register } from '@vezham/docs-mdx/node';
 import { writeFile } from 'node:fs/promises';
 
 register();

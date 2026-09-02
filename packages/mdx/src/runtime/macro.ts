@@ -1,5 +1,5 @@
-import type { MetaData, PageData, Source } from 'fumadocs-core/source';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins/remark-structure';
+import type { MetaData, PageData, Source } from '@vezham/docs-core/source';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins/remark-structure';
 import type { MDXContent, MDXProps } from 'mdx/types';
 import { createElement, use } from 'react';
 import { server, toFumadocsSource } from './server';

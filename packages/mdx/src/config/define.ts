@@ -1,7 +1,7 @@
 import type { StandardSchemaV1 } from '@standard-schema/spec';
 import type { MDXPresetOptions } from '@/config/preset';
 import type { ProcessorOptions } from '@mdx-js/mdx';
-import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
+import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
 import type { PostprocessOptions } from '@/loaders/mdx/remark-postprocess';
 import type { LastModifiedFn } from '@/loaders/mdx/last-modified';
 import type { PluginOption } from '@/core';

@@ -1,4 +1,4 @@
-import { createFromSource } from 'fumadocs-core/search/server';
+import { createFromSource } from '@vezham/docs-core/search/server';
 import { source } from '@/lib/source';
 
 // zero config: the default `multilingual` mode works for every language

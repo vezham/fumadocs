@@ -1,10 +1,10 @@
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import { DocsPage, type DocsPageProps } from 'fumadocs-ui/layouts/docs/page';
-import type { Root } from 'fumadocs-core/page-tree';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsPage, type DocsPageProps } from '@vezham/docs-react/layouts/docs/page';
+import type { Root } from '@vezham/docs-core/page-tree';
 import type { ReactNode } from 'react';
 import { navigate } from 'astro:transitions/client';
-import { RootProvider } from 'fumadocs-ui/provider/astro';
-import type { AstroProviderProps } from 'fumadocs-core/framework/astro';
+import { RootProvider } from '@vezham/docs-react/provider/astro';
+import type { AstroProviderProps } from '@vezham/docs-core/framework/astro';
 import SearchDialog from './search';
 
 export function Docs({

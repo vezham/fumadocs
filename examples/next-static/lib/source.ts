@@ -1,7 +1,7 @@
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { docsContentRoute, docsImageRoute, docsRoute } from './shared';
-import { defineDocs } from 'fumadocs-mdx/macro';
-import { metaSchema, pageSchema } from 'fumadocs-core/source/schema';
+import { defineDocs } from '@vezham/docs-mdx/macro';
+import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
 
 const docs = defineDocs({
   dir: 'content/docs',

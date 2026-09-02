@@ -9,9 +9,9 @@ import type {
 } from '@/types';
 import type { MediaAdapter } from '@/requests/media/adapter';
 import type { ComponentProps, FC, HTMLAttributes, ReactNode } from 'react';
-import { defaultShikiFactory } from 'fumadocs-core/highlight/shiki/full';
+import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
 import type { CodeUsageGeneratorRegistry, InlineCodeUsageGenerator } from '@/requests/generators';
-import type { ShikiFactory } from 'fumadocs-core/highlight/shiki';
+import type { ShikiFactory } from '@vezham/docs-core/highlight/shiki';
 import type { CodeToHastOptionsCommon, CodeOptionsThemes, BundledTheme } from 'shiki';
 import type { ExampleRequestItem } from '../utils/get-example-requests';
 import type { RequestTabsRenderOptions } from './operation/request-tabs';
@@ -210,7 +210,7 @@ export interface CreateOpenAPIPageOptions {
    *
    * Useful when using multiple OpenAPI instances to prevent state conflicts.
    *
-   * @defaultValue `fumadocs-openapi-`
+   * @defaultValue `@vezham/docs-openapi-`
    */
   storageKeyPrefix?: string;
 

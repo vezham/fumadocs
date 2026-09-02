@@ -1,5 +1,5 @@
 'use client';
-import { Callout } from 'fumadocs-ui/components/callout';
+import { Callout } from '@vezham/docs-react/components/callout';
 import { ComponentProps } from 'react';
 
 export function CalloutStory(

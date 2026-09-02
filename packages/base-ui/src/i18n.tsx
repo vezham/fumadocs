@@ -4,7 +4,7 @@ import type {
   SingularTranslationsAPI,
   TranslationExtension,
   TranslationsAPI,
-} from 'fumadocs-core/i18n';
+} from '@vezham/docs-core/i18n';
 import translationKeys from '@/.translations/keys.json';
 import type { Translations } from '@/.translations';
 

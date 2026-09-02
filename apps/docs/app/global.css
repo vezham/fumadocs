@@ -1,9 +1,9 @@
 @import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import '@vezham/docs-react/css/neutral.css';
+@import '@vezham/docs-react/css/preset.css';
 @import 'fumadocs-twoslash/twoslash.css';
-@import 'fumadocs-openapi/css/preset.css';
-@import '@fumadocs/story/css/preset.css';
+@import '@vezham/docs-openapi/css/preset.css';
+@import '@vezham/docs-story/css/preset.css';
 @import '@fumadocs/asyncapi/css/preset.css';
 @import '@fumadocs/graphql/css/preset.css';
 @import '@fumari/sponsors/style.css';

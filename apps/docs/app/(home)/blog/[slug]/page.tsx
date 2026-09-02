@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
-import { InlineTOC } from 'fumadocs-ui/components/inline-toc';
+import { InlineTOC } from '@vezham/docs-react/components/inline-toc';
 import { blogLoader } from '@/lib/source';
 import { createMetadata } from '@/lib/metadata';
 import { buttonVariants } from '@/components/ui/button';

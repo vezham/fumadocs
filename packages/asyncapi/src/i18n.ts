@@ -1,5 +1,5 @@
 import translationKeys from '@/.translations/keys.json';
-import type { TranslationExtension } from 'fumadocs-core/i18n';
+import type { TranslationExtension } from '@vezham/docs-core/i18n';
 import type { Translations } from '@/.translations';
 import {
   type Translations as SharedTranslations,

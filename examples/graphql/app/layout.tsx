@@ -1,4 +1,4 @@
-import { RootProvider } from 'fumadocs-ui/provider/next';
+import { RootProvider } from '@vezham/docs-react/provider/next';
 import './global.css';
 import { Geist, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';

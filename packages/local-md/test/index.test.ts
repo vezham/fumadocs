@@ -8,7 +8,7 @@ import { executorNative } from '@/js/executor-native';
 import { CompileResult, createMarkdownCompiler } from '@/md/compiler';
 import { fromAst, fromJS } from '@/md/renderer';
 import { localMd } from '@/index';
-import type { TOCItemType } from 'fumadocs-core/toc';
+import type { TOCItemType } from '@vezham/docs-core/toc';
 
 const cwd = path.dirname(fileURLToPath(import.meta.url));
 const fixturesDir = path.join(cwd, 'fixtures');

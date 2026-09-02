@@ -1,4 +1,4 @@
-import { defineDocs } from 'fumadocs-mdx/macro';
+import { defineDocs } from '@vezham/docs-mdx/macro';
 
 export const docs = defineDocs({
   docs: {

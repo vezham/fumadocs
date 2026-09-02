@@ -1,6 +1,6 @@
-import { defineConfig } from 'fumadocs-mdx/config';
-import jsonSchema from 'fumadocs-mdx/plugins/json-schema';
-import lastModified from 'fumadocs-mdx/plugins/last-modified';
+import { defineConfig } from '@vezham/docs-mdx/config';
+import jsonSchema from '@vezham/docs-mdx/plugins/json-schema';
+import lastModified from '@vezham/docs-mdx/plugins/last-modified';
 
 export default defineConfig({
   compiler: 'satteri',

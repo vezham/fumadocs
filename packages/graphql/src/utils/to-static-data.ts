@@ -1,6 +1,6 @@
 import Slugger from 'github-slugger';
-import type { TOCItemType } from 'fumadocs-core/toc';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
+import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
 import {
   type GraphQLSchema,
   isEnumType,

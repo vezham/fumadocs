@@ -1,9 +1,9 @@
 'use client';
 
-import { SearchClient, useDocsSearch } from 'fumadocs-core/search/client';
-import { fetchClient } from 'fumadocs-core/search/client/fetch';
+import { SearchClient, useDocsSearch } from '@vezham/docs-core/search/client';
+import { fetchClient } from '@vezham/docs-core/search/client/fetch';
 import { type ReactNode, use, useMemo, useState } from 'react';
-import { useOnChange } from 'fumadocs-core/utils/use-on-change';
+import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
 import { useI18n } from '@/contexts/i18n';
 import {
   SearchDialog,
@@ -19,7 +19,7 @@ import {
   TagsList,
   TagsListItem,
 } from './search';
-import type { SortedResult } from 'fumadocs-core/search';
+import type { SortedResult } from '@vezham/docs-core/search';
 import type { SearchLink, TagItem } from '@/contexts/search';
 
 export interface DefaultSearchDialogProps extends SharedProps {
@@ -50,7 +50,7 @@ export interface DefaultSearchDialogProps extends SharedProps {
   allowClear?: boolean;
 }
 
-let STATIC: Promise<typeof import('fumadocs-core/search/client/orama-static')> | undefined;
+let STATIC: Promise<typeof import('@vezham/docs-core/search/client/orama-static')> | undefined;
 
 export default function DefaultSearchDialog({
   type,
@@ -70,7 +70,7 @@ export default function DefaultSearchDialog({
   if (type === 'static') {
     // TODO: must remove it on next major, currently, this will bundle the static search client unnecessarily
 
-    client = use((STATIC ??= import('fumadocs-core/search/client/orama-static'))).staticClient({
+    client = use((STATIC ??= import('@vezham/docs-core/search/client/orama-static'))).staticClient({
       from: api,
       locale,
       tag,

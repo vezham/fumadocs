@@ -1,9 +1,9 @@
 import type { Route } from './+types/docs';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
 import { docs, source } from '#/lib/source.ts';
 import { baseOptions } from '#/lib/layout.shared.tsx';
-import { useFumadocsLoader } from 'fumadocs-core/source/client';
+import { useFumadocsLoader } from '@vezham/docs-core/source/client';
 import { useMDXComponents } from '#/components/mdx.tsx';
 import { use } from 'react';
 

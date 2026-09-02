@@ -7,7 +7,7 @@ import { createFSCache } from '@/utils/fs-cache';
 import { createHash } from 'node:crypto';
 import type { LazyEntry } from '@/runtime/dynamic';
 import type { EmitEntry } from '@/core';
-import { frontmatter } from 'fumadocs-core/content/md/frontmatter';
+import { frontmatter } from '@vezham/docs-core/content/md/frontmatter';
 
 export interface IndexFilePluginOptions {
   target?: 'default' | 'vite';
@@ -57,7 +57,7 @@ export default function indexFile(options: IndexFilePluginOptions = {}): Plugin 
   }
 
   function generateTypeConfig(core: Core): string {
-    const typeConfigs: string[] = ['import("fumadocs-mdx/runtime/types").InternalTypeConfig'];
+    const typeConfigs: string[] = ['import("@vezham/docs-mdx/runtime/types").InternalTypeConfig'];
     const ctx = core.getPluginContext();
 
     for (const plugin of core.getPlugins()) {
@@ -165,7 +165,7 @@ export default function indexFile(options: IndexFilePluginOptions = {}): Plugin 
 async function generateServerIndexFile(ctx: FileGenContext) {
   const { core, codegen, tc } = ctx;
   codegen.lines.push(
-    `import { server } from 'fumadocs-mdx/runtime/server';`,
+    `import { server } from '@vezham/docs-mdx/runtime/server';`,
     `import type * as Config from '${codegen.formatImportPath(core.configPath)}';`,
     '',
     `const create = server<typeof Config, ${tc}>();`,
@@ -316,7 +316,7 @@ async function generateDynamicIndexFile(ctx: FileGenContext) {
   const hasDynamicCollection = objects.some(Boolean);
 
   codegen.lines.push(
-    `import { dynamic } from 'fumadocs-mdx/runtime/dynamic';`,
+    `import { dynamic } from '@vezham/docs-mdx/runtime/dynamic';`,
     ...(hasDynamicCollection ? [`import path from 'node:path';`] : []),
     `import * as Config from '${codegen.formatImportPath(core.configPath)}';`,
     '',
@@ -329,7 +329,7 @@ async function generateDynamicIndexFile(ctx: FileGenContext) {
 async function generateBrowserIndexFile(ctx: FileGenContext) {
   const { core, codegen, tc } = ctx;
   codegen.lines.push(
-    `import { browser } from 'fumadocs-mdx/runtime/browser';`,
+    `import { browser } from '@vezham/docs-mdx/runtime/browser';`,
     `import type * as Config from '${codegen.formatImportPath(core.configPath)}';`,
     '',
     `const create = browser<typeof Config, ${tc}>();`,

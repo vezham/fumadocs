@@ -188,7 +188,7 @@ export function createCore(options: CoreOptions) {
      */
     cache: new Map<string, unknown>(),
     /**
-     * Collects the collections declared with `fumadocs-mdx/macro`.
+     * Collects the collections declared with `@vezham/docs-mdx/macro`.
      *
      * Assigned by the bundler adapter when the macro API is enabled, so that every loader of a
      * build shares one collector (and hence one evaluation of each macro module).
@@ -392,7 +392,7 @@ function postprocessPlugin(): Plugin {
   /**
    * extracted references (e.g. hrefs, paths), useful for analyzing relationships between pages.
    */
-  extractedReferences: import("fumadocs-mdx").ExtractedReference[];
+  extractedReferences: import("@vezham/docs-mdx").ExtractedReference[];
 }`;
 
   const LastModifiedTypes = `{

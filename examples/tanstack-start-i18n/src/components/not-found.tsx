@@ -1,5 +1,5 @@
 import { Link, useParams } from '@tanstack/react-router';
-import { HomeLayout } from 'fumadocs-ui/layouts/home';
+import { HomeLayout } from '@vezham/docs-react/layouts/home';
 
 export function NotFound() {
   const { lang } = useParams({ from: '/$lang/' });

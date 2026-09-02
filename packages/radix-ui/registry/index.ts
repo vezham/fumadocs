@@ -380,8 +380,8 @@ export const registry: Registry = {
     },
   ],
   dependencies: {
-    'fumadocs-core': null,
-    'fumadocs-ui': null,
+    '@vezham/docs-core': null,
+    '@vezham/docs-react': null,
     react: null,
   },
 };

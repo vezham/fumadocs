@@ -1,6 +1,6 @@
-import * as Accordions from 'fumadocs-ui/components/accordion';
-import * as Tabs from 'fumadocs-ui/components/tabs';
-import defaultMdxComponents from 'fumadocs-ui/mdx';
+import * as Accordions from '@vezham/docs-react/components/accordion';
+import * as Tabs from '@vezham/docs-react/components/tabs';
+import defaultMdxComponents from '@vezham/docs-react/mdx';
 import * as Icons from 'lucide-react';
 import type { MDXComponents } from 'mdx/types';
 import { FC } from 'react';

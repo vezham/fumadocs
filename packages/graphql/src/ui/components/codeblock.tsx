@@ -2,7 +2,7 @@
 import {
   DynamicCodeBlock,
   type DynamicCodeblockProps,
-} from 'fumadocs-ui/components/dynamic-codeblock.core';
+} from '@vezham/docs-react/components/dynamic-codeblock.core';
 import { useRenderContext } from '../contexts/api';
 
 export function ClientCodeBlock(props: Omit<DynamicCodeblockProps, 'highlighter' | 'options'>) {

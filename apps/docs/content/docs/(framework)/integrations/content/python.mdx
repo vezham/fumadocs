@@ -45,8 +45,8 @@ The components are styled with Tailwind CSS, add the preset:
 
 ```css title="Tailwind CSS"
 @import 'tailwindcss';
-@import 'fumadocs-ui/css/neutral.css';
-@import 'fumadocs-ui/css/preset.css';
+@import '@vezham/docs-react/css/neutral.css';
+@import '@vezham/docs-react/css/preset.css';
 /* [!code ++] */
 @import 'fumadocs-python/preset.css';
 ```
@@ -56,7 +56,7 @@ The components are styled with Tailwind CSS, add the preset:
 Create a source from the JSON file and pass it to `loader()`:
 
 ```ts title="lib/source.ts"
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { createPython } from 'fumadocs-python';
 
 const python = createPython({
@@ -78,7 +78,7 @@ Then load and render a page:
 ```tsx title="app/docs/[[...slug]]/page.tsx"
 import { source } from '@/lib/source';
 import { notFound } from 'next/navigation';
-import { DocsBody, DocsPage, DocsTitle } from 'fumadocs-ui/layouts/docs/page';
+import { DocsBody, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
 
 export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
   const page = source.getPage((await params).slug);
@@ -101,7 +101,7 @@ export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
 `staticSource()` reads the JSON file once. To pick up a regenerated file without restarting, use `dynamicSource()` with `dynamicLoader()` instead:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { createPython } from 'fumadocs-python';
 
 const python = createPython({
@@ -158,7 +158,7 @@ await Python.write(Python.convert(content, { baseUrl: '/docs' }), 'content/docs'
 ```
 
 ```tsx tab="mdx-components.tsx"
-import defaultMdxComponents from 'fumadocs-ui/mdx';
+import defaultMdxComponents from '@vezham/docs-react/mdx';
 import type { MDXComponents } from 'mdx/types';
 import * as Python from 'fumadocs-python/components';
 

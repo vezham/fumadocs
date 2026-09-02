@@ -1,5 +1,5 @@
 'use client';
-import { useRouter } from 'fumadocs-core/framework';
+import { useRouter } from '@vezham/docs-core/framework';
 import { useEffect, useEffectEvent, type ReactNode } from 'react';
 import { decodeDevEvent, type DevServerEvent, getDevServerUrlFromEnv } from './protocol';
 

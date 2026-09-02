@@ -32,7 +32,7 @@ They do not need to have its own `package.json`, only a config file is needed.
 To define a workspace, add:
 
 ```ts title="source.config.ts"
-import { defineConfig } from 'fumadocs-mdx/config';
+import { defineConfig } from '@vezham/docs-mdx/config';
 
 export default defineConfig({
   workspaces: {
@@ -64,7 +64,7 @@ import { docs } from 'collections/my-workspace/server';
 To integrate [multi-source](/docs/headless/source-api/source#multiple-sources) in Fumadocs:
 
 ```ts title="lib/source.ts"
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 import { docs } from 'collections/server';
 import * as MyWorkspace from 'collections/my-workspace/server';
 

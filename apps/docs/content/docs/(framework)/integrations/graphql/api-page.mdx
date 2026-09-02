@@ -171,8 +171,8 @@ export const GraphQLPage = createGraphQLPage({
 Assuming you have configured [Internationalization](/docs/internationalization) at UI level:
 
 ```tsx title="layout.shared.tsx"
-import { defineI18n } from 'fumadocs-core/i18n';
-import { uiTranslations } from 'fumadocs-ui/i18n';
+import { defineI18n } from '@vezham/docs-core/i18n';
+import { uiTranslations } from '@vezham/docs-react/i18n';
 import { graphqlTranslations } from '@fumadocs/graphql/i18n';
 
 const i18n = defineI18n({
@@ -203,7 +203,7 @@ GraphQL pages use Shiki for code blocks. You can customize the highlighter and t
 ```tsx title="components/api-page.tsx"
 'use client';
 import { createGraphQLPage } from '@fumadocs/graphql/ui';
-import { defaultShikiFactory } from 'fumadocs-core/highlight/shiki/full';
+import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
 
 export const GraphQLPage = createGraphQLPage({
   shiki: defaultShikiFactory,

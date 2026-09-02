@@ -101,7 +101,7 @@ export function createNodeEvaluator(env: { root: string; outDir: string }): Macr
       logLevel: 'silent',
       plugins: [
         {
-          name: 'fumadocs-mdx:macro-config',
+          name: '@vezham/docs-mdx:macro-config',
           setup(b) {
             b.onLoad({ filter: /\.(?:[cm]?[jt]s|[jt]sx)$/ }, async (args) => {
               const contents = await transform(await fs.readFile(args.path, 'utf-8'), args.path);
@@ -235,7 +235,7 @@ export class MacroCollector {
   }
 
   private async evaluate(abs: string): Promise<MacroModule> {
-    const registerKey = `fumadocs-mdx:macro:${randomUUID()}`;
+    const registerKey = `@vezham/docs-mdx:macro:${randomUUID()}`;
     const key = Symbol.for(registerKey);
     const registrations = new Map<string, MacroRegistration>();
 

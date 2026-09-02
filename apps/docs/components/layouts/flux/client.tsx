@@ -5,7 +5,7 @@ import {
   NavigationPanel,
   NavigationPanelOverlay,
   NavigationPanelProps,
-} from 'fumadocs-ui/layouts/flux';
+} from '@vezham/docs-react/layouts/flux';
 import {
   AISearch,
   AISearchInput,
@@ -16,10 +16,10 @@ import {
   useHotKey,
 } from '@/components/inkeep/search';
 import { MessageCircleIcon } from 'lucide-react';
-import { buttonVariants } from 'fumadocs-ui/components/ui/button';
+import { buttonVariants } from '@vezham/docs-react/components/ui/button';
 import { cn } from '@/lib/cn';
 import { AnimatePresence, motion } from 'motion/react';
-import { useSidebar } from 'fumadocs-ui/components/sidebar/base';
+import { useSidebar } from '@vezham/docs-react/components/sidebar/base';
 import { useEffect, useState } from 'react';
 
 export function LayoutClient(props: DocsLayoutProps) {

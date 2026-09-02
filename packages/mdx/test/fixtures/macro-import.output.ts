@@ -1,4 +1,4 @@
-import * as __fdm from "fumadocs-mdx/runtime/macro";
+import * as __fdm from "@vezham/docs-mdx/runtime/macro";
 import { default as __fd_glob_5 } from "../generate-index/meta.json?macro_id=test%2Ffixtures%2Fmacro%2Fsource.ts%23metaOnly"
 import { frontmatter as __fd_glob_4 } from "../generate-index/folder/test.mdx?macro_id=test%2Ffixtures%2Fmacro%2Fsource.ts%23blog&only=frontmatter"
 import { frontmatter as __fd_glob_3 } from "../generate-index/index.mdx?macro_id=test%2Ffixtures%2Fmacro%2Fsource.ts%23blog&only=frontmatter"

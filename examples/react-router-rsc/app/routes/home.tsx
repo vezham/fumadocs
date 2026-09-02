@@ -1,5 +1,5 @@
 import type { Route } from './+types/home';
-import { HomeLayout } from 'fumadocs-ui/layouts/home';
+import { HomeLayout } from '@vezham/docs-react/layouts/home';
 import { Link } from 'react-router';
 import { baseOptions } from '@/lib/layout.shared';
 

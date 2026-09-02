@@ -8,14 +8,14 @@ import type { CompileOptions, Registry } from 'fuma-cli/compiler';
 
 const baseDir = path.join(import.meta.dirname, '../../');
 
-// internal modules of `fumadocs-openapi` mapped to their public exports
+// internal modules of `@vezham/docs-openapi` mapped to their public exports
 const openapiExports = new Map([
-  ['ui/contexts/api.tsx', 'fumadocs-openapi/ui'],
-  ['ui/operation/context.tsx', 'fumadocs-openapi/ui'],
-  ['requests/generators/index.ts', 'fumadocs-openapi/requests/generators'],
+  ['ui/contexts/api.tsx', '@vezham/docs-openapi/ui'],
+  ['ui/operation/context.tsx', '@vezham/docs-openapi/ui'],
+  ['requests/generators/index.ts', '@vezham/docs-openapi/requests/generators'],
   // types are re-exported from the package root
-  ['requests/media/adapter.ts', 'fumadocs-openapi'],
-  ['types.ts', 'fumadocs-openapi'],
+  ['requests/media/adapter.ts', '@vezham/docs-openapi'],
+  ['types.ts', '@vezham/docs-openapi'],
 ]);
 
 export const compileOptions: Partial<CompileOptions> = {
@@ -47,9 +47,9 @@ export const compileOptions: Partial<CompileOptions> = {
       file = path.relative(radixUi.registry.dir, ref.file);
       if (file.startsWith('contexts/') || file.startsWith('utils/use-')) {
         return {
-          dep: 'fumadocs-ui',
+          dep: '@vezham/docs-react',
           type: 'dependency',
-          specifier: `fumadocs-ui/${removeExtname(file)}`,
+          specifier: `@vezham/docs-react/${removeExtname(file)}`,
         };
       }
 
@@ -66,7 +66,7 @@ export const compileOptions: Partial<CompileOptions> = {
       const specifier = openapiExports.get(file);
       if (specifier) {
         return {
-          dep: 'fumadocs-openapi',
+          dep: '@vezham/docs-openapi',
           type: 'dependency',
           specifier,
         };
@@ -98,8 +98,8 @@ export const compileOptions: Partial<CompileOptions> = {
     }
 
     // map dep imports to actual components
-    if (ref.type === 'dependency' && ref.dep === 'fumadocs-ui') {
-      const match = /fumadocs-ui\/components\/ui\/(.*)/.exec(ref.specifier);
+    if (ref.type === 'dependency' && ref.dep === '@vezham/docs-react') {
+      const match = /@vezham/docs-react\/components\/ui\/(.*)/.exec(ref.specifier);
 
       if (match) {
         return {
@@ -270,8 +270,8 @@ export const registry: Registry = {
     },
   ],
   dependencies: {
-    'fumadocs-core': null,
-    'fumadocs-ui': null,
+    '@vezham/docs-core': null,
+    '@vezham/docs-react': null,
   },
 };
 

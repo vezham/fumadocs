@@ -1,6 +1,6 @@
 import type { MdastPluginDefinition, MdastVisitorContext } from 'satteri';
 import type { Nodes } from 'mdast';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins/remark-structure';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins/remark-structure';
 import { createStringifier, type Stringifier } from './stringifier';
 import type { ExtraPluginHooks } from './compile';
 
@@ -136,4 +136,4 @@ export function remarkStructure({
   return plugin;
 }
 
-export type { StructuredData } from 'fumadocs-core/mdx-plugins/remark-structure';
+export type { StructuredData } from '@vezham/docs-core/mdx-plugins/remark-structure';

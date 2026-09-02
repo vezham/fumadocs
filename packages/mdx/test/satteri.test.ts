@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url';
 import * as fs from 'node:fs/promises';
 import * as path from 'node:path';
 import { expect, test } from 'vitest';
-import { rehypeCodeDefaultOptions } from 'fumadocs-core/mdx-plugins/rehype-code';
+import { rehypeCodeDefaultOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
 import { applySatteriPreset } from '@fumadocs/satteri/preset';
 import { defineCollections, defineConfig } from '@/config';
 import { buildConfig, type DocCollectionItem } from '@/config/build';

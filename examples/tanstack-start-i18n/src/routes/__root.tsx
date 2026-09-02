@@ -1,8 +1,8 @@
 import { createRootRoute, HeadContent, Outlet, Scripts, useParams } from '@tanstack/react-router';
 import * as React from 'react';
 import appCss from '@/styles/app.css?url';
-import { RootProvider } from 'fumadocs-ui/provider/tanstack';
-import { i18nProvider, uiTranslations } from 'fumadocs-ui/i18n';
+import { RootProvider } from '@vezham/docs-react/provider/tanstack';
+import { i18nProvider, uiTranslations } from '@vezham/docs-react/i18n';
 import { i18n } from '@/lib/i18n';
 import { zhTW } from '@fumadocs/language/zh-tw';
 

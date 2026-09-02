@@ -4,8 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "@vx/ws:changeset": "changeset",
     "build": "turbo run build",
     "clean": "turbo run clean",
+    "clean:cache": "find . \\( -name '.turbo' -o -name '.next' -o -name 'dist' -o -name 'node_modules' -o -name '.source' -o -name '.contentlayer' -o -name 'pnpm-lock.yaml' \\) -prune -exec rm -rf '{}' +",
     "dev": "turbo run dev",
     "dev:examples": "turbo run dev --filter=./examples/*",
     "lint": "turbo run lint",
@@ -16,6 +18,8 @@
     "types:check": "turbo run types:check --continue"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "0.5.0",
+    "@changesets/cli": "2.27.10",
     "oxfmt": "^0.65.0",
     "oxlint": "^1.80.0",
     "rimraf": "^6.1.3",
@@ -25,8 +29,8 @@
     "typescript": "^6.0.3",
     "vitest": "^4.1.11"
   },
+  "packageManager": "pnpm@10.18.3",
   "engines": {
-    "node": ">= 24.14.0"
-  },
-  "packageManager": "pnpm@11.5.3"
+    "node": ">= 20.17.0"
+  }
 }

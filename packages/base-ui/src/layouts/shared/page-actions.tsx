@@ -5,7 +5,7 @@ import { cn } from '@/utils/cn';
 import { useCopyButton } from '@/utils/use-copy-button';
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
 import { buttonVariants } from '@/components/ui/button';
-import { usePathname } from 'fumadocs-core/framework';
+import { usePathname } from '@vezham/docs-core/framework';
 import { useTranslations } from '@fuma-translate/react';
 
 const cache = new Map<string, Promise<string>>();

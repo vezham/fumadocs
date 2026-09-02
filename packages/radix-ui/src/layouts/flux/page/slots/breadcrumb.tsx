@@ -2,9 +2,9 @@
 
 import { useTreeContext, useTreePath } from '@/contexts/tree';
 import { cn } from '@/utils/cn';
-import { type BreadcrumbOptions, getBreadcrumbItemsFromPath } from 'fumadocs-core/breadcrumb';
+import { type BreadcrumbOptions, getBreadcrumbItemsFromPath } from '@vezham/docs-core/breadcrumb';
 import { ChevronRight } from 'lucide-react';
-import Link from 'fumadocs-core/link';
+import Link from '@vezham/docs-core/link';
 import { type ComponentProps, Fragment, useMemo } from 'react';
 
 export type BreadcrumbProps = BreadcrumbOptions & ComponentProps<'div'>;

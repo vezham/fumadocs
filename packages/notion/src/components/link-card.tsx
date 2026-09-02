@@ -12,7 +12,7 @@ import {
 import { richTextToPlainText } from '../blocks';
 import { NotionRichText } from '../rich-text';
 import { getSafeHref, getUrlHost, getUrlLabel } from '../url';
-import { Card } from 'fumadocs-ui/components/card';
+import { Card } from '@vezham/docs-react/components/card';
 
 export type NotionLinkKind =
   | 'audio'

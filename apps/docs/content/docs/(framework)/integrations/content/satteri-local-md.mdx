@@ -27,7 +27,7 @@ Reach for it when you want Sätteri's compiler and its plugin model, and to reus
 Create a `localMd` instance and connect it to Fumadocs:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from 'fumadocs-core/source';
+import { dynamicLoader } from '@vezham/docs-core/source';
 import { localMd } from '@fumadocs/satteri/local-md';
 
 const docs = localMd({
@@ -49,7 +49,7 @@ Pass `frontmatterSchema` and `metaSchema` to customize the validation schemas:
 
 ```ts title="lib/source.ts"
 import { localMd } from '@fumadocs/satteri/local-md';
-import { pageSchema, metaSchema } from 'fumadocs-core/source/schema';
+import { pageSchema, metaSchema } from '@vezham/docs-core/source/schema';
 
 const docs = localMd({
   dir: 'content/docs',
@@ -86,7 +86,7 @@ Read the source in your route or layout and render it with Fumadocs UI, exactly 
 
 ```tsx title="app/docs/layout.tsx"
 import { getSource } from '@/lib/source';
-import { DocsLayout } from 'fumadocs-ui/layouts/docs';
+import { DocsLayout } from '@vezham/docs-react/layouts/docs';
 
 export default async function Layout({ children }: LayoutProps<'/docs'>) {
   const docs = await getSource();
@@ -169,7 +169,7 @@ To wire up your own watcher instead, call `docs.invalidateFile(path)` when a fil
 Use `staticSource()` when you only need a one-time snapshot, so a normal `loader()` works:
 
 ```ts title="lib/source.ts"
-import { loader } from 'fumadocs-core/source';
+import { loader } from '@vezham/docs-core/source';
 
 export const source = loader(await docs.staticSource(), {
   baseUrl: '/docs',

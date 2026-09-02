@@ -1,5 +1,5 @@
 import type { BlockObjectResponse, RichTextItemResponse } from '@notionhq/client';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
 
 export type NotionBlock = BlockObjectResponse & {
   children?: NotionBlock[];

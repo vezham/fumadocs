@@ -7,10 +7,10 @@ import {
   type SourceOptions,
   type WatchableSource,
 } from '@fumadocs/local-content';
-import { frontmatter as parseFrontmatter } from 'fumadocs-core/content/md/frontmatter';
-import type { StructuredData } from 'fumadocs-core/mdx-plugins';
-import type { DynamicSource, MetaData, PageData, StaticSource } from 'fumadocs-core/source';
-import * as defaultSchemas from 'fumadocs-core/source/schema';
+import { frontmatter as parseFrontmatter } from '@vezham/docs-core/content/md/frontmatter';
+import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { DynamicSource, MetaData, PageData, StaticSource } from '@vezham/docs-core/source';
+import * as defaultSchemas from '@vezham/docs-core/source/schema';
 import { createMarkdownCompiler, type MarkdownCompilerOptions } from './md/compiler';
 import {
   fromAst,
