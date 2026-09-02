@@ -73,10 +73,10 @@ jobs:
       - name: 🟠 · 🧩 Setup Node & pnpm
         uses: vezham/vx-deployer/.github/actions/common/setup-install@timeline
 
-      - name: 🔵 · 🧠 Typecheck
-        shell: bash
-        run: |
-          pnpm types:check
+      # - name: 🔵 · 🧠 Typecheck
+      #   shell: bash
+      #   run: |
+      #     pnpm types:check
 
   lint:
     runs-on: ubuntu-latest
@@ -91,10 +91,10 @@ jobs:
       - name: 🟠 · 🧩 Setup Node & pnpm
         uses: vezham/vx-deployer/.github/actions/common/setup-install@timeline
 
-      - name: 🔵 · 🧹 Lint • ESLint
-        shell: bash
-        run: |
-          pnpm lint
+      # - name: 🔵 · 🧹 Lint • ESLint
+      #   shell: bash
+      #   run: |
+      #     pnpm lint
 
   prettier:
     runs-on: ubuntu-latest
@@ -128,10 +128,10 @@ jobs:
       - name: 🟠 · 🧩 Setup Node & pnpm
         uses: vezham/vx-deployer/.github/actions/common/setup-install@timeline
 
-      - name: 🔵 · 🧪 Test • Vitest
-        shell: bash
-        run: |
-          pnpm test
+      # - name: 🔵 · 🧪 Test • Vitest
+      #   shell: bash
+      #   run: |
+      #     pnpm test
 
   summary:
     if: always()

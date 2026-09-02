@@ -66,7 +66,7 @@ export function createMDX(options: CreateMDXOptions = {}) {
                 pattern,
                 {
                   condition: {
-                    content: /['"]@vezham/docs-mdx\/macro['"]/,
+                    content: /['"]@vezham\/docs-mdx\/macro['"]/,
                   },
                   loaders: [
                     {

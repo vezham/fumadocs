@@ -99,7 +99,7 @@ export const compileOptions: Partial<CompileOptions> = {
 
     // map dep imports to actual components
     if (ref.type === 'dependency' && ref.dep === '@vezham/docs-react') {
-      const match = /@vezham/docs-react\/components\/ui\/(.*)/.exec(ref.specifier);
+      const match = /@vezham\/docs-react\/components\/ui\/(.*)/.exec(ref.specifier);
 
       if (match) {
         return {
