@@ -50,8 +50,8 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "shadcn": "^4",
-    "@vezham/docs-core": "^16.9.2",
-    "@vezham/docs-react": "^16.9.2"
+    "@vezham/docs-core": "^1.0.0",
+    "@vezham/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "shadcn": {

@@ -17,9 +17,9 @@
     "react-server-dom-webpack": "^19.2.6",
     "takumi-js": "^2.1.1",
     "waku": "1.0.0-beta.1",
-    "@vezham/docs-core": "16.11.0",
-    "@vezham/docs-mdx": "15.1.0",
-    "@vezham/docs-react": "16.11.0"
+    "@vezham/docs-core": "^1.0.0",
+    "@vezham/docs-mdx": "^1.0.0",
+    "@vezham/docs-react": "^1.0.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.0",

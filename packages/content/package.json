@@ -42,6 +42,6 @@
   },
   "peerDependencies": {
     "fuma-content": "^1.2.3",
-    "@vezham/docs-core": "^16.6.17"
+    "@vezham/docs-core": "^1.0.0"
   }
 }

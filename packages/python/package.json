@@ -74,8 +74,8 @@
     "@types/mdx": "*",
     "@types/react": "*",
     "react": "19.x.x",
-    "@vezham/docs-core": "^16.8.0",
-    "@vezham/docs-react": "15.x.x || 16.x.x"
+    "@vezham/docs-core": "^1.0.0",
+    "@vezham/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/hast": {

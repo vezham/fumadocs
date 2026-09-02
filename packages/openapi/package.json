@@ -1,6 +1,6 @@
 {
   "name": "@vezham/docs-openapi",
-  "version": "11.3.5",
+  "version": "1.0.0",
   "description": "Generate MDX docs for your OpenAPI spec",
   "keywords": [
     "Docs",
@@ -84,8 +84,8 @@
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vezham/docs-core": "^16.15.0",
-    "@vezham/docs-react": "^16.15.0"
+    "@vezham/docs-core": "^1.0.0",
+    "@vezham/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "json-schema-typed": {

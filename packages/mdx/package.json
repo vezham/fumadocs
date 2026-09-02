@@ -1,6 +1,6 @@
 {
   "name": "@vezham/docs-mdx",
-  "version": "15.4.0",
+  "version": "1.0.0",
   "description": "The built-in source for Fumadocs",
   "keywords": [
     "Docs",
@@ -111,7 +111,7 @@
     "rolldown": "*",
     "satteri": "^0.10.5",
     "vite": "7.x.x || 8.x.x",
-    "@vezham/docs-core": "^16.15.3"
+    "@vezham/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@fumadocs/satteri": {

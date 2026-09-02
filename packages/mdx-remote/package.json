@@ -56,7 +56,7 @@
     "@types/mdx": "*",
     "@types/react": "*",
     "react": "18.x.x || 19.x.x",
-    "@vezham/docs-core": "^15.0.0 || ^16.0.0"
+    "@vezham/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/mdx": {

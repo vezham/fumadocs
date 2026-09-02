@@ -44,7 +44,7 @@
     "@types/react": "*",
     "basehub": "9.x.x",
     "react": "^19.2.0",
-    "@vezham/docs-core": "^16.8.0"
+    "@vezham/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {

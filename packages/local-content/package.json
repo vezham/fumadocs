@@ -55,7 +55,7 @@
     "@types/react": "*",
     "react": "^19.2.0",
     "vite": "^7.0.0 || ^8.0.0",
-    "@vezham/docs-core": "^16.15.0"
+    "@vezham/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {
