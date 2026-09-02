@@ -1,5 +1,11 @@
 ## fumadocs-mdx@15.4.0
 
+## 1.0.1
+
+### Patch Changes
+
+- [`31ccc75`](https://github.com/vezham/fumadocs/commit/31ccc75403db783088821eede56ef6b1f85e435b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Rename the forked docs packages under the @vezham scope.
+
 ### Remark LLMs: export a component with `output: "function"`
 
 With `output: "function"`, `_markdown` becomes a component instead of a string: Markdown content is still stringified at compile time, while JSX elements stay as JSX, receiving their original props.
@@ -14,16 +20,20 @@ postprocess: {
 Render it with `renderToMarkdown` from `fumadocs-core/server`. Elements resolve from `props.components`: a component can call `asMarkdown()` to output its own Markdown form, other components (including missing ones) are serialized as JSX syntax.
 
 ```tsx
-import { renderToMarkdown } from 'fumadocs-core/server';
+import { renderToMarkdown } from "fumadocs-core/server";
 
 const { _markdown: Content } = await page.data.load();
-const text = await renderToMarkdown(<Content components={getMDXComponents()} />);
+const text = await renderToMarkdown(
+  <Content components={getMDXComponents()} />
+);
 ```
 
 `getText('processed')` keeps working: it renders the component for you, with an optional components map:
 
 ```ts
-const text = await page.data.getText('processed', { components: getMDXComponents() });
+const text = await page.data.getText("processed", {
+  components: getMDXComponents(),
+});
 ```
 
 Supported in bundler collections with both compilers, and in `dynamic: true` collections & `@fumadocs/satteri/local-md` with the Sätteri compiler.
@@ -60,10 +70,10 @@ The query is now serialized (and percent-encoded) by Fumadocs itself, matching w
 **Breaking:** `ExtraPluginHooks.beforeToJs` was removed. Seed `ctx.data` from a Sätteri `before` hook on the plugin definition instead — it also receives the document root:
 
 ```ts
-import { defineMdastPlugin } from 'satteri';
+import { defineMdastPlugin } from "satteri";
 
 defineMdastPlugin({
-  name: 'my-plugin',
+  name: "my-plugin",
   before(root, ctx) {
     ctx.data.myValue ??= [];
   },
@@ -581,10 +591,12 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 - 3caa5cd: **Vite: move `source.generated.ts` to `.source/index.ts`**
 
   **Why:**
+
   - with Fumadocs MDX Plugins, we want to unify the output directory across Vite & Next.js.
   - `source.generated.ts` looks ugly compared by `.source`.
 
   **Migrate:**
+
   - run dev server/typegen to generate a `.source` folder.
   - import it over the original `source.generated.ts`.
   - note that both docs and `create-fumadocs-app` are updated to `.source` folder.
@@ -598,6 +610,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
   With Fumadocs MDX Plugins, you can extend Fumadocs MDX without worrying the underlying bundler.
   It is designed for:
+
   - Generate files from config (e.g. types, index files, JSON schemas)
   - Modify received config
 
@@ -660,6 +673,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 - f11f89d: **[Next.js] Rename APIS**
 
   On page data:
+
   - `_file` -> `info`.
   - `_file.absolutePath` -> `info.fullPath`.
 

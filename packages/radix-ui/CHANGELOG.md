@@ -1,5 +1,14 @@
 ## fumadocs-ui@16.15.4
 
+## 1.0.1
+
+### Patch Changes
+
+- [`31ccc75`](https://github.com/vezham/fumadocs/commit/31ccc75403db783088821eede56ef6b1f85e435b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Rename the forked docs packages under the @vezham scope.
+
+- Updated dependencies [[`31ccc75`](https://github.com/vezham/fumadocs/commit/31ccc75403db783088821eede56ef6b1f85e435b)]:
+  - @vezham/docs-core@1.0.1
+
 ### Fix Next.js `<Link>` not scrolling to top under docs layouts
 
 The page container rendered `<main style="display: contents">`, which Next.js' scroll handler treats as a hidden element: `display: contents` generates no box, so its `getBoundingClientRect()` is all-zero, indistinguishable from `display: none`. The handler skips it (and the sticky TOC siblings) without ever descending into children, dropping the scroll-to-top on navigation entirely.
@@ -37,7 +46,7 @@ The page container slot now wraps `<article id="nd-page">` in a `<main class="co
 The built-in search engine moved from `@orama/orama` to [ZBSearch](https://www.zbsearch.dev), a near drop-in successor. All module paths and APIs are unchanged, and search now works with **every language out of the box**: the new default `multilingual` mode uses Unicode word segmentation, so i18n search needs zero config.
 
 ```ts
-import { createFromSource } from 'fumadocs-core/search/server';
+import { createFromSource } from "fumadocs-core/search/server";
 
 // no `localeMap`, no `@orama/tokenizers`, CJK included
 export const { GET } = createFromSource(source);
@@ -46,7 +55,7 @@ export const { GET } = createFromSource(source);
 All locales now share a single search database — results are filtered by the locale of your pages at query time. Same for static mode:
 
 ```ts
-import { staticClient } from 'fumadocs-core/search/client/orama-static';
+import { staticClient } from "fumadocs-core/search/client/orama-static";
 
 const client = staticClient({ locale });
 ```
@@ -113,8 +122,6 @@ Add Astro as a supported framework with React islands, including framework provi
 ## fumadocs-ui@16.11.0
 
 ### Updated the theme switch to use `document.startViewTransition()` for smoother theme transitions with graceful fallback.
-
-
 
 ### Default to Base UI
 
@@ -1047,7 +1054,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
       export function createFromSource<S extends LoaderOutput<LoaderConfig>>(
         source: S,
         pageToIndexFn?: (page: InferPageType<S>) => Awaitable<AdvancedIndex>,
-        options?: Omit<Options<S>, "buildIndex">,
+        options?: Omit<Options<S>, "buildIndex">
       ): SearchAPI;
       ```
     - remove deprecated parameters in `useSearch()`, pass them in the client object instead.
@@ -1096,6 +1103,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 - 90cf1fe: Support `tabMode` on `<DocsLayout />`
 - 6c3bde5: **Prefer importing `<RootProvider />` from `fumadocs-ui/provider/<framework>`**
+
   - Old `fumadocs-ui/provider` will be kept, as it's used by majority of previous projects.
   - New guides & templates will follow the new recommendation.
 
@@ -1508,6 +1516,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
   Changed layout positioning, all layout components now use `fixed` position.
 
   This may impact sites that:
+
   - using custom styling on Fumadocs layouts.
   - added a custom footer (see below).
 
@@ -2202,6 +2211,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 ### Minor Changes
 
 - 66c70ec: **Replace official Tailwind CSS typography plugin**
+
   - Other variants like `prose-sm` and `prose-gray` are removed, as it's supposed to only provide support for Fumadocs UI typography styles.
 
 - 05d224c: added the updateAnchor option for the Tabs ui component
@@ -3154,6 +3164,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 ### Major Changes
 
 - 62b5abb: **New Layout**
+
   - Remove navbar from docs layout, replace it with sidebar.
   - On smaller devices, navbar is always shown.
   - Remove exports of internal components, copying components from the repository is now the preferred way.
