@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/api-docs",
+  "name": "@vx-oss/docs-api",
   "version": "0.2.6",
   "description": "Shared utils for API docs generation",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/api-docs"
+  },
   "files": [
     "css",
     "dist"
@@ -57,7 +61,7 @@
   "dependencies": {
     "@base-ui/react": "^1.7.0",
     "@fuma-translate/react": "^1.0.2",
-    "@fumari/stf": "workspace:*",
+    "@vx-oss/docs-stf": "workspace:*",
     "@scalar/json-magic": "^0.13.2",
     "class-variance-authority": "^0.7.1",
     "cnfast": "^0.1.0",
@@ -74,16 +78,16 @@
     "json-schema-typed": "^8.0.2",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vezham/docs-core": "^1.0.0",
-    "@vezham/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0",
+    "@vx-oss/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "json-schema-typed": {

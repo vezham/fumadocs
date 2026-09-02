@@ -1,10 +1,10 @@
 import type { Document, OperationObject } from '@/types';
 import Slugger from 'github-slugger';
-import type { TOCItemType } from '@vezham/docs-core/toc';
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins';
 import type { GeneratedPageProps } from './builder';
-import { idToTitle } from '@fumadocs/api-docs/utils/id-to-title';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { idToTitle } from '@vx-oss/docs-api/utils/id-to-title';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { createMagicProxy } from '@scalar/json-magic/magic-proxy';
 
 const proxyCache = new WeakMap<Document, Document>();

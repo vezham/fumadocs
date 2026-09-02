@@ -1,7 +1,7 @@
 import epub, { type Options } from 'epub-gen-memory';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import type { LoaderConfig, Page } from '@vezham/docs-core/source';
+import type { LoaderConfig, Page } from '@vx-oss/docs-core/source';
 import { getPagesInTreeOrder } from './toc-builder';
 import { markdownToHtml } from './markdown-to-html';
 import { defaultEpubStyles } from './default-styles';
@@ -50,7 +50,7 @@ function pathToFileUrl(filePath: string): string {
  *
  * @example
  * ```ts
- * import { exportEpub } from 'fumadocs-epub';
+ * import { exportEpub } from '@vx-oss/docs-epub';
  * import { source } from '@/lib/source';
  *
  * const buffer = await exportEpub({

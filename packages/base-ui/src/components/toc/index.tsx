@@ -1,5 +1,5 @@
 'use client';
-import * as Primitive from '@vezham/docs-core/toc';
+import * as Primitive from '@vx-oss/docs-core/toc';
 import { type ComponentProps, createContext, use, useRef } from 'react';
 import { cn } from '@/utils/cn';
 import { mergeRefs } from '@/utils/merge-refs';

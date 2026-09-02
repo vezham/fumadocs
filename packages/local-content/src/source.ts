@@ -4,7 +4,7 @@ import type {
   PageData,
   StaticSource,
   VirtualFile,
-} from '@vezham/docs-core/source';
+} from '@vx-oss/docs-core/source';
 import path from 'node:path';
 import { createStorage } from './storage';
 import type { ContentIntegration, ParsedFile } from './integration';
@@ -40,8 +40,8 @@ export interface LocalSource<Page extends PageData, Meta extends MetaData> exten
   /** drop every parsed file and source cache */
   invalidateAll: () => void;
   /**
-   * @deprecated import `watchWithDevServer` from `@fumadocs/local-content/dev/ws`,
-   * or `watchWithVite` from `@fumadocs/local-content/dev/vite`, instead.
+   * @deprecated import `watchWithDevServer` from `@vx-oss/docs-local-content/dev/ws`,
+   * or `watchWithVite` from `@vx-oss/docs-local-content/dev/vite`, instead.
    */
   devServer: (url?: string) => Promise<void>;
 }

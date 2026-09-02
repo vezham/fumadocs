@@ -9,7 +9,7 @@ Fumadocs GraphQL uses a `<GraphQLPage />` component to render page contents, it 
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   // config
@@ -22,7 +22,7 @@ Enable the interactive playground on operation pages by configuring an endpoint,
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   playground: {
@@ -41,7 +41,7 @@ You can replace the default fetcher, e.g. to proxy requests:
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   playground: {
@@ -68,7 +68,7 @@ Or replace the playground UI entirely with `render`:
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   playground: {
@@ -92,7 +92,7 @@ You can also resolve the links yourself:
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   typeLinks(name) {
@@ -112,7 +112,7 @@ You can customize how operation and type pages are laid out.
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   content: {
@@ -154,7 +154,7 @@ Customize how types are rendered.
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   schemaUI: {
@@ -171,9 +171,9 @@ export const GraphQLPage = createGraphQLPage({
 Assuming you have configured [Internationalization](/docs/internationalization) at UI level:
 
 ```tsx title="layout.shared.tsx"
-import { defineI18n } from '@vezham/docs-core/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
-import { graphqlTranslations } from '@fumadocs/graphql/i18n';
+import { defineI18n } from '@vx-oss/docs-core/i18n';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
+import { graphqlTranslations } from '@vx-oss/docs-graphql/i18n';
 
 const i18n = defineI18n({
   languages: ['en', 'cn'],
@@ -202,8 +202,8 @@ GraphQL pages use Shiki for code blocks. You can customize the highlighter and t
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
-import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
+import { defaultShikiFactory } from '@vx-oss/docs-core/highlight/shiki/full';
 
 export const GraphQLPage = createGraphQLPage({
   shiki: defaultShikiFactory,
@@ -222,7 +222,7 @@ Override the default heading, code block and Markdown components.
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   components: {

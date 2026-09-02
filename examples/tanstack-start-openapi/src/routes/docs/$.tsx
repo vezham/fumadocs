@@ -1,5 +1,5 @@
 import { createFileRoute, notFound } from '@tanstack/react-router';
-import { DocsLayout } from '@vezham/docs-react/layouts/notebook';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/notebook';
 import { createServerFn } from '@tanstack/react-start';
 import { docs, source } from '@/lib/source';
 import {
@@ -9,10 +9,10 @@ import {
   DocsTitle,
   MarkdownCopyButton,
   ViewOptionsPopover,
-} from '@vezham/docs-react/layouts/notebook/page';
+} from '@vx-oss/docs-react/layouts/notebook/page';
 import { baseOptions } from '@/lib/layout.shared';
 import { encodeMarkdownUrl, gitConfig } from '@/lib/shared';
-import { useFumadocsLoader } from '@vezham/docs-core/source/client';
+import { useFumadocsLoader } from '@vx-oss/docs-core/source/client';
 import { Suspense, use, type ReactNode } from 'react';
 import { useMDXComponents } from '@/components/mdx';
 import { OpenAPIPage } from '@/components/api-page';

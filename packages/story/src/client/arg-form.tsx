@@ -7,7 +7,7 @@ import {
   useFieldValue,
   useNamespace,
   useObject,
-} from '@fumari/stf';
+} from '@vx-oss/docs-stf';
 import {
   Select,
   SelectContent,
@@ -18,10 +18,10 @@ import {
 import { Input } from '@/client/components/input';
 import { getDefaultValue } from '@/type-tree/sampler';
 import { cn } from '@/utils/cn';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { FormatFlags, typeToString } from '@/type-tree/stringify';
 import type { ObjectNode, TypeNode } from '@/type-tree/types';
-import { stringifyFieldKey } from '@fumari/stf/lib/utils';
+import { stringifyFieldKey } from '@vx-oss/docs-stf/lib/utils';
 import { validate } from '@/type-tree/validator';
 import { formatDateForInput } from '@/utils/date';
 import { cva } from 'class-variance-authority';

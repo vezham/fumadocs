@@ -11,7 +11,7 @@ Add it to your Remark plugins.
 
 ```ts tab="MDX Compiler"
 import { compile } from '@mdx-js/mdx';
-import { remarkImage } from '@vezham/docs-core/mdx-plugins';
+import { remarkImage } from '@vx-oss/docs-core/mdx-plugins';
 
 await compile('...', {
   remarkPlugins: [remarkImage],
@@ -19,7 +19,7 @@ await compile('...', {
 ```
 
 ```ts title="source.config.ts" tab="Fumadocs MDX"
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 export default defineConfig({
   mdxOptions: {
@@ -74,7 +74,7 @@ For Next.js, you can disable static imports on local images.
 
 ```ts tab="MDX Compiler"
 import { compile } from '@mdx-js/mdx';
-import { remarkImage } from '@vezham/docs-core/mdx-plugins';
+import { remarkImage } from '@vx-oss/docs-core/mdx-plugins';
 
 await compile('...', {
   remarkPlugins: [[remarkImage, { useImport: false }]],
@@ -82,7 +82,7 @@ await compile('...', {
 ```
 
 ```ts title="source.config.ts" tab="Fumadocs MDX"
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 export default defineConfig({
   mdxOptions: {
@@ -123,7 +123,7 @@ Customize the path of public directory
 
 ```ts tab="MDX Compiler"
 import { compile } from '@mdx-js/mdx';
-import { remarkImage } from '@vezham/docs-core/mdx-plugins';
+import { remarkImage } from '@vx-oss/docs-core/mdx-plugins';
 import path from 'node:path';
 
 await compile('...', {
@@ -132,7 +132,7 @@ await compile('...', {
 ```
 
 ```ts title="source.config.ts" tab="Fumadocs MDX"
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 import path from 'node:path';
 
 export default defineConfig({
@@ -148,7 +148,7 @@ You can pass a URL too.
 
 ```ts tab="MDX Compiler"
 import { compile } from '@mdx-js/mdx';
-import { remarkImage } from '@vezham/docs-core/mdx-plugins';
+import { remarkImage } from '@vx-oss/docs-core/mdx-plugins';
 
 await compile('...', {
   remarkPlugins: [[remarkImage, { publicDir: 'https://my-cdn.com/images' }]],
@@ -156,7 +156,7 @@ await compile('...', {
 ```
 
 ```ts title="source.config.ts" tab="Fumadocs MDX"
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 export default defineConfig({
   mdxOptions: {

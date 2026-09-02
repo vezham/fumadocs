@@ -1,9 +1,9 @@
 'use client';
 
-import { type AlgoliaOptions, useDocsSearch } from '@vezham/docs-core/search/client';
-import { algoliaClient } from '@vezham/docs-core/search/client/algolia';
+import { type AlgoliaOptions, useDocsSearch } from '@vx-oss/docs-core/search/client';
+import { algoliaClient } from '@vx-oss/docs-core/search/client/algolia';
 import { type ReactNode, useMemo, useState } from 'react';
-import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
+import { useOnChange } from '@vx-oss/docs-core/utils/use-on-change';
 import {
   SearchDialog,
   SearchDialogClose,
@@ -18,7 +18,7 @@ import {
   TagsList,
   TagsListItem,
 } from './search';
-import type { SortedResult } from '@vezham/docs-core/search';
+import type { SortedResult } from '@vx-oss/docs-core/search';
 import type { SearchLink, TagItem } from '@/contexts/search';
 import { useI18n } from '@/contexts/i18n';
 

@@ -1,8 +1,8 @@
 'use client';
-import * as PageTree from '@vezham/docs-core/page-tree';
-import { usePathname } from '@vezham/docs-core/framework';
+import * as PageTree from '@vx-oss/docs-core/page-tree';
+import { usePathname } from '@vx-oss/docs-core/framework';
 import { type ReactNode, useMemo, useRef, createContext, use } from 'react';
-import { searchPath } from '@vezham/docs-core/breadcrumb';
+import { searchPath } from '@vx-oss/docs-core/breadcrumb';
 import type { LayoutTab } from '@/layouts/shared';
 
 type MakeRequired<O, K extends keyof O> = Omit<O, K> & Pick<Required<O>, K>;

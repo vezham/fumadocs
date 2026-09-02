@@ -9,25 +9,25 @@ import {
   type FC,
   type ReactNode,
 } from 'react';
-import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import { remarkGfm } from '@vx-oss/docs-core/mdx-plugins/remark-gfm';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 import { remark } from 'remark';
 import remarkRehype from 'remark-rehype';
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime';
 import * as JsxRuntime from 'react/jsx-runtime';
 import { PageContent } from './api-page';
-import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
+import { defaultShikiFactory } from '@vx-oss/docs-core/highlight/shiki/full';
 import { generate } from '@fumari/json-schema-ts';
 import { ClientCodeBlock } from './components/codeblock';
 import { dereferenceBundledDocument } from '@/utils/document/dereference';
 import { getRaw } from '@scalar/json-magic/magic-proxy';
-import type { ShikiFactory } from '@vezham/docs-core/highlight/shiki';
+import type { ShikiFactory } from '@vx-oss/docs-core/highlight/shiki';
 import type { JSONSchema } from 'json-schema-typed';
 import type { CodeToHastOptionsCommon, CodeOptionsThemes, BundledTheme } from 'shiki';
 import type { GeneratedPageProps, OperationItem } from '@/utils/pages/builder';
 import { ParsedSchema } from '@/utils/schema';
 import { Markdown } from './components/markdown';
-import { Schema, type SchemaUIOptions } from '@fumadocs/api-docs/components/schema';
+import { Schema, type SchemaUIOptions } from '@vx-oss/docs-api/components/schema';
 import { RenderContextProvider } from './contexts/api';
 import type { ExampleMessageItem } from '@/utils/get-example-messages';
 

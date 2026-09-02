@@ -191,7 +191,7 @@ function isSignedFileUrl(value: string): boolean {
 function normalizeProxyPath(value = DEFAULT_FILE_PATH): string {
   const path = value.startsWith('/') ? value : `/${value}`;
   if (/[?#]/.test(path)) {
-    throw new Error('[@fumadocs/notion] file path cannot include a query or hash');
+    throw new Error('[@vx-oss/docs-notion] file path cannot include a query or hash');
   }
   return path.length > 1 ? path.replace(/\/+$/, '') : path;
 }

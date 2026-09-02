@@ -380,8 +380,8 @@ export const registry: Registry = {
     },
   ],
   dependencies: {
-    '@vezham/docs-core': null,
-    '@vezham/docs-react': null,
+    '@vx-oss/docs-core': null,
+    '@vx-oss/docs-react': null,
     react: null,
   },
 };

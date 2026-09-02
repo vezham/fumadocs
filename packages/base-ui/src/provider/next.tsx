@@ -1,8 +1,8 @@
 'use client';
 import type { ComponentProps } from 'react';
 import { RootProvider as BaseProvider } from '@/provider/base';
-import { NextProvider } from '@vezham/docs-core/framework/next';
-import type { Framework } from '@vezham/docs-core/framework';
+import { NextProvider } from '@vx-oss/docs-core/framework/next';
+import type { Framework } from '@vx-oss/docs-core/framework';
 
 export interface RootProviderProps extends ComponentProps<typeof BaseProvider> {
   /**

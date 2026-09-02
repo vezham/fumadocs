@@ -1,4 +1,4 @@
-## @fumadocs/api-docs@0.2.6
+## @vx-oss/docs-api@0.2.6
 
 ### Fix OpenAPI 3.0 `example` in external files crashing `OpenAPIPage`
 
@@ -6,7 +6,7 @@ The version upgrader ran after external documents were embedded under `x-ext`, w
 
 Each document is now upgraded before bundling embeds it. This also honors the external file's own declared OpenAPI version, so a 3.0 file referenced from a 3.1 document is upgraded too (previously it was skipped entirely).
 
-## @fumadocs/api-docs@0.2.5
+## @vx-oss/docs-api@0.2.5
 
 ### Support HTTP Basic client authentication in OAuth password flow
 
@@ -14,7 +14,7 @@ Some OAuth servers require client credentials in an HTTP Basic `Authorization` h
 
 Fix [#3506](https://github.com/fuma-nama/fumadocs/issues/3506)
 
-## @fumadocs/api-docs@0.2.4
+## @vx-oss/docs-api@0.2.4
 
 ### Preserve `description` when merging `allOf` schemas
 
@@ -29,20 +29,20 @@ amount:
 
 The last defined description among members wins, and a description on the outer schema keeps precedence over all of them.
 
-## @fumadocs/api-docs@0.2.3
+## @vx-oss/docs-api@0.2.3
 
 ### Survive `$ref` cycles in `dereferenceShallow`
 
 A Reference Object whose target eventually refers back to it overflowed the stack. The schema is now marked while its target resolves, so a cycle resolves to the sibling keywords instead of recursing forever.
 
-## @fumadocs/api-docs@0.2.2
+## @vx-oss/docs-api@0.2.2
 
-### Introduce `@fumadocs/graphql`
+### Introduce `@vx-oss/docs-graphql`
 
 Generate API reference docs from your GraphQL schemas, similar to the OpenAPI/AsyncAPI integration.
 
 ```ts
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 export const graphql = createGraphQL({
   input: ['./schema.graphql'],
@@ -69,7 +69,7 @@ export const source = loader(
 );
 ```
 
-And render them with `createGraphQLPage` from `@fumadocs/graphql/ui`, with an optional interactive playground:
+And render them with `createGraphQLPage` from `@vx-oss/docs-graphql/ui`, with an optional interactive playground:
 
 ```tsx
 export const GraphQLPage = createGraphQLPage({
@@ -88,13 +88,13 @@ Highlights:
 - **Cross-linking out of the box**: pass `baseUrl` (the `baseUrl` of your `loader()`) to `staticSource()` and type & operation references link to their pages automatically.
 - **Request snippets**: generated cURL & JavaScript tabs next to the example query.
 
-## @fumadocs/api-docs@0.2.1
+## @vx-oss/docs-api@0.2.1
 
 ### Rewrite union detector
 
 Use a simplified JSON schema validator to identify the active tab of an union field in playground UI.
 
-## @fumadocs/api-docs@0.2.0
+## @vx-oss/docs-api@0.2.0
 
 ### Use `@scalar/json-magic` for dereferencing
 
@@ -102,13 +102,13 @@ This will affect all raw access to OpenAPI/AsyncAPI documents, ensure to use `de
 
 ### Migrate from `js-yaml` to `yaml`
 
-## @fumadocs/api-docs@0.1.0
+## @vx-oss/docs-api@0.1.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-## @fumadocs/api-docs@0.0.4
+## @vx-oss/docs-api@0.0.4
 
 ### Migrate to `cnfast`
 
@@ -116,13 +116,13 @@ Drop `tailwind-merge`.
 
 ### Inline ref parser dependency
 
-## @fumadocs/api-docs@0.0.3
+## @vx-oss/docs-api@0.0.3
 
 ### Improve Schema UI tag rendering
 
 Change behaviour for multi-line value in schema tags.
 
-# @fumadocs/api-docs
+# @vx-oss/docs-api
 
 ## 0.0.2
 

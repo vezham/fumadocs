@@ -1,16 +1,16 @@
-## fumadocs-twoslash@3.3.0
+## @vx-oss/docs-twoslash@3.3.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-## fumadocs-twoslash@3.2.1
+## @vx-oss/docs-twoslash@3.2.1
 
 ### Migrate to `cnfast`
 
 Drop `tailwind-merge`.
 
-# fumadocs-twoslash
+# @vx-oss/docs-twoslash
 
 ## 3.2.0
 
@@ -177,7 +177,7 @@ Drop `tailwind-merge`.
 
 ### Minor Changes
 
-- b49d236: Support `typesCache` option and `fumadocs-twoslash/cache-fs` similar to Vitepress
+- b49d236: Support `typesCache` option and `@vx-oss/docs-twoslash/cache-fs` similar to Vitepress
 
 ### Patch Changes
 
@@ -237,7 +237,7 @@ Drop `tailwind-merge`.
 
 ### Major Changes
 
-- 9a10262: **Move Twoslash UI components to `fumadocs-twoslash`**
+- 9a10262: **Move Twoslash UI components to `@vx-oss/docs-twoslash`**
 
   **why:** Isolate logic from Fumadocs UI
 
@@ -254,9 +254,9 @@ Drop `tailwind-merge`.
   After:
 
   ```ts
-  import "fumadocs-twoslash/twoslash.css";
+  import "@vx-oss/docs-twoslash/twoslash.css";
 
-  import { Popup } from "fumadocs-twoslash/ui";
+  import { Popup } from "@vx-oss/docs-twoslash/ui";
   ```
 
   **Tailwind CSS is now required for Twoslash integration.**

@@ -79,7 +79,7 @@ async function main() {
     }),
   );
 
-  console.log('updated create-fumadocs-app');
+  console.log('updated create-vx-oss-docs');
 }
 
 void main();

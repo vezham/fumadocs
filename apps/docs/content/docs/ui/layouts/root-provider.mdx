@@ -10,7 +10,7 @@ The context provider of all the components, including `next-themes` and [`<Frame
 Import it according to your React.js framework:
 
 ```jsx tab="Next.js"
-import { RootProvider } from '@vezham/docs-react/provider/next';
+import { RootProvider } from '@vx-oss/docs-react/provider/next';
 
 export default function Layout({ children }) {
   return (
@@ -24,7 +24,7 @@ export default function Layout({ children }) {
 ```
 
 ```jsx tab="React Router"
-import { RootProvider } from '@vezham/docs-react/provider/react-router';
+import { RootProvider } from '@vx-oss/docs-react/provider/react-router';
 
 export function Layout({ children }) {
   return (
@@ -42,7 +42,7 @@ import {
   HeadContent,
   Scripts,
 } from '@tanstack/react-router';
-import { RootProvider } from '@vezham/docs-react/provider/tanstack';
+import { RootProvider } from '@vx-oss/docs-react/provider/tanstack';
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
@@ -61,7 +61,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 ```
 
 ```jsx tab="Waku"
-import { RootProvider } from '@vezham/docs-react/provider/waku';
+import { RootProvider } from '@vx-oss/docs-react/provider/waku';
 
 export default function Layout({ children }) {
   return (
@@ -76,7 +76,7 @@ export default function Layout({ children }) {
 
 ```jsx tab="Astro"
 import { navigate } from 'astro:transitions/client';
-import { RootProvider } from '@vezham/docs-react/provider/astro';
+import { RootProvider } from '@vx-oss/docs-react/provider/astro';
 
 export function DocsIsland({ children, pathname, params }) {
   return (

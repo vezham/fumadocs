@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { blogLoader } from '@/lib/source';
-import { PathUtils } from '@vezham/docs-core/source';
+import { PathUtils } from '@vx-oss/docs-core/source';
 import BannerImage from './banner.png';
 import Image from 'next/image';
 

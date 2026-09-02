@@ -3,7 +3,7 @@ title: Obsidian
 description: Render an Obsidian vault directly with Fumadocs.
 ---
 
-`fumadocs-obsidian` exposes a runtime content source. It reads and compiles the vault directly, so it does not generate intermediate MDX files or need a Fumadocs MDX remark plugin.
+`@vx-oss/docs-obsidian` exposes a runtime content source. It reads and compiles the vault directly, so it does not generate intermediate MDX files or need a Fumadocs MDX remark plugin.
 
 Supported Obsidian syntax includes:
 
@@ -19,19 +19,19 @@ Ambiguous wikilink names resolve like Obsidian: notes take precedence over attac
 Install the package:
 
 ```package-install
-fumadocs-obsidian shiki
+@vx-oss/docs-obsidian shiki
 ```
 
 ### Generate Styles
 
-The components from `fumadocs-obsidian/ui` are styled with Tailwind CSS. Add the following line so their classes are generated:
+The components from `@vx-oss/docs-obsidian/ui` are styled with Tailwind CSS. Add the following line so their classes are generated:
 
 ```css title="Tailwind CSS"
 @import 'tailwindcss';
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
 /* [!code ++] */
-@import 'fumadocs-obsidian/css/preset.css';
+@import '@vx-oss/docs-obsidian/css/preset.css';
 ```
 
 ### Configure Source
@@ -39,8 +39,8 @@ The components from `fumadocs-obsidian/ui` are styled with Tailwind CSS. Add the
 Create an Obsidian source and pass it to `dynamicLoader()`:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from '@vezham/docs-core/source';
-import { obsidian } from 'fumadocs-obsidian';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
+import { obsidian } from '@vx-oss/docs-obsidian';
 
 const vault = obsidian({
   dir: 'public/vault',
@@ -68,9 +68,9 @@ Then load and render a page:
 ```tsx title="app/docs/[[...slug]]/page.tsx"
 import { getSource } from '@/lib/source';
 import { notFound } from 'next/navigation';
-import defaultMdxComponents, { createRelativeLink } from '@vezham/docs-react/mdx';
-import * as ObsidianComponents from 'fumadocs-obsidian/ui';
-import { DocsBody, DocsPage } from '@vezham/docs-react/layouts/docs/page';
+import defaultMdxComponents, { createRelativeLink } from '@vx-oss/docs-react/mdx';
+import * as ObsidianComponents from '@vx-oss/docs-obsidian/ui';
+import { DocsBody, DocsPage } from '@vx-oss/docs-react/layouts/docs/page';
 
 export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
   const source = await getSource();
@@ -102,7 +102,7 @@ Run the included content watcher alongside your framework:
 ```json title="package.json"
 {
   "scripts": {
-    "dev": "fumadocs-obsidian dev -- next dev"
+    "dev": "@vx-oss/docs-obsidian dev -- next dev"
   }
 }
 ```
@@ -112,7 +112,7 @@ The `vault.devServer()` call shown above receives changes from that watcher. Sin
 For Vite, use the in-process adapter instead:
 
 ```ts title="vite.config.ts"
-import { localContentPlugin } from 'fumadocs-obsidian/dev/vite';
+import { localContentPlugin } from '@vx-oss/docs-obsidian/dev/vite';
 
 export default defineConfig({
   plugins: [localContentPlugin()],
@@ -120,7 +120,7 @@ export default defineConfig({
 ```
 
 ```ts title="lib/source.ts"
-import { watchWithVite } from 'fumadocs-obsidian/dev/vite';
+import { watchWithVite } from '@vx-oss/docs-obsidian/dev/vite';
 
 if (import.meta.env.DEV) watchWithVite(vault);
 ```
@@ -130,8 +130,8 @@ if (import.meta.env.DEV) watchWithVite(vault);
 Use `staticSource()` when the vault only needs to be read once:
 
 ```ts title="lib/source.ts"
-import { loader } from '@vezham/docs-core/source';
-import { obsidian } from 'fumadocs-obsidian';
+import { loader } from '@vx-oss/docs-core/source';
+import { obsidian } from '@vx-oss/docs-obsidian';
 
 const vault = obsidian({
   dir: 'public/vault',
@@ -148,8 +148,8 @@ export const source = loader(await vault.staticSource(), {
 Use Standard Schema-compatible validators to customize page frontmatter and `meta.json` files:
 
 ```ts title="lib/source.ts"
-import { frontmatterSchema, obsidian } from 'fumadocs-obsidian';
-import { metaSchema } from '@vezham/docs-core/source/schema';
+import { frontmatterSchema, obsidian } from '@vx-oss/docs-obsidian';
+import { metaSchema } from '@vx-oss/docs-core/source/schema';
 import { z } from 'zod';
 
 const vault = obsidian({
@@ -171,7 +171,7 @@ Pass remark/rehype plugins to enable syntax features separately:
 - [Math](/docs/markdown/math).
 
 ```ts title="lib/source.ts"
-import { obsidian } from 'fumadocs-obsidian';
+import { obsidian } from '@vx-oss/docs-obsidian';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 

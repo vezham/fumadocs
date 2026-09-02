@@ -7,9 +7,9 @@ import {
   AccordionItem,
   Accordions,
   AccordionTrigger,
-} from '@fumadocs/api-docs/components/accordion';
-import { Tab, Tabs } from '@vezham/docs-react/components/tabs';
-import { sample } from '@fumadocs/api-docs/schema/sample';
+} from '@vx-oss/docs-api/components/accordion';
+import { Tab, Tabs } from '@vx-oss/docs-react/components/tabs';
+import { sample } from '@vx-oss/docs-api/schema/sample';
 import { getRaw } from '@scalar/json-magic/magic-proxy';
 import { useMemo, type ReactNode } from 'react';
 import { useTranslations } from '@fuma-translate/react';

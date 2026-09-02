@@ -1,12 +1,12 @@
-import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
+import { ServerCodeBlock } from '@vx-oss/docs-react/components/codeblock.rsc';
 import type { ManualInstallationSnippet } from './manual-installation';
-import { transformerIcon } from '@vezham/docs-core/mdx-plugins/transformer-icon';
+import { transformerIcon } from '@vx-oss/docs-core/mdx-plugins/transformer-icon';
 import {
   CodeBlockTab,
   CodeBlockTabs,
   CodeBlockTabsList,
   CodeBlockTabsTrigger,
-} from '@vezham/docs-react/components/codeblock';
+} from '@vx-oss/docs-react/components/codeblock';
 import { transformerNotationDiff } from '@shikijs/transformers';
 
 const transformers = [transformerNotationDiff(), transformerIcon()];

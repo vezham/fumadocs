@@ -1,6 +1,6 @@
 'use client';
 import type { ComponentProps } from 'react';
-import Link, { type LinkProps } from '@vezham/docs-core/link';
+import Link, { type LinkProps } from '@vx-oss/docs-core/link';
 import { NavigationMenu as Primitive } from '@base-ui/react/navigation-menu';
 import { cn } from '@/utils/cn';
 import { navItemVariants } from './slots/header';

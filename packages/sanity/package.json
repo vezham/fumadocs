@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/sanity",
+  "name": "@vx-oss/docs-sanity",
   "version": "0.2.2",
   "description": "The official Sanity integration for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/sanity"
+  },
   "files": [
     "dist"
   ],
@@ -46,8 +50,8 @@
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
     "vitest": "^4.1.11",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@sanity/client": "^7.22.0 || ^8.0.0",
@@ -56,7 +60,7 @@
     "next-sanity": "^12.4.0 || ^13.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@sanity/types": {

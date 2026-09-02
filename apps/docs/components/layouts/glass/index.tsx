@@ -3,7 +3,7 @@ import { source } from '@/lib/source';
 import { AISearch, AISearchPanel } from '@/components/inkeep/search';
 import { getSection } from '@/lib/source/navigation';
 import type { CSSProperties, ReactNode } from 'react';
-import { getLayoutTabs } from '@vezham/docs-react/layouts/shared';
+import { getLayoutTabs } from '@vx-oss/docs-react/layouts/shared';
 import { ClientGlassLayout } from './client';
 import 'katex/dist/katex.min.css';
 

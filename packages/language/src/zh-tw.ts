@@ -1,9 +1,9 @@
-import type { TranslationPreset } from '@vezham/docs-core/i18n';
-import type { Translations as UITranslations } from '@vezham/docs-react/i18n';
-import type { Translations as OpenAPITranslations } from '@vezham/docs-openapi/i18n';
-import type { Translations as AsyncAPITranslations } from '@fumadocs/asyncapi/i18n';
-import type { Translations as StoryTranslations } from '@vezham/docs-story/i18n';
-import type { Translations as APIDocsTranslations } from '@fumadocs/api-docs/i18n';
+import type { TranslationPreset } from '@vx-oss/docs-core/i18n';
+import type { Translations as UITranslations } from '@vx-oss/docs-react/i18n';
+import type { Translations as OpenAPITranslations } from '@vx-oss/docs-openapi/i18n';
+import type { Translations as AsyncAPITranslations } from '@vx-oss/docs-asyncapi/i18n';
+import type { Translations as StoryTranslations } from '@vx-oss/docs-story/i18n';
+import type { Translations as APIDocsTranslations } from '@vx-oss/docs-api/i18n';
 
 type Translations = UITranslations &
   OpenAPITranslations &
@@ -13,7 +13,7 @@ type Translations = UITranslations &
 
 const translations = {
   displayName: '繁體中文',
-  // @vezham/docs-react
+  // @vx-oss/docs-react
   'Ask AI(AI chat button)': '詢問 AI',
   'Back to Home(404 not found page)': '返回首頁',
   'Choose a language(language switcher)': '選擇語言',
@@ -66,7 +66,7 @@ const translations = {
   'Type(type table)': '型別',
   'View as Markdown(page actions)': '以 Markdown 檢視',
 
-  // @fumadocs/api-docs
+  // @vx-oss/docs-api
   'Default(schema UI)': '預設',
   'Deprecated(schema UI)': '已棄用',
   'Enter Property Name(playground)': '輸入屬性名稱',
@@ -91,7 +91,7 @@ const translations = {
   'Upload(playground)': '上傳',
   'Value in(schema UI)': '值於',
 
-  // @vezham/docs-openapi
+  // @vx-oss/docs-openapi
   'Access Token(playground)': '存取權杖',
   'Authenticate using username and password.(OAuth dialog)': '使用使用者名稱和密碼進行驗證。',
   'Authenticate with 3rd party services(OAuth dialog)': '透過第三方服務進行驗證',
@@ -179,7 +179,7 @@ const translations = {
   'Username(OAuth dialog)': '使用者名稱',
   'loading...(playground server select)': '載入中...',
 
-  // @fumadocs/asyncapi
+  // @vx-oss/docs-asyncapi
   'Address(asyncapi channel section)': '位址',
   Bindings: '繫結',
   'Bindings(operation page)': '繫結',
@@ -195,7 +195,7 @@ const translations = {
   'Payload(operation page)': '承載內容',
   'Reply(operation page)': '回覆',
 
-  // @vezham/docs-story
+  // @vx-oss/docs-story
   'Encountered error when rendering the component.(story error boundary)': '渲染元件時發生錯誤。',
   'Enter bigint(story arguments form)': '輸入 bigint',
   'Enter date(story arguments form)': '輸入日期',

@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/local-html",
+  "name": "@vx-oss/docs-local-html",
   "version": "0.1.2",
   "description": "The local HTML files content source for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/local-html"
+  },
   "bin": {
     "local-html": "./dist/bin.js"
   },
@@ -37,7 +41,7 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fumadocs/local-content": "workspace:*",
+    "@vx-oss/docs-local-content": "workspace:*",
     "@standard-schema/spec": "^1.1.0",
     "github-slugger": "^2.0.0",
     "hast-util-from-html": "^2.0.3",
@@ -55,13 +59,13 @@
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "vite": "^8.2.2",
-    "@vezham/docs-core": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
     "@types/hast": "*",
     "@types/react": "*",
     "react": "^19.2.0",
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/hast": {

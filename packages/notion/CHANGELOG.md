@@ -1,8 +1,8 @@
-## @fumadocs/notion@0.2.2
+## @vx-oss/docs-notion@0.2.2
 
 ### Simplify cache
 
-## @fumadocs/notion@0.2.1
+## @vx-oss/docs-notion@0.2.1
 
 ### Remember verified file URLs in the Notion file handler
 
@@ -12,7 +12,7 @@ Every asset request cost between 2 and 34 Notion API calls, so a page with a han
 
 The dynamic loader's `files()`, Notion's page `load()`, `createFromSource`'s index build, and Shiki factory init retry on the next call after a transient failure, instead of returning the same rejection forever.
 
-## @fumadocs/notion@0.2.0
+## @vx-oss/docs-notion@0.2.0
 
 ### Support Notion integration
 

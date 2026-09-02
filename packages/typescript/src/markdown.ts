@@ -1,9 +1,9 @@
 import type { ElementContent, Nodes } from 'hast';
 import { remark } from 'remark';
-import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
-import { rehypeCode } from '@vezham/docs-core/mdx-plugins/rehype-code';
+import { remarkGfm } from '@vx-oss/docs-core/mdx-plugins/remark-gfm';
+import { rehypeCode } from '@vx-oss/docs-core/mdx-plugins/rehype-code';
 import remarkRehype from 'remark-rehype';
-import { highlightHast } from '@vezham/docs-core/highlight';
+import { highlightHast } from '@vx-oss/docs-core/highlight';
 import type { CodeToHastOptionsCommon, CodeOptionsThemes, BundledTheme } from 'shiki';
 
 export interface MarkdownRenderer {

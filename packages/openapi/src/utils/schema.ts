@@ -1,11 +1,11 @@
 import type { ExampleObject, MediaTypeObject, TagObject } from '@/types';
-import { idToTitle } from '@fumadocs/api-docs/utils/id-to-title';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { idToTitle } from '@vx-oss/docs-api/utils/id-to-title';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { getRaw } from '@scalar/json-magic/magic-proxy';
 
 export const methodKeys = ['get', 'post', 'patch', 'delete', 'head', 'put'] as const;
 
-export type { ParsedSchema } from '@fumadocs/api-docs/schema';
+export type { ParsedSchema } from '@vx-oss/docs-api/schema';
 
 export function getPreferredType(body: Record<string, unknown>): string | undefined {
   if ('application/json' in body) return 'application/json';

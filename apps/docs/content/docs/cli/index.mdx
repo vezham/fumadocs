@@ -8,7 +8,7 @@ description: The CLI tool that automates setups and installs components.
 Initialize a config for CLI:
 
 ```package-install
-npx @fumadocs/cli
+npx @vx-oss/docs-cli
 ```
 
 You can change the output paths of components in the config.
@@ -18,13 +18,13 @@ You can change the output paths of components in the config.
 Select and install components.
 
 ```package-install
-npx @fumadocs/cli add
+npx @vx-oss/docs-cli add
 ```
 
 You can pass component names directly.
 
 ```package-install
-npx @fumadocs/cli add banner files
+npx @vx-oss/docs-cli add banner files
 ```
 
 #### How the magic works?
@@ -42,7 +42,7 @@ Make sure to use the latest version of CLI
 A simple way to customize Fumadocs layouts.
 
 ```package-install
-npx @fumadocs/cli customize
+npx @vx-oss/docs-cli customize
 ```
 
 ### Tree
@@ -50,25 +50,25 @@ npx @fumadocs/cli customize
 Generate files tree for Fumadocs UI `Files` component, using the `tree` command from your terminal.
 
 ```package-install
-npx @fumadocs/cli tree ./my-dir ./output.tsx
+npx @vx-oss/docs-cli tree ./my-dir ./output.tsx
 ```
 
 You can output MDX files too:
 
 ```package-install
-npx @fumadocs/cli tree ./my-dir ./output.mdx
+npx @vx-oss/docs-cli tree ./my-dir ./output.mdx
 ```
 
 See help for further details:
 
 ```package-install
-npx @fumadocs/cli tree -h
+npx @vx-oss/docs-cli tree -h
 ```
 
 #### Example Output
 
 ```tsx title="output.tsx"
-import { File, Folder, Files } from '@vezham/docs-react/components/files';
+import { File, Folder, Files } from '@vx-oss/docs-react/components/files';
 
 export default (
   <Files>

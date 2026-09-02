@@ -8,7 +8,7 @@ export type SatteriOptionsInput =
   | (() => SatteriPresetOptions | Promise<SatteriPresetOptions>);
 
 export interface MarkdownCompilerOptions {
-  /** same shape as `@fumadocs/satteri/preset`, or a function returning it */
+  /** same shape as `@vx-oss/docs-satteri/preset`, or a function returning it */
   satteriOptions?: SatteriOptionsInput;
 }
 

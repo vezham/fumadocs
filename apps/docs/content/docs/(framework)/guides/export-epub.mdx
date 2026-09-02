@@ -14,7 +14,7 @@ It converts your MDX content to HTML, resolves images, and produces a standards-
 ### Installation
 
 ```npm
-npm install fumadocs-epub
+npm install @vx-oss/docs-epub
 ```
 
 ### Enable Processed Markdown
@@ -22,7 +22,7 @@ npm install fumadocs-epub
 EPUB export requires `includeProcessedMarkdown` in your docs collection config:
 
 ```ts title="source.config.ts"
-import { defineDocs } from '@vezham/docs-mdx/config';
+import { defineDocs } from '@vx-oss/docs-mdx/config';
 
 export const docs = defineDocs({
   docs: {
@@ -40,7 +40,7 @@ Create a route handler to serve the EPUB:
 
 ```ts tab="Next.js" title="app/export/epub/route.ts"
 import { source } from '@/lib/source';
-import { exportEpub } from 'fumadocs-epub';
+import { exportEpub } from '@vx-oss/docs-epub';
 
 export const revalidate = false;
 
@@ -63,7 +63,7 @@ export async function GET(): Promise<Response> {
 
 ```ts tab="React Router" title="app/routes/export.epub.ts"
 import { source } from '@/lib/source';
-import { exportEpub } from 'fumadocs-epub';
+import { exportEpub } from '@vx-oss/docs-epub';
 
 export async function loader() {
   const buffer = await exportEpub({
@@ -94,7 +94,7 @@ export default [
 ```ts tab="Tanstack Start" title="src/routes/export/epub.ts"
 import { createFileRoute } from '@tanstack/react-router';
 import { source } from '@/lib/source';
-import { exportEpub } from 'fumadocs-epub';
+import { exportEpub } from '@vx-oss/docs-epub';
 
 export const Route = createFileRoute('/export/epub')({
   server: {
@@ -121,7 +121,7 @@ export const Route = createFileRoute('/export/epub')({
 
 ```ts tab="Waku" title="pages/_api/export/epub.ts"
 import { source } from '@/lib/source';
-import { exportEpub } from 'fumadocs-epub';
+import { exportEpub } from '@vx-oss/docs-epub';
 
 export async function GET(): Promise<Response> {
   const buffer = await exportEpub({
@@ -187,7 +187,7 @@ The config passed to `exportEpub` supports these options:
 You can override the default EPUB styles:
 
 ```ts
-import { exportEpub, defaultEpubStyles } from 'fumadocs-epub';
+import { exportEpub, defaultEpubStyles } from '@vx-oss/docs-epub';
 
 const buffer = await exportEpub({
   source,

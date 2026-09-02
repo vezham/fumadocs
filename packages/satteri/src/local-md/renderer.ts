@@ -1,6 +1,6 @@
-import type { TOCItemType } from '@vezham/docs-core/toc';
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins/remark-structure';
-import { asMarkdown, jsxComponents } from '@vezham/docs-core/server';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins/remark-structure';
+import { asMarkdown, jsxComponents } from '@vx-oss/docs-core/server';
 import type { ReactNode } from 'react';
 import * as JsxRuntime from 'react/jsx-runtime';
 import type { MDXComponents, MDXContent } from 'mdx/types';

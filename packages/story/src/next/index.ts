@@ -28,7 +28,7 @@ export function createNextStory(createOptions: NextStoryOptions = {}) {
         [filter]: {
           loaders: [
             {
-              loader: '@vezham/docs-story/webpack/story',
+              loader: '@vx-oss/docs-story/webpack/story',
               options: loaderOptions as unknown as TurbopackLoaderOptions,
             },
           ],
@@ -47,7 +47,7 @@ export function createNextStory(createOptions: NextStoryOptions = {}) {
           enforce: 'pre',
           use: [
             {
-              loader: '@vezham/docs-story/webpack/story',
+              loader: '@vx-oss/docs-story/webpack/story',
               options: loaderOptions,
             },
           ],

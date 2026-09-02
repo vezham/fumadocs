@@ -4,7 +4,7 @@ import { expect, test } from 'vitest';
 import { createMagicProxy } from '@scalar/json-magic/magic-proxy';
 import { SchemaProvider } from '@/components/playground/schema';
 import { FieldSet } from '@/components/playground/inputs';
-import { StfProvider, useStf } from '@fumari/stf';
+import { StfProvider, useStf } from '@vx-oss/docs-stf';
 
 test('renders playground fields of circular schemas', () => {
   const bundled = {

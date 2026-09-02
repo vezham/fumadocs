@@ -2,8 +2,8 @@
 
 import { useTreePath, useTreeContext } from '@/contexts/tree';
 import { cn } from '@/utils/cn';
-import { type BreadcrumbOptions, getBreadcrumbItemsFromPath } from '@vezham/docs-core/breadcrumb';
-import Link from '@vezham/docs-core/link';
+import { type BreadcrumbOptions, getBreadcrumbItemsFromPath } from '@vx-oss/docs-core/breadcrumb';
+import Link from '@vx-oss/docs-core/link';
 import { ChevronRight } from 'lucide-react';
 import { type ComponentProps, useMemo, Fragment } from 'react';
 

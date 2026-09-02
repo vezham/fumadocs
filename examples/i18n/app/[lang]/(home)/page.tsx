@@ -1,4 +1,4 @@
-import { DynamicLink } from '@vezham/docs-core/dynamic-link';
+import { DynamicLink } from '@vx-oss/docs-core/dynamic-link';
 
 export default function HomePage() {
   return (

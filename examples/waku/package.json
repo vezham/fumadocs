@@ -17,9 +17,9 @@
     "react-server-dom-webpack": "^19.2.8",
     "takumi-js": "^2.12.0",
     "waku": "1.0.0-rc.0",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-mdx": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-mdx": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

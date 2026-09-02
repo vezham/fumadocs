@@ -1,30 +1,30 @@
-import { type LoaderPlugin, loader } from '@vezham/docs-core/source';
-import { lucideIconsPlugin } from '@vezham/docs-core/source/lucide-icons';
+import { type LoaderPlugin, loader } from '@vx-oss/docs-core/source';
+import { lucideIconsPlugin } from '@vx-oss/docs-core/source/lucide-icons';
 import { openapi } from '@/lib/openapi';
 import { asyncapi } from '../asyncapi';
 import { graphql } from '../graphql';
-import { defineCollections, defineDocs } from '@vezham/docs-mdx/macro';
-import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
+import { defineCollections, defineDocs } from '@vx-oss/docs-mdx/macro';
+import { metaSchema, pageSchema } from '@vx-oss/docs-core/source/schema';
 import z from 'zod';
 import {
   createFileSystemGeneratorCache,
   createGenerator,
   RemarkAutoTypeTableOptions,
-} from 'fumadocs-typescript';
+} from '@vx-oss/docs-typescript';
 import { defaultShikiOptions } from '../shiki';
 import type { ShikiTransformer } from 'shiki';
 import type { ElementContent } from 'hast';
-import { remarkSteps } from '@fumadocs/satteri/remark-steps';
-import { remarkBlockId } from '@fumadocs/satteri/remark-block-id';
-import { remarkTs2js } from '@fumadocs/satteri/remark-ts2js';
-import { remarkAutoTypeTable } from '@fumadocs/satteri/remark-auto-type-table';
-import { rehypeCodeDefaultOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
-import { transformerTwoslash } from 'fumadocs-twoslash';
-import { createFileSystemTypesCache } from 'fumadocs-twoslash/cache-fs';
+import { remarkSteps } from '@vx-oss/docs-satteri/remark-steps';
+import { remarkBlockId } from '@vx-oss/docs-satteri/remark-block-id';
+import { remarkTs2js } from '@vx-oss/docs-satteri/remark-ts2js';
+import { remarkAutoTypeTable } from '@vx-oss/docs-satteri/remark-auto-type-table';
+import { rehypeCodeDefaultOptions } from '@vx-oss/docs-core/mdx-plugins/rehype-code';
+import { transformerTwoslash } from '@vx-oss/docs-twoslash';
+import { createFileSystemTypesCache } from '@vx-oss/docs-twoslash/cache-fs';
 import type { MdastPluginDefinition } from 'satteri';
 
 const typeTableGenerator = createGenerator({
-  cache: createFileSystemGeneratorCache('.next/cache/fumadocs-typescript'),
+  cache: createFileSystemGeneratorCache('.next/cache/@vx-oss/docs-typescript'),
 });
 
 const isLint = process.env.LINT === '1';
@@ -157,7 +157,7 @@ const blog = defineCollections({
   }),
   async: true,
   async satteriOptions() {
-    const { rehypeCodeDefaultOptions } = await import('@vezham/docs-core/mdx-plugins/rehype-code');
+    const { rehypeCodeDefaultOptions } = await import('@vx-oss/docs-core/mdx-plugins/rehype-code');
 
     return {
       rehypeCodeOptions: isLint

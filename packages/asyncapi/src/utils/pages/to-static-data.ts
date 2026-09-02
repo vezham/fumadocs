@@ -1,9 +1,9 @@
 import type { AsyncAPIObject } from '@/types';
 import Slugger from 'github-slugger';
-import type { TOCItemType } from '@vezham/docs-core/toc';
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins';
 import type { GeneratedPageProps } from './builder';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { createMagicProxy } from '@scalar/json-magic/magic-proxy';
 import { getOperationDisplayName } from '../schema';
 

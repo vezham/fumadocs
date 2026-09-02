@@ -1,10 +1,10 @@
 import { createFileRoute, notFound } from '@tanstack/react-router';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { createServerFn } from '@tanstack/react-start';
 import { docs, source } from '@/lib/source';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vx-oss/docs-react/layouts/docs/page';
 import { baseOptions } from '@/lib/layout.shared';
-import { useFumadocsLoader } from '@vezham/docs-core/source/client';
+import { useFumadocsLoader } from '@vx-oss/docs-core/source/client';
 import { Suspense, use } from 'react';
 import { useMDXComponents } from '@/components/mdx';
 

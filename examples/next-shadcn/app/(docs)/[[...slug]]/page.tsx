@@ -1,11 +1,11 @@
 import { source } from '@/lib/source';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vx-oss/docs-react/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
-import { createRelativeLink } from '@vezham/docs-react/mdx';
-import { createShadcnDocs } from '@fumadocs/shadcn';
-import { Snippet } from '@fumadocs/shadcn/rsc';
+import { createRelativeLink } from '@vx-oss/docs-react/mdx';
+import { createShadcnDocs } from '@vx-oss/docs-shadcn';
+import { Snippet } from '@vx-oss/docs-shadcn/rsc';
 
 const shadcnDocs = createShadcnDocs({
   registryPath: 'registry/default/registry.json',

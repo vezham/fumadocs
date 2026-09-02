@@ -1,5 +1,5 @@
 import type { AsyncAPIObject } from '@/types';
-import { bundle } from '@fumadocs/api-docs/schema/bundle';
+import { bundle } from '@vx-oss/docs-api/schema/bundle';
 
 /**
  * Process input document to a Fumadocs AsyncAPI compatible format.

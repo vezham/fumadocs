@@ -23,7 +23,7 @@ Fumadocs also supports other content sources, including [Content Collections](/d
 ## Getting Started
 
 ```npm
-npm i @vezham/docs-react @vezham/docs-core
+npm i @vx-oss/docs-react @vx-oss/docs-core
 ```
 
 ### Root Layout
@@ -31,7 +31,7 @@ npm i @vezham/docs-react @vezham/docs-core
 Wrap the entire application inside [Root Provider](/docs/ui/layouts/root-provider), and add required styles to `body`.
 
 ```tsx title="app/layout.tsx"
-import { RootProvider } from '@vezham/docs-react/provider/next';
+import { RootProvider } from '@vx-oss/docs-react/provider/next';
 import type { ReactNode } from 'react';
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -55,8 +55,8 @@ Add the following Tailwind CSS styles to `global.css`.
 ```css title="global.css"
 @import 'tailwindcss';
 /* [!code ++:2] */
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
 ```
 
 > It doesn't come with a default font, you may choose one from `next/font`.

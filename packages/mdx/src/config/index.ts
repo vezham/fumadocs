@@ -1,11 +1,11 @@
 export * from './define';
 export * from '@/config/preset';
 export { remarkInclude } from '@/loaders/mdx/remark-include';
-import { metaSchema as m, pageSchema as p } from '@vezham/docs-core/source/schema';
+import { metaSchema as m, pageSchema as p } from '@vx-oss/docs-core/source/schema';
 
-/** @deprecated import `pageSchema` from `@vezham/docs-core/source/schema` instead (since 16.2.3) */
+/** @deprecated import `pageSchema` from `@vx-oss/docs-core/source/schema` instead (since 16.2.3) */
 export const frontmatterSchema = p;
-/** @deprecated import from `@vezham/docs-core/source/schema` instead (since 16.2.3) */
+/** @deprecated import from `@vx-oss/docs-core/source/schema` instead (since 16.2.3) */
 export const metaSchema = m;
 
 export type { PostprocessOptions } from '@/loaders/mdx/remark-postprocess';

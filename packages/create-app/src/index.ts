@@ -3,7 +3,13 @@ import fs from 'node:fs/promises';
 import { copy, tryGitInit } from '@/utils';
 import type { PackageManager } from './auto-install';
 import { autoInstall } from './auto-install';
-import { depVersions, sourceDir, type TemplateInfo, templates } from './constants';
+import {
+  depVersions,
+  resolvePublicDependency,
+  sourceDir,
+  type TemplateInfo,
+  templates,
+} from './constants';
 
 export type Template = TemplateInfo['value'];
 export interface Options {
@@ -130,13 +136,21 @@ async function initPackageJson(
   packageJsonPath: string,
 ): Promise<PackageJsonType> {
   function replaceWorkspaceDeps(deps: Record<string, string> = {}) {
-    for (const k in deps) {
-      if (deps[k].startsWith('workspace:') && k in depVersions) {
-        deps[k] = depVersions[k as keyof typeof depVersions];
+    const resolved: Record<string, string> = {};
+
+    for (const [name, spec] of Object.entries(deps)) {
+      const realName = name.replace(/^@vezham\/docs-/, '@vx-oss/docs-');
+      let version = spec;
+
+      if (version.startsWith('workspace:') && realName in depVersions) {
+        version = depVersions[realName];
       }
+
+      const [publicName, publicVersion] = resolvePublicDependency(realName, version);
+      resolved[publicName] = publicVersion;
     }
 
-    return deps;
+    return resolved;
   }
 
   const packageJson: PackageJsonType = JSON.parse(await fs.readFile(packageJsonPath, 'utf-8'));

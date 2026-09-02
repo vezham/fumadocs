@@ -6,10 +6,10 @@ import {
   AccordionItem,
   Accordions,
   AccordionTrigger,
-} from '@fumadocs/api-docs/components/accordion';
+} from '@vx-oss/docs-api/components/accordion';
 import type { ReactNode } from 'react';
 import type { RawRequestData } from '@/requests/types';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@vezham/docs-react/components/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@vx-oss/docs-react/components/tabs';
 import { pathnameFromRequest } from '@/requests/generators';
 import { MethodLabel } from '@/ui/components/method-label';
 import type { ExampleRequestItem } from '../../utils/get-example-requests';

@@ -41,7 +41,7 @@ Usually, it is provided by your content source (e.g. Fumadocs MDX). You can also
 
 ```ts tab="Next.js" title="app/api/search/route.ts"
 import { source } from '@/lib/source';
-import { createSearchAPI } from '@vezham/docs-core/search/server';
+import { createSearchAPI } from '@vx-oss/docs-core/search/server';
 
 export const { GET } = createSearchAPI('advanced', {
   indexes: source.getPages().map((page) => ({
@@ -56,7 +56,7 @@ export const { GET } = createSearchAPI('advanced', {
 
 ```ts tab="React Router" title="app/routes/search.ts"
 import type { Route } from './+types/search';
-import { createSearchAPI } from '@vezham/docs-core/search/server';
+import { createSearchAPI } from '@vx-oss/docs-core/search/server';
 import { source } from '@/lib/source';
 
 const server = createSearchAPI('advanced', {
@@ -77,7 +77,7 @@ export async function loader({ request }: Route.LoaderArgs) {
 ```ts tab="Tanstack Start" title="src/routes/api/search.ts"
 import { createFileRoute } from '@tanstack/react-router';
 import { source } from '@/lib/source';
-import { createSearchAPI } from '@vezham/docs-core/search/server';
+import { createSearchAPI } from '@vx-oss/docs-core/search/server';
 
 const server = createSearchAPI('advanced', {
   indexes: source.getPages().map((page) => ({
@@ -100,7 +100,7 @@ export const Route = createFileRoute('/api/search')({
 
 ```ts tab="Waku" title="src/pages/_api/api/search.ts"
 import { source } from '@/lib/source';
-import { createSearchAPI } from '@vezham/docs-core/search/server';
+import { createSearchAPI } from '@vx-oss/docs-core/search/server';
 
 export const { GET } = createSearchAPI('advanced', {
   indexes: source.getPages().map((page) => ({
@@ -115,7 +115,7 @@ export const { GET } = createSearchAPI('advanced', {
 
 ```ts tab="Astro" title="src/pages/api/search.ts"
 import type { APIRoute } from 'astro';
-import { createSearchAPI } from '@vezham/docs-core/search/server';
+import { createSearchAPI } from '@vx-oss/docs-core/search/server';
 import { getStructuredData, source } from '@/lib/source';
 
 const server = createSearchAPI('advanced', {
@@ -139,15 +139,15 @@ You can search documents using:
 - **Search Client**:
 
 ```ts twoslash
-import { useDocsSearch } from '@vezham/docs-core/search/client';
-import { fetchClient } from '@vezham/docs-core/search/client/fetch';
+import { useDocsSearch } from '@vx-oss/docs-core/search/client';
+import { fetchClient } from '@vx-oss/docs-core/search/client/fetch';
 
 const client = useDocsSearch({
   client: fetchClient(),
 });
 ```
 
-<auto-type-table type='import("@vezham/docs-core/search/client/fetch").FetchOptions' />
+<auto-type-table type='import("@vx-oss/docs-core/search/client/fetch").FetchOptions' />
 
 ## Configurations
 
@@ -157,7 +157,7 @@ Support filtering results by tag, it's useful for implementing multi-docs simila
 
 ```ts
 import { source } from '@/lib/source';
-import { createFromSource } from '@vezham/docs-core/search/server';
+import { createFromSource } from '@vx-oss/docs-core/search/server';
 
 const server = createFromSource(source, {
   buildIndex(page) {
@@ -180,8 +180,8 @@ and update your search client:
 - **Search Client**: pass a tag to `fetchClient`.
 
 ```ts
-import { useDocsSearch } from '@vezham/docs-core/search/client';
-import { fetchClient } from '@vezham/docs-core/search/client/fetch';
+import { useDocsSearch } from '@vx-oss/docs-core/search/client';
+import { fetchClient } from '@vx-oss/docs-core/search/client/fetch';
 
 const client = useDocsSearch({
   client: fetchClient({
@@ -196,7 +196,7 @@ To support usage with static site, use `staticGET` from search server and make t
 
 ```ts tab="Next.js" title="app/api/search/route.ts"
 import { source } from '@/lib/source';
-import { createFromSource } from '@vezham/docs-core/search/server';
+import { createFromSource } from '@vx-oss/docs-core/search/server';
 
 // statically cached [!code highlight:2]
 export const revalidate = false;
@@ -243,7 +243,7 @@ export default defineConfig({
 
 ```ts tab="Waku" title="src/pages/_api/api/search.ts"
 import { source } from '@/lib/source';
-import { createFromSource } from '@vezham/docs-core/search/server';
+import { createFromSource } from '@vx-oss/docs-core/search/server';
 
 // [!code highlight]
 export const { staticGET: GET } = createFromSource(source);
@@ -270,15 +270,15 @@ and update your search clients:
 - **Search Client**: use `staticClient` instead of `fetchClient`.
 
   ```ts
-  import { useDocsSearch } from '@vezham/docs-core/search/client';
-  import { staticClient } from '@vezham/docs-core/search/client/orama-static';
+  import { useDocsSearch } from '@vx-oss/docs-core/search/client';
+  import { staticClient } from '@vx-oss/docs-core/search/client/orama-static';
 
   const client = useDocsSearch({
     client: staticClient(),
   });
   ```
 
-  <auto-type-table type='import("@vezham/docs-core/search/client/orama-static").StaticOptions' />
+  <auto-type-table type='import("@vx-oss/docs-core/search/client/orama-static").StaticOptions' />
 
 <Callout type='warn' title="Be Careful">
 
@@ -295,7 +295,7 @@ Search works with every language out of the box - the default `multilingual` mod
 
 ```ts title="app/api/search/route.ts" tab="From Source"
 import { source } from '@/lib/source';
-import { createFromSource } from '@vezham/docs-core/search/server';
+import { createFromSource } from '@vx-oss/docs-core/search/server';
 
 // no extra configuration needed for i18n
 const server = createFromSource(source);
@@ -303,7 +303,7 @@ const server = createFromSource(source);
 
 ```ts tab="From Search Indexes"
 import { source } from '@/lib/source';
-import { createI18nSearchAPI } from '@vezham/docs-core/search/server';
+import { createI18nSearchAPI } from '@vx-oss/docs-core/search/server';
 import { i18n } from '@/lib/i18n';
 
 const server = createI18nSearchAPI('advanced', {
@@ -328,8 +328,8 @@ and update your search clients:
   Add `locale` to the search client, this will only allow pages with specified locale to be searchable by the user.
 
 ```ts
-import { useDocsSearch } from '@vezham/docs-core/search/client';
-import { fetchClient } from '@vezham/docs-core/search/client/fetch';
+import { useDocsSearch } from '@vx-oss/docs-core/search/client';
+import { fetchClient } from '@vx-oss/docs-core/search/client/fetch';
 
 const { search, setSearch, query } = useDocsSearch({
   client: fetchClient({
@@ -349,7 +349,7 @@ This also applies to **Static Mode**, pass `locale` to `staticClient` instead.
 
     ```ts
     import { source } from '@/lib/source';
-    import { createFromSource } from '@vezham/docs-core/search/server';
+    import { createFromSource } from '@vx-oss/docs-core/search/server';
     import { stemmer } from '@zbsearch/stemmers/english';
 
     const server = createFromSource(source, {
@@ -361,7 +361,7 @@ This also applies to **Static Mode**, pass `locale` to `staticClient` instead.
 
     ```ts
     import { source } from '@/lib/source';
-    import { createFromSource } from '@vezham/docs-core/search/server';
+    import { createFromSource } from '@vx-oss/docs-core/search/server';
 
     const server = createFromSource(source, {
       localeMap: {
@@ -386,7 +386,7 @@ This also applies to **Static Mode**, pass `locale` to `staticClient` instead.
 You can host the search server on other backend such as Express and Elysia.
 
 ```ts
-import { initAdvancedSearch } from '@vezham/docs-core/search/server';
+import { initAdvancedSearch } from '@vx-oss/docs-core/search/server';
 
 const server = initAdvancedSearch({
   // you still have to pass indexes

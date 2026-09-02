@@ -1,9 +1,9 @@
 import type { ParsedAppConfig } from '@/config/global';
 import { getSource } from '@/lib/source';
-import type { DocsLayoutProps } from '@vezham/docs-react/layouts/docs';
-import type { HomeLayoutProps } from '@vezham/docs-react/layouts/home';
+import type { DocsLayoutProps } from '@vx-oss/docs-react/layouts/docs';
+import type { HomeLayoutProps } from '@vx-oss/docs-react/layouts/home';
 import { FumadocsLogo } from '@/components/logo';
-import type { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
+import type { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';
 import { getConfigRuntime } from '@/config/load-runtime';
 
 export function layoutConfig(config: ParsedAppConfig) {

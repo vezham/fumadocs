@@ -1,5 +1,5 @@
 {
-  "name": "create-fumadocs-app",
+  "name": "create-vx-oss-docs",
   "version": "16.1.22",
   "description": "Create a new documentation site with Fumadocs",
   "keywords": [
@@ -10,7 +10,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/create-app"
+  },
   "bin": "./dist/bin.js",
   "files": [
     "dist",
@@ -43,7 +47,7 @@
   "dependencies": {
     "@clack/prompts": "^1.7.0",
     "@commander-js/extra-typings": "^15.0.0",
-    "@fumadocs/cli": "workspace:*",
+    "@vx-oss/docs-cli": "workspace:*",
     "commander": "^15.0.0",
     "fuma-cli": "^0.1.1",
     "picocolors": "^1.1.1",

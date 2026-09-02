@@ -1,4 +1,4 @@
-import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
+import { ServerCodeBlock } from '@vx-oss/docs-react/components/codeblock.rsc';
 
 export function Customization() {
   return (
@@ -7,7 +7,7 @@ export function Customization() {
       <p className="text-fd-muted-foreground text-sm">
         For advanced customization that supported options cannot suffice.
       </p>
-      <ServerCodeBlock code="npx @fumadocs/cli@latest customize" lang="bash" />
+      <ServerCodeBlock code="npx @vx-oss/docs-cli@latest customize" lang="bash" />
     </div>
   );
 }

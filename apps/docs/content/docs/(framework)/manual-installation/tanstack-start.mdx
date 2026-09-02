@@ -13,7 +13,7 @@ Before continuing, make sure to configure:
 ### Installation
 
 ```npm
-npm i @vezham/docs-core @vezham/docs-react
+npm i @vx-oss/docs-core @vx-oss/docs-react
 ```
 
 ### Styles
@@ -23,8 +23,8 @@ Add the following to your Tailwind CSS file:
 ```css title="styles/app.css"
 @import 'tailwindcss';
 /* [!code ++:2] */
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
 ```
 
 ### Create Pages
@@ -49,7 +49,7 @@ Wrap your entire app under Fumadocs providers:
 ```tsx title="__root.tsx"
 import { createRootRoute, HeadContent, Outlet, Scripts } from '@tanstack/react-router';
 import * as React from 'react';
-import { RootProvider } from '@vezham/docs-react/provider/tanstack';
+import { RootProvider } from '@vx-oss/docs-react/provider/tanstack';
 
 export const Route = createRootRoute({
   component: RootComponent,

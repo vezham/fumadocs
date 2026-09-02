@@ -9,7 +9,7 @@ Fumadocs AsyncAPI uses a `<AsyncAPIPage />` component to render page contents, i
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createAsyncAPIPage } from '@fumadocs/asyncapi/ui';
+import { createAsyncAPIPage } from '@vx-oss/docs-asyncapi/ui';
 
 export const AsyncAPIPage = createAsyncAPIPage({
   // config
@@ -22,7 +22,7 @@ You can customize how operations and message examples are laid out.
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createAsyncAPIPage } from '@fumadocs/asyncapi/ui';
+import { createAsyncAPIPage } from '@vx-oss/docs-asyncapi/ui';
 
 export const AsyncAPIPage = createAsyncAPIPage({
   content: {
@@ -47,7 +47,7 @@ Customize how JSON schemas are rendered, or disable schema examples.
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createAsyncAPIPage } from '@fumadocs/asyncapi/ui';
+import { createAsyncAPIPage } from '@vx-oss/docs-asyncapi/ui';
 
 export const AsyncAPIPage = createAsyncAPIPage({
   schemaUI: {
@@ -65,9 +65,9 @@ export const AsyncAPIPage = createAsyncAPIPage({
 Assuming you have configured [Internationalization](/docs/internationalization) at UI level:
 
 ```tsx title="layout.shared.tsx"
-import { defineI18n } from '@vezham/docs-core/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
-import { asyncapiTranslations } from '@fumadocs/asyncapi/i18n';
+import { defineI18n } from '@vx-oss/docs-core/i18n';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
+import { asyncapiTranslations } from '@vx-oss/docs-asyncapi/i18n';
 
 const i18n = defineI18n({
   languages: ['en', 'cn'],
@@ -96,8 +96,8 @@ AsyncAPI pages use Shiki for code blocks. You can customize the highlighter and 
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createAsyncAPIPage } from '@fumadocs/asyncapi/ui';
-import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
+import { createAsyncAPIPage } from '@vx-oss/docs-asyncapi/ui';
+import { defaultShikiFactory } from '@vx-oss/docs-core/highlight/shiki/full';
 
 export const AsyncAPIPage = createAsyncAPIPage({
   shiki: defaultShikiFactory,
@@ -116,7 +116,7 @@ Override the default heading and code block components.
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createAsyncAPIPage } from '@fumadocs/asyncapi/ui';
+import { createAsyncAPIPage } from '@vx-oss/docs-asyncapi/ui';
 
 export const AsyncAPIPage = createAsyncAPIPage({
   components: {

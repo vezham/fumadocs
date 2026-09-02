@@ -6,14 +6,14 @@ description: Configure Fumadocs Story on Next.js.
 ## Installation
 
 ```npm
-npm i @vezham/docs-story
+npm i @vx-oss/docs-story
 ```
 
 Add the Tailwind CSS preset:
 
 ```css title="Tailwind CSS"
 /* [!code ++] */
-@import '@vezham/docs-story/css/preset.css';
+@import '@vx-oss/docs-story/css/preset.css';
 ```
 
 Add the Webpack/Turbopack plugin:
@@ -21,7 +21,7 @@ Add the Webpack/Turbopack plugin:
 ```ts title="next.config.mts"
 import type { NextConfig } from 'next';
 // [!code ++]
-import { createNextStory } from '@vezham/docs-story/next';
+import { createNextStory } from '@vx-oss/docs-story/next';
 
 const config: NextConfig = {
   // ...
@@ -40,7 +40,7 @@ export default withStory(config);
 Create a story factory to store your global settings:
 
 ```ts title="lib/story.ts"
-import { defineStoryFactory } from '@vezham/docs-story/next/client';
+import { defineStoryFactory } from '@vx-oss/docs-story/next/client';
 
 export const { defineStory } = defineStoryFactory();
 ```

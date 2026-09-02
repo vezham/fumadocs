@@ -12,7 +12,7 @@ It offers the same output as `server` entry, while compiled properties have to b
 ```ts tab="Docs (Meta + Doc)"
 // [!code highlight]
 import { docs } from 'collections/dynamic';
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const source = loader({
   baseUrl: '/docs',
@@ -23,8 +23,8 @@ export const source = loader({
 ```ts tab="Doc"
 // [!code highlight]
 import { blogPosts } from 'collections/dynamic';
-import { toFumadocsSource } from '@vezham/docs-mdx/runtime/server';
-import { loader } from '@vezham/docs-core/source';
+import { toFumadocsSource } from '@vx-oss/docs-mdx/runtime/server';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const blog = loader({
   baseUrl: '/blog',

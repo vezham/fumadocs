@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/local-md",
+  "name": "@vx-oss/docs-local-md",
   "version": "0.3.4",
   "description": "The local Markdown files content source for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/local-md"
+  },
   "bin": {
     "local-md": "./dist/bin.js"
   },
@@ -39,7 +43,7 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fumadocs/local-content": "workspace:*",
+    "@vx-oss/docs-local-content": "workspace:*",
     "@mdx-js/mdx": "^3.1.1",
     "@standard-schema/spec": "^1.1.0",
     "estree-util-build-jsx": "^3.0.1",
@@ -64,7 +68,7 @@
     "tsdown": "0.22.14",
     "unified": "^11.0.5",
     "vite": "^8.2.2",
-    "@vezham/docs-core": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
     "@types/estree": "*",
@@ -75,7 +79,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "unified": "*",
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "unified": {

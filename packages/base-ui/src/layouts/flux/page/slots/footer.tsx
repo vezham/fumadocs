@@ -4,10 +4,10 @@ import { useTranslations } from '@fuma-translate/react';
 import { cn } from '@/utils/cn';
 import { isActive } from '@/utils/urls';
 import { useFooterItems } from '@/utils/use-footer-items';
-import { usePathname } from '@vezham/docs-core/framework';
-import type * as PageTree from '@vezham/docs-core/page-tree';
+import { usePathname } from '@vx-oss/docs-core/framework';
+import type * as PageTree from '@vx-oss/docs-core/page-tree';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Link from '@vezham/docs-core/link';
+import Link from '@vx-oss/docs-core/link';
 import { type ComponentProps, useMemo } from 'react';
 
 type Item = Pick<PageTree.Item, 'name' | 'description' | 'url'>;

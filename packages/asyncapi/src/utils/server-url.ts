@@ -1,5 +1,5 @@
 import type { ServerObject } from '@/types';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 
 export function getDefaultValues(server: ServerObject): Record<string, string> {
   const out: Record<string, string> = {};

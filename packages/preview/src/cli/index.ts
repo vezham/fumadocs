@@ -12,10 +12,10 @@ program
     if ((await findConfigPath()) === null) {
       await fs.writeFile(
         'fumadocs.config.ts',
-        `import { defineConfig } from "fumadocs-preview/config";\n\nexport default defineConfig();`,
+        `import { defineConfig } from "@vx-oss/docs-preview/config";\n\nexport default defineConfig();`,
       );
 
-      console.log('note: make sure to install `fumadocs-preview` as a dev dependency too.');
+      console.log('note: make sure to install `@vx-oss/docs-preview` as a dev dependency too.');
     }
   });
 

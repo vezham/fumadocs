@@ -26,8 +26,8 @@ export type Node = Item | Folder | Separator;
  *
  * @example
  * ```tsx
- * import { loader } from '@vezham/docs-core/source';
- * import { statusBadgesPlugin } from '@vezham/docs-core/source/status-badges';
+ * import { loader } from '@vx-oss/docs-core/source';
+ * import { statusBadgesPlugin } from '@vx-oss/docs-core/source/status-badges';
  *
  * export const source = loader({
  *   plugins: [

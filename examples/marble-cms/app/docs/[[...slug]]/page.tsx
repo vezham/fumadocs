@@ -5,7 +5,7 @@ import {
   DocsPage,
   DocsTitle,
   PageLastUpdate,
-} from '@vezham/docs-react/layouts/docs/page';
+} from '@vx-oss/docs-react/layouts/docs/page';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { renderFromHtml } from '@/lib/render-html';

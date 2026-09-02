@@ -65,18 +65,18 @@ describe('transform', () => {
       code: await fs.readFile(consumerFile, 'utf-8'),
       file: consumerFile,
       cfg: path.relative(root, consumerFile),
-      registerKey: '@vezham/docs-mdx:test',
+      registerKey: '@vx-oss/docs-mdx:test',
     });
 
     expect(result).toContain('function createOptions(');
     expect(result).not.toContain('docs.toFumadocsSource()');
     expect(result).not.toContain('must not run during config evaluation');
-    expect(result).not.toContain('@vezham/docs-mdx/macro');
+    expect(result).not.toContain('@vx-oss/docs-mdx/macro');
   });
 
   test('config target follows resolved symbols through shadowing', async () => {
     const result = await transformMacroConfigModule({
-      code: `import { defineDocs } from '@vezham/docs-mdx/macro';
+      code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';
 function createOptions(defineDocs: () => unknown) {
   defineDocs();
   return {};
@@ -86,7 +86,7 @@ export const docs = defineDocs({
 });`,
       file: sourceFile,
       cfg: path.relative(root, sourceFile),
-      registerKey: '@vezham/docs-mdx:test',
+      registerKey: '@vx-oss/docs-mdx:test',
     });
 
     expect(result).toContain('function createOptions(');
@@ -105,7 +105,7 @@ export const docs = defineDocs({
 
   test('options that do not shape the emitted imports may be dynamic', async () => {
     const result = await transformMacroModule({
-      code: `import { defineDocs } from '@vezham/docs-mdx/macro';
+      code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';
 const enabled = process.env.CI === '1';
 export const docs = defineDocs({
   dir: 'test/fixtures/generate-index-docs',
@@ -123,7 +123,7 @@ export const docs = defineDocs({
   test('reject non-static options', async () => {
     await expect(() =>
       transformMacroModule({
-        code: `import { defineDocs } from '@vezham/docs-mdx/macro';
+        code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';
 const dir = 'content/docs';
 export const docs = defineDocs({ dir });`,
         file: sourceFile,
@@ -136,7 +136,7 @@ export const docs = defineDocs({ dir });`,
   test('reject non-top-level calls', async () => {
     await expect(() =>
       transformMacroModule({
-        code: `import { defineDocs } from '@vezham/docs-mdx/macro';
+        code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';
 export function create() {
   return defineDocs({ dir: 'content/docs' });
 }`,
@@ -154,7 +154,7 @@ export function create() {
     ]) {
       await expect(() =>
         transformMacroModule({
-          code: `import { defineDocs } from '@vezham/docs-mdx/macro';\n${code}`,
+          code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';\n${code}`,
           file: sourceFile,
           root,
           target: 'vite',
@@ -166,7 +166,7 @@ export function create() {
   test('reject non-const declarations', async () => {
     await expect(() =>
       transformMacroModule({
-        code: `import { defineDocs } from '@vezham/docs-mdx/macro';
+        code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';
 export let docs = defineDocs({ dir: 'content/docs' });`,
         file: sourceFile,
         root,
@@ -178,7 +178,7 @@ export let docs = defineDocs({ dir: 'content/docs' });`,
   test('reject destructured collections', async () => {
     await expect(() =>
       transformMacroModule({
-        code: `import { defineDocs } from '@vezham/docs-mdx/macro';
+        code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';
 export const { docs } = defineDocs({ dir: 'content/docs' });`,
         file: sourceFile,
         root,
@@ -318,7 +318,7 @@ describe('config evaluation', () => {
 
     const counts = await Promise.all(
       Array.from({ length: 8 }, async () => {
-        const registerKey = `@vezham/docs-mdx:test:${randomUUID()}`;
+        const registerKey = `@vx-oss/docs-mdx:test:${randomUUID()}`;
         const key = Symbol.for(registerKey);
         let count = 0;
 
@@ -363,7 +363,7 @@ describe('config evaluation', () => {
     const write = (dir: string) =>
       fs.writeFile(
         file,
-        `import { defineDocs } from '@vezham/docs-mdx/macro';
+        `import { defineDocs } from '@vx-oss/docs-mdx/macro';
 export const docs = defineDocs({ dir: '${dir}' });
 export const other = defineDocs({ dir: '${dir}' });`,
       );

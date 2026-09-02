@@ -1,4 +1,4 @@
-import { RootProvider } from '@vezham/docs-react/provider/next';
+import { RootProvider } from '@vx-oss/docs-react/provider/next';
 import './global.css';
 import { Inter, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';

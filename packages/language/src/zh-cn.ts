@@ -1,9 +1,9 @@
-import type { TranslationPreset } from '@vezham/docs-core/i18n';
-import type { Translations as UITranslations } from '@vezham/docs-react/i18n';
-import type { Translations as OpenAPITranslations } from '@vezham/docs-openapi/i18n';
-import type { Translations as AsyncAPITranslations } from '@fumadocs/asyncapi/i18n';
-import type { Translations as StoryTranslations } from '@vezham/docs-story/i18n';
-import type { Translations as APIDocsTranslations } from '@fumadocs/api-docs/i18n';
+import type { TranslationPreset } from '@vx-oss/docs-core/i18n';
+import type { Translations as UITranslations } from '@vx-oss/docs-react/i18n';
+import type { Translations as OpenAPITranslations } from '@vx-oss/docs-openapi/i18n';
+import type { Translations as AsyncAPITranslations } from '@vx-oss/docs-asyncapi/i18n';
+import type { Translations as StoryTranslations } from '@vx-oss/docs-story/i18n';
+import type { Translations as APIDocsTranslations } from '@vx-oss/docs-api/i18n';
 
 type Translations = UITranslations &
   OpenAPITranslations &
@@ -13,7 +13,7 @@ type Translations = UITranslations &
 
 const translations = {
   displayName: '简体中文',
-  // @vezham/docs-react
+  // @vx-oss/docs-react
   'Ask AI(AI chat button)': '询问 AI',
   'Back to Home(404 not found page)': '返回首页',
   'Choose a language(language switcher)': '选择语言',
@@ -66,7 +66,7 @@ const translations = {
   'Type(type table)': '类型',
   'View as Markdown(page actions)': '以 Markdown 查看',
 
-  // @fumadocs/api-docs
+  // @vx-oss/docs-api
   'Default(schema UI)': '默认',
   'Deprecated(schema UI)': '已弃用',
   'Enter Property Name(playground)': '输入属性名称',
@@ -91,7 +91,7 @@ const translations = {
   'Upload(playground)': '上传',
   'Value in(schema UI)': '值于',
 
-  // @vezham/docs-openapi
+  // @vx-oss/docs-openapi
   'Access Token(playground)': '访问令牌',
   'Authenticate using username and password.(OAuth dialog)': '使用用户名和密码进行验证。',
   'Authenticate with 3rd party services(OAuth dialog)': '通过第三方服务进行验证',
@@ -179,7 +179,7 @@ const translations = {
   'Username(OAuth dialog)': '用户名',
   'loading...(playground server select)': '加载中...',
 
-  // @fumadocs/asyncapi
+  // @vx-oss/docs-asyncapi
   'Address(asyncapi channel section)': '地址',
   Bindings: '绑定',
   'Bindings(operation page)': '绑定',
@@ -195,7 +195,7 @@ const translations = {
   'Payload(operation page)': '有效载荷',
   'Reply(operation page)': '回复',
 
-  // @vezham/docs-story
+  // @vx-oss/docs-story
   'Encountered error when rendering the component.(story error boundary)': '渲染组件时发生错误。',
   'Enter bigint(story arguments form)': '输入 bigint',
   'Enter date(story arguments form)': '输入日期',

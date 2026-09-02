@@ -13,7 +13,8 @@ export async function getConfig(options: { root: string; isBuild: boolean }) {
     root: options.root,
     isBuild: options.isBuild,
     isFrameworkPkgByName(pkgName) {
-      if (pkgName.startsWith('@fumadocs/') || pkgName.startsWith('fumadocs-')) return true;
+      if (pkgName.startsWith('@vx-oss/docs-')) return true;
+      if (pkgName.startsWith('@vezham/docs-')) return true;
 
       // no CommonJS below these, crawling them is wasted work
       switch (pkgName) {

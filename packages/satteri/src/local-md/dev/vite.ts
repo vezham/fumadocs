@@ -1,2 +1,2 @@
-export { watchWithVite, localContentPlugin } from '@fumadocs/local-content/dev/vite';
-export type { LocalContentPluginOptions } from '@fumadocs/local-content/dev/vite';
+export { watchWithVite, localContentPlugin } from '@vx-oss/docs-local-content/dev/vite';
+export type { LocalContentPluginOptions } from '@vx-oss/docs-local-content/dev/vite';

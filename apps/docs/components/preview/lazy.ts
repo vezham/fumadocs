@@ -3,20 +3,20 @@ import dynamic from 'next/dynamic';
 
 export const DynamicCodeBlock = dynamic(() => import('./dynamic-codeblock'));
 export const Banner = dynamic(() =>
-  import('@vezham/docs-react/components/banner').then((res) => res.Banner),
+  import('@vx-oss/docs-react/components/banner').then((res) => res.Banner),
 );
 export const InlineTOC = dynamic(() =>
-  import('@vezham/docs-react/components/inline-toc').then((res) => res.InlineTOC),
+  import('@vx-oss/docs-react/components/inline-toc').then((res) => res.InlineTOC),
 );
 
-export const File = dynamic(() => import('@vezham/docs-react/components/files').then((res) => res.File));
-export const Files = dynamic(() => import('@vezham/docs-react/components/files').then((res) => res.Files));
+export const File = dynamic(() => import('@vx-oss/docs-react/components/files').then((res) => res.File));
+export const Files = dynamic(() => import('@vx-oss/docs-react/components/files').then((res) => res.Files));
 export const Folder = dynamic(() =>
-  import('@vezham/docs-react/components/files').then((res) => res.Folder),
+  import('@vx-oss/docs-react/components/files').then((res) => res.Folder),
 );
 
 export const ImageZoom = dynamic(() =>
-  import('@vezham/docs-react/components/image-zoom').then((res) => res.ImageZoom),
+  import('@vx-oss/docs-react/components/image-zoom').then((res) => res.ImageZoom),
 );
 
 export const GraphView = dynamic(() =>

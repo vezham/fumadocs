@@ -5,9 +5,9 @@ import { Body } from '@/app/layout.client';
 import { Provider } from './provider';
 import type { ReactNode } from 'react';
 import { Geist, JetBrains_Mono } from 'next/font/google';
-import { TreeContextProvider } from '@vezham/docs-react/contexts/tree';
+import { TreeContextProvider } from '@vx-oss/docs-react/contexts/tree';
 import { source } from '@/lib/source';
-import { NextProvider } from '@vezham/docs-core/framework/next';
+import { NextProvider } from '@vx-oss/docs-core/framework/next';
 
 export const metadata = createMetadata({
   title: {

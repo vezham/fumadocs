@@ -42,8 +42,8 @@ You can also add `locale` parameter to `baseOptions()` for localized layout opti
 
 ```tsx title="lib/layout.shared.tsx"
 import { i18n } from '@/lib/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
-import type { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
+import type { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';
 
 // [!code ++:11]
 export const translations = i18n
@@ -69,9 +69,9 @@ export function baseOptions(locale: string): BaseLayoutProps {
 Pass translations to `<RootProvider />`:
 
 ```tsx title="app/[lang]/layout.tsx"
-import { RootProvider } from '@vezham/docs-react/provider/next';
+import { RootProvider } from '@vx-oss/docs-react/provider/next';
 import { translations } from '@/lib/layout.shared';
-import { i18nProvider } from '@vezham/docs-react/i18n';
+import { i18nProvider } from '@vx-oss/docs-react/i18n';
 
 export default async function RootLayout({
   params,
@@ -123,7 +123,7 @@ Pass the locale to Fumadocs in your pages and layouts.
 
 ```ts tab="lib/source.ts"
 import { i18n } from '@/lib/i18n';
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const source = loader({
   i18n, // [!code ++]
@@ -133,7 +133,7 @@ export const source = loader({
 
 ```tsx tab="Home Layout" title="app/[lang]/(home)/layout.tsx"
 import type { ReactNode } from 'react';
-import { HomeLayout } from '@vezham/docs-react/layouts/home';
+import { HomeLayout } from '@vx-oss/docs-react/layouts/home';
 import { baseOptions } from '@/lib/layout.shared';
 
 export default async function Layout({
@@ -152,7 +152,7 @@ export default async function Layout({
 ```tsx tab="Docs Layout" title="app/[lang]/docs/layout.tsx"
 import type { ReactNode } from 'react';
 import { source } from '@/lib/source';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
 
 export default async function Layout({
@@ -230,11 +230,11 @@ const { lang } = useParams();
 return <Link href={`/${lang}/another-page`}>This is a link</Link>;
 ```
 
-In addition, the [`@vezham/docs-core/dynamic-link`](/docs/headless/components/link#dynamic-hrefs) component supports dynamic hrefs, you can use it to prepend the locale prefix.
+In addition, the [`@vx-oss/docs-core/dynamic-link`](/docs/headless/components/link#dynamic-hrefs) component supports dynamic hrefs, you can use it to prepend the locale prefix.
 It is useful for Markdown/MDX content.
 
 ```mdx title="content.mdx"
-import { DynamicLink } from '@vezham/docs-core/dynamic-link';
+import { DynamicLink } from '@vx-oss/docs-core/dynamic-link';
 
 <DynamicLink href="/[lang]/another-page">This is a link</DynamicLink>
 ```

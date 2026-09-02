@@ -13,8 +13,8 @@ import {
   type ReactNode,
 } from 'react';
 import { TOCScrollArea, useTOCItems } from '@/components/toc';
-import { TOCItem } from '@vezham/docs-core/toc';
-import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
+import { TOCItem } from '@vx-oss/docs-core/toc';
+import { useOnChange } from '@vx-oss/docs-core/utils/use-on-change';
 
 export type TOCProviderProps = Base.TOCProviderProps;
 

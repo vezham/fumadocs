@@ -8,7 +8,7 @@ description: Generating docs for GraphQL schema.
 Install the required packages.
 
 ```npm
-npm i @fumadocs/graphql graphql
+npm i @vx-oss/docs-graphql graphql
 ```
 
 ### Generate Styles
@@ -17,10 +17,10 @@ Add the following line:
 
 ```css title="Tailwind CSS"
 @import 'tailwindcss';
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
 /* [!code ++] */
-@import '@fumadocs/graphql/css/preset.css';
+@import '@vx-oss/docs-graphql/css/preset.css';
 ```
 
 ### Configure Plugin
@@ -28,7 +28,7 @@ Add the following line:
 Create the GraphQL server instance & `<GraphQLPage />` component.
 
 ```ts tab="lib/graphql.ts"
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 // note: this is a server-side API
 export const graphql = createGraphQL({
@@ -41,7 +41,7 @@ export const graphql = createGraphQL({
 
 ```tsx tab="components/api-page.tsx"
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   playground: {
@@ -58,7 +58,7 @@ See [`createGraphQL()`](/docs/integrations/graphql/server) & [`createGraphQLPage
 Integrate into [Loader API](/docs/headless/source-api/source) to generate pages, without generating real files.
 
 ```ts title="lib/source.ts"
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 import { docs } from 'collections/server';
 import { graphql } from '@/lib/graphql';
 

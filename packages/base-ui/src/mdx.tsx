@@ -1,4 +1,4 @@
-import Link from '@vezham/docs-core/link';
+import Link from '@vx-oss/docs-core/link';
 import type React from 'react';
 import type {
   AnchorHTMLAttributes,
@@ -7,7 +7,7 @@ import type {
   ImgHTMLAttributes,
   TableHTMLAttributes,
 } from 'react';
-import { Image as FrameworkImage } from '@vezham/docs-core/framework';
+import { Image as FrameworkImage } from '@vx-oss/docs-core/framework';
 import { Card, Cards } from '@/components/card';
 import { Callout, CalloutContainer, CalloutDescription, CalloutTitle } from '@/components/callout';
 import { Heading } from '@/components/heading';

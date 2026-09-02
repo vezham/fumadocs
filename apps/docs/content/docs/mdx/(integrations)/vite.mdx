@@ -10,14 +10,14 @@ description: Use Fumadocs MDX with Vite
 ### Installation
 
 ```npm
-npm i @vezham/docs-mdx @vezham/docs-core @types/mdx
+npm i @vx-oss/docs-mdx @vx-oss/docs-core @types/mdx
 ```
 
 Add the Vite plugin:
 
 ```ts tab="Vite" title="vite.config.ts"
 import { defineConfig } from 'vite';
-import { fumadocsMdx } from '@vezham/docs-mdx/vite';
+import { fumadocsMdx } from '@vx-oss/docs-mdx/vite';
 
 export default defineConfig({
   plugins: [
@@ -30,7 +30,7 @@ export default defineConfig({
 
 ```ts tab="Waku" title="waku.config.ts"
 import { type Config, defineConfig } from 'waku/config';
-import { fumadocsMdx } from '@vezham/docs-mdx/vite';
+import { fumadocsMdx } from '@vx-oss/docs-mdx/vite';
 import type { UserConfig } from 'vite';
 
 export default defineConfig({
@@ -51,8 +51,8 @@ export default defineConfig({
 Create a `lib/source.ts` file:
 
 ```ts title="app/lib/source.ts"
-import { defineDocs } from '@vezham/docs-mdx/macro';
-import { loader } from '@vezham/docs-core/source';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
 
 const docs = defineDocs({
   dir: 'content/docs',
@@ -74,7 +74,7 @@ You can now write content in `content/docs` folder.
 
 <Cards>
   <Card title="Macro API" href="/docs/mdx/macro">
-    Define collections in your app modules with `@vezham/docs-mdx/macro`.
+    Define collections in your app modules with `@vx-oss/docs-mdx/macro`.
   </Card>
   <Card title="Config API" href="/docs/mdx/collections">
     Define collections in `source.config.ts` with generated entry files.

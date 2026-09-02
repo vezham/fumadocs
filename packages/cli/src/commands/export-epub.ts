@@ -35,7 +35,7 @@ const EPUB_BUILD_PATHS: Record<string, string> = {
 };
 
 const API_ROUTE_TEMPLATE = `import { source } from '@/lib/source';
-import { exportEpub } from 'fumadocs-epub';
+import { exportEpub } from '@vx-oss/docs-epub';
 
 export const revalidate = false;
 
@@ -153,7 +153,7 @@ export async function exportEpub(options: {
 
   if (options.scaffoldOnly) {
     console.log(picocolors.cyan('\nTo export:'));
-    console.log('  1. Add fumadocs-epub to your dependencies: pnpm add fumadocs-epub');
+    console.log('  1. Add @vx-oss/docs-epub to your dependencies: pnpm add @vx-oss/docs-epub');
     console.log('  2. Ensure includeProcessedMarkdown: true in your docs collection config');
     if (framework === 'next') {
       console.log(
@@ -170,7 +170,7 @@ export async function exportEpub(options: {
     return;
   }
 
-  // Check for fumadocs-epub dependency
+  // Check for @vx-oss/docs-epub dependency
   if (!pkg) {
     console.error(
       picocolors.red('Cannot read or parse package.json. Ensure it exists and is valid JSON.'),
@@ -178,14 +178,14 @@ export async function exportEpub(options: {
     process.exit(1);
   }
   const deps = { ...pkg.dependencies, ...pkg.devDependencies };
-  if (!deps['fumadocs-epub']) {
-    console.log(picocolors.yellow('\nInstalling fumadocs-epub...'));
+  if (!deps['@vx-oss/docs-epub']) {
+    console.log(picocolors.yellow('\nInstalling @vx-oss/docs-epub...'));
     const packageManager = process.env.npm_execpath?.includes('pnpm')
       ? 'pnpm'
       : process.env.npm_execpath?.includes('bun')
         ? 'bun'
         : 'npm';
-    const installCmd = `${packageManager} add fumadocs-epub`;
+    const installCmd = `${packageManager} add @vx-oss/docs-epub`;
     try {
       await execAsync(installCmd, { cwd });
     } catch (err: unknown) {
@@ -193,7 +193,7 @@ export async function exportEpub(options: {
         err && typeof err === 'object' && 'stderr' in err
           ? String((err as { stderr?: string }).stderr)
           : '';
-      console.error(picocolors.red(`Failed to install fumadocs-epub. Command: ${installCmd}`));
+      console.error(picocolors.red(`Failed to install @vx-oss/docs-epub. Command: ${installCmd}`));
       if (stderr) console.error(stderr);
       process.exit(1);
     }

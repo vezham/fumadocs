@@ -4,7 +4,7 @@ import type { OpenAPIOptions } from '@/server';
 import type { InlineCodeUsageGenerator } from './requests/generators';
 import type { CreateOpenAPIPageOptions } from './ui';
 import type { FC, ReactNode } from 'react';
-import type { SchemaUIOptions } from '@fumadocs/api-docs/components/schema';
+import type { SchemaUIOptions } from '@vx-oss/docs-api/components/schema';
 
 export type Document = OpenAPIV3_2.Document;
 export type OperationObject = OpenAPIV3_2.OperationObject & {

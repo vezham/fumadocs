@@ -1,12 +1,12 @@
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { useTranslations } from '@fuma-translate/react';
-import { usePathname } from '@vezham/docs-core/framework';
+import { usePathname } from '@vx-oss/docs-core/framework';
 import { ChevronsUpDown } from 'lucide-react';
 import { type ComponentProps, useState } from 'react';
 import { type LayoutTab, isLayoutTabActive } from '../shared';
 import { useTabsGroups } from '@/contexts/tree';
 import { cn } from '@/utils/cn';
-import Link from '@vezham/docs-core/link';
+import Link from '@vx-oss/docs-core/link';
 
 export function LayoutTabsDropdown({
   tabs: allTabs,

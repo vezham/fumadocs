@@ -1,10 +1,10 @@
-## @fumari/stf@1.1.0
+## @vx-oss/docs-stf@1.1.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-# @fumari/stf
+# @vx-oss/docs-stf
 
 ## 1.0.5
 

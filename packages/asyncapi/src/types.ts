@@ -1,7 +1,7 @@
 import type { DereferencedDocument } from '@/utils/document/dereference';
 import type { CreateAsyncAPIPageOptions } from './ui';
 import type { FC, ReactNode } from 'react';
-import type { SchemaUIOptions } from '@fumadocs/api-docs/components/schema';
+import type { SchemaUIOptions } from '@vx-oss/docs-api/components/schema';
 
 type RequireKeys<T, K extends keyof T> = Omit<T, K> & Required<Pick<T, K>>;
 

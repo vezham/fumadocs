@@ -16,7 +16,7 @@
 - [`31ccc75`](https://github.com/vezham/fumadocs/commit/31ccc75403db783088821eede56ef6b1f85e435b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Rename the forked docs packages under the @vezham scope.
 
 - Updated dependencies []:
-  - @fumadocs/api-docs@0.2.6
+  - @vx-oss/docs-api@0.2.6
 
 ### Fix OpenAPI 3.0 `example` in external files crashing `OpenAPIPage`
 
@@ -60,7 +60,7 @@ Client-side errors also show the request URL, making issues like a wrong server 
 
 For custom `ResultDisplay` components, `FetchResult` now carries a `url` field.
 
-`@fumadocs/language` includes translations for the new UI.
+`@vx-oss/docs-language` includes translations for the new UI.
 
 ## fumadocs-openapi@11.3.1
 
@@ -185,7 +185,7 @@ The type name now reflect on the actual meaning.
 - 5017289: Use stable `fuma-translate`
 - Updated dependencies [5017289]
 - Updated dependencies [7a77722]
-  - @fumadocs/api-docs@0.0.2
+  - @vx-oss/docs-api@0.0.2
   - fumadocs-ui@16.10.1
   - fumadocs-core@16.10.1
 
@@ -386,7 +386,7 @@ The type name now reflect on the actual meaning.
 - Updated dependencies [690ddb9]
   - fumadocs-ui@16.7.13
   - fumadocs-core@16.7.13
-  - @fumari/stf@1.0.5
+  - @vx-oss/docs-stf@1.0.5
 
 ## 10.6.7
 
@@ -404,7 +404,7 @@ The type name now reflect on the actual meaning.
 
 - f15e322: Improve auth UI for playground
 - Updated dependencies [f15e322]
-  - @fumari/stf@1.0.4
+  - @vx-oss/docs-stf@1.0.4
 
 ## 10.6.5
 
@@ -546,7 +546,7 @@ The type name now reflect on the actual meaning.
 - Updated dependencies [5453502]
   - fumadocs-ui@16.6.8
   - fumadocs-core@16.6.8
-  - @fumari/stf@1.0.3
+  - @vx-oss/docs-stf@1.0.3
 
 ## 10.3.13
 
@@ -570,7 +570,7 @@ The type name now reflect on the actual meaning.
 - Updated dependencies [38bd784]
 - Updated dependencies [bd8c33a]
   - fumadocs-ui@16.6.6
-  - @fumari/stf@1.0.2
+  - @vx-oss/docs-stf@1.0.2
   - fumadocs-core@16.6.6
 
 ## 10.3.11
@@ -580,7 +580,7 @@ The type name now reflect on the actual meaning.
 - 5a9b381: Pass `isRequired` to `FieldSet` for parameter enum fields in playground, fixing required enum parameters incorrectly showing an "Unset" option.
 - 21e60c3: support cleaning namespace information
 - Updated dependencies [21e60c3]
-  - @fumari/stf@1.0.1
+  - @vx-oss/docs-stf@1.0.1
 
 ## 10.3.10
 
@@ -589,7 +589,7 @@ The type name now reflect on the actual meaning.
 - ff9e919: add unset button to non-primitive fields
 - Updated dependencies [fe37b9f]
 - Updated dependencies [fe37b9f]
-  - @fumari/stf@1.0.0
+  - @vx-oss/docs-stf@1.0.0
 
 ## 10.3.9
 
@@ -643,7 +643,7 @@ The type name now reflect on the actual meaning.
 - Updated dependencies [7872e27]
 - Updated dependencies [1ad8a38]
 - Updated dependencies [3e8efb0]
-  - @fumari/stf@0.0.3
+  - @vx-oss/docs-stf@0.0.3
   - fumadocs-core@16.5.4
   - fumadocs-ui@16.5.4
 
@@ -655,7 +655,7 @@ The type name now reflect on the actual meaning.
 - Updated dependencies [c22f6ee]
   - fumadocs-ui@16.5.2
   - fumadocs-core@16.5.2
-  - @fumari/stf@0.0.2
+  - @vx-oss/docs-stf@0.0.2
 
 ## 10.3.2
 
@@ -704,7 +704,7 @@ The type name now reflect on the actual meaning.
 - cadff12: Use internal implementation for form in OpenAPI playground
 - 897cc26: Improve schema UI array rendering
 - Updated dependencies [6ac37c4]
-  - @fumari/stf@0.0.1
+  - @vx-oss/docs-stf@0.0.1
 
 ## 10.2.4
 
@@ -3592,7 +3592,7 @@ The type name now reflect on the actual meaning.
 
   `@fuma-docs/openapi` -> `fumadocs-openapi`
 
-  `create-next-docs-app` -> `create-fumadocs-app`
+  `create-next-docs-app` -> `create-vx-oss-docs`
 
 ## 0.1.0
 

@@ -1,7 +1,7 @@
 'use client';
 import { type ReactNode, useMemo } from 'react';
 import { useTranslations } from '@fuma-translate/react';
-import { AnchorSection } from '@fumadocs/api-docs/auto-anchor/client';
+import { AnchorSection } from '@vx-oss/docs-api/auto-anchor/client';
 import {
   isEnumType,
   isInputObjectType,
@@ -19,7 +19,7 @@ import { EnumValueList } from '../components/enum-values';
 import { DirectiveList, ReferenceLink, TypeAnnotation } from '../components/type-annotation';
 import { resolveOperationLink, resolveTypeLink, useRenderContext } from '../contexts/api';
 import { Braces, CornerUpLeft, Import, Layers, Variable } from 'lucide-react';
-import Link from '@vezham/docs-core/link';
+import Link from '@vx-oss/docs-core/link';
 
 export function TypeDocs({
   name,

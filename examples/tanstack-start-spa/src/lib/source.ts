@@ -1,6 +1,6 @@
-import { loader } from '@vezham/docs-core/source';
-import { lucideIconsPlugin } from '@vezham/docs-core/source/lucide-icons';
-import { defineDocs } from '@vezham/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
+import { lucideIconsPlugin } from '@vx-oss/docs-core/source/lucide-icons';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
 import { docsRoute } from './shared';
 
 export const docs = defineDocs({

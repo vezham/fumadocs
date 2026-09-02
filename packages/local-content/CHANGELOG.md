@@ -1,8 +1,8 @@
-## @fumadocs/local-content@0.2.1
+## @vx-oss/docs-local-content@0.2.1
 
 ### Simplify cache
 
-## @fumadocs/local-content@0.2.0
+## @vx-oss/docs-local-content@0.2.0
 
 ### Redesign source API
 
@@ -41,7 +41,7 @@ Sanity now uses `cache: 'custom'` when given a `sanityFetch` from `next-sanity/l
 
 `getFiles()` awaits each chunk before starting the next, instead of starting the entire tree concurrently.
 
-## @fumadocs/local-content@0.1.2
+## @vx-oss/docs-local-content@0.1.2
 
 ### Obsidian content source v1
 
@@ -49,6 +49,6 @@ Render Obsidian vaults directly through static or dynamic Fumadocs sources, with
 
 Resolve URL-encoded relative file links against their decoded source paths.
 
-## @fumadocs/local-content@0.1.1
+## @vx-oss/docs-local-content@0.1.1
 
-### Extract shared local content source logic to `@fumadocs/local-content`
+### Extract shared local content source logic to `@vx-oss/docs-local-content`

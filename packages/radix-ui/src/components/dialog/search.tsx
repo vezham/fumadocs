@@ -17,14 +17,14 @@ import {
 import { useTranslations, T } from '@fuma-translate/react';
 import { cn } from '@/utils/cn';
 import { Dialog, DialogContent, DialogOverlay, DialogTitle } from '@radix-ui/react-dialog';
-import type { HighlightedText, ReactSortedResult as BaseResultType } from '@vezham/docs-core/search';
+import type { HighlightedText, ReactSortedResult as BaseResultType } from '@vx-oss/docs-core/search';
 import { cva } from 'class-variance-authority';
-import { useRouter } from '@vezham/docs-core/framework';
+import { useRouter } from '@vx-oss/docs-core/framework';
 import type { SharedProps } from '@/contexts/search';
-import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
+import { useOnChange } from '@vx-oss/docs-core/utils/use-on-change';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import { buttonVariants } from '@/components/ui/button';
-import { createMarkdownRenderer } from '@vezham/docs-core/content/md';
+import { createMarkdownRenderer } from '@vx-oss/docs-core/content/md';
 import rehypeRaw from 'rehype-raw';
 import { visit } from 'unist-util-visit';
 import type { Transformer } from 'unified';

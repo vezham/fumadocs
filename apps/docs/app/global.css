@@ -1,11 +1,11 @@
 @import 'tailwindcss';
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
-@import 'fumadocs-twoslash/twoslash.css';
-@import '@vezham/docs-openapi/css/preset.css';
-@import '@vezham/docs-story/css/preset.css';
-@import '@fumadocs/asyncapi/css/preset.css';
-@import '@fumadocs/graphql/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
+@import '@vx-oss/docs-twoslash/twoslash.css';
+@import '@vx-oss/docs-openapi/css/preset.css';
+@import '@vx-oss/docs-story/css/preset.css';
+@import '@vx-oss/docs-asyncapi/css/preset.css';
+@import '@vx-oss/docs-graphql/css/preset.css';
 @import '@fumari/sponsors/style.css';
 @plugin 'tailwindcss-animate';
 

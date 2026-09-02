@@ -1,5 +1,5 @@
 import { cn } from 'cnfast';
-import type { CalloutType } from '@vezham/docs-react/components/callout';
+import type { CalloutType } from '@vx-oss/docs-react/components/callout';
 import type { NotionColor } from './blocks';
 
 /**

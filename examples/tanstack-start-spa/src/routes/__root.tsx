@@ -1,7 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from '@tanstack/react-router';
 import * as React from 'react';
 import appCss from '@/styles/app.css?url';
-import { RootProvider } from '@vezham/docs-react/provider/tanstack';
+import { RootProvider } from '@vx-oss/docs-react/provider/tanstack';
 import SearchDialog from '@/components/search';
 
 export const Route = createRootRoute({

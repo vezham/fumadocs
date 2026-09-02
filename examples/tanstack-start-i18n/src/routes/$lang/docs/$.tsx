@@ -1,11 +1,11 @@
 import { createFileRoute, notFound } from '@tanstack/react-router';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { createServerFn } from '@tanstack/react-start';
 import { docs, source } from '@/lib/source';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vx-oss/docs-react/layouts/docs/page';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 import { baseOptions } from '@/lib/layout.shared';
-import { useFumadocsLoader } from '@vezham/docs-core/source/client';
+import { useFumadocsLoader } from '@vx-oss/docs-core/source/client';
 import { Suspense, use } from 'react';
 
 export const Route = createFileRoute('/$lang/docs/$')({

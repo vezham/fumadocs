@@ -1,6 +1,6 @@
 import type { FileCollectionStore } from 'fuma-content/collections/runtime/file-store';
 import type { MDXStoreLazyData, MDXStoreData } from 'fuma-content/collections/mdx/runtime';
-import type { MetaData, PageData, StaticSource } from '@vezham/docs-core/source';
+import type { MetaData, PageData, StaticSource } from '@vx-oss/docs-core/source';
 
 type ToPageData<T> =
   T extends MDXStoreData<infer Frontmatter>
@@ -40,6 +40,9 @@ export function toFumadocsSource<
   }
   return out;
 }
+
+export { toFumadocsSource as toDocsSource };
+
 
 export function docsStore<
   Mdx extends MDXStoreData<PageData> | MDXStoreLazyData<PageData, unknown> = MDXStoreData<

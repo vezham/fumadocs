@@ -62,7 +62,7 @@ export default function Content(props: ComponentProps<'main'>) {
 It doesn't have **MDX components** by default, you have to provide them:
 
 ```tsx tab="components/mdx.tsx"
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 import type { MDXComponents } from 'mdx/types';
 
 export function getMDXComponents(components?: MDXComponents) {
@@ -77,7 +77,7 @@ export const useMDXComponents = getMDXComponents; // [!code ++]
 ```
 
 ```ts tab="source.config.ts"
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 export default defineConfig({
   mdxOptions: {

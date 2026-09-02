@@ -1,7 +1,7 @@
 import type { Program } from 'estree';
 import type { BlockContent, Code, DefinitionContent, Heading, Root } from 'mdast';
 import type { MdxJsxAttribute, MdxJsxFlowElement } from 'mdast-util-mdx';
-import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
+import { remarkGfm } from '@vx-oss/docs-core/mdx-plugins/remark-gfm';
 import { remark } from 'remark';
 import type {
   AttributeInterface,

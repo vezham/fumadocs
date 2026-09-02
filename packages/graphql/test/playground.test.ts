@@ -9,7 +9,7 @@ import {
   GraphQLList,
   GraphQLNonNull,
 } from 'graphql';
-import type { ParsedSchema } from '@fumadocs/api-docs/schema';
+import type { ParsedSchema } from '@vx-oss/docs-api/schema';
 import { buildSchemaFromSDL } from '@/utils/build-schema';
 import { inputTypeToJsonSchema } from '@/playground/json-schema';
 import { filterHeaderItems, getEndpointOrigin, parseStoredState } from '@/playground/storage';

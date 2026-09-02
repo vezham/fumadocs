@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { compileMdx } from '@/compile';
 import { applySatteriPreset } from '@/preset';
 
-describe('@fumadocs/satteri', () => {
+describe('@vx-oss/docs-satteri', () => {
   it('compiles mdx with fumadocs preset', async () => {
     const options = await applySatteriPreset({ rehypeCodeOptions: false })('bundler');
     const { code, data } = await compileMdx({

@@ -59,7 +59,7 @@ export function useNotebookLayout() {
   const context = use(LayoutContext);
   if (!context)
     throw new Error(
-      'Please use <DocsPage /> (`@vezham/docs-react/layouts/notebook/page`) under <DocsLayout /> (`@vezham/docs-react/layouts/notebook`).',
+      'Please use <DocsPage /> (`@vx-oss/docs-react/layouts/notebook/page`) under <DocsLayout /> (`@vx-oss/docs-react/layouts/notebook`).',
     );
   return context;
 }

@@ -5,7 +5,7 @@ import {
   NavigationPanel,
   NavigationPanelOverlay,
   NavigationPanelProps,
-} from '@vezham/docs-react/layouts/flux';
+} from '@vx-oss/docs-react/layouts/flux';
 import {
   AISearch,
   AISearchInput,
@@ -16,10 +16,10 @@ import {
   useHotKey,
 } from '@/components/inkeep/search';
 import { MessageCircleIcon } from 'lucide-react';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { cn } from '@/lib/cn';
 import { AnimatePresence, motion } from 'motion/react';
-import { useSidebar } from '@vezham/docs-react/components/sidebar/base';
+import { useSidebar } from '@vx-oss/docs-react/components/sidebar/base';
 import { useEffect, useState } from 'react';
 
 export function LayoutClient(props: DocsLayoutProps) {

@@ -97,7 +97,7 @@ export function defineStoryFactory(factoryOptions: StoryFactoryOptions = {}): St
 
     return cached(cache, getHash(`controls:${filePath}:${name}:${fileContent}`), async () => {
       const project = await initProject();
-      return generateControls('@vezham/docs-story/next/client', project, filePath, name, fileContent);
+      return generateControls('@vx-oss/docs-story/next/client', project, filePath, name, fileContent);
     });
   }
 

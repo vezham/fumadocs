@@ -1,10 +1,10 @@
 import translationKeys from '@/.translations/keys.json';
-import type { TranslationExtension } from '@vezham/docs-core/i18n';
+import type { TranslationExtension } from '@vx-oss/docs-core/i18n';
 import type { Translations } from '@/.translations';
 import {
   type Translations as SharedTranslations,
   apiDocsTranslations,
-} from '@fumadocs/api-docs/i18n';
+} from '@vx-oss/docs-api/i18n';
 
 export type { Translations };
 export function graphqlTranslations(): TranslationExtension<

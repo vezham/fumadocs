@@ -1,4 +1,4 @@
-## @fumadocs/basehub@0.1.0
+## @vx-oss/docs-basehub@0.1.0
 
 ### Default to Base UI
 

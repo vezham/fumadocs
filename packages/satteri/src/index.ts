@@ -1,5 +1,5 @@
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins/remark-structure';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins/remark-structure';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import type { RehypeTocItemType } from './rehype-toc';
 
 /** host compiler hooks (e.g. a bundler loader), used for watch-mode dependency tracking */

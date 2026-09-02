@@ -1,6 +1,6 @@
 import { source } from '@/lib/source';
 import { createFileRoute } from '@tanstack/react-router';
-import { llms } from '@vezham/docs-core/source';
+import { llms } from '@vx-oss/docs-core/source';
 
 export const Route = createFileRoute('/llms.txt')({
   server: {

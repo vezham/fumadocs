@@ -1,4 +1,4 @@
-## @fumadocs/local-md@0.3.4
+## @vx-oss/docs-local-md@0.3.4
 
 ### Read structured data from `page.data.structuredData()`
 
@@ -10,27 +10,27 @@ const structuredData = await page.data.structuredData();
 
 The renderer returned by `load()` still carries `structuredData`, existing code keeps working.
 
-## @fumadocs/local-md@0.3.1
+## @vx-oss/docs-local-md@0.3.1
 
 ### Improve performance
 
 Fixed cache misses and edge cases.
 
-### Extract shared local content source logic to `@fumadocs/local-content`
+### Extract shared local content source logic to `@vx-oss/docs-local-content`
 
-## @fumadocs/local-md@0.3.0
+## @vx-oss/docs-local-md@0.3.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-## @fumadocs/local-md@0.2.4
+## @vx-oss/docs-local-md@0.2.4
 
 ### Fix deprecation warnings
 
 Address https://github.com/fuma-nama/fumadocs/issues/3380.
 
-# @fumadocs/local-md
+# @vx-oss/docs-local-md
 
 ## 0.2.3
 

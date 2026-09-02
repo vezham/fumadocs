@@ -1,11 +1,11 @@
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { baseOptions, linkItems, logo } from '@/components/layouts/shared';
 import { source } from '@/lib/source';
 import { AISearch, AISearchPanel, AISearchTrigger } from '@/components/inkeep/search';
 import { getSection } from '@/lib/source/navigation';
 import { MessageCircleIcon } from 'lucide-react';
 import { cn } from '@/lib/cn';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import type { CSSProperties } from 'react';
 import 'katex/dist/katex.min.css';
 

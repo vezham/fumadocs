@@ -15,8 +15,8 @@ import { LinkItem, type LinkItemType, type MenuItemType } from '@/layouts/shared
 import { useNotebookLayout } from '../client';
 import { type LayoutTab, isLayoutTabActive } from '@/layouts/shared';
 import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover';
-import { usePathname } from '@vezham/docs-core/framework';
-import Link from '@vezham/docs-core/link';
+import { usePathname } from '@vx-oss/docs-core/framework';
+import Link from '@vx-oss/docs-core/link';
 import { useTabsGroups, useTreePath } from '@/contexts/tree';
 import { SidebarTabsDropdown } from '@/components/sidebar/tabs/dropdown';
 

@@ -1,5 +1,5 @@
 import './global.css';
-import { RootProvider } from '@vezham/docs-react/provider/next';
+import { RootProvider } from '@vx-oss/docs-react/provider/next';
 import { Geist, JetBrains_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
 

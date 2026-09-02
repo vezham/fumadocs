@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { isMarkdownPreferred, rewritePath } from '@vezham/docs-core/negotiation';
+import { isMarkdownPreferred, rewritePath } from '@vx-oss/docs-core/negotiation';
 import { docsContentRoute, docsRoute } from '@/lib/shared';
 
 const { rewrite: rewriteDocs } = rewritePath(

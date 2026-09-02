@@ -12,7 +12,7 @@ Note that the page content is still rendered by the `<AsyncAPIPage />` component
 It takes an AsyncAPI instance.
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 import { asyncapi } from '@/lib/asyncapi';
 
 void generateFiles({
@@ -39,7 +39,7 @@ Customize the content of pages, default to `operation`.
 | custom    | see below                      | N/A                 |
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   per: 'tag',
@@ -49,7 +49,7 @@ void generateFiles({
 When set to `custom`, you can pass a function to fully customize the generation process:
 
 ```ts title="Example"
-import { generateFiles, OperationOutput } from '@fumadocs/asyncapi';
+import { generateFiles, OperationOutput } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   per: 'custom',
@@ -96,7 +96,7 @@ In `operation` mode, you can group output files with folders.
 | none (default) | `{operationId}.mdx`                   |
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   per: 'operation',
@@ -109,7 +109,7 @@ void generateFiles({
 Generate index files with cards linking to generated pages.
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   index: {
@@ -139,7 +139,7 @@ Generate [`meta.json`](/docs/page-conventions#meta) files automatically.
 You can always define the `meta.json` files manually for maximal flexibility.
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   meta: true,
@@ -156,7 +156,7 @@ void generateFiles({
 Add custom imports to generated MDX files. This is useful for including components, utilities, or other dependencies in your generated documentation.
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   imports: [
@@ -179,7 +179,7 @@ import { API_BASE_URL } from '@/constants';
 A function that controls the output file name of MDX pages.
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   name(output) {
@@ -198,7 +198,7 @@ void generateFiles({
 You can also use the `algorithm` option:
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   // v2 (default): use operation id
@@ -221,7 +221,7 @@ By default, it includes:
 | `_asyncapi`   | Internal Properties                |
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   frontmatter: (title, description) => ({
@@ -235,7 +235,7 @@ void generateFiles({
 Add a comment to the top of generated files indicating they are auto-generated.
 
 ```ts
-import { generateFiles } from '@fumadocs/asyncapi';
+import { generateFiles } from '@vx-oss/docs-asyncapi';
 
 void generateFiles({
   // Add default comment

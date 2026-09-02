@@ -1,11 +1,15 @@
 {
-  "name": "@fumari/stf",
+  "name": "@vx-oss/docs-stf",
   "version": "1.1.0",
   "description": "Schema to Form.",
   "keywords": [],
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/stf"
+  },
   "files": [
     "dist"
   ],

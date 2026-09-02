@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronDown } from 'lucide-react';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from './ui/collapsible';
 import type { ComponentProps } from 'react';
 import { cn } from '@/utils/cn';

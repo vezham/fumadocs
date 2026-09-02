@@ -1,11 +1,11 @@
 import translationKeys from '@/.translations/keys.json';
-import type { TranslationExtension } from '@vezham/docs-core/i18n';
+import type { TranslationExtension } from '@vx-oss/docs-core/i18n';
 import type { Translations } from '@/.translations';
 import {
   type Translations as SharedTranslations,
   apiDocsTranslations,
-} from '@fumadocs/api-docs/i18n';
-import type { I18nUIConfig } from '@vezham/docs-react/i18n';
+} from '@vx-oss/docs-api/i18n';
+import type { I18nUIConfig } from '@vx-oss/docs-react/i18n';
 
 export type { Translations };
 export function openapiTranslations(): TranslationExtension<

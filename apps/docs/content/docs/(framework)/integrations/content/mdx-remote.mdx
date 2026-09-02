@@ -17,7 +17,7 @@ The Passed MDX content must be trusted as it allows code execution by default.
 ## Setup
 
 ```package-install
-@fumadocs/mdx-remote
+@vx-oss/docs-mdx-remote
 ```
 
 The main feature it offers is the MDX Compiler, it can compile MDX content to JSX nodes.
@@ -31,9 +31,9 @@ Since it doesn't use a bundler, there's some limitations:
 It's compatible with Server Components. For example:
 
 ```tsx
-import { createCompiler } from '@fumadocs/mdx-remote';
+import { createCompiler } from '@vx-oss/docs-mdx-remote';
 import { getPage } from './my-content-source';
-import { DocsBody, DocsPage } from '@vezham/docs-react/layouts/docs/page';
+import { DocsBody, DocsPage } from '@vx-oss/docs-react/layouts/docs/page';
 import { getMDXComponents } from '@/components/mdx';
 
 const compiler = createCompiler({
@@ -62,9 +62,9 @@ export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
 Without Server Components, you can enable `skipRender` and pass the compiled code to client instead:
 
 ```tsx
-import { createCompiler } from '@fumadocs/mdx-remote';
-import { executeMdxSync } from '@fumadocs/mdx-remote/client';
-import { DocsBody, DocsPage } from '@vezham/docs-react/layouts/docs/page';
+import { createCompiler } from '@vx-oss/docs-mdx-remote';
+import { executeMdxSync } from '@vx-oss/docs-mdx-remote/client';
+import { DocsBody, DocsPage } from '@vx-oss/docs-react/layouts/docs/page';
 import { getPage } from './my-content-source';
 import { useMemo } from 'react';
 import { getMDXComponents } from '@/components/mdx';

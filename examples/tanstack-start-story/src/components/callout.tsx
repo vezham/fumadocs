@@ -1,4 +1,4 @@
-import { Callout } from '@vezham/docs-react/components/callout';
+import { Callout } from '@vx-oss/docs-react/components/callout';
 import type { ComponentProps } from 'react';
 
 export function CalloutStory(

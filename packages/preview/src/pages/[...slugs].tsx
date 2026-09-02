@@ -1,28 +1,28 @@
 import type { PageProps } from 'waku/router';
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 import { getPageImageUrl, getSource, type SourcePage } from '@/lib/source';
 import { layoutConfig } from '@/layouts/config';
 import { getConfigRuntime } from '@/config/load-runtime';
-import { Card, Cards } from '@vezham/docs-react/components/card';
+import { Card, Cards } from '@vx-oss/docs-react/components/card';
 import { type CompileResult, createMarkdownCompiler, plugin } from '@/lib/md';
-import { remarkHeading } from '@vezham/docs-core/mdx-plugins/remark-heading';
-import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
-import { remarkCodeTab } from '@vezham/docs-core/mdx-plugins/remark-code-tab';
-import { remarkNpm } from '@vezham/docs-core/mdx-plugins/remark-npm';
-import { rehypeCode } from '@vezham/docs-core/mdx-plugins/rehype-code';
-import { rehypeToc } from '@vezham/docs-core/mdx-plugins';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import { remarkHeading } from '@vx-oss/docs-core/mdx-plugins/remark-heading';
+import { remarkGfm } from '@vx-oss/docs-core/mdx-plugins/remark-gfm';
+import { remarkCodeTab } from '@vx-oss/docs-core/mdx-plugins/remark-code-tab';
+import { remarkNpm } from '@vx-oss/docs-core/mdx-plugins/remark-npm';
+import { rehypeCode } from '@vx-oss/docs-core/mdx-plugins/rehype-code';
+import { rehypeToc } from '@vx-oss/docs-core/mdx-plugins';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import { Fragment } from 'react/jsx-runtime';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import { CodeBlock, Pre } from '@vezham/docs-react/components/codeblock';
-import { remarkMdxMermaid } from '@vezham/docs-core/mdx-plugins/remark-mdx-mermaid';
+import { CodeBlock, Pre } from '@vx-oss/docs-react/components/codeblock';
+import { remarkMdxMermaid } from '@vx-oss/docs-core/mdx-plugins/remark-mdx-mermaid';
 import { Mermaid } from '@/components/mermaid';
 import type { ComponentProps, ReactNode } from 'react';
 import { Image } from '@/components/image';
 import { AISearch, AISearchPanel, AISearchTrigger } from '@/components/ai/search';
 import { cn } from '@/lib/cn';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { MessageCircleIcon } from 'lucide-react';
 import { isAISupported } from '@/lib/ai';
 
@@ -67,10 +67,10 @@ function useMdxComponents(page: SourcePage) {
 }
 
 interface MdPresetComponents {
-  layout: typeof import('@vezham/docs-react/layouts/docs') | typeof import('@vezham/docs-react/layouts/flux');
+  layout: typeof import('@vx-oss/docs-react/layouts/docs') | typeof import('@vx-oss/docs-react/layouts/flux');
   page:
-    | typeof import('@vezham/docs-react/layouts/docs/page')
-    | typeof import('@vezham/docs-react/layouts/flux/page');
+    | typeof import('@vx-oss/docs-react/layouts/docs/page')
+    | typeof import('@vx-oss/docs-react/layouts/flux/page');
 }
 
 export default async function DocPage({ slugs }: PageProps<'/[...slugs]'>) {
@@ -82,13 +82,13 @@ export default async function DocPage({ slugs }: PageProps<'/[...slugs]'>) {
 
   if (mdPreset === 'docs') {
     mdPresetComponents = {
-      layout: await import('@vezham/docs-react/layouts/docs'),
-      page: await import('@vezham/docs-react/layouts/docs/page'),
+      layout: await import('@vx-oss/docs-react/layouts/docs'),
+      page: await import('@vx-oss/docs-react/layouts/docs/page'),
     };
   } else {
     mdPresetComponents = {
-      layout: await import('@vezham/docs-react/layouts/flux'),
-      page: await import('@vezham/docs-react/layouts/flux/page'),
+      layout: await import('@vx-oss/docs-react/layouts/flux'),
+      page: await import('@vx-oss/docs-react/layouts/flux/page'),
     };
   }
 

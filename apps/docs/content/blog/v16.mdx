@@ -13,27 +13,27 @@ We are pleased to announce the release of Fumadocs v16, a significant update tha
 
 Fumadocs 16 removed substantial amount of deprecated APIs accumulated since v15.2 Vite support.
 
-- **Removal of the Sidebar API**: The `@vezham/docs-core/sidebar` module has been deprecated and removed. For sidebar implementations, we recommend adopting pre-built solutions from Shadcn UI.
+- **Removal of the Sidebar API**: The `@vx-oss/docs-core/sidebar` module has been deprecated and removed. For sidebar implementations, we recommend adopting pre-built solutions from Shadcn UI.
 
-- **Restructuring of Server-Side Exports**: Exports from `@vezham/docs-core/server` have been redistributed to more specialized modules:
-  - `getGithubLastEdit` -> `@vezham/docs-core/content/github`.
-  - `getTableOfContents` -> `@vezham/docs-core/content/toc`.
-  - `PageTree` and related utilities -> `@vezham/docs-core/page-tree`.
-  - `TOCItemType` and `TableOfContents` -> `@vezham/docs-core/toc`.
+- **Restructuring of Server-Side Exports**: Exports from `@vx-oss/docs-core/server` have been redistributed to more specialized modules:
+  - `getGithubLastEdit` -> `@vx-oss/docs-core/content/github`.
+  - `getTableOfContents` -> `@vx-oss/docs-core/content/toc`.
+  - `PageTree` and related utilities -> `@vx-oss/docs-core/page-tree`.
+  - `TOCItemType` and `TableOfContents` -> `@vx-oss/docs-core/toc`.
   - removed `createMetadataImage` API, use Next.js Metadata API instead.
 
-- **Default Switch to Shiki's JavaScript Regex Engine**: To ensure seamless compatibility with environments like Cloudflare Workers, the JavaScript engine is now the default over the WASM-based Oniguruma. This change affects `rehype-code` (via the `engine` option) and `@vezham/docs-core/highlight`.
+- **Default Switch to Shiki's JavaScript Regex Engine**: To ensure seamless compatibility with environments like Cloudflare Workers, the JavaScript engine is now the default over the WASM-based Oniguruma. This change affects `rehype-code` (via the `engine` option) and `@vx-oss/docs-core/highlight`.
 
 - **Minimum React.js Version Raised to 19.2.0**: React 19.2 brings crucial performance improvements to Fumadocs UI.
   - **Next.js Projects**: Next.js projects using Fumadocs UI must use Next.js 16 or later, as Next.js uses its own canary channel for React.js.
-- **`@vezham/docs-react/provider` is removed**:
-  - Use `@vezham/docs-react/provider/next` for root provider.
-  - Use individual exports for contexts from `@vezham/docs-react/contexts/*`.
-- `@vezham/docs-react/page`:
+- **`@vx-oss/docs-react/provider` is removed**:
+  - Use `@vx-oss/docs-react/provider/next` for root provider.
+  - Use individual exports for contexts from `@vx-oss/docs-react/contexts/*`.
+- `@vx-oss/docs-react/page`:
   - Removed `<DocsCategory />`, use `getPageTreePeers()` instead:
 
     ```tsx title="page.tsx"
-    import { getPageTreePeers } from '@vezham/docs-core/page-tree';
+    import { getPageTreePeers } from '@vx-oss/docs-core/page-tree';
     import { source } from '@/lib/source';
 
     <Cards>
@@ -47,11 +47,11 @@ Fumadocs 16 removed substantial amount of deprecated APIs accumulated since v15.
 
   - Removed the `breadcrumbs.full` option in `<DocsPage />`.
 
-- `@vezham/docs-core/search/algolia`: The `document` option is renamed to `indexName`.
-- `@vezham/docs-core/search`: Removed the deprecated `createFromSource()` signature in `useSearch()`.
-- `@vezham/docs-core/highlight`: Removed `withPrerenderScript` and `loading` options from `useShiki()`, use React Suspense API instead.
-- `@vezham/docs-core/i18n`: Removed `createI18nMiddleware` (import from `@vezham/docs-core/i18n/middleware` instead).
-- `@vezham/docs-core/source`:
+- `@vx-oss/docs-core/search/algolia`: The `document` option is renamed to `indexName`.
+- `@vx-oss/docs-core/search`: Removed the deprecated `createFromSource()` signature in `useSearch()`.
+- `@vx-oss/docs-core/highlight`: Removed `withPrerenderScript` and `loading` options from `useShiki()`, use React Suspense API instead.
+- `@vx-oss/docs-core/i18n`: Removed `createI18nMiddleware` (import from `@vx-oss/docs-core/i18n/middleware` instead).
+- `@vx-oss/docs-core/source`:
   - Removed `transformers`, `pageTree.attach*` options in `loader()`: use [Loader Plugin](/docs/headless/source-api/plugins) instead.
   - Removed the `page.file` property: use `page.path` instead.
   - Removed internal utilities `FileInfo` and `parseFilePath`: use `PathUtils` instead.
@@ -59,7 +59,7 @@ Fumadocs 16 removed substantial amount of deprecated APIs accumulated since v15.
 - **Migration to Orama Cloud's New SDK**: The `@orama/core` package replaces the prior client. Update your synchronization code as follows:
 
   ```ts
-  import { sync } from '@vezham/docs-core/search/orama-cloud';
+  import { sync } from '@vx-oss/docs-core/search/orama-cloud';
   import { OramaCloud } from '@orama/core';
 
   // [!code highlight:4]
@@ -78,9 +78,9 @@ Fumadocs 16 removed substantial amount of deprecated APIs accumulated since v15.
 
   ```ts
   // [!code --]
-  import { oramaCloudClient } from '@vezham/docs-core/search/client/orama-cloud';
+  import { oramaCloudClient } from '@vx-oss/docs-core/search/client/orama-cloud';
   // [!code ++]
-  import { oramaCloudLegacyClient } from '@vezham/docs-core/search/client/orama-cloud-legacy';
+  import { oramaCloudLegacyClient } from '@vx-oss/docs-core/search/client/orama-cloud-legacy';
 
   useSearch({
     // [!code --]

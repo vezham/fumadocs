@@ -1,4 +1,4 @@
-import { frontmatter } from '@vezham/docs-core/content/md/frontmatter';
+import { frontmatter } from '@vx-oss/docs-core/content/md/frontmatter';
 import type { Loader, LoaderOutput } from '@/loaders/adapter';
 import { z } from 'zod';
 import type { DocCollectionItem } from '@/config/build';

@@ -1,6 +1,6 @@
 import { AlbumIcon, Heart, LayoutTemplate } from 'lucide-react';
 import Image from 'next/image';
-import type { BaseLayoutProps, LinkItemType } from '@vezham/docs-react/layouts/shared';
+import type { BaseLayoutProps, LinkItemType } from '@vx-oss/docs-react/layouts/shared';
 import { FumadocsIcon } from '@/app/layout.client';
 import Logo from '@/public/logo.png';
 

@@ -2,7 +2,7 @@
 import {
   DynamicCodeBlock,
   type DynamicCodeblockProps,
-} from '@vezham/docs-react/components/dynamic-codeblock.core';
+} from '@vx-oss/docs-react/components/dynamic-codeblock.core';
 import { useRenderContext } from '../contexts/api';
 
 export function ClientCodeBlock(props: Omit<DynamicCodeblockProps, 'highlighter' | 'options'>) {

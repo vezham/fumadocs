@@ -9,7 +9,7 @@ import type {
   MdastVisitorContext,
   RawMdastContent,
 } from 'satteri';
-import { frontmatter } from '@vezham/docs-core/content/md/frontmatter';
+import { frontmatter } from '@vx-oss/docs-core/content/md/frontmatter';
 import { replaceSource } from '@/stringifier';
 import { flattenNode } from '@/utils';
 import type { Code, Heading, RootContent } from 'mdast';
@@ -51,7 +51,7 @@ const INCLUDE_TYPES = new Set([
 const PARSE_FEATURES = { gfm: true, directive: true, headingAttributes: true };
 
 /**
- * Sätteri port of @vezham/docs-mdx's `remark-include`: embed other documents with
+ * Sätteri port of @vx-oss/docs-mdx's `remark-include`: embed other documents with
  * `<include>./file.mdx</include>` (or the `:::include` / `::include`
  * directives), sections with `<include>./file.mdx#section</include>`, and
  * non-markdown files as code blocks — with VS Code-style `#region` extraction.

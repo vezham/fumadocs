@@ -1,4 +1,4 @@
-## fumadocs-obsidian@1.0.3
+## @vx-oss/docs-obsidian@1.0.3
 
 ### Read structured data from `page.data.structuredData()`
 
@@ -10,13 +10,13 @@ const structuredData = await page.data.structuredData();
 
 The renderer returned by `load()` still carries `structuredData`, existing code keeps working.
 
-## fumadocs-obsidian@1.0.1
+## @vx-oss/docs-obsidian@1.0.1
 
 ### Support CSS preset
 
 Include required css classes by importing the preset.
 
-## fumadocs-obsidian@1.0.0
+## @vx-oss/docs-obsidian@1.0.0
 
 ### Obsidian content source v1
 
@@ -24,17 +24,17 @@ Render Obsidian vaults directly through static or dynamic Fumadocs sources, with
 
 Resolve URL-encoded relative file links against their decoded source paths.
 
-## fumadocs-obsidian@0.2.1
+## @vx-oss/docs-obsidian@0.2.1
 
 ### Migrate from `js-yaml` to `yaml`
 
-## fumadocs-obsidian@0.2.0
+## @vx-oss/docs-obsidian@0.2.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-# fumadocs-obsidian
+# @vx-oss/docs-obsidian
 
 ## 0.1.0
 

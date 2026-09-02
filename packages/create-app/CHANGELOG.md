@@ -1,4 +1,4 @@
-## create-fumadocs-app@16.1.10
+## create-vx-oss-docs@16.1.10
 
 ### Replace Orama with ZBSearch, zero-config i18n search
 
@@ -34,23 +34,23 @@ const client = staticClient({ locale });
 - The exported static search data is now a ZBSearch database (i18n exports became a single unified database), so server and client should be on the same fumadocs-core version.
 - `@orama/orama` and `@orama/tokenizers` can be removed from your dependencies unless you use them directly. Orama **Cloud** integrations (`fumadocs-core/search/orama-cloud`) are unaffected.
 
-## create-fumadocs-app@16.1.8
+## create-vx-oss-docs@16.1.8
 
 ### Fix React Router template
 
-## create-fumadocs-app@16.1.7
+## create-vx-oss-docs@16.1.7
 
 ### Improve hints for create app CLI
 
 Show details for pros & cons of each framework.
 
-## create-fumadocs-app@16.1.2
+## create-vx-oss-docs@16.1.2
 
 ### Add Astro framework support
 
 Add Astro as a supported framework with React islands, including framework providers, an example app, create-app template support, search integration, OG image generation, and documentation.
 
-## create-fumadocs-app@16.1.0
+## create-vx-oss-docs@16.1.0
 
 ### Default to Base UI
 
@@ -107,14 +107,14 @@ Internal packages & templates now use Base UI rather than Radix UI.
 ### Patch Changes
 
 - Updated dependencies [2d22086]
-  - @fumadocs/cli@1.3.10
+  - @vx-oss/docs-cli@1.3.10
 
 ## 16.0.101
 
 ### Patch Changes
 
 - Updated dependencies [af7ee2d]
-  - @fumadocs/cli@1.3.9
+  - @vx-oss/docs-cli@1.3.9
 
 ## 16.0.100
 
@@ -132,7 +132,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 
 - f51b849: update Waku template
 - Updated dependencies [71c15fd]
-  - @fumadocs/cli@1.3.8
+  - @vx-oss/docs-cli@1.3.8
 
 ## 16.0.94
 
@@ -144,7 +144,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 
 - 2d8f596: fix `npm pack` skipping nested `node_modules`
 - Updated dependencies [2d8f596]
-  - @fumadocs/cli@1.3.7
+  - @vx-oss/docs-cli@1.3.7
 
 ## 16.0.91
 
@@ -152,7 +152,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 
 - 690ddb9: bundle more deps
 - Updated dependencies [690ddb9]
-  - @fumadocs/cli@1.3.6
+  - @vx-oss/docs-cli@1.3.6
 
 ## 16.0.90
 
@@ -162,7 +162,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 
 - 7c59264: Adopt Fuma CLI
 - Updated dependencies [7c59264]
-  - @fumadocs/cli@1.3.5
+  - @vx-oss/docs-cli@1.3.5
 
 ## 16.0.88
 
@@ -174,7 +174,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 
 - 1a84b96: hotfix cwd for default config
 - Updated dependencies [1a84b96]
-  - @fumadocs/cli@1.3.4
+  - @vx-oss/docs-cli@1.3.4
 
 ## 16.0.85
 
@@ -182,7 +182,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 
 - a77a4ad: Support other React.js frameworks for AI chat
 - Updated dependencies [3ff78c9]
-  - @fumadocs/cli@1.3.3
+  - @vx-oss/docs-cli@1.3.3
 
 ## 16.0.84
 
@@ -211,7 +211,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 ### Patch Changes
 
 - Updated dependencies [823d880]
-  - @fumadocs/cli@1.3.2
+  - @vx-oss/docs-cli@1.3.2
 
 ## 16.0.78
 
@@ -224,14 +224,14 @@ Internal packages & templates now use Base UI rather than Radix UI.
 ### Patch Changes
 
 - Updated dependencies [e201942]
-  - @fumadocs/cli@1.3.1
+  - @vx-oss/docs-cli@1.3.1
 
 ## 16.0.74
 
 ### Patch Changes
 
 - Updated dependencies [0ddaa8a]
-  - @fumadocs/cli@1.3.0
+  - @vx-oss/docs-cli@1.3.0
 
 ## 16.0.73
 
@@ -248,7 +248,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 - e7ab329: Add AI chat option for Next.js
 - Updated dependencies [42e17a4]
 - Updated dependencies [b2191f5]
-  - @fumadocs/cli@1.2.6
+  - @vx-oss/docs-cli@1.2.6
 
 ## 16.0.70
 
@@ -1053,7 +1053,7 @@ Internal packages & templates now use Base UI rather than Radix UI.
 
   `@fuma-docs/openapi` -> `fumadocs-openapi`
 
-  `create-next-docs-app` -> `create-fumadocs-app`
+  `create-next-docs-app` -> `create-vx-oss-docs`
 
 ## 7.1.2
 

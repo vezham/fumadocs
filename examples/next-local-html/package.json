@@ -9,13 +9,13 @@
     "types:check": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@fumadocs/local-html": "workspace:*",
+    "@vx-oss/docs-local-html": "workspace:*",
     "lucide-react": "^1.34.0",
     "next": "16.3.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",

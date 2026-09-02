@@ -6,8 +6,8 @@ import {
   type PageObjectResponse,
   type QueryDataSourceParameters,
 } from '@notionhq/client';
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
-import type { DynamicSource, MetaData, PageData, VirtualFile } from '@vezham/docs-core/source';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins';
+import type { DynamicSource, MetaData, PageData, VirtualFile } from '@vx-oss/docs-core/source';
 import path from 'node:path';
 import { blocksToStructuredData, richTextToPlainText, type NotionBlock } from './blocks';
 import { cache } from 'react';
@@ -91,7 +91,7 @@ export function createNotion({
   blockConcurrency = 4,
 }: CreateNotionOptions): NotionIntegration {
   if (blockConcurrency < 1 || !Number.isInteger(blockConcurrency)) {
-    throw new TypeError('[@fumadocs/notion] blockConcurrency must be a positive integer');
+    throw new TypeError('[@vx-oss/docs-notion] blockConcurrency must be a positive integer');
   }
 
   const limitBlockRequest = createLimiter(blockConcurrency);
@@ -120,7 +120,7 @@ export function createNotion({
         const duplicate = seenPaths.get(filePath);
         if (duplicate) {
           throw new Error(
-            `[@fumadocs/notion] Pages "${duplicate}" and "${page.id}" resolve to the same virtual path: ${filePath}`,
+            `[@vx-oss/docs-notion] Pages "${duplicate}" and "${page.id}" resolve to the same virtual path: ${filePath}`,
           );
         }
         seenPaths.set(filePath, page.id);
@@ -164,7 +164,7 @@ export function createNotion({
             }
             if (response.request_status?.type === 'incomplete') {
               throw new Error(
-                "[@fumadocs/notion] The data source query reached Notion's result limit. Narrow the query filter so every page can be loaded.",
+                "[@vx-oss/docs-notion] The data source query reached Notion's result limit. Narrow the query filter so every page can be loaded.",
               );
             }
             cursor = response.has_more ? response.next_cursor : undefined;
@@ -342,7 +342,7 @@ function parseSlug(value: string, pageId: string): string[] {
     .map((part) => part.trim())
     .filter(Boolean);
   if (slugs.some((part) => part === '.' || part === '..')) {
-    throw new Error(`[@fumadocs/notion] Page "${pageId}" has an unsafe slug: ${value}`);
+    throw new Error(`[@vx-oss/docs-notion] Page "${pageId}" has an unsafe slug: ${value}`);
   }
   return slugs;
 }
@@ -359,7 +359,7 @@ function slugify(value: string): string {
 function resolveVirtualPath(baseDir: string | undefined, generatedPath: string): string {
   const normalized = generatedPath.replaceAll('\\', '/').replace(/^\/+/, '');
   if (!normalized || normalized.split('/').some((part) => part === '..')) {
-    throw new Error(`[@fumadocs/notion] Invalid virtual path: ${generatedPath}`);
+    throw new Error(`[@vx-oss/docs-notion] Invalid virtual path: ${generatedPath}`);
   }
 
   return baseDir ? path.posix.join(baseDir.replaceAll('\\', '/'), normalized) : normalized;

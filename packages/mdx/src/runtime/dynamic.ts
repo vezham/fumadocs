@@ -1,8 +1,8 @@
 import { buildConfig, type DocCollectionItem } from '@/config/build';
 import { buildMDX, type CompiledMDXProperties } from '@/loaders/mdx/build';
 import { pathToFileURL } from 'node:url';
-import { frontmatter } from '@vezham/docs-core/content/md/frontmatter';
-import { asMarkdown, jsxComponents } from '@vezham/docs-core/server';
+import { frontmatter } from '@vx-oss/docs-core/content/md/frontmatter';
+import { asMarkdown, jsxComponents } from '@vx-oss/docs-core/server';
 import fs from 'node:fs/promises';
 import { server } from './server';
 import { type CoreOptions, createCore } from '@/core';

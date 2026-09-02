@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { compileMdx } from '@/compile';
 import { applySatteriPreset } from '@/preset';
 import { remarkHeading } from '@/remark-heading';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 
 async function compile(source: string) {
   const options = await applySatteriPreset({

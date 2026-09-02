@@ -1,4 +1,4 @@
-import { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
+import { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {

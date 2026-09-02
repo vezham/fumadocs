@@ -19,7 +19,7 @@ The GraphQL schemas to read from, either:
 Record inputs accept SDL file paths/URLs, SDL text, introspection results, `GraphQLSchema` instances, and functions returning them.
 
 ```ts tab="Basic"
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 export const graphql = createGraphQL({
   input: ['./schema.graphql'],
@@ -27,7 +27,7 @@ export const graphql = createGraphQL({
 ```
 
 ```ts tab="Record"
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 export const graphql = createGraphQL({
   input: {
@@ -46,7 +46,7 @@ export const graphql = createGraphQL({
 You can pass an array of SDL files to merge them into a single schema, type extensions (e.g. `extend type Query`) are supported.
 
 ```ts
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 export const graphql = createGraphQL({
   input: {
@@ -60,7 +60,7 @@ export const graphql = createGraphQL({
 Disable caching of loaded schemas. Useful during development when schemas change frequently.
 
 ```ts
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 export const graphql = createGraphQL({
   input: ['./schema.graphql'],

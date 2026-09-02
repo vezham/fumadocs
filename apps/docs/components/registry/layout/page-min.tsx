@@ -1,10 +1,10 @@
 'use client';
 import { type ComponentProps, type ReactNode, useMemo } from 'react';
-import { AnchorProvider, type TOCItemType, useActiveAnchors } from '@vezham/docs-core/toc';
+import { AnchorProvider, type TOCItemType, useActiveAnchors } from '@vx-oss/docs-core/toc';
 import { cn } from '@/lib/cn';
-import { useTreeContext } from '@vezham/docs-react/contexts/tree';
-import { Link, usePathname } from '@vezham/docs-core/framework';
-import type * as PageTree from '@vezham/docs-core/page-tree';
+import { useTreeContext } from '@vx-oss/docs-react/contexts/tree';
+import { Link, usePathname } from '@vx-oss/docs-core/framework';
+import type * as PageTree from '@vx-oss/docs-core/page-tree';
 
 export interface DocsPageProps {
   toc?: TOCItemType[];

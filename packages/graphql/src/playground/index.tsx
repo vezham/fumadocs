@@ -1,7 +1,7 @@
 'use client';
 import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslations } from '@fuma-translate/react';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import {
   ChevronDown,
   CircleCheck,
@@ -19,17 +19,17 @@ import {
   parse,
   validate,
 } from 'graphql';
-import { type FieldKey, StfProvider, useListener, useStf } from '@fumari/stf';
-import { isPlainObject, stringifyFieldKey } from '@fumari/stf/lib/utils';
+import { type FieldKey, StfProvider, useListener, useStf } from '@vx-oss/docs-stf';
+import { isPlainObject, stringifyFieldKey } from '@vx-oss/docs-stf/lib/utils';
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@fumadocs/api-docs/components/collapsible';
-import { FieldSet } from '@fumadocs/api-docs/components/playground/inputs';
-import { SchemaProvider } from '@fumadocs/api-docs/components/playground/schema';
-import { Input } from '@fumadocs/api-docs/components/input';
-import { Spinner } from '@fumadocs/api-docs/components/spinner';
+} from '@vx-oss/docs-api/components/collapsible';
+import { FieldSet } from '@vx-oss/docs-api/components/playground/inputs';
+import { SchemaProvider } from '@vx-oss/docs-api/components/playground/schema';
+import { Input } from '@vx-oss/docs-api/components/input';
+import { Spinner } from '@vx-oss/docs-api/components/spinner';
 import { cn } from '@/utils/cn';
 import type { OperationKind } from '@/utils/schema';
 import { type OperationExample, syncOperationVariables } from '@/utils/example';

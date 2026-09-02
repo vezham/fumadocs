@@ -1,13 +1,13 @@
-import type { Accordion, Accordions } from '@vezham/docs-react/components/accordion';
-import type { Callout } from '@vezham/docs-react/components/callout';
-import type { File, Folder } from '@vezham/docs-react/components/files';
-import type { InlineTOC } from '@vezham/docs-react/components/inline-toc';
-import type { TypeTable } from '@vezham/docs-react/components/type-table';
-import type { Card } from '@vezham/docs-react/components/card';
-import type { DocsLayoutProps } from '@vezham/docs-react/layouts/docs';
+import type { Accordion, Accordions } from '@vx-oss/docs-react/components/accordion';
+import type { Callout } from '@vx-oss/docs-react/components/callout';
+import type { File, Folder } from '@vx-oss/docs-react/components/files';
+import type { InlineTOC } from '@vx-oss/docs-react/components/inline-toc';
+import type { TypeTable } from '@vx-oss/docs-react/components/type-table';
+import type { Card } from '@vx-oss/docs-react/components/card';
+import type { DocsLayoutProps } from '@vx-oss/docs-react/layouts/docs';
 import type { ComponentProps, ComponentPropsWithoutRef } from 'react';
-import type { AutoTypeTable } from 'fumadocs-typescript/ui';
-import type { RootProviderProps } from '@vezham/docs-react/provider/base';
+import type { AutoTypeTable } from '@vx-oss/docs-typescript/ui';
+import type { RootProviderProps } from '@vx-oss/docs-react/provider/base';
 
 export type AccordionsProps = Omit<
   ComponentPropsWithoutRef<typeof Accordions>,
@@ -67,4 +67,4 @@ export type AutoTypeTableProps = Omit<
 
 export type SearchProps = Required<RootProviderProps>['search'];
 
-export type { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
+export type { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';

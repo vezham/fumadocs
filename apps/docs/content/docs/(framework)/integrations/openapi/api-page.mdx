@@ -9,7 +9,7 @@ Fumadocs OpenAPI uses a `<OpenAPIPage />` component to render page contents, it 
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createOpenAPIPage } from '@vezham/docs-openapi/ui';
+import { createOpenAPIPage } from '@vx-oss/docs-openapi/ui';
 
 export const OpenAPIPage = createOpenAPIPage({
   // config
@@ -22,12 +22,12 @@ Generate code usage examples for each API endpoint.
 
 ```tsx title="components/api-page.tsx" twoslash
 'use client';
-import { createOpenAPIPage } from '@vezham/docs-openapi/ui';
+import { createOpenAPIPage } from '@vx-oss/docs-openapi/ui';
 import {
   createCodeUsageGeneratorRegistry,
   type CodeUsageGenerator,
-} from '@vezham/docs-openapi/requests/generators';
-import { registerDefault } from '@vezham/docs-openapi/requests/generators/all';
+} from '@vx-oss/docs-openapi/requests/generators';
+import { registerDefault } from '@vx-oss/docs-openapi/requests/generators/all';
 
 const codeUsages = createCodeUsageGeneratorRegistry();
 
@@ -71,9 +71,9 @@ paths:
 Assuming you have configured [Internationalization](/docs/internationalization) at UI level:
 
 ```tsx title="layout.shared.tsx"
-import { defineI18n } from '@vezham/docs-core/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
-import { openapiTranslations } from '@vezham/docs-openapi/i18n';
+import { defineI18n } from '@vx-oss/docs-core/i18n';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
+import { openapiTranslations } from '@vx-oss/docs-openapi/i18n';
 
 const i18n = defineI18n({
   languages: ['en', 'cn'],
@@ -105,8 +105,8 @@ You can create a media adapter to support other media types in API pages, a medi
 
 ```tsx title="components/api-page.tsx" twoslash
 'use client';
-import { createOpenAPIPage } from '@vezham/docs-openapi/ui';
-import type { MediaAdapter } from '@vezham/docs-openapi';
+import { createOpenAPIPage } from '@vx-oss/docs-openapi/ui';
+import type { MediaAdapter } from '@vx-oss/docs-openapi';
 
 const mediaAdapters: Record<string, MediaAdapter> = {
   // example: custom `application/json
@@ -146,12 +146,12 @@ For customisations beyond the available options, you can install the UI into you
 ### API Playground
 
 ```npm
-npx @fumadocs/cli add fumadocs/openapi/playground
+npx @vx-oss/docs-cli add fumadocs/openapi/playground
 ```
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createOpenAPIPage } from '@vezham/docs-openapi/ui';
+import { createOpenAPIPage } from '@vx-oss/docs-openapi/ui';
 import PlaygroundClient from '@/components/api/playground';
 import { AuthProvider } from '@/components/api/playground/auth';
 
@@ -172,19 +172,19 @@ export const OpenAPIPage = createOpenAPIPage({
 });
 ```
 
-The installed files access the runtime of API pages from `@vezham/docs-openapi/ui`, such as the render context. You can also use it to build your own playground from scratch.
+The installed files access the runtime of API pages from `@vx-oss/docs-openapi/ui`, such as the render context. You can also use it to build your own playground from scratch.
 
 ### Schema UI
 
 The UI for rendering JSON schemas.
 
 ```npm
-npx @fumadocs/cli add fumadocs/api-docs/schema
+npx @vx-oss/docs-cli add fumadocs/api-docs/schema
 ```
 
 ```tsx title="components/api-page.tsx"
 'use client';
-import { createOpenAPIPage } from '@vezham/docs-openapi/ui';
+import { createOpenAPIPage } from '@vx-oss/docs-openapi/ui';
 import { Schema } from '@/components/api/schema';
 
 export const OpenAPIPage = createOpenAPIPage({

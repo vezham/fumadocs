@@ -5,16 +5,16 @@ import {
   createLocalSource,
   type ContentIntegration,
   type LocalSource,
-} from '@fumadocs/local-content';
-import { remarkGfm } from '@vezham/docs-core/mdx-plugins/remark-gfm';
-import { remarkHeading, type RemarkHeadingOptions } from '@vezham/docs-core/mdx-plugins/remark-heading';
-import { remarkImage, type RemarkImageOptions } from '@vezham/docs-core/mdx-plugins/remark-image';
-import { remarkStructure, type StructureOptions } from '@vezham/docs-core/mdx-plugins/remark-structure';
-import { rehypeCode, type RehypeCodeOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
-import { rehypeToc, type RehypeTocOptions } from '@vezham/docs-core/mdx-plugins/rehype-toc';
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
-import type { MetaData, PageData } from '@vezham/docs-core/source';
-import * as defaultSchemas from '@vezham/docs-core/source/schema';
+} from '@vx-oss/docs-local-content';
+import { remarkGfm } from '@vx-oss/docs-core/mdx-plugins/remark-gfm';
+import { remarkHeading, type RemarkHeadingOptions } from '@vx-oss/docs-core/mdx-plugins/remark-heading';
+import { remarkImage, type RemarkImageOptions } from '@vx-oss/docs-core/mdx-plugins/remark-image';
+import { remarkStructure, type StructureOptions } from '@vx-oss/docs-core/mdx-plugins/remark-structure';
+import { rehypeCode, type RehypeCodeOptions } from '@vx-oss/docs-core/mdx-plugins/rehype-code';
+import { rehypeToc, type RehypeTocOptions } from '@vx-oss/docs-core/mdx-plugins/rehype-toc';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins';
+import type { MetaData, PageData } from '@vx-oss/docs-core/source';
+import * as defaultSchemas from '@vx-oss/docs-core/source/schema';
 import remarkParse from 'remark-parse';
 import remarkRehype, { type Options as RemarkRehypeOptions } from 'remark-rehype';
 import { glob } from 'tinyglobby';
@@ -80,7 +80,7 @@ export interface ObsidianSource<
 > {
   /**
    * Connect to the standalone local-content dev server. On Vite, prefer
-   * `watchWithVite()` from `fumadocs-obsidian/dev/vite`.
+   * `watchWithVite()` from `@vx-oss/docs-obsidian/dev/vite`.
    */
   devServer: (url?: string) => Promise<void>;
 }
@@ -184,7 +184,7 @@ export function obsidian<
           } catch (error) {
             // e.g. deleted between scan and read, skip it instead of failing the vault
             vaultFiles.delete(file.path);
-            console.error(`[fumadocs-obsidian] failed to read ${file.absolutePath}`, error);
+            console.error(`[@vx-oss/docs-obsidian] failed to read ${file.absolutePath}`, error);
           }
         }),
       );

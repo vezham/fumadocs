@@ -13,7 +13,7 @@ import {
   TimerIcon,
 } from 'lucide-react';
 import { Marquee } from '@/app/(home)/marquee';
-import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
+import { ServerCodeBlock } from '@vx-oss/docs-react/components/codeblock.rsc';
 import {
   Hero,
   AgnosticBackground,
@@ -280,7 +280,7 @@ function Aesthetics() {
         </p>
         <p className="mb-4">Pro designer? Customize the theme using Fumadocs CLI.</p>
         <ServerCodeBlock
-          code={`pnpm dlx @fumadocs/cli customize\n\n> Choose a layout to customize...`}
+          code={`pnpm dlx @vx-oss/docs-cli customize\n\n> Choose a layout to customize...`}
           lang="bash"
         />
       </div>
@@ -596,23 +596,23 @@ function ForEngineers() {
         <div className="mt-auto flex flex-col gap-2 @container mask-[linear-gradient(to_bottom,white,transparent)]">
           {[
             {
-              name: '@vezham/docs-mdx',
+              name: '@vx-oss/docs-mdx',
               description: 'Use MDX in your React framework elegantly.',
             },
             {
-              name: '@vezham/docs-core',
+              name: '@vx-oss/docs-core',
               description: 'Headless library for building docs + handling content.',
             },
             {
-              name: '@vezham/docs-react',
+              name: '@vx-oss/docs-react',
               description: 'UI library for building docs.',
             },
             {
-              name: '@vezham/docs-openapi',
+              name: '@vx-oss/docs-openapi',
               description: 'Extend Fumadocs to render OpenAPI docs.',
             },
             {
-              name: 'fumadocs-obsidian',
+              name: '@vx-oss/docs-obsidian',
               description: 'Extend Fumadocs to handle Obsidian-style Markdown.',
             },
           ].map((item) => (
@@ -665,8 +665,8 @@ function ForEngineers() {
             title: 'Fumadocs MDX',
           }}
           code={`
-import { loader } from '@vezham/docs-core/source';
-import { defineDocs } from '@vezham/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
 
 const docs = defineDocs({
   dir: 'content/docs',

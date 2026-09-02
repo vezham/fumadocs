@@ -9,7 +9,7 @@ preview: githubInfo
 ## Usage
 
 ```tsx
-import { GithubInfo } from '@vezham/docs-react/components/github-info';
+import { GithubInfo } from '@vx-oss/docs-react/components/github-info';
 
 export function MyComp() {
   return (
@@ -26,10 +26,10 @@ export function MyComp() {
 It's recommended to add it to your docs layout with `links` option:
 
 ```tsx title="app/docs/layout.tsx"
-import { DocsLayout, type DocsLayoutProps } from '@vezham/docs-react/layouts/notebook';
+import { DocsLayout, type DocsLayoutProps } from '@vx-oss/docs-react/layouts/notebook';
 import { baseOptions } from '@/lib/layout.shared';
 import { source } from '@/lib/source';
-import { GithubInfo } from '@vezham/docs-react/components/github-info';
+import { GithubInfo } from '@vx-oss/docs-react/components/github-info';
 
 function docsOptions(): DocsLayoutProps {
   return {

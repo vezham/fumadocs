@@ -3,7 +3,7 @@
 import type { ComponentProps } from 'react';
 import { PreviewCard as PreviewCardPrimitive } from '@base-ui/react/preview-card';
 import { cn } from '@/lib/cn';
-import Link from '@vezham/docs-core/link';
+import Link from '@vx-oss/docs-core/link';
 
 const HoverCard = PreviewCardPrimitive.Root;
 

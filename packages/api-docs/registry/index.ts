@@ -27,9 +27,9 @@ export const registry: Registry = {
     },
   ],
   dependencies: {
-    '@vezham/docs-core': null,
-    '@vezham/docs-react': null,
-    '@fumadocs/api-docs': null,
+    '@vx-oss/docs-core': null,
+    '@vx-oss/docs-react': null,
+    '@vx-oss/docs-api': null,
     react: null,
   },
 };

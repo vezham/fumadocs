@@ -1,5 +1,5 @@
 import { defineConfig, type Config } from 'waku/config';
-import { fumadocsMdx } from '@vezham/docs-mdx/vite';
+import { fumadocsMdx } from '@vx-oss/docs-mdx/vite';
 import tailwindcss from '@tailwindcss/vite';
 import type { UserConfig } from 'vite';
 

@@ -1,6 +1,6 @@
 import { type FC, useMemo, type ComponentProps, type ReactNode } from 'react';
-import type { I18nConfig } from '@vezham/docs-core/i18n';
-import * as PageTree from '@vezham/docs-core/page-tree';
+import type { I18nConfig } from '@vx-oss/docs-core/i18n';
+import * as PageTree from '@vx-oss/docs-core/page-tree';
 import { isActive, normalize } from '@/utils/urls';
 import type { BaseSlots } from './client';
 import type { ThemeSwitchProps } from './slots/theme-switch';

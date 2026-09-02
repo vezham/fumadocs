@@ -9,9 +9,9 @@ import type {
 } from '@/types';
 import type { MediaAdapter } from '@/requests/media/adapter';
 import type { ComponentProps, FC, HTMLAttributes, ReactNode } from 'react';
-import { defaultShikiFactory } from '@vezham/docs-core/highlight/shiki/full';
+import { defaultShikiFactory } from '@vx-oss/docs-core/highlight/shiki/full';
 import type { CodeUsageGeneratorRegistry, InlineCodeUsageGenerator } from '@/requests/generators';
-import type { ShikiFactory } from '@vezham/docs-core/highlight/shiki';
+import type { ShikiFactory } from '@vx-oss/docs-core/highlight/shiki';
 import type { CodeToHastOptionsCommon, CodeOptionsThemes, BundledTheme } from 'shiki';
 import type { ExampleRequestItem } from '../utils/get-example-requests';
 import type { RequestTabsRenderOptions } from './operation/request-tabs';
@@ -19,7 +19,7 @@ import type { ResponseTabsRenderOptions } from './operation/response-tabs';
 import type { PlaygroundClientOptions } from '@/playground/client';
 import type { GeneratedPageProps, WebhookItem, OperationItem } from '@/utils/pages/builder';
 import type { ParsedSchema } from '@/utils/schema';
-import type { SchemaUIOptions } from '@fumadocs/api-docs/components/schema';
+import type { SchemaUIOptions } from '@vx-oss/docs-api/components/schema';
 import { createOpenAPIPageBase } from './base';
 
 export { useRenderContext, useServerContext } from '@/ui/contexts/api';
@@ -210,7 +210,7 @@ export interface CreateOpenAPIPageOptions {
    *
    * Useful when using multiple OpenAPI instances to prevent state conflicts.
    *
-   * @defaultValue `@vezham/docs-openapi-`
+   * @defaultValue `@vx-oss/docs-openapi-`
    */
   storageKeyPrefix?: string;
 

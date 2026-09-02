@@ -12,9 +12,9 @@ Content loader accepts different content sources based on a `source` interface.
 Pass a record of source objects instead
 
 ```ts
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 import { blog, docs } from 'collections/server';
-import { lucideIconsPlugin } from '@vezham/docs-core/source/lucide-icons';
+import { lucideIconsPlugin } from '@vx-oss/docs-core/source/lucide-icons';
 
 export const source = loader(
   {
@@ -46,7 +46,7 @@ To plug your own content source, create a `StaticSource` object.
 Since Loader API doesn't rely on file system, file paths only allow virtual paths like `file.mdx` and `content/file.mdx`, `./file.mdx` and `D://content/file.mdx` are not allowed.
 
 ```ts twoslash
-import type { StaticSource } from '@vezham/docs-core/source';
+import type { StaticSource } from '@vx-oss/docs-core/source';
 
 export function createMySource(): StaticSource<{
   metaData: { title: string; pages: string[] }; // Your custom type
@@ -81,7 +81,7 @@ export function createMySource(): StaticSource<{
 For content sources with revalidation, return a `DynamicSource` instead:
 
 ```ts
-import type { DynamicSource } from '@vezham/docs-core/source';
+import type { DynamicSource } from '@vx-oss/docs-core/source';
 
 export function createMySource(): DynamicSource<{
   metaData: { title: string; pages: string[] };

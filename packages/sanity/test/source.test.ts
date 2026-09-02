@@ -1,5 +1,5 @@
 import type { SanityClient } from '@sanity/client';
-import { dynamicLoader } from '@vezham/docs-core/source';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
 import type { DefinedFetchType } from 'next-sanity/live';
 import { describe, expect, it, vi } from 'vitest';
 import { createSanitySource } from '../src';

@@ -1,4 +1,4 @@
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import type { MdxContent } from '@/render';
 
 export * from './compile';

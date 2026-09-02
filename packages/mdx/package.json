@@ -1,5 +1,5 @@
 {
-  "name": "@vezham/docs-mdx",
+  "name": "@vx-oss/docs-mdx",
   "version": "1.0.1",
   "description": "The built-in source for Fumadocs",
   "keywords": [
@@ -18,7 +18,7 @@
     "directory": "packages/mdx"
   },
   "bin": {
-    "fumadocs-mdx": "./bin.js"
+    "vx-oss-docs-mdx": "./bin.js"
   },
   "files": [
     "dist",
@@ -82,8 +82,8 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@fumadocs/satteri": "workspace:*",
-    "@fumadocs/vite": "workspace:*",
+    "@vx-oss/docs-satteri": "workspace:*",
+    "@vx-oss/docs-vite": "workspace:*",
     "@types/bun": "^1.4.0",
     "@types/mdast": "^4.0.4",
     "@types/mdx": "^2.0.14",
@@ -102,10 +102,10 @@
     "tsdown": "0.22.14",
     "vite": "^8.2.2",
     "webpack": "^5.109.2",
-    "@vezham/docs-core": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
-    "@fumadocs/satteri": "0.x.x",
+    "@vx-oss/docs-satteri": "0.x.x",
     "@types/mdast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
@@ -115,10 +115,10 @@
     "rolldown": "*",
     "satteri": "^0.10.5",
     "vite": "7.x.x || 8.x.x",
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
-    "@fumadocs/satteri": {
+    "@vx-oss/docs-satteri": {
       "optional": true
     },
     "satteri": {

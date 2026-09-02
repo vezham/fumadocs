@@ -1,1 +1,1 @@
-export { default } from '@fumadocs/tailwind/typography';
+export { default } from '@vx-oss/docs-tailwind/typography';

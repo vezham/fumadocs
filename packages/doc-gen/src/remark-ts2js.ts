@@ -4,7 +4,7 @@ import { visit } from 'unist-util-visit';
 import {
   generateCodeBlockTabs,
   parseCodeBlockAttributes,
-} from '@vezham/docs-core/mdx-plugins/codeblock-utils';
+} from '@vx-oss/docs-core/mdx-plugins/codeblock-utils';
 
 export interface TypeScriptToJavaScriptOptions {
   /**

@@ -1,5 +1,5 @@
 import { createFileRoute, notFound } from '@tanstack/react-router';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { createServerFn } from '@tanstack/react-start';
 import { getSource } from '@/lib/source';
 import {
@@ -9,13 +9,13 @@ import {
   DocsTitle,
   MarkdownCopyButton,
   ViewOptionsPopover,
-} from '@vezham/docs-react/layouts/docs/page';
+} from '@vx-oss/docs-react/layouts/docs/page';
 import { baseOptions } from '@/lib/layout.shared';
 import { encodeMarkdownUrl, gitConfig } from '@/lib/shared';
-import { useFumadocsLoader } from '@vezham/docs-core/source/client';
+import { useFumadocsLoader } from '@vx-oss/docs-core/source/client';
 import { useMemo } from 'react';
 import { useMDXComponents } from '@/components/mdx';
-import { rendererFromSerialized } from '@fumadocs/local-md/client';
+import { rendererFromSerialized } from '@vx-oss/docs-local-md/client';
 
 export const Route = createFileRoute('/docs/$')({
   component: Page,

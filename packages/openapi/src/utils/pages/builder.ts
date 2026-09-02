@@ -1,9 +1,9 @@
 import type { Document, HttpMethods, OperationObject, PathItemObject, TagObject } from '@/types';
 import { getTagDisplayName, methodKeys } from '@/utils/schema';
-import { idToTitle } from '@fumadocs/api-docs/utils/id-to-title';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { idToTitle } from '@vx-oss/docs-api/utils/id-to-title';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { createMagicProxy } from '@scalar/json-magic/magic-proxy';
-import type { NoReferenceSwallow } from '@fumadocs/api-docs/schema';
+import type { NoReferenceSwallow } from '@vx-oss/docs-api/schema';
 
 interface BaseEntry {
   path: string;

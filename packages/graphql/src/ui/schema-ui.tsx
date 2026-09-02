@@ -29,8 +29,8 @@ import {
   SchemaUI,
   InlineTag,
   type SchemaUIProps,
-} from '@fumadocs/api-docs/components/schema/client';
-import type { SchemaData, SchemaUIGeneratedData } from '@fumadocs/api-docs/components/schema';
+} from '@vx-oss/docs-api/components/schema/client';
+import type { SchemaData, SchemaUIGeneratedData } from '@vx-oss/docs-api/components/schema';
 import { getCustomDirectives } from '@/utils/schema';
 import { useRenderContext } from './contexts/api';
 import { Markdown } from './components/markdown';

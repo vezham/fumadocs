@@ -12,8 +12,8 @@ import {
   useDeferredValue,
 } from 'react';
 import { Fragment, jsx, jsxs } from 'react/jsx-runtime';
-import { DynamicCodeBlock } from '@vezham/docs-react/components/dynamic-codeblock';
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import { DynamicCodeBlock } from '@vx-oss/docs-react/components/dynamic-codeblock';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 import { visit } from 'unist-util-visit';
 import type { ElementContent, Root, RootContent } from 'hast';
 

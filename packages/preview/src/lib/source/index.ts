@@ -1,6 +1,6 @@
-import { loader, StaticSource } from '@vezham/docs-core/source';
+import { loader, StaticSource } from '@vx-oss/docs-core/source';
 import { revalidable } from '@/lib/revalidable';
-import { lucideIconsPlugin } from '@vezham/docs-core/source/lucide-icons';
+import { lucideIconsPlugin } from '@vx-oss/docs-core/source/lucide-icons';
 import { getPages, RawMeta, RawPage } from './storage';
 import type { ParsedAppConfig } from '@/config/global';
 

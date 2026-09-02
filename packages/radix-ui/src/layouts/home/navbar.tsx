@@ -1,5 +1,5 @@
 'use client';
-import Link, { type LinkProps } from '@vezham/docs-core/link';
+import Link, { type LinkProps } from '@vx-oss/docs-core/link';
 import { cn } from '@/utils/cn';
 import {
   NavigationMenuContent,

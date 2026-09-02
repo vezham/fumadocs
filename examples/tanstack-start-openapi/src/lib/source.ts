@@ -1,6 +1,6 @@
-import { loader } from '@vezham/docs-core/source';
-import { defineDocs } from '@vezham/docs-mdx/macro';
-import { lucideIconsPlugin } from '@vezham/docs-core/source/lucide-icons';
+import { loader } from '@vx-oss/docs-core/source';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
+import { lucideIconsPlugin } from '@vx-oss/docs-core/source/lucide-icons';
 import { docsRoute } from './shared';
 import { openapi } from './openapi';
 

@@ -21,7 +21,7 @@ export async function watchWithDevServer(
   if (!url) {
     if (warnWhenMissing) {
       console.warn(
-        `[@fumadocs/local-content] dev server URL could not be found, try passing \`url\` explicitly instead`,
+        `[@vx-oss/docs-local-content] dev server URL could not be found, try passing \`url\` explicitly instead`,
       );
     }
     return () => undefined;

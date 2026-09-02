@@ -14,7 +14,7 @@ You can integrate a simple feedback system with Fumadocs.
 Install it using **Fumadocs CLI**.
 
 ```npm
-npx @fumadocs/cli@latest add feedback
+npx @vx-oss/docs-cli@latest add feedback
 ```
 
 ### Page Feedback
@@ -22,7 +22,7 @@ npx @fumadocs/cli@latest add feedback
 To create a page-level feedback UI, add the `<Feedback />` component to your docs page:
 
 ```tsx
-import { DocsPage } from '@vezham/docs-react/layout/docs/page';
+import { DocsPage } from '@vx-oss/docs-react/layout/docs/page';
 import { Feedback } from '@/components/feedback/client';
 
 export default async function Page() {
@@ -56,8 +56,8 @@ Add the `remark-block-id` Remark plugin:
 import {
   remarkBlockId,
   type RemarkBlockIdOptions,
-} from '@vezham/docs-core/mdx-plugins/remark-block-id';
-import { defineConfig } from '@vezham/docs-mdx/config';
+} from '@vx-oss/docs-core/mdx-plugins/remark-block-id';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 const blockIdOptions: RemarkBlockIdOptions = {
   addDataAttribute: 'feedback',
@@ -76,7 +76,7 @@ export default defineConfig({
 Then, wrap your page content under the `FeedbackText` component:
 
 ```tsx
-import { DocsPage } from '@vezham/docs-react/layout/docs/page';
+import { DocsPage } from '@vx-oss/docs-react/layout/docs/page';
 import { FeedbackText } from '@/components/feedback/client';
 
 export default async function Page() {

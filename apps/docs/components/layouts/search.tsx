@@ -12,16 +12,16 @@ import {
   SearchDialogOverlay,
   type SearchItemType,
   type SharedProps,
-} from '@vezham/docs-react/components/dialog/search';
-import { useDocsSearch } from '@vezham/docs-core/search/client';
-import { fetchClient } from '@vezham/docs-core/search/client/fetch';
+} from '@vx-oss/docs-react/components/dialog/search';
+import { useDocsSearch } from '@vx-oss/docs-core/search/client';
+import { fetchClient } from '@vx-oss/docs-core/search/client/fetch';
 import { useMemo, useState } from 'react';
-import { Popover, PopoverContent, PopoverTrigger } from '@vezham/docs-react/components/ui/popover';
+import { Popover, PopoverContent, PopoverTrigger } from '@vx-oss/docs-react/components/ui/popover';
 import { ArrowRight, ChevronDown } from 'lucide-react';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { cn } from '@/lib/cn';
-import { useTreeContext } from '@vezham/docs-react/contexts/tree';
-import type { Item, Node } from '@vezham/docs-core/page-tree';
+import { useTreeContext } from '@vx-oss/docs-react/contexts/tree';
+import type { Item, Node } from '@vx-oss/docs-core/page-tree';
 import { useRouter } from 'next/navigation';
 
 const items = [

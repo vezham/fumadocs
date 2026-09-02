@@ -3,7 +3,7 @@ import { type ComponentProps, type ReactNode, useEffect, useMemo, useState } fro
 import type { HighlighterCore } from 'shiki';
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime';
 import * as JsxRuntime from 'react/jsx-runtime';
-import { highlightHast } from '@vezham/docs-core/highlight/shiki';
+import { highlightHast } from '@vx-oss/docs-core/highlight/shiki';
 import { cn } from '@/utils/cn';
 import { useRenderContext } from '../contexts/api';
 

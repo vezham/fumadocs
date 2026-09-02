@@ -5,11 +5,11 @@ import type {
   PortableTextMarkComponent,
   PortableTextTypeComponent,
 } from '@portabletext/react';
-import Link from '@vezham/docs-core/link';
-import { Heading } from '@vezham/docs-react/components/heading';
-import { DynamicCodeBlock } from '@vezham/docs-react/components/dynamic-codeblock';
-import { Callout, type CalloutType } from '@vezham/docs-react/components/callout';
-import { Cards, Card } from '@vezham/docs-react/components/card';
+import Link from '@vx-oss/docs-core/link';
+import { Heading } from '@vx-oss/docs-react/components/heading';
+import { DynamicCodeBlock } from '@vx-oss/docs-react/components/dynamic-codeblock';
+import { Callout, type CalloutType } from '@vx-oss/docs-react/components/callout';
+import { Cards, Card } from '@vx-oss/docs-react/components/card';
 
 const baseHeading: PortableTextBlockComponent = (props) => {
   return (

@@ -11,10 +11,10 @@ A compact version of [`<DocsLayout />`](/docs/ui/layouts/docs).
 
 ## Usage
 
-Enable the notebook layout with `@vezham/docs-react/layouts/notebook`.
+Enable the notebook layout with `@vx-oss/docs-react/layouts/notebook`.
 
 ```tsx title="layout.tsx"
-import { DocsLayout } from '@vezham/docs-react/layouts/notebook'; // [!code highlight]
+import { DocsLayout } from '@vx-oss/docs-react/layouts/notebook'; // [!code highlight]
 import { baseOptions } from '@/lib/layout.shared';
 import { source } from '@/lib/source';
 import type { ReactNode } from 'react';
@@ -31,8 +31,8 @@ export default function Layout({ children }: { children: ReactNode }) {
 Make sure to update your page import too:
 
 ```tsx title="page.tsx"
-import { ... } from '@vezham/docs-react/layouts/docs/page'; // [!code --]
-import { ... } from '@vezham/docs-react/layouts/notebook/page'; // [!code ++]
+import { ... } from '@vx-oss/docs-react/layouts/docs/page'; // [!code --]
+import { ... } from '@vx-oss/docs-react/layouts/notebook/page'; // [!code ++]
 ```
 
 ## Configurations
@@ -49,7 +49,7 @@ Configure the style of [Layout Tabs](/docs/ui/layouts/docs#layout-tabs), see the
 ![Notebook](/docs/notebook-tab-mode.png)
 
 ```tsx title="layout.tsx"
-import { DocsLayout } from '@vezham/docs-react/layouts/notebook';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/notebook';
 import { baseOptions } from '@/lib/layout.shared';
 import { source } from '@/lib/source';
 import type { ReactNode } from 'react';
@@ -76,7 +76,7 @@ Below is an example using [tab mode](#tab-mode) `navbar` & nav mode `top`:
 ![Notebook](/docs/notebook-nav-mode.png)
 
 ```tsx title="layout.tsx"
-import { DocsLayout } from '@vezham/docs-react/layouts/notebook';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/notebook';
 import { baseOptions } from '@/lib/layout.shared';
 import { source } from '@/lib/source';
 import type { ReactNode } from 'react';

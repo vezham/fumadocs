@@ -45,20 +45,20 @@ It generates a table for your docs based on TypeScript definitions.
 ## Usage
 
 ```npm
-npm i fumadocs-typescript
+npm i @vx-oss/docs-typescript
 ```
 
 Initialize the TypeScript compiler and add it as a MDX component.
 
 ```tsx title="components/mdx.tsx"
-import defaultComponents from '@vezham/docs-react/mdx';
+import defaultComponents from '@vx-oss/docs-react/mdx';
 import type { MDXComponents } from 'mdx/types';
-import { createGenerator, createFileSystemGeneratorCache } from 'fumadocs-typescript';
-import { AutoTypeTable, type AutoTypeTableProps } from 'fumadocs-typescript/ui';
+import { createGenerator, createFileSystemGeneratorCache } from '@vx-oss/docs-typescript';
+import { AutoTypeTable, type AutoTypeTableProps } from '@vx-oss/docs-typescript/ui';
 
 const generator = createGenerator({
   // set a cache, necessary for serverless platform like Vercel
-  cache: createFileSystemGeneratorCache('.next/fumadocs-typescript'),
+  cache: createFileSystemGeneratorCache('.next/@vx-oss/docs-typescript'),
 });
 
 export function getMDXComponents(components?: MDXComponents) {
@@ -142,7 +142,7 @@ Your `tsconfig.json` file in the current working directory will be loaded.
 You can change the compiler settings from [`createGenerator()`](/docs/integrations/typescript).
 
 ```ts
-import { createGenerator, createFileSystemGeneratorCache } from 'fumadocs-typescript';
+import { createGenerator, createFileSystemGeneratorCache } from '@vx-oss/docs-typescript';
 
 const generator = createGenerator({
   tsconfigPath: './tsconfig.json',

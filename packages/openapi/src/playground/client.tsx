@@ -19,24 +19,24 @@ import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from '@fumadocs/api-docs/components/collapsible';
+} from '@vx-oss/docs-api/components/collapsible';
 import { ChevronDown, LoaderCircle, PlusIcon } from 'lucide-react';
 import { encodeRequestData } from '@/requests/media/encode';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { cn } from '@/utils/cn';
 import {
   anyFields,
   SchemaProvider,
   useResolvedSchema,
-} from '@fumadocs/api-docs/components/playground/schema';
+} from '@vx-oss/docs-api/components/playground/schema';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@fumadocs/api-docs/components/select';
-import { labelVariants } from '@fumadocs/api-docs/components/input';
+} from '@vx-oss/docs-api/components/select';
+import { labelVariants } from '@vx-oss/docs-api/components/input';
 import { getPreferredType, type ParsedSchema } from '@/utils/schema';
 import ServerSelect from './components/server-select';
 import { useStorageKey } from '@/utils/storage-key';
@@ -48,23 +48,23 @@ import {
   useFieldValue,
   useListener,
   useStf,
-} from '@fumari/stf';
-import { arrayStartsWith, objectGet, objectSet, stringifyFieldKey } from '@fumari/stf/lib/utils';
+} from '@vx-oss/docs-stf';
+import { arrayStartsWith, objectGet, objectSet, stringifyFieldKey } from '@vx-oss/docs-stf/lib/utils';
 import {
   FieldInput,
   FieldSet,
   JsonInput,
   ObjectInput,
-} from '@fumadocs/api-docs/components/playground/inputs';
+} from '@vx-oss/docs-api/components/playground/inputs';
 import type { HttpMethods, OperationObject, ParameterObject, PathItemObject } from '@/types';
 import { useTranslations } from '@fuma-translate/react';
 import { useOperationContext } from '@/ui/operation/context';
 import { OAuthDialog, OAuthDialogContent, OAuthDialogTrigger } from './components/oauth-dialog';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { useAuth } from './auth';
-import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
-import { Spinner } from '@fumadocs/api-docs/components/spinner';
-import { joinURL, resolveServerUrl } from '@fumadocs/api-docs/utils/url';
+import { useOnChange } from '@vx-oss/docs-core/utils/use-on-change';
+import { Spinner } from '@vx-oss/docs-api/components/spinner';
+import { joinURL, resolveServerUrl } from '@vx-oss/docs-api/utils/url';
 
 export interface FormValues extends Record<string, unknown> {
   path: Record<string, unknown>;
@@ -113,7 +113,7 @@ export interface PlaygroundClientOptions {
    * render the parameter inputs of API endpoint.
    *
    * for updating values, use:
-   * - the `Custom.useController()` from `@vezham/docs-openapi/playground/client`.
+   * - the `Custom.useController()` from `@vx-oss/docs-openapi/playground/client`.
    *
    * Recommended types packages: `json-schema-typed`.
    */

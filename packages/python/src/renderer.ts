@@ -1,5 +1,5 @@
-import type { RehypeTOCItemType, StructuredData } from '@vezham/docs-core/mdx-plugins';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { RehypeTOCItemType, StructuredData } from '@vx-oss/docs-core/mdx-plugins';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import type { Expression } from 'estree';
 import type { Root } from 'hast';
 import { type Components, type Evaluater, toJsxRuntime } from 'hast-util-to-jsx-runtime';
@@ -7,7 +7,7 @@ import type { MDXComponents } from 'mdx/types';
 import type { ReactNode } from 'react';
 import * as JsxRuntime from 'react/jsx-runtime';
 import * as PythonComponents from './components';
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 
 export interface PythonRendererOptions {
   tree: Root;
@@ -27,7 +27,7 @@ export interface PythonRendererResult {
 export interface PythonRenderer {
   structuredData: StructuredData;
   /**
-   * Fumadocs UI's default MDX components and `fumadocs-python/components`
+   * Fumadocs UI's default MDX components and `@vx-oss/docs-python/components`
    * are included, pass your own to override them.
    */
   render: (components?: MDXComponents) => Promise<PythonRendererResult>;

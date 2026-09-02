@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/basehub",
+  "name": "@vx-oss/docs-basehub",
   "version": "0.1.0",
   "description": "The official BaseHub integration for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/basehub"
+  },
   "files": [
     "dist"
   ],
@@ -37,14 +41,14 @@
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
     "basehub": "9.x.x",
     "react": "^19.2.0",
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {

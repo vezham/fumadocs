@@ -2,10 +2,10 @@
 // @ts-nocheck
 import * as __fd_glob_1 from "./generate-index/folder/test.mdx?collection=docs"
 import * as __fd_glob_0 from "./generate-index/index.mdx?collection=docs"
-import { server } from '@vezham/docs-mdx/runtime/server';
+import { server } from '@vx-oss/docs-mdx/runtime/server';
 import type * as Config from './config';
 
-const create = server<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = server<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
   }
 }>();
@@ -15,10 +15,10 @@ export const docs = await create.doc("docs", "packages/mdx/test/fixtures/generat
 
 ```ts title="dynamic.ts"
 // @ts-nocheck
-import { dynamic } from '@vezham/docs-mdx/runtime/dynamic';
+import { dynamic } from '@vx-oss/docs-mdx/runtime/dynamic';
 import * as Config from './config';
 
-const create = await dynamic<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = await dynamic<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
   }
 }>(Config, {"environment":"dynamic","root":"","configPath":"packages/mdx/test/fixtures/config.ts","outDir":"packages/mdx/test/fixtures"});
@@ -26,10 +26,10 @@ const create = await dynamic<typeof Config, import("@vezham/docs-mdx/runtime/typ
 
 ```ts title="browser.ts"
 // @ts-nocheck
-import { browser } from '@vezham/docs-mdx/runtime/browser';
+import { browser } from '@vx-oss/docs-mdx/runtime/browser';
 import type * as Config from './config';
 
-const create = browser<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = browser<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
   }
 }>();
@@ -43,10 +43,10 @@ export default browserCollections;
 // @ts-nocheck
 import { frontmatter as __fd_glob_1 } from "../generate-index-2/test/test.mdx?collection=docs&only=frontmatter&workspace=test"
 import { frontmatter as __fd_glob_0 } from "../generate-index-2/index.mdx?collection=docs&only=frontmatter&workspace=test"
-import { server } from '@vezham/docs-mdx/runtime/server';
+import { server } from '@vx-oss/docs-mdx/runtime/server';
 import type * as Config from '../config';
 
-const create = server<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = server<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
   }
 }>();
@@ -56,10 +56,10 @@ export const docs = await create.docLazy("docs", "packages/mdx/test/fixtures/gen
 
 ```ts title="test/dynamic.ts"
 // @ts-nocheck
-import { dynamic } from '@vezham/docs-mdx/runtime/dynamic';
+import { dynamic } from '@vx-oss/docs-mdx/runtime/dynamic';
 import * as Config from '../config';
 
-const create = await dynamic<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = await dynamic<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
   }
 }>(Config, {"environment":"dynamic","root":"","configPath":"packages/mdx/test/fixtures/config.ts","outDir":"packages/mdx/test/fixtures/test"});
@@ -67,10 +67,10 @@ const create = await dynamic<typeof Config, import("@vezham/docs-mdx/runtime/typ
 
 ```ts title="test/browser.ts"
 // @ts-nocheck
-import { browser } from '@vezham/docs-mdx/runtime/browser';
+import { browser } from '@vx-oss/docs-mdx/runtime/browser';
 import type * as Config from '../config';
 
-const create = browser<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = browser<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
   }
 }>();

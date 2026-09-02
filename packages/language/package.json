@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/language",
+  "name": "@vx-oss/docs-language",
   "version": "0.2.4",
   "description": "Common language packs for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/language"
+  },
   "files": [
     "dist"
   ],
@@ -30,41 +34,41 @@
     "types:check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@fumadocs/api-docs": "workspace:*",
-    "@fumadocs/asyncapi": "workspace:*",
+    "@vx-oss/docs-api": "workspace:*",
+    "@vx-oss/docs-asyncapi": "workspace:*",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-openapi": "workspace:*",
-    "@vezham/docs-react": "workspace:*",
-    "@vezham/docs-story": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-openapi": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*",
+    "@vx-oss/docs-story": "workspace:*"
   },
   "peerDependencies": {
-    "@fumadocs/api-docs": "*",
-    "@fumadocs/asyncapi": "*",
-    "@vezham/docs-core": "*",
-    "@vezham/docs-openapi": "*",
-    "@vezham/docs-react": "*",
-    "@vezham/docs-story": "*"
+    "@vx-oss/docs-api": "*",
+    "@vx-oss/docs-asyncapi": "*",
+    "@vx-oss/docs-core": "*",
+    "@vx-oss/docs-openapi": "*",
+    "@vx-oss/docs-react": "*",
+    "@vx-oss/docs-story": "*"
   },
   "peerDependenciesMeta": {
-    "@fumadocs/api-docs": {
+    "@vx-oss/docs-api": {
       "optional": true
     },
-    "@fumadocs/asyncapi": {
+    "@vx-oss/docs-asyncapi": {
       "optional": true
     },
-    "@vezham/docs-core": {
+    "@vx-oss/docs-core": {
       "optional": true
     },
-    "@vezham/docs-openapi": {
+    "@vx-oss/docs-openapi": {
       "optional": true
     },
-    "@vezham/docs-react": {
+    "@vx-oss/docs-react": {
       "optional": true
     },
-    "@vezham/docs-story": {
+    "@vx-oss/docs-story": {
       "optional": true
     }
   }

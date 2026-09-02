@@ -1,4 +1,4 @@
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
 import { source } from '@/lib/source';
 

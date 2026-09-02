@@ -5,8 +5,8 @@ import type { BuildMDXOptions, CompiledMDXProperties } from '@/loaders/mdx/build
 import type { PostprocessOptions } from '@/loaders/mdx/remark-postprocess';
 import { resolveLastModified } from '@/loaders/mdx/last-modified';
 import type { MdxCompileOptions, Data, MdastPluginInput, MdastPluginDefinition } from 'satteri';
-import type { SatteriPresetOptions } from '@fumadocs/satteri/preset';
-import type { ExtraPluginHooks } from '@fumadocs/satteri/compile';
+import type { SatteriPresetOptions } from '@vx-oss/docs-satteri/preset';
+import type { ExtraPluginHooks } from '@vx-oss/docs-satteri/compile';
 
 export type CompiledSatteriMDXProperties<Frontmatter = Record<string, unknown>> =
   CompiledMDXProperties<Frontmatter>;
@@ -23,9 +23,9 @@ export async function buildSatteriMDX(
     ...collection?.postprocess,
   };
   const [{ compileMdx }, { remarkLlms }, { remarkInclude }] = await Promise.all([
-    import(/* turbopackOptional: true */ '@fumadocs/satteri/compile'),
-    import(/* turbopackOptional: true */ '@fumadocs/satteri/remark-llms'),
-    import(/* turbopackOptional: true */ '@fumadocs/satteri/remark-include'),
+    import(/* turbopackOptional: true */ '@vx-oss/docs-satteri/compile'),
+    import(/* turbopackOptional: true */ '@vx-oss/docs-satteri/remark-llms'),
+    import(/* turbopackOptional: true */ '@vx-oss/docs-satteri/remark-include'),
   ]);
 
   const data: Data = {
@@ -122,7 +122,7 @@ async function resolvePresetOptions(
 ): Promise<MdxCompileOptions> {
   const options = typeof input === 'function' ? await input(environment) : input;
   const { applySatteriPreset } = await import(
-    /* turbopackOptional: true */ '@fumadocs/satteri/preset'
+    /* turbopackOptional: true */ '@vx-oss/docs-satteri/preset'
   );
   return applySatteriPreset(options)(environment);
 }

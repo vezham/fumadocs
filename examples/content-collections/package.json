@@ -8,12 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fumadocs/content-collections": "workspace:*",
+    "@vx-oss/docs-content-collections": "workspace:*",
     "next": "16.3.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "devDependencies": {
     "@content-collections/core": "^0.15.2",

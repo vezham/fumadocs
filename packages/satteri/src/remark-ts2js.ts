@@ -2,7 +2,7 @@ import { defineMdastPlugin } from 'satteri';
 import {
   generateCodeBlockTabs,
   parseCodeBlockAttributes,
-} from '@vezham/docs-core/mdx-plugins/codeblock-utils';
+} from '@vx-oss/docs-core/mdx-plugins/codeblock-utils';
 
 export interface RemarkTs2jsOptions {
   /**

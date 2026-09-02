@@ -1,5 +1,5 @@
 {
-  "name": "@vezham/docs-story",
+  "name": "@vx-oss/docs-story",
   "version": "1.0.1",
   "description": "Story integration to Fumadocs.",
   "keywords": [],
@@ -40,7 +40,7 @@
   "dependencies": {
     "@base-ui/react": "^1.7.0",
     "@fuma-translate/react": "^1.0.2",
-    "@fumari/stf": "workspace:*",
+    "@vx-oss/docs-stf": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "cnfast": "^0.1.0",
     "lucide-react": "^1.34.0",
@@ -61,8 +61,8 @@
     "tsdown": "0.22.14",
     "vite": "^8.2.2",
     "webpack": "^5.109.2",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
@@ -71,8 +71,8 @@
     "react-dom": "^19.2.0",
     "vite": "^8",
     "webpack": "^5",
-    "@vezham/docs-core": "^1.0.0",
-    "@vezham/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0",
+    "@vx-oss/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "next": {

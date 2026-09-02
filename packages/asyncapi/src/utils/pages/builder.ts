@@ -1,7 +1,7 @@
 import type { AsyncAPIObject, TagObject } from '@/types';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { createMagicProxy } from '@scalar/json-magic/magic-proxy';
-import type { NoReferenceSwallow } from '@fumadocs/api-docs/schema';
+import type { NoReferenceSwallow } from '@vx-oss/docs-api/schema';
 
 interface BaseEntry {
   path: string;

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { rehypeCodeDefaultOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
+import { rehypeCodeDefaultOptions } from '@vx-oss/docs-core/mdx-plugins/rehype-code';
 import { compileMdx } from '@/compile';
 import { applySatteriPreset } from '@/preset';
 

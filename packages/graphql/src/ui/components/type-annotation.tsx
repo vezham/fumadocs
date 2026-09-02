@@ -6,7 +6,7 @@ import { useTranslations } from '@fuma-translate/react';
 import { AtSignIcon } from 'lucide-react';
 import { Fragment } from 'react/jsx-runtime';
 import type { ComponentProps } from 'react';
-import Link from '@vezham/docs-core/link';
+import Link from '@vx-oss/docs-core/link';
 
 /**
  * A link to a reference, e.g. the docs page of a type or operation.

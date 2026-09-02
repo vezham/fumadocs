@@ -11,7 +11,7 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fumadocs/local-md": "workspace:*",
+    "@vx-oss/docs-local-md": "workspace:*",
     "@tanstack/react-router": "1.170.32",
     "@tanstack/react-router-devtools": "1.167.1",
     "@tanstack/react-start": "1.168.49",
@@ -19,8 +19,8 @@
     "lucide-react": "^1.34.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

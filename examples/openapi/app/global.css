@@ -1,7 +1,7 @@
 @import 'tailwindcss';
-@import '@vezham/docs-react/css/solar.css';
-@import '@vezham/docs-react/css/preset.css';
-@import '@vezham/docs-openapi/css/preset.css';
+@import '@vx-oss/docs-react/css/solar.css';
+@import '@vx-oss/docs-react/css/preset.css';
+@import '@vx-oss/docs-openapi/css/preset.css';
 
 html {
   scrollbar-gutter: stable;

@@ -2,8 +2,8 @@
 
 import { type ComponentProps, createContext, type FC, use, useMemo } from 'react';
 import { cn } from '@/utils/cn';
-import { usePathname } from '@vezham/docs-core/framework';
-import Link from '@vezham/docs-core/link';
+import { usePathname } from '@vx-oss/docs-core/framework';
+import Link from '@vx-oss/docs-core/link';
 import { useIsScrollTop } from '@/utils/use-is-scroll-top';
 import type { LinkItemType } from '@/layouts/shared';
 import {
@@ -65,7 +65,7 @@ export function useDocsLayout() {
   const context = use(LayoutContext);
   if (!context)
     throw new Error(
-      'Please use <DocsPage /> (`@vezham/docs-react/layouts/docs/page`) under <DocsLayout /> (`@vezham/docs-react/layouts/docs`).',
+      'Please use <DocsPage /> (`@vx-oss/docs-react/layouts/docs/page`) under <DocsLayout /> (`@vx-oss/docs-react/layouts/docs`).',
     );
   return context;
 }

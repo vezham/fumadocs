@@ -1,4 +1,4 @@
-import type { LoaderConfig, LoaderOutput, Page } from '@vezham/docs-core/source';
+import type { LoaderConfig, LoaderOutput, Page } from '@vx-oss/docs-core/source';
 import type { ComponentProps, FC } from 'react';
 import defaultMdxComponents from '@/mdx';
 

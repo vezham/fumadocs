@@ -1,4 +1,4 @@
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 export const graphql = createGraphQL({
   // input files

@@ -23,7 +23,7 @@ function createMacroEvaluator(root: string): MacroEvaluator {
       root,
       plugins: [
         {
-          name: '@vezham/docs-mdx:macro-config',
+          name: '@vx-oss/docs-mdx:macro-config',
           transform: {
             order: 'pre',
             async handler(code, id) {
@@ -48,7 +48,7 @@ function createMacroEvaluator(root: string): MacroEvaluator {
 
 export interface PluginOptions extends Pick<CoreOptions, 'configPath' | 'outDir' | 'plugins'> {
   /**
-   * Configure the macro API (`@vezham/docs-mdx/macro`), or `false` to disable it.
+   * Configure the macro API (`@vx-oss/docs-mdx/macro`), or `false` to disable it.
    *
    * `macro.include` is passed to the
    * [`id` filter](https://vite.dev/guide/api-plugin#hook-filters) of the transform hook.
@@ -82,6 +82,8 @@ export function fumadocsMdx(options?: FumadocsMdxOptions) {
   return mdx(options?.forcedConfig, options);
 }
 
+export { fumadocsMdx as docsMdx };
+
 export default function mdx(
   forcedConfig?: Record<string, unknown> | Promise<Record<string, unknown>> | undefined,
   pluginOptions: PluginOptions = {},
@@ -89,18 +91,18 @@ export default function mdx(
   const { updateViteConfig = true } = pluginOptions;
   let managed: ManagedCore;
   const metaPlugin: Plugin = {
-    name: '@vezham/docs-mdx:meta',
+    name: '@vx-oss/docs-mdx:meta',
   };
   const mdxPlugin: Plugin = {
-    name: '@vezham/docs-mdx:mdx',
+    name: '@vx-oss/docs-mdx:mdx',
   };
   const macroPlugin: Plugin = {
-    name: '@vezham/docs-mdx:macro',
+    name: '@vx-oss/docs-mdx:macro',
   };
 
   return [
     {
-      name: '@vezham/docs-mdx',
+      name: '@vx-oss/docs-mdx',
       async config(config, env) {
         managed = createManagedCore(config.root ?? process.cwd(), forcedConfig, pluginOptions);
         const core = managed.core;
@@ -179,7 +181,7 @@ export default function mdx(
         if ('_fumadocs_skipViteConfig' in config && config._fumadocs_skipViteConfig) return;
         if (!updateViteConfig) return;
 
-        const { getConfig } = await import('@fumadocs/vite');
+        const { getConfig } = await import('@vx-oss/docs-vite');
         return getConfig({ root: core.root, isBuild: env.command === 'build' });
       },
       async buildStart() {

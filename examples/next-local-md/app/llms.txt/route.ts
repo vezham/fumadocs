@@ -1,5 +1,5 @@
 import { getSource } from '@/lib/source';
-import { llms } from '@vezham/docs-core/source';
+import { llms } from '@vx-oss/docs-core/source';
 
 export const revalidate = false;
 

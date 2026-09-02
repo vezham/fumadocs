@@ -23,7 +23,7 @@ test('Remark LLMs: jsx', async () => {
 
   // evaluate with the runtime resolved to `src/server.ts`, so it shares the test's module instance
   const evalFile = path.resolve(cwd, './fixtures/remark-llms-jsx.out.js');
-  await fs.writeFile(evalFile, compiled.replace('"@vezham/docs-core/server"', '"../../src/server.ts"'));
+  await fs.writeFile(evalFile, compiled.replace('"@vx-oss/docs-core/server"', '"../../src/server.ts"'));
   const { _markdown: Md } = (await import(evalFile)) as {
     _markdown: FC<{ components?: Record<string, unknown> }>;
   };

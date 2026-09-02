@@ -7,7 +7,7 @@ import type {
   NodeObject,
 } from 'react-force-graph-2d';
 import { forceCollide, forceLink, forceManyBody } from 'd3-force';
-import { useRouter } from '@vezham/docs-core/framework';
+import { useRouter } from '@vx-oss/docs-core/framework';
 
 export interface Graph {
   links: Link[];

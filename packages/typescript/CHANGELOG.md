@@ -1,16 +1,16 @@
-## fumadocs-typescript@5.3.0
+## @vx-oss/docs-typescript@5.3.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-## fumadocs-typescript@5.2.7
+## @vx-oss/docs-typescript@5.2.7
 
 ### Migrate to `cnfast`
 
 Drop `tailwind-merge`.
 
-# fumadocs-typescript
+# @vx-oss/docs-typescript
 
 ## 5.2.6
 
@@ -173,11 +173,11 @@ Drop `tailwind-merge`.
   import {
     createGenerator,
     createFileSystemGeneratorCache,
-  } from "fumadocs-typescript";
+  } from "@vx-oss/docs-typescript";
 
   const generator = createGenerator({
     // add this!
-    cache: createFileSystemGeneratorCache(".next/fumadocs-typescript"),
+    cache: createFileSystemGeneratorCache(".next/@vx-oss/docs-typescript"),
   });
   ```
 
@@ -328,7 +328,7 @@ Drop `tailwind-merge`.
   Create a generator instance:
 
   ```ts
-  import { createGenerator } from "fumadocs-typescript";
+  import { createGenerator } from "@vx-oss/docs-typescript";
 
   const generator = createGenerator(tsconfig);
   ```
@@ -336,7 +336,7 @@ Drop `tailwind-merge`.
   Refactor:
 
   ```tsx
-  import { remarkAutoTypeTable, createTypeTable } from 'fumadocs-typescript';
+  import { remarkAutoTypeTable, createTypeTable } from '@vx-oss/docs-typescript';
 
   generateDocumentation('./file.ts', 'MyClass', fs.readFileSync('./file.ts').toString())
   generateMDX('content', {...})
@@ -352,7 +352,7 @@ Drop `tailwind-merge`.
   To:
 
   ```tsx
-  import { AutoTypeTable, remarkAutoTypeTable } from "fumadocs-typescript";
+  import { AutoTypeTable, remarkAutoTypeTable } from "@vx-oss/docs-typescript";
 
   generator.generateDocumentation({path: './file.ts'}, 'MyClass')
   generateMDX(generator, 'content', { ... })
@@ -437,10 +437,10 @@ Drop `tailwind-merge`.
 
 ### Major Changes
 
-- f75287d: **Introduce `fumadocs-docgen` package.**
+- f75287d: **Introduce `@vx-oss/docs-docgen` package.**
 
   Offer a better authoring experience for advanced use cases.
-  - Move `remark-dynamic-content` and `remark-install` plugins to the new package `fumadocs-docgen`.
+  - Move `remark-dynamic-content` and `remark-install` plugins to the new package `@vx-oss/docs-docgen`.
   - Support Typescript generator by default
 
   **Usage**
@@ -448,7 +448,7 @@ Drop `tailwind-merge`.
   Add the `remarkDocGen` plugin to your remark plugins.
 
   ```ts
-  import { remarkDocGen, fileGenerator } from "fumadocs-docgen";
+  import { remarkDocGen, fileGenerator } from "@vx-oss/docs-docgen";
 
   remark().use(remarkDocGen, { generators: [fileGenerator()] });
   ```
@@ -478,7 +478,7 @@ Drop `tailwind-merge`.
   For `remarkInstall`, it remains the same:
 
   ```ts
-  import { remarkInstall } from "fumadocs-docgen";
+  import { remarkInstall } from "@vx-oss/docs-docgen";
   ```
 
 ## 1.0.2

@@ -53,15 +53,6 @@ importers:
       '@floating-ui/react-dom':
         specifier: ^2.1.9
         version: 2.1.9(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@fumadocs/asyncapi':
-        specifier: workspace:*
-        version: link:../../packages/asyncapi
-      '@fumadocs/graphql':
-        specifier: workspace:*
-        version: link:../../packages/graphql
-      '@fumadocs/satteri':
-        specifier: workspace:*
-        version: link:../../packages/satteri
       '@fumari/sponsors':
         specifier: 0.1.1
         version: 0.1.1(react@19.2.8)
@@ -83,21 +74,42 @@ importers:
       '@shikijs/transformers':
         specifier: ^4.4.3
         version: 4.4.3
-      '@vezham/docs-core':
+      '@vx-oss/docs-asyncapi':
+        specifier: workspace:*
+        version: link:../../packages/asyncapi
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-docgen':
+        specifier: workspace:^
+        version: link:../../packages/doc-gen
+      '@vx-oss/docs-epub':
+        specifier: workspace:*
+        version: link:../../packages/epub
+      '@vx-oss/docs-graphql':
+        specifier: workspace:*
+        version: link:../../packages/graphql
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-openapi':
+      '@vx-oss/docs-openapi':
         specifier: workspace:^
         version: link:../../packages/openapi
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
-      '@vezham/docs-story':
+      '@vx-oss/docs-satteri':
+        specifier: workspace:*
+        version: link:../../packages/satteri
+      '@vx-oss/docs-story':
         specifier: workspace:*
         version: link:../../packages/story
+      '@vx-oss/docs-twoslash':
+        specifier: workspace:^
+        version: link:../../packages/twoslash
+      '@vx-oss/docs-typescript':
+        specifier: workspace:^
+        version: link:../../packages/typescript
       ai:
         specifier: ^7.0.79
         version: 7.0.79(zod@4.4.3)
@@ -125,18 +137,6 @@ importers:
       fuma-cli:
         specifier: ^0.1.1
         version: 0.1.1(@emnapi/core@2.0.0-alpha.3)(@emnapi/runtime@2.0.0-alpha.3)
-      fumadocs-docgen:
-        specifier: workspace:^
-        version: link:../../packages/doc-gen
-      fumadocs-epub:
-        specifier: workspace:*
-        version: link:../../packages/epub
-      fumadocs-twoslash:
-        specifier: workspace:^
-        version: link:../../packages/twoslash
-      fumadocs-typescript:
-        specifier: workspace:^
-        version: link:../../packages/typescript
       graphql:
         specifier: ^17.0.2
         version: 17.0.2
@@ -204,9 +204,6 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
-      '@fumadocs/cli':
-        specifier: workspace:*
-        version: link:../../packages/cli
       '@modelcontextprotocol/server':
         specifier: ^2.0.0
         version: 2.0.0
@@ -246,6 +243,9 @@ importers:
       '@types/three':
         specifier: ^0.185.4
         version: 0.185.4
+      '@vx-oss/docs-cli':
+        specifier: workspace:*
+        version: link:../../packages/cli
       algoliasearch:
         specifier: 5.57.0
         version: 5.57.0
@@ -297,10 +297,10 @@ importers:
       '@astrojs/react':
         specifier: ^6.0.4
         version: 6.0.4(@types/node@26.3.0)(@types/react-dom@19.2.5(@types/react@19.2.18))(@types/react@19.2.18)(esbuild@0.28.2)(jiti@2.7.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       astro:
@@ -334,16 +334,16 @@ importers:
 
   examples/asyncapi:
     dependencies:
-      '@fumadocs/asyncapi':
+      '@vx-oss/docs-asyncapi':
         specifier: workspace:*
         version: link:../../packages/asyncapi
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       next:
@@ -386,13 +386,13 @@ importers:
 
   examples/base-ui:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -438,13 +438,13 @@ importers:
 
   examples/content-collections:
     dependencies:
-      '@fumadocs/content-collections':
+      '@vx-oss/docs-content-collections':
         specifier: workspace:*
         version: link:../../packages/content-collections
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       next:
@@ -481,16 +481,16 @@ importers:
 
   examples/graphql:
     dependencies:
-      '@fumadocs/graphql':
-        specifier: workspace:*
-        version: link:../../packages/graphql
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-graphql':
+        specifier: workspace:*
+        version: link:../../packages/graphql
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       graphql:
@@ -533,16 +533,16 @@ importers:
 
   examples/i18n:
     dependencies:
-      '@fumadocs/language':
-        specifier: workspace:*
-        version: link:../../packages/language
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-language':
+        specifier: workspace:*
+        version: link:../../packages/language
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       next:
@@ -570,10 +570,10 @@ importers:
 
   examples/marble-cms:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       github-slugger:
@@ -619,13 +619,13 @@ importers:
 
   examples/next:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -671,13 +671,13 @@ importers:
 
   examples/next-local-html:
     dependencies:
-      '@fumadocs/local-html':
-        specifier: workspace:*
-        version: link:../../packages/local-html
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-react':
+      '@vx-oss/docs-local-html':
+        specifier: workspace:*
+        version: link:../../packages/local-html
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       lucide-react:
@@ -720,13 +720,13 @@ importers:
 
   examples/next-local-md:
     dependencies:
-      '@fumadocs/local-md':
-        specifier: workspace:*
-        version: link:../../packages/local-md
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-react':
+      '@vx-oss/docs-local-md':
+        specifier: workspace:*
+        version: link:../../packages/local-md
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -772,13 +772,13 @@ importers:
 
   examples/next-min:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       next:
@@ -815,18 +815,18 @@ importers:
 
   examples/next-shadcn:
     dependencies:
-      '@fumadocs/shadcn':
-        specifier: workspace:*
-        version: link:../../packages/shadcn
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
+      '@vx-oss/docs-shadcn':
+        specifier: workspace:*
+        version: link:../../packages/shadcn
       lucide-react:
         specifier: ^1.34.0
         version: 1.34.0(react@19.2.8)
@@ -870,13 +870,13 @@ importers:
 
   examples/next-static:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -925,15 +925,15 @@ importers:
 
   examples/obsidian:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-react':
-        specifier: workspace:*
-        version: link:../../packages/radix-ui
-      fumadocs-obsidian:
+      '@vx-oss/docs-obsidian':
         specifier: workspace:*
         version: link:../../packages/obsidian
+      '@vx-oss/docs-react':
+        specifier: workspace:*
+        version: link:../../packages/radix-ui
       next:
         specifier: 16.3.3
         version: 16.3.3(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@types/node@26.3.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -968,16 +968,16 @@ importers:
 
   examples/openapi:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-openapi':
+      '@vx-oss/docs-openapi':
         specifier: workspace:*
         version: link:../../packages/openapi
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       next:
@@ -1020,15 +1020,15 @@ importers:
 
   examples/python:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-react':
-        specifier: workspace:*
-        version: link:../../packages/radix-ui
-      fumadocs-python:
+      '@vx-oss/docs-python':
         specifier: workspace:*
         version: link:../../packages/python
+      '@vx-oss/docs-react':
+        specifier: workspace:*
+        version: link:../../packages/radix-ui
       next:
         specifier: 16.3.3
         version: 16.3.3(@babel/core@7.29.7)(@opentelemetry/api@1.9.1)(@types/node@26.3.0)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -1072,13 +1072,13 @@ importers:
       '@react-router/serve':
         specifier: ^8.3.0
         version: 8.3.0(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@6.0.3)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -1136,22 +1136,22 @@ importers:
 
   examples/react-router-i18n:
     dependencies:
-      '@fumadocs/language':
-        specifier: workspace:*
-        version: link:../../packages/language
       '@react-router/node':
         specifier: ^8.3.0
         version: 8.3.0(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@6.0.3)
       '@react-router/serve':
         specifier: ^8.3.0
         version: 8.3.0(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@6.0.3)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-language':
+        specifier: workspace:*
+        version: link:../../packages/language
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       isbot:
@@ -1206,13 +1206,13 @@ importers:
       '@react-router/serve':
         specifier: ^8.3.0
         version: 8.3.0(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@6.0.3)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       isbot:
@@ -1267,13 +1267,13 @@ importers:
       '@react-router/serve':
         specifier: ^8.3.0
         version: 8.3.0(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@6.0.3)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       isbot:
@@ -1328,13 +1328,13 @@ importers:
       '@react-router/node':
         specifier: ^8.3.0
         version: 8.3.0(react-router@8.3.0(react-dom@19.2.8(react@19.2.8))(react@19.2.8))(typescript@6.0.3)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -1401,13 +1401,13 @@ importers:
       '@tanstack/react-start':
         specifier: 1.168.49
         version: 1.168.49(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react-server-dom-webpack@19.2.8(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(webpack@5.109.2(esbuild@0.28.2)))(react@19.2.8)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0)))(crossws@0.4.6(srvx@0.11.22))(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rolldown@1.2.6)(rollup@4.63.0)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0))(webpack@5.109.2(esbuild@0.28.2))
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -1456,9 +1456,6 @@ importers:
 
   examples/tanstack-start-i18n:
     dependencies:
-      '@fumadocs/language':
-        specifier: workspace:*
-        version: link:../../packages/language
       '@tanstack/react-router':
         specifier: 1.170.32
         version: 1.170.32(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -1468,13 +1465,16 @@ importers:
       '@tanstack/react-start':
         specifier: 1.168.49
         version: 1.168.49(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react-server-dom-webpack@19.2.8(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(webpack@5.109.2(esbuild@0.28.2)))(react@19.2.8)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0)))(crossws@0.4.6(srvx@0.12.7))(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rolldown@1.2.6)(rollup@4.63.0)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0))(webpack@5.109.2(esbuild@0.28.2))
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-language':
+        specifier: workspace:*
+        version: link:../../packages/language
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       lucide-static:
@@ -1517,9 +1517,6 @@ importers:
 
   examples/tanstack-start-local-md:
     dependencies:
-      '@fumadocs/local-md':
-        specifier: workspace:*
-        version: link:../../packages/local-md
       '@tanstack/react-router':
         specifier: 1.170.32
         version: 1.170.32(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -1529,10 +1526,13 @@ importers:
       '@tanstack/react-start':
         specifier: 1.168.49
         version: 1.168.49(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react-server-dom-webpack@19.2.8(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(webpack@5.109.2(esbuild@0.28.2)))(react@19.2.8)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0)))(crossws@0.4.6(srvx@0.12.7))(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rolldown@1.2.6)(rollup@4.63.0)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0))(webpack@5.109.2(esbuild@0.28.2))
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-react':
+      '@vx-oss/docs-local-md':
+        specifier: workspace:*
+        version: link:../../packages/local-md
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -1590,13 +1590,13 @@ importers:
       '@tanstack/react-start':
         specifier: 1.168.49
         version: 1.168.49(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react-server-dom-webpack@19.2.8(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(webpack@5.109.2(esbuild@0.28.2)))(react@19.2.8)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0)))(crossws@0.4.6(srvx@0.12.7))(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rolldown@1.2.6)(rollup@4.63.0)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0))(webpack@5.109.2(esbuild@0.28.2))
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       lucide-react:
@@ -1654,16 +1654,16 @@ importers:
       '@tanstack/react-start':
         specifier: 1.168.49
         version: 1.168.49(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react-server-dom-webpack@19.2.8(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(webpack@5.109.2(esbuild@0.28.2)))(react@19.2.8)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0)))(crossws@0.4.6(srvx@0.12.7))(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rolldown@1.2.6)(rollup@4.63.0)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0))(webpack@5.109.2(esbuild@0.28.2))
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-openapi':
+      '@vx-oss/docs-openapi':
         specifier: workspace:*
         version: link:../../packages/openapi
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -1727,13 +1727,13 @@ importers:
       '@tanstack/start-static-server-functions':
         specifier: 1.167.32
         version: 1.167.32(@tanstack/react-start@1.168.49(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react-server-dom-webpack@19.2.8(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(webpack@5.109.2(esbuild@0.28.2)))(react@19.2.8)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0)))(crossws@0.4.6(srvx@0.12.7))(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rolldown@1.2.6)(rollup@4.63.0)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0))(webpack@5.109.2(esbuild@0.28.2)))
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -1797,16 +1797,16 @@ importers:
       '@tanstack/react-start':
         specifier: 1.168.49
         version: 1.168.49(@vitejs/plugin-rsc@0.5.34(react-dom@19.2.8(react@19.2.8))(react-server-dom-webpack@19.2.8(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(webpack@5.109.2(esbuild@0.28.2)))(react@19.2.8)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0)))(crossws@0.4.6(srvx@0.12.7))(esbuild@0.28.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(rolldown@1.2.6)(rollup@4.63.0)(vite@8.2.2(@types/node@26.3.0)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.49.0)(tsx@4.23.12)(yaml@2.9.0))(webpack@5.109.2(esbuild@0.28.2))
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
-      '@vezham/docs-story':
+      '@vx-oss/docs-story':
         specifier: workspace:*
         version: link:../../packages/story
       lucide-react:
@@ -1849,13 +1849,13 @@ importers:
 
   examples/waku:
     dependencies:
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       cnfast:
@@ -1907,16 +1907,16 @@ importers:
 
   examples/waku-i18n:
     dependencies:
-      '@fumadocs/language':
-        specifier: workspace:*
-        version: link:../../packages/language
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../../packages/core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-language':
+        specifier: workspace:*
+        version: link:../../packages/language
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../../packages/mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../../packages/radix-ui
       react:
@@ -1965,12 +1965,12 @@ importers:
       '@fuma-translate/react':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@fumari/stf':
-        specifier: workspace:*
-        version: link:../stf
       '@scalar/json-magic':
         specifier: ^0.13.2
         version: 0.13.2
+      '@vx-oss/docs-stf':
+        specifier: workspace:*
+        version: link:../stf
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -2005,10 +2005,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       fuma-cli:
@@ -2029,18 +2029,18 @@ importers:
       '@fuma-translate/react':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@fumadocs/api-docs':
-        specifier: workspace:*
-        version: link:../api-docs
       '@fumari/json-schema-ts':
         specifier: ^1.0.2
         version: 1.0.2(json-schema-typed@8.0.2)
-      '@fumari/stf':
-        specifier: workspace:*
-        version: link:../stf
       '@scalar/json-magic':
         specifier: ^0.13.2
         version: 0.13.2
+      '@vx-oss/docs-api':
+        specifier: workspace:*
+        version: link:../api-docs
+      '@vx-oss/docs-stf':
+        specifier: workspace:*
+        version: link:../stf
       chokidar:
         specifier: ^5.0.0
         version: 5.0.0
@@ -2087,10 +2087,10 @@ importers:
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       json-schema-typed:
@@ -2114,7 +2114,7 @@ importers:
       '@fuma-translate/react':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@fumadocs/tailwind':
+      '@vx-oss/docs-tailwind':
         specifier: workspace:*
         version: link:../tailwind
       class-variance-authority:
@@ -2160,9 +2160,6 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
     devDependencies:
-      '@fumadocs/cli':
-        specifier: workspace:*
-        version: link:../cli
       '@tailwindcss/cli':
         specifier: ^4.3.3
         version: 4.3.3
@@ -2187,7 +2184,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-cli':
+        specifier: workspace:*
+        version: link:../cli
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       fuma-cli:
@@ -2217,10 +2217,10 @@ importers:
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       basehub:
@@ -2282,7 +2282,7 @@ importers:
       '@types/node':
         specifier: ^26.3.0
         version: 26.3.0
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       fuma-content:
@@ -2316,7 +2316,7 @@ importers:
       '@types/node':
         specifier: 26.3.0
         version: 26.3.0
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       tsconfig:
@@ -2328,7 +2328,7 @@ importers:
 
   packages/core:
     dependencies:
-      '@fumari/image-size':
+      '@vx-oss/docs-image-size':
         specifier: workspace:^
         version: link:../image-size
       estree-util-value-to-estree:
@@ -2482,7 +2482,7 @@ importers:
       '@commander-js/extra-typings':
         specifier: ^15.0.0
         version: 15.0.0(commander@15.0.0)
-      '@fumadocs/cli':
+      '@vx-oss/docs-cli':
         specifier: workspace:*
         version: link:../cli
       commander:
@@ -2528,13 +2528,13 @@ importers:
       '@orama/core':
         specifier: ^1.2.19
         version: 1.2.19
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-mdx':
+      '@vx-oss/docs-mdx':
         specifier: workspace:*
         version: link:../mdx
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       oxlint:
@@ -2592,7 +2592,7 @@ importers:
       '@types/node':
         specifier: 26.3.0
         version: 26.3.0
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       mdast-util-mdx:
@@ -2641,7 +2641,7 @@ importers:
       '@types/node':
         specifier: 26.3.0
         version: 26.3.0
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       rimraf:
@@ -2665,10 +2665,10 @@ importers:
       '@fuma-translate/react':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@fumadocs/api-docs':
+      '@vx-oss/docs-api':
         specifier: workspace:*
         version: link:../api-docs
-      '@fumari/stf':
+      '@vx-oss/docs-stf':
         specifier: workspace:*
         version: link:../stf
       class-variance-authority:
@@ -2714,10 +2714,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       graphql:
@@ -2750,22 +2750,22 @@ importers:
 
   packages/language:
     devDependencies:
-      '@fumadocs/api-docs':
+      '@vx-oss/docs-api':
         specifier: workspace:*
         version: link:../api-docs
-      '@fumadocs/asyncapi':
+      '@vx-oss/docs-asyncapi':
         specifier: workspace:*
         version: link:../asyncapi
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-openapi':
+      '@vx-oss/docs-openapi':
         specifier: workspace:*
         version: link:../openapi
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
-      '@vezham/docs-story':
+      '@vx-oss/docs-story':
         specifier: workspace:*
         version: link:../story
       tsconfig:
@@ -2805,7 +2805,7 @@ importers:
       '@types/ws':
         specifier: ^8.18.1
         version: 8.18.1
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       react:
@@ -2826,12 +2826,12 @@ importers:
 
   packages/local-html:
     dependencies:
-      '@fumadocs/local-content':
-        specifier: workspace:*
-        version: link:../local-content
       '@standard-schema/spec':
         specifier: ^1.1.0
         version: 1.1.0
+      '@vx-oss/docs-local-content':
+        specifier: workspace:*
+        version: link:../local-content
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -2860,7 +2860,7 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       react:
@@ -2881,15 +2881,15 @@ importers:
 
   packages/local-md:
     dependencies:
-      '@fumadocs/local-content':
-        specifier: workspace:*
-        version: link:../local-content
       '@mdx-js/mdx':
         specifier: ^3.1.1
         version: 3.1.1
       '@standard-schema/spec':
         specifier: ^1.1.0
         version: 1.1.0
+      '@vx-oss/docs-local-content':
+        specifier: workspace:*
+        version: link:../local-content
       estree-util-build-jsx:
         specifier: ^3.0.1
         version: 3.0.1
@@ -2933,7 +2933,7 @@ importers:
       '@types/unist':
         specifier: ^3.0.3
         version: 3.0.3
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       react:
@@ -3015,12 +3015,6 @@ importers:
         specifier: ^4.4.3
         version: 4.4.3
     devDependencies:
-      '@fumadocs/satteri':
-        specifier: workspace:*
-        version: link:../satteri
-      '@fumadocs/vite':
-        specifier: workspace:*
-        version: link:../vite
       '@types/bun':
         specifier: ^1.4.0
         version: 1.4.0
@@ -3039,9 +3033,15 @@ importers:
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
+      '@vx-oss/docs-satteri':
+        specifier: workspace:*
+        version: link:../satteri
+      '@vx-oss/docs-vite':
+        specifier: workspace:*
+        version: link:../vite
       mdast-util-directive:
         specifier: ^3.1.0
         version: 3.1.0
@@ -3103,7 +3103,7 @@ importers:
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       react:
@@ -3146,10 +3146,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       react:
@@ -3173,12 +3173,12 @@ importers:
 
   packages/obsidian:
     dependencies:
-      '@fumadocs/local-content':
-        specifier: workspace:*
-        version: link:../local-content
       '@standard-schema/spec':
         specifier: ^1.1.0
         version: 1.1.0
+      '@vx-oss/docs-local-content':
+        specifier: workspace:*
+        version: link:../local-content
       cnfast:
         specifier: ^0.1.0
         version: 0.1.0
@@ -3231,7 +3231,7 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       mdast-util-mdx:
@@ -3261,18 +3261,18 @@ importers:
       '@fuma-translate/react':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@fumadocs/api-docs':
-        specifier: workspace:*
-        version: link:../api-docs
       '@fumari/json-schema-ts':
         specifier: ^1.0.2
         version: 1.0.2(json-schema-typed@8.0.2)
-      '@fumari/stf':
-        specifier: workspace:*
-        version: link:../stf
       '@scalar/json-magic':
         specifier: ^0.13.2
         version: 0.13.2
+      '@vx-oss/docs-api':
+        specifier: workspace:*
+        version: link:../api-docs
+      '@vx-oss/docs-stf':
+        specifier: workspace:*
+        version: link:../stf
       chokidar:
         specifier: ^5.0.0
         version: 5.0.0
@@ -3325,10 +3325,10 @@ importers:
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       fast-content-type-parse:
@@ -3365,9 +3365,6 @@ importers:
       '@ai-sdk/react':
         specifier: ^4.0.82
         version: 4.0.82(react@19.2.8)(zod@4.4.3)
-      '@fumadocs/vite':
-        specifier: workspace:*
-        version: link:../vite
       '@hono/node-server':
         specifier: ^2.1.1
         version: 2.1.1(hono@4.13.5)
@@ -3404,12 +3401,15 @@ importers:
       '@types/ws':
         specifier: ^8.18.1
         version: 8.18.1
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
+      '@vx-oss/docs-vite':
+        specifier: workspace:*
+        version: link:../vite
       ai:
         specifier: ^7.0.79
         version: 7.0.79(zod@4.4.3)
@@ -3558,10 +3558,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       react:
@@ -3585,9 +3585,6 @@ importers:
       '@fuma-translate/react':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@fumadocs/tailwind':
-        specifier: workspace:*
-        version: link:../tailwind
       '@radix-ui/react-accordion':
         specifier: ^1.2.20
         version: 1.2.20(@types/react-dom@19.2.5(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -3618,6 +3615,9 @@ importers:
       '@radix-ui/react-tabs':
         specifier: ^1.1.21
         version: 1.1.21(@types/react-dom@19.2.5(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+      '@vx-oss/docs-tailwind':
+        specifier: workspace:*
+        version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -3661,9 +3661,6 @@ importers:
         specifier: ^5.1.0
         version: 5.1.0
     devDependencies:
-      '@fumadocs/cli':
-        specifier: workspace:*
-        version: link:../cli
       '@tailwindcss/cli':
         specifier: ^4.3.3
         version: 4.3.3
@@ -3688,7 +3685,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-cli':
+        specifier: workspace:*
+        version: link:../cli
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       fuma-cli:
@@ -3731,10 +3731,10 @@ importers:
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       fuma-cli:
@@ -3764,21 +3764,21 @@ importers:
 
   packages/satteri:
     dependencies:
-      '@fumadocs/local-content':
-        specifier: workspace:*
-        version: link:../local-content
-      '@fumari/image-size':
-        specifier: workspace:^
-        version: link:../image-size
       '@standard-schema/spec':
         specifier: ^1.1.0
         version: 1.1.0
+      '@vx-oss/docs-image-size':
+        specifier: workspace:^
+        version: link:../image-size
+      '@vx-oss/docs-local-content':
+        specifier: workspace:*
+        version: link:../local-content
+      '@vx-oss/docs-typescript':
+        specifier: workspace:^
+        version: link:../typescript
       estree-util-to-js:
         specifier: ^2.0.0
         version: 2.0.0
-      fumadocs-typescript:
-        specifier: workspace:^
-        version: link:../typescript
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -3825,7 +3825,7 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
       react:
@@ -3865,10 +3865,10 @@ importers:
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       react:
@@ -3899,12 +3899,12 @@ importers:
         specifier: ^0.2.17
         version: 0.2.17
     devDependencies:
-      '@fumadocs/cli':
-        specifier: workspace:*
-        version: link:../cli
       '@types/node':
         specifier: ^26.3.0
         version: 26.3.0
+      '@vx-oss/docs-cli':
+        specifier: workspace:*
+        version: link:../cli
       fuma-translate:
         specifier: ^1.0.2
         version: 1.0.2
@@ -3942,7 +3942,7 @@ importers:
       '@fuma-translate/react':
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
-      '@fumari/stf':
+      '@vx-oss/docs-stf':
         specifier: workspace:*
         version: link:../stf
       class-variance-authority:
@@ -3973,10 +3973,10 @@ importers:
       '@ungap/structured-clone':
         specifier: ^1.3.4
         version: 1.3.4
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       next:
@@ -4072,10 +4072,10 @@ importers:
       '@types/react':
         specifier: ^19.2.18
         version: 19.2.18
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       shiki:
@@ -4148,10 +4148,10 @@ importers:
       '@types/react-dom':
         specifier: ^19.2.5
         version: 19.2.5(@types/react@19.2.18)
-      '@vezham/docs-core':
+      '@vx-oss/docs-core':
         specifier: workspace:*
         version: link:../core
-      '@vezham/docs-react':
+      '@vx-oss/docs-react':
         specifier: workspace:*
         version: link:../radix-ui
       mdast-util-mdx:

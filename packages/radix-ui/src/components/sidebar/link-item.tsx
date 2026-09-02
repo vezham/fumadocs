@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from 'react';
 import type * as Base from './base';
 import { isLinkItemActive, type LinkItemType } from '@/layouts/shared';
-import { usePathname } from '@vezham/docs-core/framework';
+import { usePathname } from '@vx-oss/docs-core/framework';
 
 type InternalComponents = Pick<
   typeof Base,

@@ -15,8 +15,8 @@ It is not a full CMS but rather a content processing layer for React frameworks,
 **Collection** refers to a collection containing a certain type of files. You can define them with the [Macro API](/docs/mdx/macro) in your app:
 
 ```ts title="lib/source.ts"
-import { defineDocs } from '@vezham/docs-mdx/macro';
-import { loader } from '@vezham/docs-core/source';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
 
 const docs = defineDocs({
   dir: 'content/docs',
@@ -37,7 +37,7 @@ Available collections:
 Compile Markdown & MDX files into a React component, with useful properties like **Table of Contents**.
 
 ```ts
-import { defineCollections } from '@vezham/docs-mdx/macro';
+import { defineCollections } from '@vx-oss/docs-mdx/macro';
 
 export const test = defineCollections({
   type: 'doc',
@@ -52,7 +52,7 @@ export const test = defineCollections({
 Transform YAML/JSON files into an array of data.
 
 ```ts
-import { defineCollections } from '@vezham/docs-mdx/macro';
+import { defineCollections } from '@vx-oss/docs-mdx/macro';
 
 export const test = defineCollections({
   type: 'meta',
@@ -67,7 +67,7 @@ export const test = defineCollections({
 Combination of `meta` and `doc` collections, which is needed for Fumadocs.
 
 ```ts
-import { defineDocs } from '@vezham/docs-mdx/macro';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
 
 export const docs = defineDocs({
   dir: 'content/docs',

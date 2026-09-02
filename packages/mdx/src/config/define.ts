@@ -1,11 +1,11 @@
 import type { StandardSchemaV1 } from '@standard-schema/spec';
 import type { MDXPresetOptions } from '@/config/preset';
 import type { ProcessorOptions } from '@mdx-js/mdx';
-import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
+import { metaSchema, pageSchema } from '@vx-oss/docs-core/source/schema';
 import type { PostprocessOptions } from '@/loaders/mdx/remark-postprocess';
 import type { LastModifiedFn } from '@/loaders/mdx/last-modified';
 import type { PluginOption } from '@/core';
-import type { SatteriPresetOptions } from '@fumadocs/satteri/preset';
+import type { SatteriPresetOptions } from '@vx-oss/docs-satteri/preset';
 import type { BuildEnvironment } from './build';
 import type { SatteriOptionsInput } from '@/loaders/mdx/build-satteri';
 

@@ -13,13 +13,13 @@ Set up Fumadocs MDX for your Next.js application.
 ### Installation
 
 ```npm
-npm i @vezham/docs-mdx @vezham/docs-core @types/mdx
+npm i @vx-oss/docs-mdx @vx-oss/docs-core @types/mdx
 ```
 
 Add the plugin to Next.js config:
 
 ```js title="next.config.mjs"
-import { createMDX } from '@vezham/docs-mdx/next';
+import { createMDX } from '@vx-oss/docs-mdx/next';
 
 /** @type {import('next').NextConfig} */
 const config = {
@@ -46,8 +46,8 @@ For TypeScript config file, it requires Native Node.js TypeScript Resolver, you 
 Create a `lib/source.ts` file:
 
 ```ts title="lib/source.ts"
-import { defineDocs } from '@vezham/docs-mdx/macro';
-import { loader } from '@vezham/docs-core/source';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
 
 const docs = defineDocs({
   dir: 'content/docs',
@@ -70,7 +70,7 @@ You can now write content in `content/docs` folder.
 
 <Cards>
   <Card title="Macro API" href="/docs/mdx/macro">
-    Define collections in your app modules with `@vezham/docs-mdx/macro`.
+    Define collections in your app modules with `@vx-oss/docs-mdx/macro`.
   </Card>
   <Card title="Config API" href="/docs/mdx/collections">
     Define collections in `source.config.ts` with generated entry files.

@@ -1,5 +1,5 @@
 import { source } from '@/lib/source';
-import { DocsLayout } from '@vezham/docs-react/layouts/notebook';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/notebook';
 import type { ReactNode } from 'react';
 import { baseOptions } from '@/lib/layout.shared';
 

@@ -3,7 +3,7 @@ import { source } from '@/lib/source';
 import { getSection } from '@/lib/source/navigation';
 import type { CSSProperties, ReactNode } from 'react';
 import { LayoutClient } from './client';
-import { getLayoutTabs } from '@vezham/docs-react/layouts/shared';
+import { getLayoutTabs } from '@vx-oss/docs-react/layouts/shared';
 import 'katex/dist/katex.min.css';
 
 export function Flux({ children }: { children: ReactNode }) {

@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/asyncapi",
+  "name": "@vx-oss/docs-asyncapi",
   "version": "0.3.3",
   "description": "Generate docs for your AsyncAPI spec",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/asyncapi"
+  },
   "files": [
     "css",
     "dist"
@@ -35,9 +39,9 @@
   },
   "dependencies": {
     "@fuma-translate/react": "^1.0.2",
-    "@fumadocs/api-docs": "workspace:*",
+    "@vx-oss/docs-api": "workspace:*",
     "@fumari/json-schema-ts": "^1.0.2",
-    "@fumari/stf": "workspace:*",
+    "@vx-oss/docs-stf": "workspace:*",
     "@scalar/json-magic": "^0.13.2",
     "chokidar": "^5.0.0",
     "class-variance-authority": "^0.7.1",
@@ -58,16 +62,16 @@
     "tailwindcss": "^4.3.3",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vezham/docs-core": "^1.0.0",
-    "@vezham/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0",
+    "@vx-oss/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "json-schema-typed": {

@@ -6,16 +6,16 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "python:generate": "pip3 install ./node_modules/fumadocs-python && fumapy-generate httpx",
+    "python:generate": "pip3 install ./node_modules/@vx-oss/docs-python && fumapy-generate httpx",
     "types:check": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "fumadocs-python": "workspace:*",
+    "@vx-oss/docs-python": "workspace:*",
     "next": "16.3.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",

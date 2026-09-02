@@ -24,7 +24,7 @@ export async function createConfigSchema(cwd = process.cwd()) {
   if (!isSupportedFramework(framework)) framework = 'next';
 
   return z.object({
-    $schema: z.string().default('node_modules/@fumadocs/cli/dist/schema.json').optional(),
+    $schema: z.string().default('node_modules/@vx-oss/docs-cli/dist/schema.json').optional(),
     aliases: z
       .object({
         uiDir: z.string().default(defaultAliases.uiDir),

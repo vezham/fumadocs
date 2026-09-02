@@ -561,7 +561,7 @@ export async function transformMacroModule({
   }
 
   const banner = [
-    `import * as ${runtimeName} from "@vezham/docs-mdx/runtime/macro";`,
+    `import * as ${runtimeName} from "@vx-oss/docs-mdx/runtime/macro";`,
     // hoisted glob imports (target: 'import')
     ...codegen.lines,
     '',

@@ -1,8 +1,8 @@
-import type * as Breadcrumb from '@vezham/docs-core/breadcrumb';
-import type * as TOC from '@vezham/docs-core/toc';
-import type * as Search from '@vezham/docs-core/search';
-import type * as PageTree from '@vezham/docs-core/page-tree';
-import type * as MDX from '@vezham/docs-core/mdx-plugins';
+import type * as Breadcrumb from '@vx-oss/docs-core/breadcrumb';
+import type * as TOC from '@vx-oss/docs-core/toc';
+import type * as Search from '@vx-oss/docs-core/search';
+import type * as PageTree from '@vx-oss/docs-core/page-tree';
+import type * as MDX from '@vx-oss/docs-core/mdx-plugins';
 
 export type SortedResult = Search.SortedResult;
 

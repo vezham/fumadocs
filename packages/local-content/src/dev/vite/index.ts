@@ -50,7 +50,7 @@ export interface LocalContentPluginOptions {
 
 export function localContentPlugin({ reload = true }: LocalContentPluginOptions = {}): Plugin {
   return {
-    name: 'fumadocs-local-content',
+    name: 'vx-oss-docs-local-content',
     apply: 'serve',
     configureServer(server) {
       const registry = getRegistry();

@@ -8,7 +8,7 @@ description: Generating docs for OpenAPI schema.
 Install the required packages.
 
 ```npm
-npm i @vezham/docs-openapi shiki
+npm i @vx-oss/docs-openapi shiki
 ```
 
 ### Generate Styles
@@ -17,10 +17,10 @@ Add the following line:
 
 ```css title="Tailwind CSS"
 @import 'tailwindcss';
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
 /* [!code ++] */
-@import '@vezham/docs-openapi/css/preset.css';
+@import '@vx-oss/docs-openapi/css/preset.css';
 ```
 
 ### Configure Plugin
@@ -28,7 +28,7 @@ Add the following line:
 Create the OpenAPI server instance & `<OpenAPIPage />` component.
 
 ```ts tab="lib/openapi.ts"
-import { createOpenAPI } from '@vezham/docs-openapi/server';
+import { createOpenAPI } from '@vx-oss/docs-openapi/server';
 
 // note: this is a server-side API
 export const openapi = createOpenAPI({
@@ -39,14 +39,14 @@ export const openapi = createOpenAPI({
 
 ```tsx tab="components/api-page.tsx"
 'use client';
-import { createOpenAPIPage } from '@vezham/docs-openapi/ui';
+import { createOpenAPIPage } from '@vx-oss/docs-openapi/ui';
 
 export const OpenAPIPage = createOpenAPIPage();
 ```
 
 ```ts tab="lib/source.ts"
-import { openapiPlugin } from '@vezham/docs-openapi/server';
-import { loader } from '@vezham/docs-core/source';
+import { openapiPlugin } from '@vx-oss/docs-openapi/server';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const source = loader({
   // [!code ++] optional: adds a badge to each page item in page tree
@@ -66,7 +66,7 @@ You can generate MDX files directly from your OpenAPI schema.
 Create a script:
 
 ```js title="scripts/generate-docs.ts"
-import { generateFiles } from '@vezham/docs-openapi';
+import { generateFiles } from '@vx-oss/docs-openapi';
 import { openapi } from '@/lib/openapi';
 
 void generateFiles({
@@ -149,7 +149,7 @@ export default function Page() {
 You can also use it without generating real files by integrating into [Loader API](/docs/headless/source-api/source).
 
 ```ts title="lib/source.ts"
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 import { docs } from 'collections/server';
 import { openapi } from '@/lib/openapi';
 
@@ -227,11 +227,11 @@ For example, in Tanstack Start:
 
 ```tsx title="routes/docs/$.tsx"
 import { createFileRoute, notFound } from '@tanstack/react-router';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { createServerFn } from '@tanstack/react-start';
 import { docs, source } from '@/lib/source';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
-import { useFumadocsLoader } from '@vezham/docs-core/source/client';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vx-oss/docs-react/layouts/docs/page';
+import { useFumadocsLoader } from '@vx-oss/docs-core/source/client';
 import { type ReactNode, Suspense } from 'react';
 import { OpenAPIPage } from '@/components/api-page';
 

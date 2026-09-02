@@ -6,11 +6,11 @@ import {
   DocsTitle,
   MarkdownCopyButton,
   ViewOptionsPopover,
-} from '@vezham/docs-react/layouts/docs/page';
+} from '@vx-oss/docs-react/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
-import { createRelativeLink } from '@vezham/docs-react/mdx';
+import { createRelativeLink } from '@vx-oss/docs-react/mdx';
 import { gitConfig } from '@/lib/shared';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {

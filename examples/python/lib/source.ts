@@ -1,5 +1,5 @@
-import { dynamicLoader } from '@vezham/docs-core/source';
-import { createPython } from 'fumadocs-python';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
+import { createPython } from '@vx-oss/docs-python';
 
 const python = createPython({
   file: './httpx.json',

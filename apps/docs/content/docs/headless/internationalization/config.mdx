@@ -22,7 +22,7 @@ You can define a config to share between utilities.
 To hide the locale prefix (e.g. `/en/page` -> `/page`), use the `hideLocale` option.
 
 ```ts
-import { defineI18n } from '@vezham/docs-core/i18n';
+import { defineI18n } from '@vx-oss/docs-core/i18n';
 
 export const i18n = defineI18n({
   defaultLanguage: 'en',
@@ -52,7 +52,7 @@ The fallback language to use when translations are missing for a file, default t
 It accepts one of the languages in your `languages` array.
 
 ```ts
-import { defineI18n } from '@vezham/docs-core/i18n';
+import { defineI18n } from '@vx-oss/docs-core/i18n';
 
 export const i18n = defineI18n({
   languages: ['en', 'cn'],
@@ -65,7 +65,7 @@ export const i18n = defineI18n({
 To disable the fallback behaviour, set it to `null`:
 
 ```ts
-import { defineI18n } from '@vezham/docs-core/i18n';
+import { defineI18n } from '@vx-oss/docs-core/i18n';
 
 export const i18n = defineI18n({
   languages: ['en', 'cn'],

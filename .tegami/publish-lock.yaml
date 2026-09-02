@@ -1,120 +1,120 @@
 core:changelogs:
-  - content: "---\npackages:\n  npm:@fumadocs/graphql:\n    type: patch\n---\n\n## Require `graphql` v17\n\nThe peer range now correctly requires `^17.0.0`.\n"
+  - content: "---\npackages:\n  npm:@vx-oss/docs-graphql:\n    type: patch\n---\n\n## Require `graphql` v17\n\nThe peer range now correctly requires `^17.0.0`.\n"
     filename: 2026-08-28-graphql-v17-peer.md
     v: 0.0.0
-  - content: "---\npackages:\n  npm:@fumadocs/sanity:\n    type: patch\n---\n\n## Support `@sanity/client` v8 and `next-sanity` v13\n\nWidened the peer dependency ranges to `^7.22.0 || ^8.0.0` and `^12.4.0 || ^13.0.0` respectively.\n"
+  - content: "---\npackages:\n  npm:@vx-oss/docs-sanity:\n    type: patch\n---\n\n## Support `@sanity/client` v8 and `next-sanity` v13\n\nWidened the peer dependency ranges to `^7.22.0 || ^8.0.0` and `^12.4.0 || ^13.0.0` respectively.\n"
     filename: 2026-08-28-sanity-peer-ranges.md
     v: 0.0.0
 core:packages:
-  - id: npm:@fumadocs/api-docs
+  - id: npm:@vx-oss/docs-api
     updated: false
-  - id: npm:@fumadocs/asyncapi
+  - id: npm:@vx-oss/docs-asyncapi
     updated: false
-  - id: npm:@fumadocs/base-ui
+  - id: npm:@vx-oss/docs-base-ui
     updated: false
-  - id: npm:@fumadocs/basehub
+  - id: npm:@vx-oss/docs-basehub
     updated: false
-  - id: npm:@fumadocs/cli
+  - id: npm:@vx-oss/docs-cli
     updated: false
-  - id: npm:@fumadocs/content
+  - id: npm:@vx-oss/docs-content
     updated: false
-  - id: npm:@fumadocs/content-collections
+  - id: npm:@vx-oss/docs-content-collections
     updated: false
   - id: npm:fumadocs-core
     updated: false
-  - id: npm:create-fumadocs-app
+  - id: npm:create-vx-oss-docs
     updated: false
-  - id: npm:create-fumadocs-versions
+  - id: npm:create-vx-oss-docs-versions
     updated: false
-  - id: npm:fumadocs-docgen
+  - id: npm:@vx-oss/docs-docgen
     updated: false
-  - id: npm:fumadocs-epub
+  - id: npm:@vx-oss/docs-epub
     updated: false
   - changelogIds:
       - 2026-08-28-graphql-v17-peer.md
-    id: npm:@fumadocs/graphql
+    id: npm:@vx-oss/docs-graphql
     updated: true
-  - id: npm:@fumari/image-size
+  - id: npm:@vx-oss/docs-image-size
     updated: false
-  - id: npm:@fumadocs/language
+  - id: npm:@vx-oss/docs-language
     updated: false
-  - id: npm:@fumadocs/local-content
+  - id: npm:@vx-oss/docs-local-content
     updated: false
-  - id: npm:@fumadocs/local-html
+  - id: npm:@vx-oss/docs-local-html
     updated: false
   - id: npm:fumadocs-mdx
     updated: false
-  - id: npm:@fumadocs/local-md
+  - id: npm:@vx-oss/docs-local-md
     updated: false
-  - id: npm:@fumadocs/mdx-remote
+  - id: npm:@vx-oss/docs-mdx-remote
     updated: false
-  - id: npm:@fumadocs/notion
+  - id: npm:@vx-oss/docs-notion
     updated: false
-  - id: npm:fumadocs-obsidian
+  - id: npm:@vx-oss/docs-obsidian
     updated: false
   - id: npm:fumadocs-openapi
     updated: false
-  - id: npm:fumadocs-preview
+  - id: npm:@vx-oss/docs-preview
     updated: false
-  - id: npm:fumadocs-python
+  - id: npm:@vx-oss/docs-python
     updated: false
   - id: npm:fumadocs-ui
     updated: false
   - changelogIds:
       - 2026-08-28-sanity-peer-ranges.md
-    id: npm:@fumadocs/sanity
+    id: npm:@vx-oss/docs-sanity
     updated: true
-  - id: npm:@fumadocs/satteri
+  - id: npm:@vx-oss/docs-satteri
     updated: false
-  - id: npm:@fumadocs/shadcn
+  - id: npm:@vx-oss/docs-shadcn
     updated: false
-  - id: npm:@fumari/stf
+  - id: npm:@vx-oss/docs-stf
     updated: false
   - id: npm:@fumadocs/story
     updated: false
-  - id: npm:@fumadocs/tailwind
+  - id: npm:@vx-oss/docs-tailwind
     updated: false
-  - id: npm:fumadocs-twoslash
+  - id: npm:@vx-oss/docs-twoslash
     updated: false
-  - id: npm:fumadocs-typescript
+  - id: npm:@vx-oss/docs-typescript
     updated: false
-  - id: npm:@fumadocs/vite
+  - id: npm:@vx-oss/docs-vite
     updated: false
 npm:packages:
-  - id: npm:@fumadocs/api-docs
-  - id: npm:@fumadocs/asyncapi
-  - id: npm:@fumadocs/base-ui
-  - id: npm:@fumadocs/basehub
-  - id: npm:@fumadocs/cli
-  - id: npm:@fumadocs/content
-  - id: npm:@fumadocs/content-collections
+  - id: npm:@vx-oss/docs-api
+  - id: npm:@vx-oss/docs-asyncapi
+  - id: npm:@vx-oss/docs-base-ui
+  - id: npm:@vx-oss/docs-basehub
+  - id: npm:@vx-oss/docs-cli
+  - id: npm:@vx-oss/docs-content
+  - id: npm:@vx-oss/docs-content-collections
   - id: npm:fumadocs-core
-  - id: npm:create-fumadocs-app
-  - id: npm:create-fumadocs-versions
-  - id: npm:fumadocs-docgen
-  - id: npm:fumadocs-epub
-  - id: npm:@fumadocs/graphql
-  - id: npm:@fumari/image-size
-  - id: npm:@fumadocs/language
-  - id: npm:@fumadocs/local-content
-  - id: npm:@fumadocs/local-html
+  - id: npm:create-vx-oss-docs
+  - id: npm:create-vx-oss-docs-versions
+  - id: npm:@vx-oss/docs-docgen
+  - id: npm:@vx-oss/docs-epub
+  - id: npm:@vx-oss/docs-graphql
+  - id: npm:@vx-oss/docs-image-size
+  - id: npm:@vx-oss/docs-language
+  - id: npm:@vx-oss/docs-local-content
+  - id: npm:@vx-oss/docs-local-html
   - id: npm:fumadocs-mdx
-  - id: npm:@fumadocs/local-md
-  - id: npm:@fumadocs/mdx-remote
-  - id: npm:@fumadocs/notion
-  - id: npm:fumadocs-obsidian
+  - id: npm:@vx-oss/docs-local-md
+  - id: npm:@vx-oss/docs-mdx-remote
+  - id: npm:@vx-oss/docs-notion
+  - id: npm:@vx-oss/docs-obsidian
   - id: npm:fumadocs-openapi
-  - id: npm:fumadocs-preview
-  - id: npm:fumadocs-python
+  - id: npm:@vx-oss/docs-preview
+  - id: npm:@vx-oss/docs-python
   - id: npm:fumadocs-ui
-  - id: npm:@fumadocs/sanity
-  - id: npm:@fumadocs/satteri
-  - id: npm:@fumadocs/shadcn
-  - id: npm:@fumari/stf
+  - id: npm:@vx-oss/docs-sanity
+  - id: npm:@vx-oss/docs-satteri
+  - id: npm:@vx-oss/docs-shadcn
+  - id: npm:@vx-oss/docs-stf
   - id: npm:@fumadocs/story
-  - id: npm:@fumadocs/tailwind
-  - id: npm:fumadocs-twoslash
-  - id: npm:fumadocs-typescript
-  - id: npm:@fumadocs/vite
+  - id: npm:@vx-oss/docs-tailwind
+  - id: npm:@vx-oss/docs-twoslash
+  - id: npm:@vx-oss/docs-typescript
+  - id: npm:@vx-oss/docs-vite
   - id: npm:docs
   - id: npm:example-graphql

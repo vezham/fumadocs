@@ -5,7 +5,7 @@
     { "repo": "vezham/fumadocs" }
   ],
   "commit": false,
-  "fixed": [["@vezham/docs-core", "@vezham/docs-react"]],
+  "fixed": [["@vx-oss/docs-core", "@vx-oss/docs-react"]],
   "linked": [],
   "access": "public",
   "baseBranch": "timeline",
@@ -13,5 +13,5 @@
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
-  "ignore": ["docs", "example-*", "create-fumadocs-*", "@fumadocs/base-ui"]
+  "ignore": ["docs", "example-*", "create-vx-oss-docs*", "@vx-oss/docs-base-ui"]
 }

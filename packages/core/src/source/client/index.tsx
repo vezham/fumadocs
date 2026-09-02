@@ -59,6 +59,8 @@ export function useFumadocsLoader<V>(serialized: V): Serialized<V> {
   }, [serialized]);
 }
 
+export { useFumadocsLoader as useDocsLoader }
+
 function isSerializedPageTree(v: unknown): v is SerializedPageTree {
   return (
     typeof v === 'object' &&

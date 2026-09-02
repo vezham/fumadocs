@@ -10,7 +10,7 @@ import {
   type Source,
   type VirtualFile,
   type Page,
-} from '@vezham/docs-core/source';
+} from '@vx-oss/docs-core/source';
 import {
   fromSchema,
   getPageProps,
@@ -21,8 +21,8 @@ import {
 import { toStaticData } from '@/utils/pages/to-static-data';
 import path from 'node:path';
 import type { AsyncAPIPageProps_Preloaded, AsyncAPIPageProps_Spec } from '@/ui';
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins/remark-structure';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins/remark-structure';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import { createAutoPreset, type SchemaToPagesOptions } from '@/utils/pages/preset-auto';
 import { ActionLabel } from '@/ui/components/badge';
 

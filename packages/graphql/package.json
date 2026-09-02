@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/graphql",
+  "name": "@vx-oss/docs-graphql",
   "version": "0.2.4",
   "description": "Generate docs for your GraphQL schema",
   "keywords": [
@@ -10,7 +10,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/graphql"
+  },
   "files": [
     "css",
     "dist"
@@ -36,8 +40,8 @@
   },
   "dependencies": {
     "@fuma-translate/react": "^1.0.2",
-    "@fumadocs/api-docs": "workspace:*",
-    "@fumari/stf": "workspace:*",
+    "@vx-oss/docs-api": "workspace:*",
+    "@vx-oss/docs-stf": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "cnfast": "^0.1.0",
     "github-slugger": "^2.0.0",
@@ -56,16 +60,16 @@
     "tailwindcss": "^4.3.3",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
     "graphql": "^17.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vezham/docs-core": "^1.0.0",
-    "@vezham/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0",
+    "@vx-oss/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {

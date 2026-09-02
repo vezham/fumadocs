@@ -1,4 +1,4 @@
-import type { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
+import type { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';
 import { i18n } from '#/lib/i18n.ts';
 
 export function baseOptions(locale: string = i18n.defaultLanguage): BaseLayoutProps {

@@ -1,8 +1,8 @@
 'use client';
 import type { ComponentProps } from 'react';
-import { Heading as BaseHeading } from '@vezham/docs-react/components/heading';
+import { Heading as BaseHeading } from '@vx-oss/docs-react/components/heading';
 import { useRenderContext } from '../contexts/api';
-import { useAnchorId } from '@fumadocs/api-docs/auto-anchor/client';
+import { useAnchorId } from '@vx-oss/docs-api/auto-anchor/client';
 
 export function Heading({
   id: _id,

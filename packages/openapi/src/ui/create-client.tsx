@@ -7,5 +7,5 @@ export type CreateClientAPIPageOptions = CreateOpenAPIPageOptions;
 /** @deprecated Use `OpenAPIPageProps` instead */
 export type ClientApiPageProps = OpenAPIPageProps;
 
-/** @deprecated use `createOpenAPIPage()` from `@vezham/docs-openapi/ui` instead */
+/** @deprecated use `createOpenAPIPage()` from `@vx-oss/docs-openapi/ui` instead */
 export const createClientAPIPage = createOpenAPIPage;

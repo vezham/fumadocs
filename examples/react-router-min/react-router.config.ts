@@ -1,6 +1,6 @@
 import type { Config } from '@react-router/dev/config';
 import { glob } from 'node:fs/promises';
-import { createGetUrl, getSlugs } from '@vezham/docs-core/source';
+import { createGetUrl, getSlugs } from '@vx-oss/docs-core/source';
 
 const getUrl = createGetUrl('/docs');
 

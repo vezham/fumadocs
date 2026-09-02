@@ -13,14 +13,14 @@ description: Generate code blocks for installing packages
 ## Usage
 
 ```package-install
-fumadocs-docgen
+@vx-oss/docs-docgen
 ```
 
 Add the remark plugin.
 
 ```ts title="source.config.ts" tab="Fumadocs MDX"
-import { remarkInstall } from 'fumadocs-docgen';
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { remarkInstall } from '@vx-oss/docs-docgen';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 export default defineConfig({
   mdxOptions: {
@@ -31,7 +31,7 @@ export default defineConfig({
 
 ```ts tab="MDX Compiler"
 import { compile } from '@mdx-js/mdx';
-import { remarkInstall } from 'fumadocs-docgen';
+import { remarkInstall } from '@vx-oss/docs-docgen';
 
 await compile('...', {
   remarkPlugins: [remarkInstall],
@@ -41,8 +41,8 @@ await compile('...', {
 Define the required components.
 
 ```tsx title="components/mdx.tsx (Fumadocs UI)"
-import { Tab, Tabs } from '@vezham/docs-react/components/tabs';
-import defaultComponents from '@vezham/docs-react/mdx';
+import { Tab, Tabs } from '@vx-oss/docs-react/components/tabs';
+import defaultComponents from '@vx-oss/docs-react/mdx';
 import type { MDXComponents } from 'mdx/types';
 
 export function getMDXComponents(components?: MDXComponents) {
@@ -97,8 +97,8 @@ my-package
 When using with Fumadocs UI, you can enable persistence with the `persist` option.
 
 ```ts title="source.config.ts" tab="Fumadocs MDX"
-import { remarkInstall } from 'fumadocs-docgen';
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { remarkInstall } from '@vx-oss/docs-docgen';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 const remarkInstallOptions = {
   persist: {
@@ -115,7 +115,7 @@ export default defineConfig({
 
 ```ts tab="MDX Compiler"
 import { compile } from '@mdx-js/mdx';
-import { remarkInstall } from 'fumadocs-docgen';
+import { remarkInstall } from '@vx-oss/docs-docgen';
 
 const remarkInstallOptions = {
   persist: {

@@ -20,13 +20,13 @@ import type {
   SchemaDataObjectProperty,
   SchemaUIGeneratedData,
 } from '@/components/schema';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { CheckIcon, FilterIcon, LinkIcon } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '../popover';
 import { cn } from '@/utils/cn';
 import { cva } from 'class-variance-authority';
 import { useAnchorId } from '@/auto-anchor/client';
-import { useCopyButton } from '@vezham/docs-react/utils/use-copy-button';
+import { useCopyButton } from '@vx-oss/docs-react/utils/use-copy-button';
 import { mergeRefs } from '@/utils/merge-refs';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../select';
 

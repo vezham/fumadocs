@@ -185,7 +185,7 @@ async function loadImageSize(
   src: Source,
   onExternal: ExternalImageOptions,
 ): Promise<ImageSize | undefined> {
-  const { probe } = await import('@fumari/image-size');
+  const { probe } = await import('@vx-oss/docs-image-size');
 
   if (src.type === 'file') return probe(src.file);
   if (onExternal === false) return;

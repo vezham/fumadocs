@@ -1,4 +1,4 @@
 'use client';
-import { createAsyncAPIPage } from '@fumadocs/asyncapi/ui';
+import { createAsyncAPIPage } from '@vx-oss/docs-asyncapi/ui';
 
 export const AsyncAPIPage = createAsyncAPIPage();

@@ -48,7 +48,7 @@ const text = await page.data.getText("processed", {
 });
 ```
 
-Supported in bundler collections with both compilers, and in `dynamic: true` collections & `@fumadocs/satteri/local-md` with the Sätteri compiler.
+Supported in bundler collections with both compilers, and in `dynamic: true` collections & `@vx-oss/docs-satteri/local-md` with the Sätteri compiler.
 
 ### `fumadocs-core/server`: render React trees into Markdown
 
@@ -165,12 +165,12 @@ loader({
 
 ## fumadocs-core@16.14.4
 
-### Introduce `@fumari/image-size`, replacing `image-size` in `remarkImage`
+### Introduce `@vx-oss/docs-image-size`, replacing `image-size` in `remarkImage`
 
 A fork of [probe-image-size](https://github.com/nodeca/probe-image-size) with no dependencies of its own.
 
 ```ts
-import { probe, imageSize } from "@fumari/image-size";
+import { probe, imageSize } from "@vx-oss/docs-image-size";
 
 await probe("./public/banner.png"); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
 await probe("https://example.com/banner.png", { timeout: 5000 });
@@ -178,7 +178,7 @@ await probe("https://example.com/banner.png", { timeout: 5000 });
 imageSize(bytes); // the same result, or `null`
 ```
 
-`remarkImage` now uses it in both `fumadocs-core` and `@fumadocs/satteri`. Remote images are no longer downloaded in full just to be measured, and redirects are followed. Sizes are always in pixels, so an SVG sized in `em` or `pt` is converted instead of being skipped. Remote requests also time out after 30 seconds by default.
+`remarkImage` now uses it in both `fumadocs-core` and `@vx-oss/docs-satteri`. Remote images are no longer downloaded in full just to be measured, and redirects are followed. Sizes are always in pixels, so an SVG sized in `em` or `pt` is converted instead of being skipped. Remote requests also time out after 30 seconds by default.
 
 One behaviour difference worth knowing: the supported formats are avif/heic/heif, bmp, gif, ico, jpeg, png, psd, svg, tiff and webp. Sizes for jxl, tga, pnm, dds, icns, cur, ktx and jp2 can no longer be resolved and go through `onError` instead.
 
@@ -2401,11 +2401,11 @@ The peer dependencies now include v8, note that previous versions can also work 
   });
   ```
 
-- f75287d: **Introduce `fumadocs-docgen` package.**
+- f75287d: **Introduce `@vx-oss/docs-docgen` package.**
 
   Offer a better authoring experience for advanced use cases.
 
-  - Move `remark-dynamic-content` and `remark-install` plugins to the new package `fumadocs-docgen`.
+  - Move `remark-dynamic-content` and `remark-install` plugins to the new package `@vx-oss/docs-docgen`.
   - Support Typescript generator by default
 
   **Usage**
@@ -2413,7 +2413,7 @@ The peer dependencies now include v8, note that previous versions can also work 
   Add the `remarkDocGen` plugin to your remark plugins.
 
   ```ts
-  import { remarkDocGen, fileGenerator } from "fumadocs-docgen";
+  import { remarkDocGen, fileGenerator } from "@vx-oss/docs-docgen";
 
   remark().use(remarkDocGen, { generators: [fileGenerator()] });
   ```
@@ -2443,7 +2443,7 @@ The peer dependencies now include v8, note that previous versions can also work 
   For `remarkInstall`, it remains the same:
 
   ```ts
-  import { remarkInstall } from "fumadocs-docgen";
+  import { remarkInstall } from "@vx-oss/docs-docgen";
   ```
 
 - 2d8df75: Remove support for `getTableOfContentsFromPortableText`
@@ -2502,15 +2502,15 @@ The peer dependencies now include v8, note that previous versions can also work 
 
 ### Major Changes
 
-- 321d1e1f: **Move Typescript integrations to `fumadocs-typescript`**
+- 321d1e1f: **Move Typescript integrations to `@vx-oss/docs-typescript`**
 
   why: It is now a stable feature
 
-  migrate: Use `fumadocs-typescript` instead.
+  migrate: Use `@vx-oss/docs-typescript` instead.
 
   ```diff
   - import { AutoTypeTable } from "fumadocs-ui/components/auto-type-table"
-  + import { AutoTypeTable } from "fumadocs-typescript/ui"
+  + import { AutoTypeTable } from "@vx-oss/docs-typescript/ui"
   ```
 
 ### Minor Changes
@@ -2609,7 +2609,7 @@ The peer dependencies now include v8, note that previous versions can also work 
 
   `@fuma-docs/openapi` -> `fumadocs-openapi`
 
-  `create-next-docs-app` -> `create-fumadocs-app`
+  `create-next-docs-app` -> `create-vx-oss-docs`
 
 ### Minor Changes
 

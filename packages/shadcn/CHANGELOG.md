@@ -1,4 +1,4 @@
-## @fumadocs/shadcn@0.1.0
+## @vx-oss/docs-shadcn@0.1.0
 
 ### Default to Base UI
 

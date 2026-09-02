@@ -1,7 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from '@tanstack/react-router';
 import appCss from '@/styles/app.css?url';
-import { RootProvider } from '@vezham/docs-react/provider/tanstack';
-import { DevClient } from '@fumadocs/local-md/dev/react-client';
+import { RootProvider } from '@vx-oss/docs-react/provider/tanstack';
+import { DevClient } from '@vx-oss/docs-local-md/dev/react-client';
 
 export const Route = createRootRoute({
   head: () => ({

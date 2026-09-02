@@ -1,5 +1,5 @@
 {
-  "name": "@vezham/docs-openapi",
+  "name": "@vx-oss/docs-openapi",
   "version": "1.0.1",
   "description": "Generate MDX docs for your OpenAPI spec",
   "keywords": [
@@ -52,9 +52,9 @@
   },
   "dependencies": {
     "@fuma-translate/react": "^1.0.2",
-    "@fumadocs/api-docs": "workspace:*",
+    "@vx-oss/docs-api": "workspace:*",
     "@fumari/json-schema-ts": "^1.0.2",
-    "@fumari/stf": "workspace:*",
+    "@vx-oss/docs-stf": "workspace:*",
     "@scalar/json-magic": "^0.13.2",
     "chokidar": "^5.0.0",
     "class-variance-authority": "^0.7.1",
@@ -79,8 +79,8 @@
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "xml-js": "^1.6.11",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@scalar/api-client-react": "^2.0.20",
@@ -88,8 +88,8 @@
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vezham/docs-core": "^1.0.0",
-    "@vezham/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0",
+    "@vx-oss/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "json-schema-typed": {

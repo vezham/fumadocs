@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { createElement } from 'react';
 import type { MDXComponents } from 'mdx/types';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { dynamicLoader, loader } from '@vezham/docs-core/source';
+import { dynamicLoader, loader } from '@vx-oss/docs-core/source';
 import { convert, createPython, type ModuleInterface } from '@/index';
 
 const file = path.join(path.dirname(fileURLToPath(import.meta.url)), 'fixtures/demo.json');

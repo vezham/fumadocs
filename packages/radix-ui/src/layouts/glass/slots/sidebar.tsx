@@ -1,8 +1,8 @@
 'use client';
-import type * as PageTree from '@vezham/docs-core/page-tree';
+import type * as PageTree from '@vx-oss/docs-core/page-tree';
 import { type IconItemType, isLinkItemActive, type LinkItemType } from '@/layouts/shared';
 import { useTreeContext, useTreePath } from '@/contexts/tree';
-import Link from '@vezham/docs-core/link';
+import Link from '@vx-oss/docs-core/link';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import {
   cloneElement,
@@ -21,11 +21,11 @@ import {
   SidebarIcon,
   XIcon,
 } from 'lucide-react';
-import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
+import { useOnChange } from '@vx-oss/docs-core/utils/use-on-change';
 import { cn } from '@/utils/cn';
 import { ScrollArea, ScrollViewport } from '@/components/ui/scroll-area';
 import { buttonVariants } from '@/components/ui/button';
-import { usePathname } from '@vezham/docs-core/framework';
+import { usePathname } from '@vx-oss/docs-core/framework';
 import { useTranslations } from '@fuma-translate/react';
 import {
   SidebarDrawerContent,

@@ -1,10 +1,10 @@
 import type { RichTextItemResponse } from '@notionhq/client';
 import { cn } from 'cnfast';
-import type { HighlightOptions } from '@vezham/docs-core/highlight';
-import { CalloutContainer } from '@vezham/docs-react/components/callout';
-import { CodeBlock, Pre } from '@vezham/docs-react/components/codeblock';
-import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
-import { Heading } from '@vezham/docs-react/components/heading';
+import type { HighlightOptions } from '@vx-oss/docs-core/highlight';
+import { CalloutContainer } from '@vx-oss/docs-react/components/callout';
+import { CodeBlock, Pre } from '@vx-oss/docs-react/components/codeblock';
+import { ServerCodeBlock } from '@vx-oss/docs-react/components/codeblock.rsc';
+import { Heading } from '@vx-oss/docs-react/components/heading';
 import { ChevronRight } from 'lucide-react';
 import { Fragment, type ComponentType, type CSSProperties, type ReactNode } from 'react';
 import {

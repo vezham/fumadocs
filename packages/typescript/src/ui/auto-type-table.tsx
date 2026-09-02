@@ -1,7 +1,7 @@
-import { type ParameterNode, type TypeNode, TypeTable } from '@vezham/docs-react/components/type-table';
+import { type ParameterNode, type TypeNode, TypeTable } from '@vx-oss/docs-react/components/type-table';
 import { toJsxRuntime } from 'hast-util-to-jsx-runtime';
 import * as JsxRuntime from 'react/jsx-runtime';
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 import type { ComponentProps, ReactNode } from 'react';
 import { type BaseTypeTableProps, type GenerateTypeTableOptions } from '@/lib/type-table';
 import { type Generator } from '@/lib/base';

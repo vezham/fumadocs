@@ -3,9 +3,9 @@ import type { Element, Root, RootContent } from 'hast';
 import {
   rehypeCode as createRehypeCodeTransformer,
   type RehypeCodeOptions,
-} from '@vezham/docs-core/mdx-plugins/rehype-code';
+} from '@vx-oss/docs-core/mdx-plugins/rehype-code';
 
-export type { RehypeCodeOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
+export type { RehypeCodeOptions } from '@vx-oss/docs-core/mdx-plugins/rehype-code';
 
 function unwrapReplacement(node: RootContent | Root): RootContent | RootContent[] {
   if (node.type === 'root') return node.children;

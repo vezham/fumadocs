@@ -1,9 +1,9 @@
 'use client';
 import { cn } from '@/utils/cn';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { useApiClient } from '@scalar/api-client-react';
 import { MethodLabel } from '@/ui/components/method-label';
-import { useTheme } from '@vezham/docs-react/provider/base';
+import { useTheme } from '@vx-oss/docs-react/provider/base';
 import { useEffect, useState } from 'react';
 import type { HttpMethods } from '@/types';
 import { useTranslations } from '@fuma-translate/react';

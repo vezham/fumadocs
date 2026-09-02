@@ -3,9 +3,9 @@ import { createSourceFile } from '@/transform/shared';
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import { SyntaxKind } from 'ts-morph';
-import { FumadocsComponentInstaller } from '@fumadocs/cli/registry/installer';
+import { FumadocsComponentInstaller } from '@vx-oss/docs-cli/registry/installer';
 import { HttpRegistryConnector } from 'fuma-cli/registry/connector';
-import { getDefaultConfig } from '@fumadocs/cli/config';
+import { getDefaultConfig } from '@vx-oss/docs-cli/config';
 
 const envKey: Record<'openrouter' | 'llmgateway' | 'inkeep', string> = {
   openrouter: 'OPENROUTER_API_KEY',

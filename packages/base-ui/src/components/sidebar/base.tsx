@@ -12,8 +12,8 @@ import {
   useRef,
   useState,
 } from 'react';
-import Link, { type LinkProps } from '@vezham/docs-core/link';
-import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
+import Link, { type LinkProps } from '@vx-oss/docs-core/link';
+import { useOnChange } from '@vx-oss/docs-core/utils/use-on-change';
 import { cn } from '@/utils/cn';
 import { ScrollArea, type ScrollAreaProps, ScrollViewport } from '@/components/ui/scroll-area';
 import {
@@ -23,9 +23,9 @@ import {
   CollapsibleTrigger,
   type CollapsibleTriggerProps,
 } from '@/components/ui/collapsible';
-import { useMediaQuery } from '@vezham/docs-core/utils/use-media-query';
+import { useMediaQuery } from '@vx-oss/docs-core/utils/use-media-query';
 import scrollIntoView from 'scroll-into-view-if-needed';
-import { usePathname } from '@vezham/docs-core/framework';
+import { usePathname } from '@vx-oss/docs-core/framework';
 import ReactDOM from 'react-dom';
 import { useTranslations } from '@fuma-translate/react';
 

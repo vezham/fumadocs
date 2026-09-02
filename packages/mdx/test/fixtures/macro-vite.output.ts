@@ -1,4 +1,4 @@
-import * as __fdm from "@vezham/docs-mdx/runtime/macro";
+import * as __fdm from "@vx-oss/docs-mdx/runtime/macro";
 
 import { z } from 'zod';
 

@@ -1,8 +1,8 @@
 import { createContext, ReactNode, use, useMemo } from 'react';
 import type { ParsedSchema } from '@/schema';
 import { mergeAllOf } from '@/schema/merge';
-import { FieldKey, useDataEngine, useFieldValue, useNamespace } from '@fumari/stf';
-import { stringifyFieldKey } from '@fumari/stf/lib/utils';
+import { FieldKey, useDataEngine, useFieldValue, useNamespace } from '@vx-oss/docs-stf';
+import { stringifyFieldKey } from '@vx-oss/docs-stf/lib/utils';
 import { sample } from '@/schema/sample';
 import { FormatFlags, schemaToString } from '@/schema/to-string';
 import { dereferenceShallow } from '@/schema/dereference';

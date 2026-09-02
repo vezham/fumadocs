@@ -4,7 +4,7 @@ import { transformMacroModule } from '@/macro/transform';
 import { MacroModuleId } from '@/macro/options';
 
 /**
- * Expand macro calls (`@vezham/docs-mdx/macro`) into static imports of content files.
+ * Expand macro calls (`@vx-oss/docs-mdx/macro`) into static imports of content files.
  *
  * File filtering happens in the bundler configuration (`include` patterns as
  * Webpack rule conditions/Turbopack rule globs), the loader only skips modules

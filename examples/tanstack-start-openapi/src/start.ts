@@ -1,5 +1,5 @@
 import { createMiddleware, createStart } from '@tanstack/react-start';
-import { isMarkdownPreferred } from '@vezham/docs-core/negotiation';
+import { isMarkdownPreferred } from '@vx-oss/docs-core/negotiation';
 import { redirect } from '@tanstack/react-router';
 import { docsRoute, encodeMarkdownUrl } from '@/lib/shared';
 

@@ -1,12 +1,12 @@
-import { HomeLayout } from '@vezham/docs-react/layouts/home';
+import { HomeLayout } from '@vx-oss/docs-react/layouts/home';
 import { baseOptions, linkItems } from '@/components/layouts/shared';
 import {
   NavbarMenu,
   NavbarMenuContent,
   NavbarMenuLink,
   NavbarMenuTrigger,
-} from '@vezham/docs-react/layouts/home/navbar';
-import Link from '@vezham/docs-core/link';
+} from '@vx-oss/docs-react/layouts/home/navbar';
+import Link from '@vx-oss/docs-core/link';
 import Image from 'next/image';
 import Preview from '@/public/banner.png';
 import { Book, ComponentIcon, Pencil, PlusIcon, Server } from 'lucide-react';

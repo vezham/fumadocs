@@ -1,5 +1,5 @@
-import type * as PageTree from '@vezham/docs-core/page-tree';
-import { flattenTree } from '@vezham/docs-core/page-tree';
+import type * as PageTree from '@vx-oss/docs-core/page-tree';
+import { flattenTree } from '@vx-oss/docs-core/page-tree';
 
 /**
  * Get pages in the order they appear in the page tree (navigation order).

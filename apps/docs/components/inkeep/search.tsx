@@ -13,8 +13,8 @@ import {
 } from 'react';
 import { Loader2, MessageCircleIcon, RefreshCw, Send, X } from 'lucide-react';
 import { cn } from '@/lib/cn';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
-import Link from '@vezham/docs-core/link';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
+import Link from '@vx-oss/docs-core/link';
 import { useChat, type UseChatHelpers } from '@ai-sdk/react';
 import type { ProvideLinksToolSchema } from '@/lib/inkeep/inkeep-qa-schema';
 import type { z } from 'zod';

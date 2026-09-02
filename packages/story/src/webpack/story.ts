@@ -28,7 +28,7 @@ const loader: LoaderDefinitionFunction<StoryLoaderOptions> = function (source) {
 
     try {
       const transformed = transformStoryFile(
-        '@vezham/docs-story/next/client',
+        '@vx-oss/docs-story/next/client',
         source,
         this.resourcePath,
         await projectPromise!,

@@ -1,11 +1,11 @@
 ---
 title: Macro API
-description: Define collections in your app with @vezham/docs-mdx/macro.
+description: Define collections in your app with @vx-oss/docs-mdx/macro.
 ---
 
 ## Overview
 
-Declare collections directly in your application modules with `@vezham/docs-mdx/macro`.
+Declare collections directly in your application modules with `@vx-oss/docs-mdx/macro`.
 
 The bundler (or runtime loader) compiles `defineDocs` / `defineCollections` into imports of content files.
 
@@ -15,8 +15,8 @@ The bundler (or runtime loader) compiles `defineDocs` / `defineCollections` into
 ## Usage
 
 ```ts tab="lib/source.ts"
-import { defineDocs } from '@vezham/docs-mdx/macro';
-import { loader } from '@vezham/docs-core/source';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const docs = defineDocs({
   dir: 'content/docs',
@@ -29,8 +29,8 @@ export const source = loader({
 ```
 
 ```ts tab="lib/blog.ts"
-import { defineCollections } from '@vezham/docs-mdx/macro';
-import { loader } from '@vezham/docs-core/source';
+import { defineCollections } from '@vx-oss/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
 
 const blog = defineCollections({
   type: 'doc',
@@ -111,7 +111,7 @@ Since the content is loaded lazily, wrap the page in a `<Suspense>` boundary unl
 The Macro API is enabled by default. Pass `macro` to limit which modules may use it, or `false` to disable it.
 
 ```js tab="Next.js" title="next.config.mjs"
-import { createMDX } from '@vezham/docs-mdx/next';
+import { createMDX } from '@vx-oss/docs-mdx/next';
 
 const withMDX = createMDX({
   macro: {
@@ -124,7 +124,7 @@ const withMDX = createMDX({
 ```
 
 ```ts tab="Vite" title="vite.config.ts"
-import { fumadocsMdx } from '@vezham/docs-mdx/vite';
+import { fumadocsMdx } from '@vx-oss/docs-mdx/vite';
 
 export default {
   plugins: [
@@ -138,7 +138,7 @@ export default {
 ```
 
 ```js tab="Node.js"
-import { register } from '@vezham/docs-mdx/node';
+import { register } from '@vx-oss/docs-mdx/node';
 
 register({
   macro: {
@@ -169,4 +169,4 @@ Macro calls are compiled statically. Keep these rules in mind:
 
 - [`dynamic`](/docs/mdx/async#dynamic-mode) collections are not supported by the Macro API yet. Prefer [`async`](/docs/mdx/async) for lazy loading.
 
-- Re-exporting from `@vezham/docs-mdx/macro` is not supported.
+- Re-exporting from `@vx-oss/docs-mdx/macro` is not supported.

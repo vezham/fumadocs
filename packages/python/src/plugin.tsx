@@ -1,5 +1,5 @@
 import { cn } from 'cnfast';
-import type { LoaderPlugin } from '@vezham/docs-core/source';
+import type { LoaderPlugin } from '@vx-oss/docs-core/source';
 import { badgeVariants } from './badge';
 import type { PythonPage } from './source';
 

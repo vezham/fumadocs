@@ -1,16 +1,21 @@
 {
-  "name": "create-fumadocs-versions",
+  "name": "create-vx-oss-docs-versions",
   "version": "16.1.22",
   "private": true,
-  "description": "Used to track dependency versions in create-fumadocs-app",
+  "description": "Used to track dependency versions in create-vx-oss-docs",
   "dependencies": {
     "@biomejs/biome": "^2.5.10",
     "@orama/core": "^1.2.19",
     "oxlint": "^1.80.0",
     "react": "^19.2.8",
     "takumi-js": "^2.12.0",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-mdx": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-mdx": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/create-app-versions"
   }
 }

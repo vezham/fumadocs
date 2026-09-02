@@ -1,16 +1,16 @@
-## fumadocs-preview@0.2.0
+## @vx-oss/docs-preview@0.2.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-## fumadocs-preview@0.1.5
+## @vx-oss/docs-preview@0.1.5
 
 ### Migrate to `cnfast`
 
 Drop `tailwind-merge`.
 
-# fumadocs-preview
+# @vx-oss/docs-preview
 
 ## 0.1.4
 

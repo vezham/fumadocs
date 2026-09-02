@@ -1,6 +1,6 @@
 import { source } from '@/lib/source';
-import type { OramaDocument } from '@vezham/docs-core/search/orama-cloud';
-import { getBreadcrumbItems } from '@vezham/docs-core/breadcrumb';
+import type { OramaDocument } from '@vx-oss/docs-core/search/orama-cloud';
+import { getBreadcrumbItems } from '@vx-oss/docs-core/breadcrumb';
 import { getSection } from '@/lib/source/navigation';
 
 export const revalidate = false;

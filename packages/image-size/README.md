@@ -1,11 +1,11 @@
-# @fumari/image-size
+# @vx-oss/docs-image-size
 
 Read image dimensions without downloading or reading the whole image. No dependencies.
 
 Supports AVIF/HEIC/HEIF, BMP, GIF, ICO, JPEG, PNG, PSD, SVG, TIFF and WebP.
 
 ```ts
-import { probe, imageSize } from '@fumari/image-size';
+import { probe, imageSize } from '@vx-oss/docs-image-size';
 
 // reads only as far as the header
 await probe('./public/banner.png'); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }

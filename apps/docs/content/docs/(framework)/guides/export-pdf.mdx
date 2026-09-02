@@ -69,9 +69,9 @@ bun ./scripts/export-pdf.ts
 For invisible contents in accordions/tabs, you may need to temporarily override the MDX components. For example:
 
 ```tsx title="components/mdx.tsx"
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 import type { MDXComponents } from 'mdx/types';
-import { Accordion, Accordions } from '@vezham/docs-react/components/accordion';
+import { Accordion, Accordions } from '@vx-oss/docs-react/components/accordion';
 
 // you may use environment variable here [!code highlight]
 const isPrinting = true;

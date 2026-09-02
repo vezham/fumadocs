@@ -9,7 +9,7 @@ description: Generate API references from Python packages.
 
 ## Introduction
 
-`fumadocs-python` documents a Python package from its source code and docstrings. A Python command collects the package into a JSON file, which you can serve directly as a runtime content source, or convert into MDX files.
+`@vx-oss/docs-python` documents a Python package from its source code and docstrings. A Python command collects the package into a JSON file, which you can serve directly as a runtime content source, or convert into MDX files.
 
 Every module and class becomes a page, with functions, attributes and parameters rendered by the included components.
 
@@ -18,7 +18,7 @@ Every module and class becomes a page, with functions, attributes and parameters
 Install the package:
 
 ```package-install
-fumadocs-python shiki
+@vx-oss/docs-python shiki
 ```
 
 ### Generate JSON
@@ -26,7 +26,7 @@ fumadocs-python shiki
 Install the Python command, it collects docs from your Python package:
 
 ```bash
-pip install ./node_modules/fumadocs-python
+pip install ./node_modules/@vx-oss/docs-python
 ```
 
 Generate the JSON file of a package:
@@ -45,10 +45,10 @@ The components are styled with Tailwind CSS, add the preset:
 
 ```css title="Tailwind CSS"
 @import 'tailwindcss';
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
 /* [!code ++] */
-@import 'fumadocs-python/preset.css';
+@import '@vx-oss/docs-python/preset.css';
 ```
 
 ### Configure Source
@@ -56,8 +56,8 @@ The components are styled with Tailwind CSS, add the preset:
 Create a source from the JSON file and pass it to `loader()`:
 
 ```ts title="lib/source.ts"
-import { loader } from '@vezham/docs-core/source';
-import { createPython } from 'fumadocs-python';
+import { loader } from '@vx-oss/docs-core/source';
+import { createPython } from '@vx-oss/docs-python';
 
 const python = createPython({
   file: './httpx.json',
@@ -78,7 +78,7 @@ Then load and render a page:
 ```tsx title="app/docs/[[...slug]]/page.tsx"
 import { source } from '@/lib/source';
 import { notFound } from 'next/navigation';
-import { DocsBody, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
+import { DocsBody, DocsPage, DocsTitle } from '@vx-oss/docs-react/layouts/docs/page';
 
 export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
   const page = source.getPage((await params).slug);
@@ -101,8 +101,8 @@ export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
 `staticSource()` reads the JSON file once. To pick up a regenerated file without restarting, use `dynamicSource()` with `dynamicLoader()` instead:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from '@vezham/docs-core/source';
-import { createPython } from 'fumadocs-python';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
+import { createPython } from '@vx-oss/docs-python';
 
 const python = createPython({
   file: './httpx.json',
@@ -124,7 +124,7 @@ The file is read again after `pythonLoader.invalidate()`, and `getSource()` retu
 Source code and docstring examples are highlighted with [Shiki](https://shiki.style), configure it with `rehypeCodeOptions`. You can also pass remark/rehype plugins:
 
 ```ts title="lib/source.ts"
-import { createPython } from 'fumadocs-python';
+import { createPython } from '@vx-oss/docs-python';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
@@ -147,7 +147,7 @@ You can convert the JSON into MDX files instead, and keep them next to your othe
 
 ```js tab="scripts/generate-docs.mjs"
 import { rimraf } from 'rimraf';
-import * as Python from 'fumadocs-python';
+import * as Python from '@vx-oss/docs-python';
 import * as fs from 'node:fs/promises';
 
 const content = JSON.parse(await fs.readFile('./httpx.json', 'utf-8'));
@@ -158,9 +158,9 @@ await Python.write(Python.convert(content, { baseUrl: '/docs' }), 'content/docs'
 ```
 
 ```tsx tab="mdx-components.tsx"
-import defaultMdxComponents from '@vezham/docs-react/mdx';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
 import type { MDXComponents } from 'mdx/types';
-import * as Python from 'fumadocs-python/components';
+import * as Python from '@vx-oss/docs-python/components';
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {

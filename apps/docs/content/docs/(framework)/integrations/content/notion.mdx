@@ -5,7 +5,7 @@ description: Pull pages from Notion and render them with Fumadocs.
 
 ## Introduction
 
-`@fumadocs/notion` turns a Notion database into a Fumadocs content source. It provides a dynamic [content source](/docs/headless/source-api) that pulls pages over the official Notion API, and a server renderer that renders Notion blocks with Fumadocs UI.
+`@vx-oss/docs-notion` turns a Notion database into a Fumadocs content source. It provides a dynamic [content source](/docs/headless/source-api) that pulls pages over the official Notion API, and a server renderer that renders Notion blocks with Fumadocs UI.
 
 It does not ship a client-side renderer or convert content to MDX, blocks are rendered on the server, so there is no bundler or type-gen step.
 
@@ -14,16 +14,16 @@ It does not ship a client-side renderer or convert content to MDX, blocks are re
 Install the integration and the official Notion client:
 
 ```package-install
-@fumadocs/notion @notionhq/client
+@vx-oss/docs-notion @notionhq/client
 ```
 
 Import the renderer's Tailwind CSS source after the Fumadocs UI styles:
 
 ```css title="app/global.css"
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
 /* [!code ++] */
-@import '@fumadocs/notion/css/preset.css';
+@import '@vx-oss/docs-notion/css/preset.css';
 ```
 
 ### Notion Database [step]
@@ -49,7 +49,7 @@ Create the integration once and share it between the content source and the file
 
 ```ts title="lib/notion.ts"
 import { Client } from '@notionhq/client';
-import { createNotion } from '@fumadocs/notion';
+import { createNotion } from '@vx-oss/docs-notion';
 
 export const notion = createNotion({
   client: new Client({ auth: process.env.NOTION_TOKEN }),
@@ -62,7 +62,7 @@ export const notion = createNotion({
 Pass `notion.dynamicSource()` to `dynamicLoader()` and expose the loader through `getSource()`:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from '@vezham/docs-core/source';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
 import { notion } from '@/lib/notion';
 
 const source = dynamicLoader(
@@ -99,7 +99,7 @@ Use the loader in your layout to build the page tree:
 
 ```tsx title="app/docs/layout.tsx"
 import { getSource } from '@/lib/source';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 
 export default async function Layout({ children }: LayoutProps<'/docs'>) {
   const source = await getSource();
@@ -117,8 +117,8 @@ import {
   NotionRenderer,
   blocksToTableOfContents,
   createNotionFileUrlResolver,
-} from '@fumadocs/notion';
-import { DocsPage, DocsBody, DocsDescription, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
+} from '@vx-oss/docs-notion';
+import { DocsPage, DocsBody, DocsDescription, DocsTitle } from '@vx-oss/docs-react/layouts/docs/page';
 
 export default async function Page({ params }: PageProps<'/docs/[[...slug]]'>) {
   const { slug = [] } = await params;
@@ -152,7 +152,7 @@ Notion-hosted file URLs (images, videos, PDFs) expire after about an hour, so th
 `createNotionFileUrlResolver()` routes those internal assets through a file handler that fetches a fresh signed URL on demand. Mount the handler with `createNotionFileHandler()`, it verifies that the requested block belongs to a page in your data source before redirecting:
 
 ```ts title="app/api/notion/file/route.ts"
-import { createNotionFileHandler } from '@fumadocs/notion';
+import { createNotionFileHandler } from '@vx-oss/docs-notion';
 import { notion } from '@/lib/notion';
 
 export const GET = createNotionFileHandler(notion);
@@ -223,7 +223,7 @@ notion.dynamicSource({
 `NotionRenderer` ships renderers for common block types. Pass `components` to add or override them, each override is typed against its block:
 
 ```tsx
-import { NotionRenderer } from '@fumadocs/notion';
+import { NotionRenderer } from '@vx-oss/docs-notion';
 
 <NotionRenderer
   blocks={blocks}
@@ -244,10 +244,10 @@ Code blocks are highlighted on the server with Shiki by default. Pass `highlight
 
 ## Source-only Import
 
-Code that only pulls Notion pages, such as a search indexer or `llms.txt` route, can import from `@fumadocs/notion/source` to skip the React renderer entry:
+Code that only pulls Notion pages, such as a search indexer or `llms.txt` route, can import from `@vx-oss/docs-notion/source` to skip the React renderer entry:
 
 ```ts
-import { createNotion } from '@fumadocs/notion/source';
+import { createNotion } from '@vx-oss/docs-notion/source';
 ```
 
 This entry keeps the Notion SDK external and contains no React imports. `blocksToPlainText()`, `blocksToStructuredData()`, and `blocksToTableOfContents()` are available here too.

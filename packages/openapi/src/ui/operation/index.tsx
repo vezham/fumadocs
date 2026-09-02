@@ -9,7 +9,7 @@ import type {
   ServerObject,
 } from '@/types';
 import { methodKeys } from '@/utils/schema';
-import { idToTitle } from '@fumadocs/api-docs/utils/id-to-title';
+import { idToTitle } from '@vx-oss/docs-api/utils/id-to-title';
 import { UsageTabs } from '@/ui/operation/usage-tabs';
 import { Badge, MethodLabel } from '@/ui/components/method-label';
 import { OperationProvider } from './context';
@@ -20,19 +20,19 @@ import {
   AccordionItem,
   Accordions,
   AccordionTrigger,
-} from '@fumadocs/api-docs/components/accordion';
+} from '@vx-oss/docs-api/components/accordion';
 import { isMediaTypeSupported } from '@/requests/media/adapter';
 import { RequestTabs } from './request-tabs';
 import { cn } from '@/utils/cn';
 import { getExampleRequests } from '../../utils/get-example-requests';
-import { SelectTabs, SelectTabTrigger, SelectTab } from '@fumadocs/api-docs/components/select-tab';
-import { Callout } from '@vezham/docs-react/components/callout';
-import { AnchorSection } from '@fumadocs/api-docs/auto-anchor/client';
+import { SelectTabs, SelectTabTrigger, SelectTab } from '@vx-oss/docs-api/components/select-tab';
+import { Callout } from '@vx-oss/docs-react/components/callout';
+import { AnchorSection } from '@vx-oss/docs-api/auto-anchor/client';
 import { Heading } from '@/ui/components/heading';
 import { Markdown } from '../components/markdown';
 import { ServerProvider, useRenderContext } from '../contexts/api';
-import { useCopyButton } from '@vezham/docs-react/utils/use-copy-button';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { useCopyButton } from '@vx-oss/docs-react/utils/use-copy-button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { Check, Copy } from 'lucide-react';
 import PlaygroundClient from '@/playground/client';
 

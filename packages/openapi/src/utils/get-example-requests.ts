@@ -9,8 +9,8 @@ import type {
   RequestBodyObject,
 } from '@/types';
 import { getPreferredType, type ParsedSchema, pickExample } from '@/utils/schema';
-import { sample } from '@fumadocs/api-docs/schema/sample';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { sample } from '@vx-oss/docs-api/schema/sample';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { getRaw } from '@scalar/json-magic/magic-proxy';
 
 export interface ExampleRequestItem {

@@ -8,18 +8,18 @@ description: A remark plugin to transform TypeScript codeblocks into two tabs of
 Install dependencies:
 
 ```npm tab="Fumadocs MDX"
-npm i fumadocs-docgen
+npm i @vx-oss/docs-docgen
 ```
 
 ```npm tab="Satteri"
-npm i @fumadocs/satteri
+npm i @vx-oss/docs-satteri
 ```
 
 Add the remark plugin:
 
 ```ts title="source.config.ts" tab="Fumadocs MDX"
-import { remarkTypeScriptToJavaScript } from 'fumadocs-docgen/remark-ts2js';
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { remarkTypeScriptToJavaScript } from '@vx-oss/docs-docgen/remark-ts2js';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 export default defineConfig({
   mdxOptions: {
@@ -29,7 +29,7 @@ export default defineConfig({
 ```
 
 ```ts title="source.config.ts" tab="Satteri"
-import { remarkTs2js } from '@fumadocs/satteri/remark-ts2js';
+import { remarkTs2js } from '@vx-oss/docs-satteri/remark-ts2js';
 
 export default defineConfig({
   docs: {
@@ -44,7 +44,7 @@ export default defineConfig({
 ```
 
 ```ts tab="MDX Compiler"
-import { remarkTypeScriptToJavaScript } from 'fumadocs-docgen/remark-ts2js';
+import { remarkTypeScriptToJavaScript } from '@vx-oss/docs-docgen/remark-ts2js';
 import { compile } from '@mdx-js/mdx';
 
 await compile('...', {
@@ -55,8 +55,8 @@ await compile('...', {
 Finally, make sure to define the required MDX components: `Tabs` and `Tab`.
 
 ```tsx title="components/mdx.tsx (Fumadocs UI)"
-import { Tab, Tabs } from '@vezham/docs-react/components/tabs';
-import defaultComponents from '@vezham/docs-react/mdx';
+import { Tab, Tabs } from '@vx-oss/docs-react/components/tabs';
+import defaultComponents from '@vx-oss/docs-react/mdx';
 import type { MDXComponents } from 'mdx/types';
 
 export function getMDXComponents(components?: MDXComponents) {

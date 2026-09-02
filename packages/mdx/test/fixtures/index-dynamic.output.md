@@ -1,15 +1,15 @@
 ```ts title="server.ts"
 // @ts-nocheck
-import { server } from '@vezham/docs-mdx/runtime/server';
+import { server } from '@vx-oss/docs-mdx/runtime/server';
 import type * as Config from './config';
 
-const create = server<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = server<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
     blogs: {
       /**
        * extracted references (e.g. hrefs, paths), useful for analyzing relationships between pages.
        */
-      extractedReferences: import("@vezham/docs-mdx").ExtractedReference[];
+      extractedReferences: import("@vx-oss/docs-mdx").ExtractedReference[];
     },
   }
 }>();
@@ -17,17 +17,17 @@ const create = server<typeof Config, import("@vezham/docs-mdx/runtime/types").In
 
 ```ts title="dynamic.ts"
 // @ts-nocheck
-import { dynamic } from '@vezham/docs-mdx/runtime/dynamic';
+import { dynamic } from '@vx-oss/docs-mdx/runtime/dynamic';
 import path from 'node:path';
 import * as Config from './config';
 
-const create = await dynamic<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = await dynamic<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
     blogs: {
       /**
        * extracted references (e.g. hrefs, paths), useful for analyzing relationships between pages.
        */
-      extractedReferences: import("@vezham/docs-mdx").ExtractedReference[];
+      extractedReferences: import("@vx-oss/docs-mdx").ExtractedReference[];
     },
   }
 }>(Config, {"environment":"dynamic","root":"","configPath":"packages/mdx/test/fixtures/config.ts","outDir":"packages/mdx/test/fixtures"});
@@ -39,16 +39,16 @@ export const blogs = await create.doc("blogs", "packages/mdx/test/fixtures/gener
 
 ```ts title="browser.ts"
 // @ts-nocheck
-import { browser } from '@vezham/docs-mdx/runtime/browser';
+import { browser } from '@vx-oss/docs-mdx/runtime/browser';
 import type * as Config from './config';
 
-const create = browser<typeof Config, import("@vezham/docs-mdx/runtime/types").InternalTypeConfig & {
+const create = browser<typeof Config, import("@vx-oss/docs-mdx/runtime/types").InternalTypeConfig & {
   DocData: {
     blogs: {
       /**
        * extracted references (e.g. hrefs, paths), useful for analyzing relationships between pages.
        */
-      extractedReferences: import("@vezham/docs-mdx").ExtractedReference[];
+      extractedReferences: import("@vx-oss/docs-mdx").ExtractedReference[];
     },
   }
 }>();

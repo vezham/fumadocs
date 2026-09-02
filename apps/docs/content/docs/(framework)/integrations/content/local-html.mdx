@@ -5,7 +5,7 @@ description: Content source for local HTML files.
 
 ## Introduction
 
-`@fumadocs/local-html` is a content source for local HTML files, it is bundleless (works fully at runtime) by design.
+`@vx-oss/docs-local-html` is a content source for local HTML files, it is bundleless (works fully at runtime) by design.
 
 It is made for pages you receive as HTML instead of author yourself, like exported decks, reports, and the output of other tools. Each file is adapted to your docs theme rather than rendered as it came.
 
@@ -22,14 +22,14 @@ As compared to [Local Markdown](/docs/integrations/content/local-md), HTML is tr
 Install the package:
 
 ```package-install
-@fumadocs/local-html
+@vx-oss/docs-local-html
 ```
 
 Create a `localHtml` instance and connect it to Fumadocs:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from '@vezham/docs-core/source';
-import { localHtml } from '@fumadocs/local-html';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
+import { localHtml } from '@vx-oss/docs-local-html';
 
 const pages = localHtml({
   dir: 'content/pages',
@@ -53,7 +53,7 @@ The returned source from `pagesLoader.get()` is a normal [content loader](/docs/
 
 ```tsx title="app/docs/[[...slug]]/page.tsx"
 import { getSource } from '@/lib/source';
-import { DocsPage, DocsBody, DocsTitle, DocsDescription } from '@vezham/docs-react/page';
+import { DocsPage, DocsBody, DocsTitle, DocsDescription } from '@vx-oss/docs-react/page';
 import { notFound } from 'next/navigation';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
@@ -109,7 +109,7 @@ A page keeps only its content element: the only `<main>`, then the only `<articl
 Each part of that is configurable:
 
 ```ts
-import { localHtml } from '@fumadocs/local-html';
+import { localHtml } from '@vx-oss/docs-local-html';
 
 const pages = localHtml({
   dir: 'content/pages',
@@ -157,7 +157,7 @@ A block without one falls back to plain text. Pass `rehypeCodeOptions: false` to
 Vite already watches your project, so its watcher can invalidate the source in the same process. No extra process or port.
 
 ```ts tab="vite.config.ts"
-import { localContentPlugin } from '@fumadocs/local-html/dev/vite';
+import { localContentPlugin } from '@vx-oss/docs-local-html/dev/vite';
 
 export default defineConfig({
   plugins: [localContentPlugin()],
@@ -165,7 +165,7 @@ export default defineConfig({
 ```
 
 ```ts tab="lib/source.ts"
-import { watchWithVite } from '@fumadocs/local-html/dev/vite';
+import { watchWithVite } from '@vx-oss/docs-local-html/dev/vite';
 
 if (import.meta.env.DEV) {
   watchWithVite(pages);
@@ -185,7 +185,7 @@ For everything else, run the bundled dev server alongside your app. The watcher 
 ```
 
 ```ts tab="lib/source.ts"
-import { watchWithDevServer } from '@fumadocs/local-html/dev/ws';
+import { watchWithDevServer } from '@vx-oss/docs-local-html/dev/ws';
 
 // change it if you use a different framework (e.g. import.meta.env.DEV)
 if (process.env.NODE_ENV === 'development') {
@@ -202,7 +202,7 @@ void watchWithDevServer(pages, { url: 'ws://127.0.0.1:8000/_fumadocs_local_md' }
 This invalidates the source on the server. On frameworks that cache rendered output in the browser, like Next.js, render `<DevClient />` in your root layout so the page refreshes too:
 
 ```tsx title="app/layout.tsx"
-import { DevClient } from '@fumadocs/local-html/dev/react-client';
+import { DevClient } from '@vx-oss/docs-local-html/dev/react-client';
 
 export function RootLayout({ children }) {
   return (
@@ -224,8 +224,8 @@ You can use `staticSource()` when you only need a one-time snapshot without reva
 It works with a normal `loader()` instead of only `dynamicLoader()`:
 
 ```ts title="lib/source.ts"
-import { loader } from '@vezham/docs-core/source';
-import { localHtml } from '@fumadocs/local-html';
+import { loader } from '@vx-oss/docs-core/source';
+import { localHtml } from '@vx-oss/docs-local-html';
 
 const pages = localHtml({
   dir: 'content/pages',

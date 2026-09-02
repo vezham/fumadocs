@@ -9,13 +9,13 @@
     "types:check": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@fumadocs/language": "workspace:*",
+    "@vx-oss/docs-language": "workspace:*",
     "next": "16.3.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-mdx": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-mdx": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "devDependencies": {
     "@types/mdx": "^2.0.14",

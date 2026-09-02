@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/cli",
+  "name": "@vx-oss/docs-cli",
   "version": "1.4.1",
   "description": "The CLI tool for Fumadocs",
   "keywords": [
@@ -9,9 +9,13 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/cli"
+  },
   "bin": {
-    "cli": "./dist/index.js"
+    "docs-cli": "./dist/index.js"
   },
   "files": [
     "dist"

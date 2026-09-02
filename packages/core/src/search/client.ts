@@ -60,7 +60,7 @@ export type ClientPreset =
     } & FlexsearchStaticOptions)
   | ({
       /**
-       * @deprecated Use `createMixedbreadSearchAPI` from `@vezham/docs-core/search/mixedbread` instead.
+       * @deprecated Use `createMixedbreadSearchAPI` from `@vx-oss/docs-core/search/mixedbread` instead.
        * This client-side approach exposes your API key in the browser.
        * The server-side approach keeps the key secure and uses `client: fetchClient(...)` on the client.
        */

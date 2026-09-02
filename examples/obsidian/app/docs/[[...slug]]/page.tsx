@@ -1,9 +1,9 @@
 import { getSource } from '@/lib/source';
-import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vezham/docs-react/layouts/docs/page';
+import { DocsBody, DocsDescription, DocsPage, DocsTitle } from '@vx-oss/docs-react/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import defaultMdxComponents, { createRelativeLink } from '@vezham/docs-react/mdx';
-import * as ObsidianComponents from 'fumadocs-obsidian/ui';
+import defaultMdxComponents, { createRelativeLink } from '@vx-oss/docs-react/mdx';
+import * as ObsidianComponents from '@vx-oss/docs-obsidian/ui';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;

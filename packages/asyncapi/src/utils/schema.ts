@@ -7,9 +7,9 @@ import type {
   RenderContext,
   TagObject,
 } from '@/types';
-import { idToTitle } from '@fumadocs/api-docs/utils/id-to-title';
+import { idToTitle } from '@vx-oss/docs-api/utils/id-to-title';
 
-export type { ParsedSchema } from '@fumadocs/api-docs/schema';
+export type { ParsedSchema } from '@vx-oss/docs-api/schema';
 
 export function getTagDisplayName(tag: TagObject): string {
   if ('x-displayName' in tag && typeof tag['x-displayName'] === 'string')

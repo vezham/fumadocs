@@ -1,7 +1,7 @@
 import { reactRouter } from '@react-router/dev/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
-import { fumadocsMdx } from '@vezham/docs-mdx/vite';
+import { fumadocsMdx } from '@vx-oss/docs-mdx/vite';
 
 export default defineConfig({
   resolve: {

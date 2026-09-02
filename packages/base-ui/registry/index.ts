@@ -376,9 +376,9 @@ export const registry: Registry = {
     },
   ],
   dependencies: {
-    '@vezham/docs-core': null,
-    '@fumadocs/base-ui': null,
-    '@vezham/docs-react': 'npm:@fumadocs/base-ui',
+    '@vx-oss/docs-core': null,
+    '@vx-oss/docs-base-ui': null,
+    '@vx-oss/docs-react': 'npm:@vx-oss/docs-base-ui',
     react: null,
   },
 };

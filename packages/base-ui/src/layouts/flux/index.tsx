@@ -1,5 +1,5 @@
 'use client';
-import type * as PageTree from '@vezham/docs-core/page-tree';
+import type * as PageTree from '@vx-oss/docs-core/page-tree';
 import {
   type BaseLayoutProps,
   baseSlots,
@@ -70,7 +70,7 @@ export function useFluxLayout() {
   const context = use(LayoutContext);
   if (!context)
     throw new Error(
-      'Please use Flux layout components under <DocsLayout /> (`@vezham/docs-react/layouts/flux`).',
+      'Please use Flux layout components under <DocsLayout /> (`@vx-oss/docs-react/layouts/flux`).',
     );
   return context;
 }

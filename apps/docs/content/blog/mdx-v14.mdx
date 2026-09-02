@@ -47,7 +47,7 @@ import { docs } from '@/.source';
 import { docs } from 'collections/server';
 
 // access collections on server-side, e.g.
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const source = loader({
   source: docs.toFumadocsSource(),
@@ -116,7 +116,7 @@ For `docs` collection, `create.sourceAsync()` (Vite) is now consistent with Next
 
 ```ts
 import { docs } from 'collections/server';
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const source = loader({
   baseUrl: '/docs',
@@ -133,8 +133,8 @@ If you use `create.sourceAsync()` (Vite) for `doc` collections, you should also 
 
 ```ts
 import { blogPosts } from 'collections/server';
-import { toFumadocsSource } from '@vezham/docs-mdx/runtime/server';
-import { loader } from '@vezham/docs-core/source';
+import { toFumadocsSource } from '@vx-oss/docs-mdx/runtime/server';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const blog = loader({
   baseUrl: '/blog',
@@ -152,7 +152,7 @@ export const blog = loader({
 On Next.js, **Async Mode** now aligns with the behaviour on Vite to generate async imports. This enables server-side chunking to improve memory usage.
 
 ```ts title="source.config.ts"
-import { defineDocs } from '@vezham/docs-mdx/config';
+import { defineDocs } from '@vx-oss/docs-mdx/config';
 
 export const docs = defineDocs({
   dir: 'content/docs',
@@ -166,7 +166,7 @@ export const docs = defineDocs({
 Instead, we introduced a `dynamic` option to enable dynamic compilation. This is available for both Vite and Next.js.
 
 ```ts title="source.config.ts"
-import { defineDocs } from '@vezham/docs-mdx/config';
+import { defineDocs } from '@vx-oss/docs-mdx/config';
 
 export const docs = defineDocs({
   dir: 'content/docs',
@@ -184,17 +184,17 @@ By enabling Async or Dynamic modes, the relevant collections are considered lazy
 It now accepts the framework plugin options, you can customize more properties:
 
 ```ts tab="Before"
-import { postInstall } from '@vezham/docs-mdx/next';
+import { postInstall } from '@vx-oss/docs-mdx/next';
 // or
-import { postInstall } from '@vezham/docs-mdx/vite';
+import { postInstall } from '@vx-oss/docs-mdx/vite';
 
 postInstall('source.config.ts');
 ```
 
 ```ts tab="After"
-import { postInstall } from '@vezham/docs-mdx/next';
+import { postInstall } from '@vx-oss/docs-mdx/next';
 // or
-import { postInstall } from '@vezham/docs-mdx/vite';
+import { postInstall } from '@vx-oss/docs-mdx/vite';
 
 postInstall({ configPath: 'source.config.ts' });
 ```
@@ -204,7 +204,7 @@ postInstall({ configPath: 'source.config.ts' });
 To support a broader range of presets and accommodate dynamic modes, `getDefaultMDXOptions()` has been renamed to `applyMdxPreset()`.
 
 ```ts title="source.config.ts" tab="Before"
-import { defineCollections, getDefaultMDXOptions } from '@vezham/docs-mdx/config';
+import { defineCollections, getDefaultMDXOptions } from '@vx-oss/docs-mdx/config';
 import { myPlugin } from './remark-plugin';
 
 export const blog = defineCollections({
@@ -218,7 +218,7 @@ export const blog = defineCollections({
 ```
 
 ```ts title="source.config.ts" tab="After"
-import { defineCollections, applyMdxPreset } from '@vezham/docs-mdx/config';
+import { defineCollections, applyMdxPreset } from '@vx-oss/docs-mdx/config';
 import { myPlugin } from './remark-plugin';
 
 export const blog = defineCollections({
@@ -238,8 +238,8 @@ export const blog = defineCollections({
 This shift promotes a plugin-based architecture for better extensibility.
 
 ```ts title="source.config.ts"
-import { defineConfig } from '@vezham/docs-mdx/config';
-import lastModified from '@vezham/docs-mdx/plugins/last-modified';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
+import lastModified from '@vx-oss/docs-mdx/plugins/last-modified';
 
 export default defineConfig({
   // [!code ++]
@@ -252,7 +252,7 @@ export default defineConfig({
 Support for specifying multiple directories in a single collection has been discontinued. Instead, utilize the `files` property to filter and include specific files.
 
 ```ts title="source.config.ts"
-import { defineDocs } from '@vezham/docs-mdx/config';
+import { defineDocs } from '@vx-oss/docs-mdx/config';
 
 export const docs = defineDocs({
   dir: 'content/guides',
@@ -267,7 +267,7 @@ export const docs = defineDocs({
 The automatic generation of `extractedReferences` is no longer enabled by default. To retain this functionality, explicitly activate it via the `postprocess` option.
 
 ```ts title="source.config.ts"
-import { defineDocs } from '@vezham/docs-mdx/config';
+import { defineDocs } from '@vx-oss/docs-mdx/config';
 
 export const docs = defineDocs({
   dir: 'content/docs',
@@ -286,7 +286,7 @@ The `generateIndexFile` option of our Vite plugin has been renamed to `index`.
 
 ```ts title="vite.config.ts"
 import { defineConfig } from 'vite';
-import mdx from '@vezham/docs-mdx/vite';
+import mdx from '@vx-oss/docs-mdx/vite';
 import * as MdxConfig from './source.config';
 
 export default defineConfig({

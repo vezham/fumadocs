@@ -11,7 +11,7 @@ The local HTML files content source for Fumadocs. It integrates plain `.html` fi
 Trust model: content is transformed, not sanitized. Nothing that executes survives (e.g. `<script>`, `<style>`, `<iframe>`, `<object>`, `<embed>`, `<form>`), inline event handlers and `javascript:` URLs are always dropped, but the remaining markup is rendered as-is, and remote resources it references (images above all) are fetched by everyone who opens the page.
 
 ```ts
-import { localHtml } from '@fumadocs/local-html';
+import { localHtml } from '@vx-oss/docs-local-html';
 
 const source = localHtml({ dir: 'content/pages' });
 ```

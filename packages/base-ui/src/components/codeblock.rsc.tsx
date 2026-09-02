@@ -1,5 +1,5 @@
 import { CodeBlock, type CodeBlockProps, Pre } from './codeblock';
-import { highlight, type HighlightOptions } from '@vezham/docs-core/highlight';
+import { highlight, type HighlightOptions } from '@vx-oss/docs-core/highlight';
 import { cn } from '@/utils/cn';
 
 export type ServerCodeBlockProps = HighlightOptions & {

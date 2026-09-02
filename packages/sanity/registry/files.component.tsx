@@ -1,5 +1,5 @@
 import type { PortableTextTypeComponent } from '@portabletext/react';
-import { File, Files, Folder } from '@vezham/docs-react/components/files';
+import { File, Files, Folder } from '@vx-oss/docs-react/components/files';
 
 export interface FileValue {
   _key?: string;

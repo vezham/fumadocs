@@ -3,10 +3,10 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "@vezham/docs-mdx/macro": ["./src/macro/index.ts"],
-      "@fumadocs/satteri/*": ["../satteri/dist/*"]
+      "@vx-oss/docs-mdx/macro": ["./src/macro/index.ts"],
+      "@vx-oss/docs-satteri/*": ["../satteri/dist/*"]
     },
-    "types": ["@types/node", "@types/mdx", "@fumadocs/satteri"],
+    "types": ["@types/node", "@types/mdx", "@vx-oss/docs-satteri"],
     "jsx": "react-jsx",
     "noEmit": true,
     "lib": ["ESNext"],

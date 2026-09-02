@@ -1,4 +1,4 @@
-import { generateOGImage } from '@vezham/docs-react/og';
+import { generateOGImage } from '@vx-oss/docs-react/og';
 import { source } from '@/lib/source';
 import { notFound } from 'next/navigation';
 

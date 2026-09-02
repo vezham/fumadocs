@@ -1,5 +1,5 @@
 import type { Route } from './+types/search';
-import { createFromSource } from '@vezham/docs-core/search/server';
+import { createFromSource } from '@vx-oss/docs-core/search/server';
 import { source } from '@/lib/source';
 
 const server = createFromSource(source);

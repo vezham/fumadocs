@@ -1,14 +1,14 @@
-## @fumadocs/mdx-remote@1.5.1
+## @vx-oss/docs-mdx-remote@1.5.1
 
 ### Migrate from `js-yaml` to `yaml`
 
-## @fumadocs/mdx-remote@1.5.0
+## @vx-oss/docs-mdx-remote@1.5.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-# @fumadocs/mdx-remote
+# @vx-oss/docs-mdx-remote
 
 ## 1.4.10
 

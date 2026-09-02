@@ -1,7 +1,7 @@
 import { getPageImageUrl, source } from '@/lib/source';
 import { notFound } from 'next/navigation';
 import { ImageResponse } from 'next/og';
-import { generate as DefaultImage } from '@vezham/docs-react/og';
+import { generate as DefaultImage } from '@vx-oss/docs-react/og';
 import { appName } from '@/lib/shared';
 
 export const revalidate = false;

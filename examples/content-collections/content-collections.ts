@@ -1,6 +1,6 @@
 import { defineCollection, defineConfig } from '@content-collections/core';
-import { transformMDX } from '@fumadocs/content-collections/configuration';
-import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
+import { transformMDX } from '@vx-oss/docs-content-collections/configuration';
+import { metaSchema, pageSchema } from '@vx-oss/docs-core/source/schema';
 
 const docs = defineCollection({
   name: 'docs',

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import { type ComponentProps, type FC, type ReactNode } from 'react';
-import * as Twoslash from 'fumadocs-twoslash/ui';
-import { Callout } from '@vezham/docs-react/components/callout';
-import { TypeTable } from '@vezham/docs-react/components/type-table';
+import * as Twoslash from '@vx-oss/docs-twoslash/ui';
+import { Callout } from '@vx-oss/docs-react/components/callout';
+import { TypeTable } from '@vx-oss/docs-react/components/type-table';
 import * as Preview from '@/components/preview';
 import { createMetadata, getPageImageUrl } from '@/lib/metadata';
 import { source } from '@/lib/source';
@@ -11,11 +11,11 @@ import { Mermaid } from '@/components/mdx/mermaid';
 import { Feedback, FeedbackText } from '@/components/feedback/client';
 import { onBlockFeedbackAction, onPageFeedbackAction, owner, repo } from '@/lib/github';
 import { HoverCard, HoverCardContent, HoverCardTrigger } from '@/components/ui/hover-card';
-import Link from '@vezham/docs-core/link';
-import { findSiblings } from '@vezham/docs-core/page-tree';
-import { Card, Cards } from '@vezham/docs-react/components/card';
+import Link from '@vx-oss/docs-core/link';
+import { findSiblings } from '@vx-oss/docs-core/page-tree';
+import { Card, Cards } from '@vx-oss/docs-react/components/card';
 import { getMDXComponents } from '@/components/mdx';
-import { Banner } from '@vezham/docs-react/components/banner';
+import { Banner } from '@vx-oss/docs-react/components/banner';
 import { Installation } from '@/components/preview/installation';
 import { Customization } from '@/components/preview/customization';
 import {
@@ -25,10 +25,10 @@ import {
   MarkdownCopyButton,
   ViewOptionsPopover,
   DocsPageProps,
-} from '@vezham/docs-react/layouts/docs/page';
+} from '@vx-oss/docs-react/layouts/docs/page';
 import { NotFound } from '@/components/layouts/not-found';
 import { getSuggestions } from './suggestions';
-import { PathUtils } from '@vezham/docs-core/source';
+import { PathUtils } from '@vx-oss/docs-core/source';
 import { AsyncAPIPageLazy, GraphQLPageLazy, OpenAPIPageLazy } from './lazy';
 
 function PreviewRenderer({ preview }: { preview: string }): ReactNode {

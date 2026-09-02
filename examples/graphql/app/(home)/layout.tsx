@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { HomeLayout } from '@vezham/docs-react/layouts/home';
+import { HomeLayout } from '@vx-oss/docs-react/layouts/home';
 import { baseOptions } from '@/lib/layout.shared';
 
 export default function Layout({ children }: { children: ReactNode }) {

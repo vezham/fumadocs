@@ -1,5 +1,5 @@
-import type { RehypeTOCItemType, StructuredData } from '@vezham/docs-core/mdx-plugins';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { RehypeTOCItemType, StructuredData } from '@vx-oss/docs-core/mdx-plugins';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import type { Root } from 'hast';
 import { type Evaluater, toJsxRuntime } from 'hast-util-to-jsx-runtime';
 import type { MDXComponents } from 'mdx/types';
@@ -26,7 +26,7 @@ export interface ObsidianRenderer {
   structuredData: StructuredData;
   render: (components?: MDXComponents) => Promise<ObsidianRendererResult>;
   renderSync: (components?: MDXComponents) => ObsidianRendererResult;
-  /** a serializable form, restore it with `rendererFromSerialized` from `fumadocs-obsidian/client` */
+  /** a serializable form, restore it with `rendererFromSerialized` from `@vx-oss/docs-obsidian/client` */
   serialize: () => ObsidianRendererOptions;
 }
 

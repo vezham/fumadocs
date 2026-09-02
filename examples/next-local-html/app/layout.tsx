@@ -1,7 +1,7 @@
-import { RootProvider } from '@vezham/docs-react/provider/next';
+import { RootProvider } from '@vx-oss/docs-react/provider/next';
 import './global.css';
 import { Inter } from 'next/font/google';
-import { DevClient } from '@fumadocs/local-html/dev/react-client';
+import { DevClient } from '@vx-oss/docs-local-html/dev/react-client';
 
 const inter = Inter({
   subsets: ['latin'],

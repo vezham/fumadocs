@@ -1,5 +1,5 @@
 'use client';
-import { DynamicCodeBlock } from '@vezham/docs-react/components/dynamic-codeblock';
+import { DynamicCodeBlock } from '@vx-oss/docs-react/components/dynamic-codeblock';
 import { useState } from 'react';
 import { bundledLanguages } from 'shiki';
 

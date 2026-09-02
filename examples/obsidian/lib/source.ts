@@ -1,5 +1,5 @@
-import { dynamicLoader } from '@vezham/docs-core/source';
-import { obsidian } from 'fumadocs-obsidian';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
+import { obsidian } from '@vx-oss/docs-obsidian';
 
 const vault = obsidian({
   dir: 'public/vault',

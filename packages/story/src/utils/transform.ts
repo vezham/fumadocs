@@ -10,7 +10,7 @@ function injectControls(parsed: ParsedStoryCall, controls: TypeNode) {
 
   if (optionsArg.getKind() !== SyntaxKind.ObjectLiteralExpression) {
     throw new Error(
-      'defineStory() options must be an object literal to inject controls from @vezham/docs-story.',
+      'defineStory() options must be an object literal to inject controls from @vx-oss/docs-story.',
     );
   }
 

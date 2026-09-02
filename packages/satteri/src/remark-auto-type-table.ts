@@ -7,7 +7,7 @@ import type {
   MdxJsxExpressionAttributeNode as MdxJsxExpressionAttribute,
   MdxJsxFlowElement,
 } from 'satteri';
-import { highlightHast, type HighlightHastOptions } from '@vezham/docs-core/highlight';
+import { highlightHast, type HighlightHastOptions } from '@vx-oss/docs-core/highlight';
 import {
   createGenerator,
   type DocEntry,
@@ -15,11 +15,11 @@ import {
   type RawTag,
   type RemarkAutoTypeTableOptions,
   type TypeTableProps,
-} from 'fumadocs-typescript';
+} from '@vx-oss/docs-typescript';
 import { formatTable, replaceSource } from './stringifier';
 import { jsxToSource } from './utils';
 
-export type { RemarkAutoTypeTableOptions } from 'fumadocs-typescript';
+export type { RemarkAutoTypeTableOptions } from '@vx-oss/docs-typescript';
 
 type RenderHast = (value: string) => Nodes | Promise<Nodes>;
 

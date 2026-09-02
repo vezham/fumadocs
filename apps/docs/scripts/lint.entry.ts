@@ -1,5 +1,5 @@
-import { postInstall } from '@vezham/docs-mdx/next';
-import mdx from '@vezham/docs-mdx/rolldown';
+import { postInstall } from '@vx-oss/docs-mdx/next';
+import mdx from '@vx-oss/docs-mdx/rolldown';
 import { unrun } from 'unrun';
 
 process.env.LINT = '1';

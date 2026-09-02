@@ -1,5 +1,5 @@
 'use client';
-import type * as PageTree from '@vezham/docs-core/page-tree';
+import type * as PageTree from '@vx-oss/docs-core/page-tree';
 import {
   type BaseLayoutProps,
   type BaseSlots,
@@ -61,7 +61,7 @@ export function useGlassLayout() {
   const context = use(LayoutContext);
   if (!context)
     throw new Error(
-      'Please use Glass layout components under <GlassLayout /> (`@vezham/docs-react/layouts/glass`).',
+      'Please use Glass layout components under <GlassLayout /> (`@vx-oss/docs-react/layouts/glass`).',
     );
   return context;
 }

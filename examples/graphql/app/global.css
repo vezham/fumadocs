@@ -1,8 +1,8 @@
 @import 'tailwindcss';
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/generated/glass.css';
-@import '@vezham/docs-react/css/preset.css';
-@import '@fumadocs/graphql/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/generated/glass.css';
+@import '@vx-oss/docs-react/css/preset.css';
+@import '@vx-oss/docs-graphql/css/preset.css';
 
 html {
   scrollbar-gutter: stable;

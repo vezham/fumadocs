@@ -100,7 +100,7 @@ export async function startDevServer(options: DevServerOptions): Promise<DevServ
 
   watcher.on('all', (event, filePath) => {
     if (!WATCH_EVENTS.has(event as DevWatchEvent)) return;
-    console.log(`[@fumadocs/local-content] ${event} at "${filePath}"`);
+    console.log(`[@vx-oss/docs-local-content] ${event} at "${filePath}"`);
 
     broadcast({
       type: 'change',
@@ -122,7 +122,7 @@ export async function startDevServer(options: DevServerOptions): Promise<DevServ
     wss.once('error', reject);
     wss.on('listening', () => {
       wss.off('error', reject);
-      console.log(`[@fumadocs/local-content] dev server is ready at ${url}`);
+      console.log(`[@vx-oss/docs-local-content] dev server is ready at ${url}`);
       resolve();
     });
   });

@@ -1,7 +1,7 @@
-import { localHtml } from '@fumadocs/local-html';
-import { watchWithDevServer } from '@fumadocs/local-html/dev/ws';
-import { dynamicLoader } from '@vezham/docs-core/source';
-import { lucideIconsPlugin } from '@vezham/docs-core/source/lucide-icons';
+import { localHtml } from '@vx-oss/docs-local-html';
+import { watchWithDevServer } from '@vx-oss/docs-local-html/dev/ws';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
+import { lucideIconsPlugin } from '@vx-oss/docs-core/source/lucide-icons';
 
 const pages = localHtml({
   dir: 'content/pages',

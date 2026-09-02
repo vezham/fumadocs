@@ -1,8 +1,8 @@
-import { asyncapiTranslations } from '@fumadocs/asyncapi/i18n';
-import { storyTranslations } from '@vezham/docs-story/i18n';
-import { defineI18n } from '@vezham/docs-core/i18n';
-import { openapiTranslations } from '@vezham/docs-openapi/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
+import { asyncapiTranslations } from '@vx-oss/docs-asyncapi/i18n';
+import { storyTranslations } from '@vx-oss/docs-story/i18n';
+import { defineI18n } from '@vx-oss/docs-core/i18n';
+import { openapiTranslations } from '@vx-oss/docs-openapi/i18n';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
 import { zhTW } from '../src/zh-tw';
 
 const i18n = defineI18n({

@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/tailwind",
+  "name": "@vx-oss/docs-tailwind",
   "version": "0.1.1",
   "description": "The Tailwind CSS utils for Fumadocs UI.",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/tailwind"
+  },
   "files": [
     "dist"
   ],

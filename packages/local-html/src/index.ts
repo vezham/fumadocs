@@ -5,10 +5,10 @@ import {
   type SourceFile,
   type SourceOptions,
   type WatchableSource,
-} from '@fumadocs/local-content';
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
-import type { DynamicSource, MetaData, PageData, StaticSource } from '@vezham/docs-core/source';
-import * as defaultSchemas from '@vezham/docs-core/source/schema';
+} from '@vx-oss/docs-local-content';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins';
+import type { DynamicSource, MetaData, PageData, StaticSource } from '@vx-oss/docs-core/source';
+import * as defaultSchemas from '@vx-oss/docs-core/source/schema';
 import type { Element, Root } from 'hast';
 import { visit } from 'unist-util-visit';
 import { parseHtml, processHtml, textOf, type ProcessHtmlOptions } from './html/compiler';
@@ -27,7 +27,7 @@ export interface LocalHtmlConfig<MetaSchema extends StandardSchemaV1> extends Pr
 export interface LocalHtml<MetaSchema extends StandardSchemaV1> extends WatchableSource {
   /**
    * Connect to the standalone dev server for hot reload. On Vite, prefer
-   * `watchWithVite()` from `@fumadocs/local-content/dev/vite`.
+   * `watchWithVite()` from `@vx-oss/docs-local-content/dev/vite`.
    */
   devServer: (url?: string) => Promise<void>;
   staticSource: (options?: SourceOptions) => Promise<

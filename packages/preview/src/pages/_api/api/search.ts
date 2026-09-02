@@ -1,7 +1,7 @@
-import { flexsearchFromSource } from '@vezham/docs-core/search/flexsearch';
+import { flexsearchFromSource } from '@vx-oss/docs-core/search/flexsearch';
 import { getSource, Source } from '@/lib/source';
 import { revalidable } from '@/lib/revalidable';
-import { structure } from '@vezham/docs-core/mdx-plugins/remark-structure';
+import { structure } from '@vx-oss/docs-core/mdx-plugins/remark-structure';
 import { getConfigRuntime } from '@/config/load-runtime';
 
 const getServer = revalidable({

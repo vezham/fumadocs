@@ -15,6 +15,6 @@ export function useStorageKey() {
   );
 }
 
-function getStorageKey(prefix = '@vezham/docs-openapi-', name: KeyName) {
+function getStorageKey(prefix = '@vx-oss/docs-openapi-', name: KeyName) {
   return prefix + name;
 }

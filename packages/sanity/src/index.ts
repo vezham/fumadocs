@@ -1,6 +1,6 @@
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins/remark-structure';
-import type { DynamicSource, MetaData, VirtualFile } from '@vezham/docs-core/source';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins/remark-structure';
+import type { DynamicSource, MetaData, VirtualFile } from '@vx-oss/docs-core/source';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import type { DefinedFetchType } from 'next-sanity/live';
 import { cache, type ReactNode } from 'react';
 import type { PortableTextBlock } from '@portabletext/react';

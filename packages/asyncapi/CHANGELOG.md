@@ -1,4 +1,4 @@
-## @fumadocs/asyncapi@0.3.0
+## @vx-oss/docs-asyncapi@0.3.0
 
 ### Redesign source API
 
@@ -37,7 +37,7 @@ Sanity now uses `cache: 'custom'` when given a `sanityFetch` from `next-sanity/l
 
 Matches `fumadocs-openapi`: the magic proxy is created once per document instead of once per generated page.
 
-## @fumadocs/asyncapi@0.2.0
+## @vx-oss/docs-asyncapi@0.2.0
 
 ### Use `@scalar/json-magic` for dereferencing
 
@@ -45,25 +45,25 @@ This will affect all raw access to OpenAPI/AsyncAPI documents, ensure to use `de
 
 ### Migrate from `js-yaml` to `yaml`
 
-## @fumadocs/asyncapi@0.1.1
+## @vx-oss/docs-asyncapi@0.1.1
 
 ### Fix minor UI inconsistencies
 
 More aligned with original styles.
 
-## @fumadocs/asyncapi@0.1.0
+## @vx-oss/docs-asyncapi@0.1.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-## @fumadocs/asyncapi@0.0.4
+## @vx-oss/docs-asyncapi@0.0.4
 
 ### Migrate to `cnfast`
 
 Drop `tailwind-merge`.
 
-# @fumadocs/asyncapi
+# @vx-oss/docs-asyncapi
 
 ## 0.0.2
 
@@ -72,7 +72,7 @@ Drop `tailwind-merge`.
 - 5017289: Use stable `fuma-translate`
 - Updated dependencies [5017289]
 - Updated dependencies [7a77722]
-  - @fumadocs/api-docs@0.0.2
+  - @vx-oss/docs-api@0.0.2
   - fumadocs-ui@16.10.1
   - fumadocs-core@16.10.1
 

@@ -1,6 +1,6 @@
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 import { i18n } from '@/lib/i18n';
-import { defineDocs } from '@vezham/docs-mdx/macro';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
 
 const docs = defineDocs({
   dir: 'content/docs',

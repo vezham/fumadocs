@@ -5,7 +5,7 @@ description: Content source for local Markdown content.
 
 ## Introduction
 
-`@fumadocs/local-md` is a content source for local Markdown/MDX files, it is bundleless (works fully at runtime) by design.
+`@vx-oss/docs-local-md` is a content source for local Markdown/MDX files, it is bundleless (works fully at runtime) by design.
 
 As compared to [MDX Remote](/docs/integrations/content/mdx-remote), it is more comprehensive & robust while focused solely on local files.
 
@@ -21,7 +21,7 @@ As compared to [Fumadocs MDX](/docs/mdx), it doesn't need a type-gen or bundler 
 Install the package:
 
 ```package-install
-@fumadocs/local-md shiki
+@vx-oss/docs-local-md shiki
 ```
 
 > `shiki` is installed because it has to be externalized by the bundler.
@@ -29,8 +29,8 @@ Install the package:
 Create a `localMd` instance and connect it to Fumadocs:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from '@vezham/docs-core/source';
-import { localMd } from '@fumadocs/local-md';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
+import { localMd } from '@vx-oss/docs-local-md';
 
 const docs = localMd({
   dir: 'content/docs',
@@ -51,8 +51,8 @@ export async function getSource() {
 You may pass `frontmatterSchema` and `metaSchema` to customize the validation schemas:
 
 ```ts title="lib/source.ts"
-import { localMd } from '@fumadocs/local-md';
-import { pageSchema, metaSchema } from '@vezham/docs-core/source/schema';
+import { localMd } from '@vx-oss/docs-local-md';
+import { pageSchema, metaSchema } from '@vx-oss/docs-core/source/schema';
 
 const docs = localMd({
   dir: 'content/docs',
@@ -77,7 +77,7 @@ For example, in a docs layout:
 
 ```tsx title="app/docs/layout.tsx"
 import { getSource } from '@/lib/source';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 
 export default async function Layout({ children }: LayoutProps<'/docs'>) {
   const docs = await getSource();
@@ -97,7 +97,7 @@ The returned source from `docsLoader.get()` is a normal [content loader](/docs/h
 Vite already watches your project, so its watcher can invalidate the source in the same process. No extra process or port.
 
 ```ts title="vite.config.ts"
-import { localContentPlugin } from '@fumadocs/local-md/dev/vite';
+import { localContentPlugin } from '@vx-oss/docs-local-md/dev/vite';
 
 export default defineConfig({
   plugins: [localContentPlugin()],
@@ -105,7 +105,7 @@ export default defineConfig({
 ```
 
 ```ts title="lib/source.ts"
-import { watchWithVite } from '@fumadocs/local-md/dev/vite';
+import { watchWithVite } from '@vx-oss/docs-local-md/dev/vite';
 
 if (import.meta.env.DEV) {
   watchWithVite(docs);
@@ -127,7 +127,7 @@ For everything else, run the bundled dev server alongside your app. The watcher 
 ```
 
 ```ts title="lib/source.ts"
-import { watchWithDevServer } from '@fumadocs/local-md/dev/ws';
+import { watchWithDevServer } from '@vx-oss/docs-local-md/dev/ws';
 
 // change it if you use a different framework (e.g. import.meta.env.DEV)
 if (process.env.NODE_ENV === 'development') {
@@ -145,7 +145,7 @@ Both keep the loader in sync when local Markdown or MDX files change. To wire up
 
 ### JavaScript Engine
 
-When compiling Markdown files (`*.md`), `@fumadocs/local-md` uses a virtual JavaScript engine to avoid `eval()` at runtime.
+When compiling Markdown files (`*.md`), `@vx-oss/docs-local-md` uses a virtual JavaScript engine to avoid `eval()` at runtime.
 
 This allows your app to work on environments like Cloudflare Worker, while the performance will be slower than the native JavaScript JIT compiler.
 
@@ -156,8 +156,8 @@ You can use `staticSource()` when you only need a one-time snapshot without reva
 It works with a normal `loader()` instead of only `dynamicLoader()`:
 
 ```ts title="lib/source.ts"
-import { loader } from '@vezham/docs-core/source';
-import { localMd } from '@fumadocs/local-md';
+import { loader } from '@vx-oss/docs-core/source';
+import { localMd } from '@vx-oss/docs-local-md';
 
 const docs = localMd({
   dir: 'content/docs',
@@ -177,7 +177,7 @@ If you're already using Fumadocs MDX for local docs content, migrating is usuall
 With Fumadocs MDX, a common setup looks like:
 
 ```ts tab="source.config.ts"
-import { defineDocs, defineConfig } from '@vezham/docs-mdx/config';
+import { defineDocs, defineConfig } from '@vx-oss/docs-mdx/config';
 
 export const docs = defineDocs({
   dir: 'content/docs',
@@ -188,7 +188,7 @@ export default defineConfig();
 
 ```ts tab="lib/source.ts"
 import { docs } from 'collections/server';
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const source = loader({
   baseUrl: '/docs',
@@ -198,12 +198,12 @@ export const source = loader({
 
 ### After
 
-With `@fumadocs/local-md`, you can replace that setup with:
+With `@vx-oss/docs-local-md`, you can replace that setup with:
 
 ```ts title="lib/source.ts"
-import { dynamicLoader } from '@vezham/docs-core/source';
-import { watchWithDevServer } from '@fumadocs/local-md/dev/ws';
-import { localMd } from '@fumadocs/local-md';
+import { dynamicLoader } from '@vx-oss/docs-core/source';
+import { watchWithDevServer } from '@vx-oss/docs-local-md/dev/ws';
+import { localMd } from '@vx-oss/docs-local-md';
 
 const docs = localMd({
   dir: 'content/docs',
@@ -232,7 +232,7 @@ Finally, update references to your `source` object with `getSource()`:
 
 ```tsx title="app/docs/layout.tsx"
 import { getSource } from '@/lib/source';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 
 export default async function Layout({ children }: LayoutProps<'/docs'>) {
   // [!code --]
@@ -295,14 +295,14 @@ For example, in Tanstack Start:
 
 ```tsx title="src/routes/docs/$.tsx"
 import { createFileRoute, notFound } from '@tanstack/react-router';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { createServerFn } from '@tanstack/react-start';
 import { getSource } from '@/lib/source';
-import { DocsBody, DocsPage } from '@vezham/docs-react/layouts/docs/page';
-import { useFumadocsLoader } from '@vezham/docs-core/source/client';
+import { DocsBody, DocsPage } from '@vx-oss/docs-react/layouts/docs/page';
+import { useFumadocsLoader } from '@vx-oss/docs-core/source/client';
 import { useMemo } from 'react';
 import { useMDXComponents } from '@/components/mdx';
-import { rendererFromSerialized } from '@fumadocs/local-md/client';
+import { rendererFromSerialized } from '@vx-oss/docs-local-md/client';
 
 export const Route = createFileRoute('/docs/$')({
   component: Page,

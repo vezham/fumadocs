@@ -9,7 +9,7 @@ import type {
   PagesBuilderConfig,
 } from '@/utils/pages/builder';
 import type { DistributiveOmit, TagObject } from '@/types';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { getOperationDisplayName, getTagDisplayName } from '../schema';
 
 interface OperationConfig extends BaseConfig {

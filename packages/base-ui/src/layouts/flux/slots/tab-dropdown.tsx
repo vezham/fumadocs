@@ -1,8 +1,8 @@
 'use client';
 import { Check, ChevronsUpDown } from 'lucide-react';
 import { type ComponentProps, type ReactNode, useMemo, useState } from 'react';
-import Link from '@vezham/docs-core/link';
-import { usePathname } from '@vezham/docs-core/framework';
+import Link from '@vx-oss/docs-core/link';
+import { usePathname } from '@vx-oss/docs-core/framework';
 import { cn } from '@/utils/cn';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { AnimatePresence, motion } from 'motion/react';

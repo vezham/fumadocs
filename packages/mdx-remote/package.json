@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/mdx-remote",
+  "name": "@vx-oss/docs-mdx-remote",
   "version": "1.5.1",
   "description": "The remote MDX files adapter for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/mdx-remote"
+  },
   "files": [
     "dist"
   ],
@@ -50,13 +54,13 @@
     "tinyglobby": "^0.2.17",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "@vezham/docs-core": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
     "@types/mdx": "*",
     "@types/react": "*",
     "react": "18.x.x || 19.x.x",
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/mdx": {

@@ -2,8 +2,8 @@ import type { StandardSchemaV1 } from '@standard-schema/spec';
 import { Collection } from 'fuma-content/collections';
 import { dataCollection, type DataCollectionConfig } from 'fuma-content/collections/data';
 import { mdxCollection, type MDXCollectionConfig } from 'fuma-content/collections/mdx';
-import { type MDXBundlerPresetOptions, mdxPreset } from '@vezham/docs-core/content/mdx/preset-bundler';
-import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
+import { type MDXBundlerPresetOptions, mdxPreset } from '@vx-oss/docs-core/content/mdx/preset-bundler';
+import { metaSchema, pageSchema } from '@vx-oss/docs-core/source/schema';
 
 export interface DocsMDXCollectionConfig<
   FrontmatterSchema extends StandardSchemaV1 | undefined,
@@ -61,7 +61,7 @@ export class DocsCollection extends Collection {
         const metaName = `${this.name}$meta`;
         codegen.addNamedImport([docName], `./${docName}`);
         codegen.addNamedImport([metaName], `./${metaName}`);
-        codegen.addNamedImport(['docsStore'], '@fumadocs/content/runtime');
+        codegen.addNamedImport(['docsStore'], '@vx-oss/docs-content/runtime');
         codegen.push(`export const ${this.name} = docsStore(${docName}, ${metaName})`);
       });
       data.push(file);

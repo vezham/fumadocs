@@ -14,7 +14,7 @@ import {
 import { flushSync } from 'react-dom';
 import { Loader2, MessageCircleIcon, RefreshCw, SearchIcon, Send, X } from 'lucide-react';
 import { cn } from '@/lib/cn';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { useChat, type UseChatHelpers } from '@ai-sdk/react';
 import { DefaultChatTransport, type Tool, type UIMessage, type UIToolInvocation } from 'ai';
 import { Markdown } from '../markdown';

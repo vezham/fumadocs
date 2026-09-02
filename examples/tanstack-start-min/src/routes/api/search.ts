@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { source } from '@/lib/source';
-import { createFromSource } from '@vezham/docs-core/search/server';
+import { createFromSource } from '@vx-oss/docs-core/search/server';
 
 const server = createFromSource(source);
 

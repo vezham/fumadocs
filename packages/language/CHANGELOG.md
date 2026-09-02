@@ -1,4 +1,4 @@
-## @fumadocs/language@0.2.4
+## @vx-oss/docs-language@0.2.4
 
 ### Support HTTP Basic client authentication in OAuth password flow
 
@@ -6,7 +6,7 @@ Some OAuth servers require client credentials in an HTTP Basic `Authorization` h
 
 Fix [#3506](https://github.com/fuma-nama/fumadocs/issues/3506)
 
-## @fumadocs/language@0.2.3
+## @vx-oss/docs-language@0.2.3
 
 ### Enhance result display of API playground
 
@@ -20,13 +20,13 @@ Client-side errors also show the request URL, making issues like a wrong server 
 
 For custom `ResultDisplay` components, `FetchResult` now carries a `url` field.
 
-`@fumadocs/language` includes translations for the new UI.
+`@vx-oss/docs-language` includes translations for the new UI.
 
-## @fumadocs/language@0.2.2
+## @vx-oss/docs-language@0.2.2
 
 ### Add new translation keys
 
-## @fumadocs/language@0.2.1
+## @vx-oss/docs-language@0.2.1
 
 ### Expose sidebar trigger state to assistive technology
 
@@ -36,13 +36,13 @@ Previously, both the button opening the mobile sidebar and the one closing it we
 
 A new `Close Sidebar` translation key is available for customisation.
 
-## @fumadocs/language@0.2.0
+## @vx-oss/docs-language@0.2.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-# @fumadocs/language
+# @vx-oss/docs-language
 
 ## 0.1.0
 
@@ -62,5 +62,5 @@ Internal packages & templates now use Base UI rather than Radix UI.
   - fumadocs-core@16.10.0
   - fumadocs-openapi@11.0.0
   - fumadocs-ui@16.10.0
-  - @fumadocs/asyncapi@0.0.1
+  - @vx-oss/docs-asyncapi@0.0.1
   - @fumadocs/story@1.1.0

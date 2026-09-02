@@ -14,8 +14,8 @@ All official Fumadocs packages use English by default, you can add translations 
 **Singular** refers to adding translations for only one language:
 
 ```ts title="lib/layout.shared.tsx"
-import { defineTranslations } from '@vezham/docs-core/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
+import { defineTranslations } from '@vx-oss/docs-core/i18n';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
 
 export const translations = defineTranslations().extend(uiTranslations()).add({
   // [label]: [translation]
@@ -28,8 +28,8 @@ export const translations = defineTranslations().extend(uiTranslations()).add({
 Pass the translations to `<RootProvider />`.
 
 ```tsx
-import { RootProvider } from '@vezham/docs-react/provider/<framework>';
-import { i18nProvider } from '@vezham/docs-react/i18n';
+import { RootProvider } from '@vx-oss/docs-react/provider/<framework>';
+import { i18nProvider } from '@vx-oss/docs-react/i18n';
 import { translations } from '@/lib/layout.shared';
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -49,8 +49,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 Define translations for multiple languages, this requires a standard [i18n](/docs/internationalization) setup.
 
 ```ts title="lib/layout.shared.tsx"
-import { defineTranslations } from '@vezham/docs-core/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
+import { defineTranslations } from '@vx-oss/docs-core/i18n';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
 import { i18n } from '@/lib/i18n';
 
 export const translations = i18n
@@ -68,8 +68,8 @@ export const translations = i18n
 Pass the translations to `<RootProvider />`.
 
 ```tsx
-import { RootProvider } from '@vezham/docs-react/provider/<framework>';
-import { i18nProvider } from '@vezham/docs-react/i18n';
+import { RootProvider } from '@vx-oss/docs-react/provider/<framework>';
+import { i18nProvider } from '@vx-oss/docs-react/i18n';
 import { translations } from '@/lib/layout.shared';
 
 export function Layout({ locale, children }: { locale: string; children: React.ReactNode }) {
@@ -86,10 +86,10 @@ export function Layout({ locale, children }: { locale: string; children: React.R
 
 ## Language Packs
 
-Language packs provide translations for `@vezham/docs-react` and several other integrations like Fumadocs OpenAPI.
+Language packs provide translations for `@vx-oss/docs-react` and several other integrations like Fumadocs OpenAPI.
 
 ```npm
-npm i @fumadocs/language
+npm i @vx-oss/docs-language
 ```
 
 > If your desired language is missing in the official language packs, we welcome contributions to [our repository](https://github.com/fuma-nama/fumadocs).
@@ -97,10 +97,10 @@ npm i @fumadocs/language
 Use `preset()` to consume language packs:
 
 ```ts tab="Singular"
-import { defineTranslations } from '@vezham/docs-core/i18n';
-import { openapiTranslations } from '@vezham/docs-openapi/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
-import { zhTW } from '@fumadocs/language/zh-tw';
+import { defineTranslations } from '@vx-oss/docs-core/i18n';
+import { openapiTranslations } from '@vx-oss/docs-openapi/i18n';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
+import { zhTW } from '@vx-oss/docs-language/zh-tw';
 
 export const translations = defineTranslations()
   .extend(uiTranslations())
@@ -111,10 +111,10 @@ export const translations = defineTranslations()
 ```
 
 ```ts tab="Multilingual"
-import { defineTranslations } from '@vezham/docs-core/i18n';
-import { openapiTranslations } from '@vezham/docs-openapi/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
-import { zhTW } from '@fumadocs/language/zh-tw';
+import { defineTranslations } from '@vx-oss/docs-core/i18n';
+import { openapiTranslations } from '@vx-oss/docs-openapi/i18n';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
+import { zhTW } from '@vx-oss/docs-language/zh-tw';
 import { i18n } from '@/lib/i18n';
 
 export const translations = i18n
@@ -133,10 +133,10 @@ You can also create & publish your own language packs.
 For example, the structure of `zh-TW` language pack looks like:
 
 ```ts twoslash
-import type { TranslationPreset } from '@vezham/docs-core/i18n';
-import * as OpenAPI from '@vezham/docs-openapi/i18n';
-import * as UI from '@vezham/docs-react/i18n';
-import * as Story from '@vezham/docs-story/i18n';
+import type { TranslationPreset } from '@vx-oss/docs-core/i18n';
+import * as OpenAPI from '@vx-oss/docs-openapi/i18n';
+import * as UI from '@vx-oss/docs-react/i18n';
+import * as Story from '@vx-oss/docs-story/i18n';
 
 const translations = {
   displayName: '繁體中文',
@@ -168,7 +168,7 @@ npm i @fuma-translate/react
 ```
 
 ```ts tab="i18n.ts" twoslash
-import type { TranslationExtension } from '@vezham/docs-core/i18n';
+import type { TranslationExtension } from '@vx-oss/docs-core/i18n';
 
 const keys = [
   // key format: "your label(additional context)"
@@ -205,7 +205,7 @@ export function Comp() {
 Consumers can use your extension like:
 
 ```ts
-import { defineTranslations } from '@vezham/docs-core/i18n';
+import { defineTranslations } from '@vx-oss/docs-core/i18n';
 import { myTranslations } from 'my-package/i18n';
 
 export const translations = defineTranslations()

@@ -1,6 +1,6 @@
 import { describe, expect, test } from 'vitest';
 import { applyMessageTraits, applyOperationTraits, mergeTraits } from '@/utils/traits';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import type { MessageObject, OperationObject } from '@/types/asyncapi-3';
 
 describe('mergeTraits', () => {

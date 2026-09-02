@@ -6,7 +6,7 @@ description: Generate docs from Typescript definitions
 ## Usage
 
 ```package-install
-fumadocs-typescript
+@vx-oss/docs-typescript
 ```
 
 ### UI Integration
@@ -22,12 +22,12 @@ import {
   remarkAutoTypeTable,
   createGenerator,
   createFileSystemGeneratorCache,
-} from 'fumadocs-typescript';
-import { defineConfig } from '@vezham/docs-mdx/config';
+} from '@vx-oss/docs-typescript';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 const generator = createGenerator({
   // recommended: choose a directory for cache
-  cache: createFileSystemGeneratorCache('.next/fumadocs-typescript'),
+  cache: createFileSystemGeneratorCache('.next/@vx-oss/docs-typescript'),
 });
 
 export default defineConfig({
@@ -42,12 +42,12 @@ import {
   remarkAutoTypeTable,
   createGenerator,
   createFileSystemGeneratorCache,
-} from 'fumadocs-typescript';
+} from '@vx-oss/docs-typescript';
 import { compile } from '@mdx-js/mdx';
 
 const generator = createGenerator({
   // recommended: choose a directory for cache
-  cache: createFileSystemGeneratorCache('.next/fumadocs-typescript'),
+  cache: createFileSystemGeneratorCache('.next/@vx-oss/docs-typescript'),
 });
 
 await compile('...', {
@@ -56,11 +56,11 @@ await compile('...', {
 ```
 
 ```ts tab="Satteri"
-import { createGenerator, createFileSystemGeneratorCache } from 'fumadocs-typescript';
-import { remarkAutoTypeTable } from '@fumadocs/satteri/remark-auto-type-table';
+import { createGenerator, createFileSystemGeneratorCache } from '@vx-oss/docs-typescript';
+import { remarkAutoTypeTable } from '@vx-oss/docs-satteri/remark-auto-type-table';
 
 const generator = createGenerator({
-  cache: createFileSystemGeneratorCache('.next/fumadocs-typescript'),
+  cache: createFileSystemGeneratorCache('.next/@vx-oss/docs-typescript'),
 });
 
 export default defineConfig({

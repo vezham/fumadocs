@@ -1,5 +1,5 @@
 'use client';
-import { useRouter } from '@vezham/docs-core/framework';
+import { useRouter } from '@vx-oss/docs-core/framework';
 import { useEffect, useEffectEvent, type ReactNode } from 'react';
 import { decodeDevEvent, type DevServerEvent, getDevServerUrlFromEnv } from './protocol';
 
@@ -8,7 +8,7 @@ export function DevClient(): ReactNode {
 
   const onUpdate = useEffectEvent((event: DevServerEvent) => {
     if (event.type === 'change') {
-      console.log(`[@fumadocs/local-content] "${event.absolutePath}" updated`);
+      console.log(`[@vx-oss/docs-local-content] "${event.absolutePath}" updated`);
       router.refresh();
     }
   });
@@ -19,7 +19,7 @@ export function DevClient(): ReactNode {
 
     const ws = new WebSocket(url);
     ws.onopen = () => {
-      console.log(`[@fumadocs/local-content] connected to dev server at ${url}`);
+      console.log(`[@vx-oss/docs-local-content] connected to dev server at ${url}`);
     };
 
     ws.onmessage = (event) => {
@@ -28,7 +28,7 @@ export function DevClient(): ReactNode {
     };
 
     ws.onclose = () => {
-      console.log(`[@fumadocs/local-content] disconnected from dev server at ${url}`);
+      console.log(`[@vx-oss/docs-local-content] disconnected from dev server at ${url}`);
     };
 
     return () => {

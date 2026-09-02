@@ -1,7 +1,7 @@
 import type { AsyncAPIObject } from '@/types';
 import { createMagicProxy } from '@scalar/json-magic/magic-proxy';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
-import type { NoReferenceSwallow } from '@fumadocs/api-docs/schema';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
+import type { NoReferenceSwallow } from '@vx-oss/docs-api/schema';
 
 export interface DereferencedDocument {
   /**

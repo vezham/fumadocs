@@ -1,5 +1,5 @@
 {
-  "name": "@vezham/docs-core",
+  "name": "@vx-oss/docs-core",
   "version": "1.0.1",
   "description": "The React.js library for building a documentation website",
   "keywords": [
@@ -116,7 +116,7 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fumari/image-size": "workspace:^",
+    "@vx-oss/docs-image-size": "workspace:^",
     "estree-util-value-to-estree": "^3.5.0",
     "github-slugger": "^2.0.0",
     "hast-util-to-estree": "^3.1.3",

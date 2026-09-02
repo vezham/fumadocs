@@ -6,11 +6,11 @@ import {
   type SourceFile,
   type SourceOptions,
   type WatchableSource,
-} from '@fumadocs/local-content';
-import { frontmatter as parseFrontmatter } from '@vezham/docs-core/content/md/frontmatter';
-import type { StructuredData } from '@vezham/docs-core/mdx-plugins';
-import type { DynamicSource, MetaData, PageData, StaticSource } from '@vezham/docs-core/source';
-import * as defaultSchemas from '@vezham/docs-core/source/schema';
+} from '@vx-oss/docs-local-content';
+import { frontmatter as parseFrontmatter } from '@vx-oss/docs-core/content/md/frontmatter';
+import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins';
+import type { DynamicSource, MetaData, PageData, StaticSource } from '@vx-oss/docs-core/source';
+import * as defaultSchemas from '@vx-oss/docs-core/source/schema';
 import { createMarkdownCompiler, type MarkdownCompilerOptions } from './md/compiler';
 import {
   fromAst,
@@ -40,7 +40,7 @@ export interface LocalMarkdown<
 > extends WatchableSource {
   /**
    * Connect to the standalone dev server for hot reload. On Vite, prefer
-   * `watchWithVite()` from `@fumadocs/local-content/dev/vite`.
+   * `watchWithVite()` from `@vx-oss/docs-local-content/dev/vite`.
    */
   devServer: (url?: string) => Promise<void>;
   staticSource: <ModuleExports = Record<string, unknown>>(

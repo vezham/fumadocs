@@ -1,6 +1,6 @@
 'use client';
-import { usePathname } from '@vezham/docs-core/framework';
-import { useOnChange } from '@vezham/docs-core/utils/use-on-change';
+import { usePathname } from '@vx-oss/docs-core/framework';
+import { useOnChange } from '@vx-oss/docs-core/utils/use-on-change';
 import {
   createContext,
   type ReactNode,
@@ -25,7 +25,7 @@ export function useSidebar() {
   const ctx = use(SidebarContext);
   if (!ctx)
     throw new Error(
-      'the component must be wrapped under <SidebarProvider /> (@vezham/docs-react/legacy/sidebar)',
+      'the component must be wrapped under <SidebarProvider /> (@vx-oss/docs-react/legacy/sidebar)',
     );
   return ctx;
 }

@@ -17,10 +17,10 @@ import {
   AccordionItem,
   Accordions,
   AccordionTrigger,
-} from '@fumadocs/api-docs/components/accordion';
+} from '@vx-oss/docs-api/components/accordion';
 import { cn } from '@/utils/cn';
-import { SelectTabs, SelectTabTrigger, SelectTab } from '@fumadocs/api-docs/components/select-tab';
-import { AnchorSection } from '@fumadocs/api-docs/auto-anchor/client';
+import { SelectTabs, SelectTabTrigger, SelectTab } from '@vx-oss/docs-api/components/select-tab';
+import { AnchorSection } from '@vx-oss/docs-api/auto-anchor/client';
 import { Heading } from '@/ui/components/heading';
 import { Markdown } from '../components/markdown';
 import { ServerProvider, useRenderContext, useServerContext } from '../contexts/api';

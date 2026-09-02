@@ -1,8 +1,8 @@
-import { loader } from '@vezham/docs-core/source';
-import { lucideIconsPlugin } from '@vezham/docs-core/source/lucide-icons';
+import { loader } from '@vx-oss/docs-core/source';
+import { lucideIconsPlugin } from '@vx-oss/docs-core/source/lucide-icons';
 import { docsContentRoute, docsImageRoute, docsRoute } from './shared';
-import { defineDocs } from '@vezham/docs-mdx/macro';
-import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
+import { metaSchema, pageSchema } from '@vx-oss/docs-core/source/schema';
 
 const docs = defineDocs({
   dir: 'content/docs',

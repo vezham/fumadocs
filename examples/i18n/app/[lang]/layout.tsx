@@ -1,8 +1,8 @@
-import '@vezham/docs-react/style.css';
-import { RootProvider } from '@vezham/docs-react/provider/next';
+import '@vx-oss/docs-react/style.css';
+import { RootProvider } from '@vx-oss/docs-react/provider/next';
 import { Inter } from 'next/font/google';
 import { translations } from '@/lib/layout.shared';
-import { i18nProvider } from '@vezham/docs-react/i18n';
+import { i18nProvider } from '@vx-oss/docs-react/i18n';
 
 const inter = Inter({
   subsets: ['latin'],

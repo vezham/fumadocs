@@ -1,7 +1,7 @@
 'use client';
 import type { HTMLAttributes } from 'react';
 import type * as Base from './base';
-import { usePathname } from '@vezham/docs-core/framework';
+import { usePathname } from '@vx-oss/docs-core/framework';
 import { isLinkItemActive, type LinkItemType } from '@/layouts/shared';
 
 type InternalComponents = Pick<

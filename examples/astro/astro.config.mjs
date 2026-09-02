@@ -10,7 +10,7 @@ import {
   remarkHeading,
   remarkNpm,
   remarkStructure,
-} from '@vezham/docs-core/mdx-plugins';
+} from '@vx-oss/docs-core/mdx-plugins';
 
 const remarkPlugins = [
   remarkHeading,

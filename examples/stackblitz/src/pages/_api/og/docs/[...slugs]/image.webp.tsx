@@ -1,7 +1,7 @@
 import { appName } from '@/lib/shared';
 import { source } from '@/lib/source';
 import { ImageResponse } from 'takumi-js/response';
-import { generate as DefaultImage } from '@vezham/docs-react/og/takumi';
+import { generate as DefaultImage } from '@vx-oss/docs-react/og/takumi';
 import { ApiContext } from 'waku/router';
 
 export async function GET(_: Request, { params }: ApiContext<'/og/docs/[...slugs]/image.webp'>) {

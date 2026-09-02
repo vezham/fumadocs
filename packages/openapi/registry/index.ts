@@ -92,13 +92,13 @@ export const registry: Registry = {
     },
   ],
   dependencies: {
-    '@vezham/docs-core': null,
-    '@vezham/docs-react': null,
-    '@vezham/docs-openapi': null,
-    '@fumadocs/api-docs': null,
-    '@fumari/stf': null,
+    '@vx-oss/docs-core': null,
+    '@vx-oss/docs-react': null,
+    '@vx-oss/docs-openapi': null,
+    '@vx-oss/docs-api': null,
+    '@vx-oss/docs-stf': null,
     react: null,
-    // dev dependency of `@vezham/docs-openapi` (inlined on build), but needed by vendored files
+    // dev dependency of `@vx-oss/docs-openapi` (inlined on build), but needed by vendored files
     'fast-content-type-parse': '^3.0.0',
   },
 };

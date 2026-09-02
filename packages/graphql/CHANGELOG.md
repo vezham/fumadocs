@@ -1,10 +1,10 @@
-## @fumadocs/graphql@0.2.4
+## @vx-oss/docs-graphql@0.2.4
 
 ### Require `graphql` v17
 
 The peer range now correctly requires `^17.0.0`.
 
-## @fumadocs/graphql@0.2.0
+## @vx-oss/docs-graphql@0.2.0
 
 ### Redesign source API
 
@@ -39,7 +39,7 @@ GraphQL cross-links are generated from the attached loader instead of a `baseUrl
 
 Sanity now uses `cache: 'custom'` when given a `sanityFetch` from `next-sanity/live`, calling `invalidate()` in draft mode is no longer needed.
 
-## @fumadocs/graphql@0.1.2
+## @vx-oss/docs-graphql@0.1.2
 
 ### Fix dropped optional arguments in playground
 
@@ -49,20 +49,20 @@ The query's variable declarations now follow the panel: setting an argument decl
 
 Also fixes the playground's form editing the example rendered on the page, which made **Reset** restore edited values instead of the original ones.
 
-## @fumadocs/graphql@0.1.1
+## @vx-oss/docs-graphql@0.1.1
 
 ### Bump `graphql`
 
 Use GraphQL.js v18.
 
-## @fumadocs/graphql@0.1.0
+## @vx-oss/docs-graphql@0.1.0
 
-### Introduce `@fumadocs/graphql`
+### Introduce `@vx-oss/docs-graphql`
 
 Generate API reference docs from your GraphQL schemas, similar to the OpenAPI/AsyncAPI integration.
 
 ```ts
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 export const graphql = createGraphQL({
   input: ['./schema.graphql'],
@@ -89,7 +89,7 @@ export const source = loader(
 );
 ```
 
-And render them with `createGraphQLPage` from `@fumadocs/graphql/ui`, with an optional interactive playground:
+And render them with `createGraphQLPage` from `@vx-oss/docs-graphql/ui`, with an optional interactive playground:
 
 ```tsx
 export const GraphQLPage = createGraphQLPage({

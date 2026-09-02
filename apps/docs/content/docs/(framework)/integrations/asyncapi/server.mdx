@@ -18,7 +18,7 @@ The AsyncAPI schemas to read from.
 - Functions (see below)
 
 ```ts tab="Basic"
-import { createAsyncAPI } from '@fumadocs/asyncapi/server';
+import { createAsyncAPI } from '@vx-oss/docs-asyncapi/server';
 
 export const asyncapi = createAsyncAPI({
   input: ['./streetlights.yaml'],
@@ -26,7 +26,7 @@ export const asyncapi = createAsyncAPI({
 ```
 
 ```ts tab="Functions"
-import { createAsyncAPI } from '@fumadocs/asyncapi/server';
+import { createAsyncAPI } from '@vx-oss/docs-asyncapi/server';
 
 export const asyncapi = createAsyncAPI({
   input: {
@@ -44,7 +44,7 @@ export const asyncapi = createAsyncAPI({
 Disable caching of loaded schemas. Useful during development when schemas change frequently.
 
 ```ts
-import { createAsyncAPI } from '@fumadocs/asyncapi/server';
+import { createAsyncAPI } from '@vx-oss/docs-asyncapi/server';
 
 export const asyncapi = createAsyncAPI({
   input: ['./asyncapi.yaml'],

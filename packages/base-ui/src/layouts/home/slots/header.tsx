@@ -12,7 +12,7 @@ import {
   useState,
 } from 'react';
 import { cva } from 'class-variance-authority';
-import Link from '@vezham/docs-core/link';
+import Link from '@vx-oss/docs-core/link';
 import { NavigationMenu as Primitive } from '@base-ui/react/navigation-menu';
 import { cn } from '@/utils/cn';
 import { type LinkItemType, LinkItem } from '@/layouts/shared';

@@ -78,9 +78,9 @@ If you have already installed layout components via Fumadocs CLI, replace `prese
 
 ```css title="global.css"
 /* [!code --] */
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/preset.css';
 /* [!code ++] */
-@import '@vezham/docs-react/css/preset-legacy.css';
+@import '@vx-oss/docs-react/css/preset-legacy.css';
 ```
 
 ### No Longer Exposing Internal Components
@@ -94,26 +94,26 @@ This decision enables Fumadocs UI to iterate these elements without introducing 
 
 The following context modules are made private:
 
-- `@vezham/docs-react/contexts/sidebar`
-- `@vezham/docs-react/contexts/layout`
+- `@vx-oss/docs-react/contexts/sidebar`
+- `@vx-oss/docs-react/contexts/layout`
 
 If you have already installed `<DocsLayout />` via Fumadocs CLI, import the legacy contexts instead:
 
 ```ts
 // [!code --:2]
-import {} from '@vezham/docs-react/contexts/sidebar';
-import {} from '@vezham/docs-react/contexts/layout';
+import {} from '@vx-oss/docs-react/contexts/sidebar';
+import {} from '@vx-oss/docs-react/contexts/layout';
 
 // [!code ++:2]
-import {} from '@vezham/docs-react/legacy/sidebar';
-import {} from '@vezham/docs-react/legacy/layout';
+import {} from '@vx-oss/docs-react/legacy/sidebar';
+import {} from '@vx-oss/docs-react/legacy/layout';
 ```
 
 And wrap your app under the legacy `<SidebarProvider />`:
 
 ```tsx
 import type { ReactNode } from 'react';
-import { SidebarProvider } from '@vezham/docs-react/legacy/sidebar';
+import { SidebarProvider } from '@vx-oss/docs-react/legacy/sidebar';
 
 export function RootLayout({ children }: { children: ReactNode }) {
   return <SidebarProvider>{children}</SidebarProvider>;
@@ -123,13 +123,13 @@ export function RootLayout({ children }: { children: ReactNode }) {
 <Callout title="What if I still use built-in layouts?">
 
 The legacy contexts are made exclusively for layout components installed locally. If you still
-import layout components (e.g. `<DocsLayout />`) from `@vezham/docs-react`, migrate your usages as follows:
+import layout components (e.g. `<DocsLayout />`) from `@vx-oss/docs-react`, migrate your usages as follows:
 
 ```tsx
 // [!code --]
-import { useSidebar } from '@vezham/docs-react/contexts/sidebar';
+import { useSidebar } from '@vx-oss/docs-react/contexts/sidebar';
 // [!code ++]
-import { useSidebar } from '@vezham/docs-react/components/sidebar/base';
+import { useSidebar } from '@vx-oss/docs-react/components/sidebar/base';
 ```
 
 Ensure the contexts are only accessed within `<DocsLayout />`.
@@ -148,12 +148,12 @@ Make sure to import the appropriate page layout based on your docs layout:
 
 ```ts
 // For docs layout
-import { DocsPage } from '@vezham/docs-react/layouts/docs/page';
+import { DocsPage } from '@vx-oss/docs-react/layouts/docs/page';
 // For notebook layout
-import { DocsPage } from '@vezham/docs-react/layouts/notebook/page';
+import { DocsPage } from '@vx-oss/docs-react/layouts/notebook/page';
 ```
 
-**Migration Steps:** Update your imports accordingly. Although the default `@vezham/docs-react/page` will redirect to the correct layout, we strongly advise explicit imports for clarity and future-proofing.
+**Migration Steps:** Update your imports accordingly. Although the default `@vx-oss/docs-react/page` will redirect to the correct layout, we strongly advise explicit imports for clarity and future-proofing.
 
 ### Removal of Unused Styles
 

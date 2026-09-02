@@ -11,10 +11,10 @@ import {
   SearchDialogList,
   SearchDialogOverlay,
   type SharedProps,
-} from '@vezham/docs-react/components/dialog/search';
-import { useDocsSearch } from '@vezham/docs-core/search/client';
-import { fetchClient } from '@vezham/docs-core/search/client/fetch';
-import { useI18n } from '@vezham/docs-react/contexts/i18n';
+} from '@vx-oss/docs-react/components/dialog/search';
+import { useDocsSearch } from '@vx-oss/docs-core/search/client';
+import { fetchClient } from '@vx-oss/docs-core/search/client/fetch';
+import { useI18n } from '@vx-oss/docs-react/contexts/i18n';
 
 export default function CustomSearchDialog(props: SharedProps) {
   const { locale } = useI18n(); // (optional) for i18n

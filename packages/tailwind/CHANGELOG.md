@@ -1,16 +1,16 @@
-## @fumadocs/tailwind@0.1.1
+## @vx-oss/docs-tailwind@0.1.1
 
 ### Support scalable prose typography
 
 Scale prose typography with the unitless `--tw-prose-size` variable and add a `prose-sm` modifier for optically adjusted small text.
 
-## @fumadocs/tailwind@0.1.0
+## @vx-oss/docs-tailwind@0.1.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-# @fumadocs/tailwind
+# @vx-oss/docs-tailwind
 
 ## 0.0.5
 

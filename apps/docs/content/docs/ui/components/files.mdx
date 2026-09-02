@@ -11,7 +11,7 @@ preview: 'files'
 Wrap file components in `Files`, you can use it in your MDX content, or as a normal React.js component.
 
 ```mdx title="content.mdx"
-import { File, Folder, Files } from '@vezham/docs-react/components/files';
+import { File, Folder, Files } from '@vx-oss/docs-react/components/files';
 
 <Files>
   <Folder name="app" defaultOpen>
@@ -41,8 +41,8 @@ import { File, Folder, Files } from '@vezham/docs-react/components/files';
 You can enable [`remark-mdx-files`](/docs/headless/mdx/remark-mdx-files) for additional feature & syntax.
 
 ```tsx title="source.config.ts (Fumadocs MDX)"
-import { remarkMdxFiles } from '@vezham/docs-core/mdx-plugins/remark-mdx-files';
-import { defineConfig } from '@vezham/docs-mdx/config';
+import { remarkMdxFiles } from '@vx-oss/docs-core/mdx-plugins/remark-mdx-files';
+import { defineConfig } from '@vx-oss/docs-mdx/config';
 
 export default defineConfig({
   mdxOptions: {

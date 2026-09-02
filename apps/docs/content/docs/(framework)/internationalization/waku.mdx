@@ -8,7 +8,7 @@ description: Support i18n routing on your Waku + Fumadocs app.
 Define the i18n configurations in a file, we will import it with `@/lib/i18n` in this guide.
 
 ```ts title="src/lib/i18n.ts"
-import { defineI18n } from '@vezham/docs-core/i18n';
+import { defineI18n } from '@vx-oss/docs-core/i18n';
 
 export const i18n = defineI18n({
   defaultLanguage: 'en',
@@ -42,8 +42,8 @@ You can also add `locale` parameter to `baseOptions()` for localized layout opti
 
 ```tsx title="lib/layout.shared.tsx"
 import { i18n } from '@/lib/i18n';
-import { uiTranslations } from '@vezham/docs-react/i18n';
-import type { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
+import type { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';
 
 // [!code ++:11]
 export const translations = i18n
@@ -77,8 +77,8 @@ Waku does not expose route segment params from `useRouter()`. Extract the locale
 ```tsx title="src/components/provider.tsx"
 'use client';
 import type { ReactNode } from 'react';
-import { RootProvider } from '@vezham/docs-react/provider/waku';
-import { i18nProvider } from '@vezham/docs-react/i18n';
+import { RootProvider } from '@vx-oss/docs-react/provider/waku';
+import { i18nProvider } from '@vx-oss/docs-react/i18n';
 import { useRouter } from 'waku/router/client';
 import { i18n } from '@/lib/i18n';
 import { translations } from '@/lib/layout.shared';
@@ -105,7 +105,7 @@ Pass the locale to Fumadocs in your pages and layouts.
 
 ```ts tab="src/lib/source.ts"
 import { i18n } from '@/lib/i18n';
-import { loader } from '@vezham/docs-core/source';
+import { loader } from '@vx-oss/docs-core/source';
 
 export const source = loader({
   i18n, // [!code ++]
@@ -115,7 +115,7 @@ export const source = loader({
 
 ```tsx tab="Home Page" title="src/pages/[lang]/index.tsx"
 import { i18n } from '@/lib/i18n';
-import { HomeLayout } from '@vezham/docs-react/layouts/home';
+import { HomeLayout } from '@vx-oss/docs-react/layouts/home';
 import { baseOptions } from '@/lib/layout.shared';
 import type { PageProps } from 'waku/router';
 
@@ -135,7 +135,7 @@ export const getConfig = async () => {
 ```tsx tab="Docs Page" title="src/pages/[lang]/docs/[...slugs].tsx"
 import { source } from '@/lib/source';
 import type { PageProps } from 'waku/router';
-import { DocsLayout } from '@vezham/docs-react/layouts/docs';
+import { DocsLayout } from '@vx-oss/docs-react/layouts/docs';
 import { baseOptions } from '@/lib/layout.shared';
 
 export default function DocPage({ slugs, lang }: PageProps<'/[lang]/docs/[...slugs]'>) {
@@ -196,11 +196,11 @@ const lang = router.path.split('/')[1];
 <Link to={`/${lang}/about`}>About Us</Link>;
 ```
 
-In addition, the [`@vezham/docs-core/dynamic-link`](/docs/headless/components/link#dynamic-hrefs) component supports dynamic hrefs, you can use it to attend the locale prefix.
+In addition, the [`@vx-oss/docs-core/dynamic-link`](/docs/headless/components/link#dynamic-hrefs) component supports dynamic hrefs, you can use it to attend the locale prefix.
 It is useful for Markdown/MDX content.
 
 ```mdx title="content.mdx"
-import { DynamicLink } from '@vezham/docs-core/dynamic-link';
+import { DynamicLink } from '@vx-oss/docs-core/dynamic-link';
 
 <DynamicLink href="/[lang]/another-page">This is a link</DynamicLink>
 ```

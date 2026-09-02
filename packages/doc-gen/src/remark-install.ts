@@ -42,7 +42,7 @@ export type RemarkInstallOptions = {
  * </Tabs>
  * ```
  *
- * @deprecated Use `remarkNpm` from `@vezham/docs-core/mdx-plugins` instead, it's a drop-in replacement.
+ * @deprecated Use `remarkNpm` from `@vx-oss/docs-core/mdx-plugins` instead, it's a drop-in replacement.
  */
 export function remarkInstall({
   Tab = 'Tab',

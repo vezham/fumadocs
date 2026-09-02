@@ -1,6 +1,6 @@
 import { getConfigRuntime } from '@/config/load-runtime';
 import { getSource } from '@/lib/source';
-import { generate as DefaultImage } from '@vezham/docs-react/og/takumi';
+import { generate as DefaultImage } from '@vx-oss/docs-react/og/takumi';
 import { ApiContext } from 'waku/router';
 import { ImageResponse } from 'takumi-js/response';
 

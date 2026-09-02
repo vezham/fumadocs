@@ -8,7 +8,7 @@ export default defineConfig({
   format: 'esm',
   deps: {
     onlyBundle: [],
-    alwaysBundle: ['@vezham/docs-core/content/md/frontmatter'],
+    alwaysBundle: ['@vx-oss/docs-core/content/md/frontmatter'],
     neverBundle: ['mdx/types'],
   },
 });

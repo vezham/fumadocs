@@ -14,7 +14,7 @@ import type { RolldownPlugin } from 'rolldown';
 
 export interface PluginOptions extends Pick<CoreOptions, 'configPath' | 'outDir' | 'plugins'> {
   /**
-   * Configure the macro API (`@vezham/docs-mdx/macro`), or `false` to disable it.
+   * Configure the macro API (`@vx-oss/docs-mdx/macro`), or `false` to disable it.
    *
    * `macro.include` (relative to cwd) is passed to the `id` filter of the transform hook.
    */
@@ -54,7 +54,7 @@ export default async function mdx(
     });
 
     plugins.push({
-      name: '@vezham/docs-mdx:macro',
+      name: '@vx-oss/docs-mdx:macro',
       transform: {
         filter: {
           id: {
@@ -97,7 +97,7 @@ export default async function mdx(
 
   plugins.push(
     {
-      name: '@vezham/docs-mdx',
+      name: '@vx-oss/docs-mdx',
       load: {
         filter: { id: [metaLoaderGlob, mdxLoaderGlob] },
         // Rolldown couldn't read the correct file path when query params exist.
@@ -110,14 +110,14 @@ export default async function mdx(
       },
     },
     {
-      name: '@vezham/docs-mdx:mdx',
+      name: '@vx-oss/docs-mdx:mdx',
       transform: {
         filter: { id: mdxLoaderGlob },
         handler: mdxLoader.transform,
       },
     },
     {
-      name: '@vezham/docs-mdx:meta',
+      name: '@vx-oss/docs-mdx:meta',
       transform: {
         filter: { id: metaLoaderGlob },
         handler: metaLoader.transform,

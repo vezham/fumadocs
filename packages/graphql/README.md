@@ -3,7 +3,7 @@
 Generate API reference docs from GraphQL schemas for [Fumadocs](https://fumadocs.dev), with an interactive playground.
 
 ```bash
-npm i @fumadocs/graphql graphql
+npm i @vx-oss/docs-graphql graphql
 ```
 
 `graphql` is a peer dependency.
@@ -14,7 +14,7 @@ Create the server instance from your schema:
 
 ```ts
 // lib/graphql.ts
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from '@vx-oss/docs-graphql/server';
 
 export const graphql = createGraphQL({
   input: ['./schema.graphql'],
@@ -25,8 +25,8 @@ Add the generated pages to your source:
 
 ```ts
 // lib/source.ts
-import { loader } from '@vezham/docs-core/source';
-import { defineDocs } from '@vezham/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
 import { graphql } from './graphql';
 
 const docs = defineDocs({
@@ -54,7 +54,7 @@ Render them from a client component:
 ```tsx
 // components/api-page.tsx
 'use client';
-import { createGraphQLPage } from '@fumadocs/graphql/ui';
+import { createGraphQLPage } from '@vx-oss/docs-graphql/ui';
 
 export const GraphQLPage = createGraphQLPage({
   playground: {
@@ -81,7 +81,7 @@ if (page.type === 'graphql') {
 And import the styles in your global CSS:
 
 ```css
-@import '@fumadocs/graphql/css/preset.css';
+@import '@vx-oss/docs-graphql/css/preset.css';
 ```
 
 ## Options

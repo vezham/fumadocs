@@ -1,6 +1,6 @@
 'use client';
 
-import { RootProvider } from '@vezham/docs-react/provider/base';
+import { RootProvider } from '@vx-oss/docs-react/provider/base';
 import dynamic from 'next/dynamic';
 import type { ReactNode } from 'react';
 import { Tooltip } from '@base-ui/react/tooltip';

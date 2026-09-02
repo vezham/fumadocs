@@ -11,10 +11,10 @@ import {
   SearchDialogList,
   SearchDialogOverlay,
   type SharedProps,
-} from '@vezham/docs-react/components/dialog/search';
-import { useDocsSearch } from '@vezham/docs-core/search/client';
-import { algoliaClient } from '@vezham/docs-core/search/client/algolia';
-import { useI18n } from '@vezham/docs-react/contexts/i18n';
+} from '@vx-oss/docs-react/components/dialog/search';
+import { useDocsSearch } from '@vx-oss/docs-core/search/client';
+import { algoliaClient } from '@vx-oss/docs-core/search/client/algolia';
+import { useI18n } from '@vx-oss/docs-react/contexts/i18n';
 
 const appId = 'replace me';
 const apiKey = 'replace me';

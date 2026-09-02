@@ -6,14 +6,14 @@ import {
   DocsTitle,
   MarkdownCopyButton,
   ViewOptionsPopover,
-} from '@vezham/docs-react/layouts/docs/page';
+} from '@vx-oss/docs-react/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import type { Metadata } from 'next';
-import { createRelativeLink } from '@vezham/docs-react/mdx';
+import { createRelativeLink } from '@vx-oss/docs-react/mdx';
 import { gitConfig } from '@/lib/shared';
-import { Card, Cards } from '@vezham/docs-react/components/card';
-import { findSiblings } from '@vezham/docs-core/page-tree';
+import { Card, Cards } from '@vx-oss/docs-react/components/card';
+import { findSiblings } from '@vx-oss/docs-core/page-tree';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;

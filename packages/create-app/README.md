@@ -3,7 +3,7 @@
 A CLI tool to create new documentation sites with Fumadocs.
 
 ```bash
-npx create-fumadocs-app
+npx create-vx-oss-docs
 #or
 pnpm create fumadocs-app
 #or

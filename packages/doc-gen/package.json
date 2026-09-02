@@ -1,5 +1,5 @@
 {
-  "name": "fumadocs-docgen",
+  "name": "@vx-oss/docs-docgen",
   "version": "3.1.0",
   "description": "Useful remark utilities and plugins",
   "keywords": [
@@ -11,7 +11,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/doc-gen"
+  },
   "files": [
     "dist"
   ],
@@ -60,14 +64,14 @@
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
-    "@vezham/docs-core": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
     "@types/estree": "*",
     "@types/hast": "*",
     "@types/mdast": "*",
     "mdast-util-mdx": "*",
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "mdast-util-mdx": {

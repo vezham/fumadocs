@@ -1,9 +1,9 @@
 'use client';
 
 import { cn } from '@/utils/cn';
-import { useStf, StfProvider, useDataEngine, useListener } from '@fumari/stf';
+import { useStf, StfProvider, useDataEngine, useListener } from '@vx-oss/docs-stf';
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from './components/select';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import { AlertCircle } from 'lucide-react';
 import { FC, useState, useRef, useDeferredValue, Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';

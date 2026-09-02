@@ -1,4 +1,4 @@
-import type { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
+import type { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';
 
 export function baseOptions(locale: string): BaseLayoutProps {
   return {

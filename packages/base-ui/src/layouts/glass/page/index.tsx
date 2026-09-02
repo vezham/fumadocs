@@ -7,7 +7,7 @@ import { Edit } from 'lucide-react';
 import { Footer } from './slots/footer';
 import { Breadcrumb } from './slots/breadcrumb';
 import { TOC, type TOCProps, TOCProvider } from './slots/toc';
-import { TOCItemType } from '@vezham/docs-core/toc';
+import { TOCItemType } from '@vx-oss/docs-core/toc';
 
 export interface DocsPageProps extends ComponentProps<'article'> {
   toc?: TOCItemType[];
@@ -30,7 +30,7 @@ export function useDocsPage() {
   const context = use(PageContext);
   if (!context)
     throw new Error(
-      'Please use page components under <DocsPage /> (`@vezham/docs-react/layouts/glass/page`).',
+      'Please use page components under <DocsPage /> (`@vx-oss/docs-react/layouts/glass/page`).',
     );
   return context;
 }

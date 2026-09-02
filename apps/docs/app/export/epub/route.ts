@@ -1,5 +1,5 @@
 import { source } from '@/lib/source';
-import { exportEpub } from 'fumadocs-epub';
+import { exportEpub } from '@vx-oss/docs-epub';
 
 export const revalidate = false;
 

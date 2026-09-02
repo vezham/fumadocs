@@ -1,1 +1,1 @@
-export { DevClient } from '@fumadocs/local-content/dev/ws/react';
+export { DevClient } from '@vx-oss/docs-local-content/dev/ws/react';

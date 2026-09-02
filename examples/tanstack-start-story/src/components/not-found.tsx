@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { HomeLayout } from '@vezham/docs-react/layouts/home';
+import { HomeLayout } from '@vx-oss/docs-react/layouts/home';
 
 export function NotFound() {
   return (

@@ -1,5 +1,5 @@
 {
-  "name": "fumadocs-epub",
+  "name": "@vx-oss/docs-epub",
   "version": "1.2.0",
   "description": "EPUB export for Fumadocs documentation",
   "keywords": [
@@ -11,7 +11,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/epub"
+  },
   "files": [
     "dist"
   ],
@@ -51,10 +55,10 @@
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
     "vfile": "^6.0.3",
-    "@vezham/docs-core": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   },
   "engines": {
     "node": ">=18"

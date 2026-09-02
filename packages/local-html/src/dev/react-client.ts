@@ -1,1 +1,1 @@
-export * from '@fumadocs/local-content/dev/ws/react';
+export * from '@vx-oss/docs-local-content/dev/ws/react';

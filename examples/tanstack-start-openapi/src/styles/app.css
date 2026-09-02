@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');
 @import 'tailwindcss';
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
-@import '@vezham/docs-openapi/css/preset.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
+@import '@vx-oss/docs-openapi/css/preset.css';
 
 @theme {
   --default-font-family: 'Geist';

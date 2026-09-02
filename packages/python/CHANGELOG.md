@@ -1,4 +1,4 @@
-## fumadocs-python@1.0.1
+## @vx-oss/docs-python@1.0.1
 
 ### `groupBy` option
 
@@ -13,7 +13,7 @@ const python = createPython({
 
 `convert()` accepts the same option.
 
-## fumadocs-python@1.0.0
+## @vx-oss/docs-python@1.0.0
 
 ### Runtime content source
 
@@ -21,7 +21,7 @@ const python = createPython({
 
 ```ts
 import { dynamicLoader } from 'fumadocs-core/source';
-import { createPython } from 'fumadocs-python';
+import { createPython } from '@vx-oss/docs-python';
 
 const python = createPython({
   file: './httpx.json',
@@ -32,7 +32,7 @@ const pythonLoader = dynamicLoader(python.dynamicSource(), {
 });
 ```
 
-Pages are compiled in memory with `page.data.load()`, `render()` includes the default MDX components of Fumadocs UI and `fumadocs-python/components`. Links between modules and classes are resolved from the loader the source is attached to, and `loaderPlugin()` badges generated pages in the page tree.
+Pages are compiled in memory with `page.data.load()`, `render()` includes the default MDX components of Fumadocs UI and `@vx-oss/docs-python/components`. Links between modules and classes are resolved from the loader the source is attached to, and `loaderPlugin()` badges generated pages in the page tree.
 
 `convert()` shares the same page builder. `write()` takes the output directory directly, and keeps the package name in file paths:
 
@@ -40,17 +40,17 @@ Pages are compiled in memory with `page.data.load()`, `render()` includes the de
 await write(convert(content, { baseUrl: '/docs' }), 'content/docs');
 ```
 
-## fumadocs-python@0.1.1
+## @vx-oss/docs-python@0.1.1
 
 ### Migrate from `js-yaml` to `yaml`
 
-## fumadocs-python@0.1.0
+## @vx-oss/docs-python@0.1.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-# fumadocs-python
+# @vx-oss/docs-python
 
 ## 0.0.11
 

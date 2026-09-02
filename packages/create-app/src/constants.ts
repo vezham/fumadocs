@@ -89,10 +89,19 @@ export const templates: TemplateInfo[] = [
 
 const workspaces = [corePkg, mdxPkg, basePkg];
 
-export const depVersions = versionPkg.dependencies;
+export const depVersions: Record<string, string> = { ...versionPkg.dependencies };
 
 for (const workspace of workspaces) {
-  depVersions[workspace.name as keyof typeof depVersions] = workspace.version;
+  depVersions[workspace.name] = workspace.version;
 }
 
-depVersions['@vezham/docs-react'] = `npm:${basePkg.name}@${basePkg.version}`;
+depVersions['@vx-oss/docs-react'] = `npm:${basePkg.name}@${basePkg.version}`;
+
+export function resolvePublicDependency(name: string, version: string): [string, string] {
+  const realName = name.replace(/^@vezham\/docs-/, '@vx-oss/docs-');
+  const publicName = realName.replace(/^@vx-oss\/docs-/, '@vezham/docs-');
+
+  if (realName === publicName) return [name, version];
+
+  return [publicName, version.startsWith('npm:') ? version : `npm:${realName}@${version}`];
+}

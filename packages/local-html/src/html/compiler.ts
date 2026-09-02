@@ -1,9 +1,9 @@
 import { fromHtml } from 'hast-util-from-html';
 import { visit, SKIP } from 'unist-util-visit';
 import Slugger from 'github-slugger';
-import type { RehypeTOCItemType, StructuredData } from '@vezham/docs-core/mdx-plugins';
+import type { RehypeTOCItemType, StructuredData } from '@vx-oss/docs-core/mdx-plugins';
 import type { Element, ElementContent, Properties, Root } from 'hast';
-import type { RehypeCodeOptions } from '@vezham/docs-core/mdx-plugins/rehype-code';
+import type { RehypeCodeOptions } from '@vx-oss/docs-core/mdx-plugins/rehype-code';
 import { highlightCode } from './highlight';
 
 export interface ProcessHtmlOptions {

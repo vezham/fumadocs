@@ -5,19 +5,19 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@fumadocs/api-docs/components/dialog';
-import { Input, labelVariants } from '@fumadocs/api-docs/components/input';
+} from '@vx-oss/docs-api/components/dialog';
+import { Input, labelVariants } from '@vx-oss/docs-api/components/input';
 import { useQuery } from '@/utils/use-query';
 import { type ReactNode, useMemo, useState } from 'react';
 import { cn } from '@/utils/cn';
-import { buttonVariants } from '@vezham/docs-react/components/ui/button';
+import { buttonVariants } from '@vx-oss/docs-react/components/ui/button';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@fumadocs/api-docs/components/select';
+} from '@vx-oss/docs-api/components/select';
 import type { OAuth2SecurityScheme } from '@/types';
 import { useTranslations } from '@fuma-translate/react';
 import { useAuth } from '../auth';

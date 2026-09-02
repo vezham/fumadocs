@@ -11,10 +11,10 @@ A docs layout built around floating, translucent (glass-like) panels: the sideba
 
 ## Usage
 
-Enable the Glass layout with `@vezham/docs-react/layouts/glass`.
+Enable the Glass layout with `@vx-oss/docs-react/layouts/glass`.
 
 ```tsx title="layout.tsx"
-import { GlassLayout } from '@vezham/docs-react/layouts/glass'; // [!code highlight]
+import { GlassLayout } from '@vx-oss/docs-react/layouts/glass'; // [!code highlight]
 import { baseOptions } from '@/lib/layout.shared';
 import { source } from '@/lib/source';
 import type { ReactNode } from 'react';
@@ -31,8 +31,8 @@ export default function Layout({ children }: { children: ReactNode }) {
 Make sure to update your page import too:
 
 ```tsx title="page.tsx"
-import { ... } from '@vezham/docs-react/layouts/docs/page'; // [!code --]
-import { ... } from '@vezham/docs-react/layouts/glass/page'; // [!code ++]
+import { ... } from '@vx-oss/docs-react/layouts/docs/page'; // [!code --]
+import { ... } from '@vx-oss/docs-react/layouts/glass/page'; // [!code ++]
 ```
 
 ### Styles
@@ -42,9 +42,9 @@ Unlike other layouts, Glass layout styles are **not** bundled into the CSS prese
 ```css title="Tailwind CSS"
 @import 'tailwindcss';
 /* [!code ++] */
-@import '@vezham/docs-react/css/generated/glass.css';
-@import '@vezham/docs-react/css/neutral.css';
-@import '@vezham/docs-react/css/preset.css';
+@import '@vx-oss/docs-react/css/generated/glass.css';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
 ```
 
 <Callout title="Important to know">
@@ -66,7 +66,7 @@ The options are inherited from [Docs Layout](/docs/ui/layouts/docs), with minor 
 Configure [Layout Tabs](/docs/ui/layouts/docs#layout-tabs) with the `tabs` prop, see the linked docs for how to add them. Tabs are shown as a dropdown in the sidebar.
 
 ```tsx title="layout.tsx"
-import { GlassLayout } from '@vezham/docs-react/layouts/glass';
+import { GlassLayout } from '@vx-oss/docs-react/layouts/glass';
 import { baseOptions } from '@/lib/layout.shared';
 import { source } from '@/lib/source';
 import type { ReactNode } from 'react';
@@ -94,7 +94,7 @@ The floating header can render an **Ask AI** button. Pass an `aiChat` object wit
 
 ```tsx title="layout.tsx"
 'use client';
-import { GlassLayout } from '@vezham/docs-react/layouts/glass';
+import { GlassLayout } from '@vx-oss/docs-react/layouts/glass';
 import { useState } from 'react';
 
 export function Layout({ children }) {
@@ -116,7 +116,7 @@ export function Layout({ children }) {
 Like other layouts, Glass layout exposes a `slots` option to override the built-in `header`, `sidebar`, and `sidebarDrawer` (mobile) components, in addition to the shared slots (`navTitle`, `themeSwitch`, `searchTrigger`, `languageSelect`).
 
 ```tsx title="layout.tsx"
-import { GlassLayout } from '@vezham/docs-react/layouts/glass';
+import { GlassLayout } from '@vx-oss/docs-react/layouts/glass';
 
 <GlassLayout
   slots={{

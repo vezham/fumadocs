@@ -14,8 +14,8 @@ import { UrlBar } from './tabs.client';
 Add MDX components.
 
 ```tsx title="components/mdx.tsx"
-import defaultMdxComponents from '@vezham/docs-react/mdx';
-import * as TabsComponents from '@vezham/docs-react/components/tabs';
+import defaultMdxComponents from '@vx-oss/docs-react/mdx';
+import * as TabsComponents from '@vx-oss/docs-react/components/tabs';
 import type { MDXComponents } from 'mdx/types';
 
 export function getMDXComponents(components?: MDXComponents) {
@@ -46,7 +46,7 @@ And use it in your MDX content:
 Without a `value`, it detects from the children index. Note that it might cause errors on re-renders, it's not encouraged if the tabs might change.
 
 ```mdx
-import { Tab, Tabs } from '@vezham/docs-react/components/tabs';
+import { Tab, Tabs } from '@vx-oss/docs-react/components/tabs';
 
 <Tabs items={['Javascript', 'Rust']}>
   <Tab>Javascript is weird</Tab>

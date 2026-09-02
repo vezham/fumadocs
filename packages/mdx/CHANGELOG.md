@@ -42,7 +42,7 @@ const text = await page.data.getText("processed", {
 });
 ```
 
-Supported in bundler collections with both compilers, and in `dynamic: true` collections & `@fumadocs/satteri/local-md` with the Sätteri compiler.
+Supported in bundler collections with both compilers, and in `dynamic: true` collections & `@vx-oss/docs-satteri/local-md` with the Sätteri compiler.
 
 ## fumadocs-mdx@15.3.1
 
@@ -64,7 +64,7 @@ The query is now serialized (and percent-encoded) by Fumadocs itself, matching w
 
 ### Sätteri 0.10
 
-`@fumadocs/satteri` now requires `satteri` ^0.10.3, and the plugins were rewritten on its new capabilities:
+`@vx-oss/docs-satteri` now requires `satteri` ^0.10.3, and the plugins were rewritten on its new capabilities:
 
 - Exports (`frontmatter`, `toc`, `structuredData`, …) are emitted by an `after` document hook instead of an anchor marker appended to the source, so plugins no longer see (or need to skip) the anchor node.
 - `remark-steps`, `remark-admonition` and `remark-code-tab` still detect their targets through node visitors (so documents without the construct cost nothing), but process each parent exactly once in an `after` hook, replacing the per-visit dedup workarounds.
@@ -277,7 +277,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
 - 2d8f596: fix `npm pack` skipping nested `node_modules`
 - Updated dependencies [2d8f596]
-  - @fumadocs/mdx-remote@1.4.8
+  - @vx-oss/docs-mdx-remote@1.4.8
   - fumadocs-core@16.7.14
 
 ## 14.2.12
@@ -286,7 +286,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
 - 690ddb9: bundle more deps
 - Updated dependencies [690ddb9]
-  - @fumadocs/mdx-remote@1.4.7
+  - @vx-oss/docs-mdx-remote@1.4.7
   - fumadocs-core@16.7.13
 
 ## 14.2.11
@@ -315,7 +315,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
 - 5453502: use Shiki.js v4
 - Updated dependencies [5453502]
-  - @fumadocs/mdx-remote@1.4.6
+  - @vx-oss/docs-mdx-remote@1.4.6
   - fumadocs-core@16.6.8
 
 ## 14.2.8
@@ -333,7 +333,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
 - c22f6ee: bump tsdown
 - Updated dependencies [c22f6ee]
-  - @fumadocs/mdx-remote@1.4.5
+  - @vx-oss/docs-mdx-remote@1.4.5
   - fumadocs-core@16.5.2
 
 ## 14.2.6
@@ -361,7 +361,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 - Updated dependencies [446631d]
 - Updated dependencies [b16a32f]
   - fumadocs-core@16.4.2
-  - @fumadocs/mdx-remote@1.4.4
+  - @vx-oss/docs-mdx-remote@1.4.4
 
 ## 14.2.3
 
@@ -605,7 +605,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
   - run dev server/typegen to generate a `.source` folder.
   - import it over the original `source.generated.ts`.
-  - note that both docs and `create-fumadocs-app` are updated to `.source` folder.
+  - note that both docs and `create-vx-oss-docs` are updated to `.source` folder.
 
 ### Minor Changes
 
@@ -638,7 +638,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 - Updated dependencies [55afd8a]
 - Updated dependencies [5210f18]
   - fumadocs-core@16.0.0
-  - @fumadocs/mdx-remote@1.4.3
+  - @vx-oss/docs-mdx-remote@1.4.3
 
 ## 12.0.3
 
@@ -655,7 +655,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
 - a3a14e7: Bump deps
 - Updated dependencies [a3a14e7]
-  - @fumadocs/mdx-remote@1.4.1
+  - @vx-oss/docs-mdx-remote@1.4.1
   - fumadocs-core@15.8.3
 
 ## 12.0.1
@@ -828,7 +828,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 - Updated dependencies [658fa96]
 - Updated dependencies [f8a58c6]
   - fumadocs-core@15.6.5
-  - @fumadocs/mdx-remote@1.4.0
+  - @vx-oss/docs-mdx-remote@1.4.0
 
 ## 11.6.11
 
@@ -845,7 +845,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 - Updated dependencies [84918b8]
 - Updated dependencies [f8d1709]
   - fumadocs-core@15.6.0
-  - @fumadocs/mdx-remote@1.3.4
+  - @vx-oss/docs-mdx-remote@1.3.4
 
 ## 11.6.9
 
@@ -865,7 +865,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 - Updated dependencies [7a45921]
 - Updated dependencies [1b7bc4b]
   - fumadocs-core@15.5.2
-  - @fumadocs/mdx-remote@1.3.3
+  - @vx-oss/docs-mdx-remote@1.3.3
 
 ## 11.6.7
 
@@ -893,7 +893,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
 - a6c909b: Removed unused devDependencies and migrated from `fast-glob` to `tinyglobby`
 - Updated dependencies [a6c909b]
-  - @fumadocs/mdx-remote@1.3.2
+  - @vx-oss/docs-mdx-remote@1.3.2
   - fumadocs-core@15.3.4
 
 ## 11.6.4
@@ -902,7 +902,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
 - 4ae7b4a: Support MDX in codeblock tab value
 - Updated dependencies [4ae7b4a]
-  - @fumadocs/mdx-remote@1.3.1
+  - @vx-oss/docs-mdx-remote@1.3.1
   - fumadocs-core@15.3.3
 
 ## 11.6.3
@@ -959,7 +959,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 - Updated dependencies [7c8a690]
 - Updated dependencies [b812457]
   - fumadocs-core@15.1.1
-  - @fumadocs/mdx-remote@1.2.1
+  - @vx-oss/docs-mdx-remote@1.2.1
 
 ## 11.5.6
 
@@ -1013,7 +1013,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 ### Patch Changes
 
 - Updated dependencies [69f20cb]
-  - @fumadocs/mdx-remote@1.2.0
+  - @vx-oss/docs-mdx-remote@1.2.0
   - fumadocs-core@15.0.3
 
 ## 11.4.1
@@ -1606,7 +1606,7 @@ Instead of passing through all JSON/YAML files, the meta loader now requires `co
 
   `@fuma-docs/openapi` -> `fumadocs-openapi`
 
-  `create-next-docs-app` -> `create-fumadocs-app`
+  `create-next-docs-app` -> `create-vx-oss-docs`
 
 ### Patch Changes
 

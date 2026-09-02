@@ -19,7 +19,7 @@ export default defineConfig({
     bin: false,
   },
   deps: {
-    onlyBundle: ['@fumadocs/vite'],
+    onlyBundle: ['@vx-oss/docs-vite'],
     neverBundle: ['webpack', 'bun', /^node:/],
   },
 });

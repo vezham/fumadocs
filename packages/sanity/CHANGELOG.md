@@ -1,14 +1,14 @@
-## @fumadocs/sanity@0.2.2
+## @vx-oss/docs-sanity@0.2.2
 
 ### Support `@sanity/client` v8 and `next-sanity` v13
 
 Widened the peer dependency ranges to `^7.22.0 || ^8.0.0` and `^12.4.0 || ^13.0.0` respectively.
 
-## @fumadocs/sanity@0.2.1
+## @vx-oss/docs-sanity@0.2.1
 
 ### Simplify cache
 
-## @fumadocs/sanity@0.2.0
+## @vx-oss/docs-sanity@0.2.0
 
 ### Redesign source API
 
@@ -43,13 +43,13 @@ GraphQL cross-links are generated from the attached loader instead of a `baseUrl
 
 Sanity now uses `cache: 'custom'` when given a `sanityFetch` from `next-sanity/live`, calling `invalidate()` in draft mode is no longer needed.
 
-## @fumadocs/sanity@0.1.0
+## @vx-oss/docs-sanity@0.1.0
 
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
 
-# @fumadocs/sanity
+# @vx-oss/docs-sanity
 
 ## 0.0.5
 

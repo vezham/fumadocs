@@ -1,7 +1,7 @@
 import type { MessageObject } from '@/types';
 import { resolveMultiFormatSchema } from '@/utils/schema';
-import { sample } from '@fumadocs/api-docs/schema/sample';
-import { dereferenceShallow } from '@fumadocs/api-docs/schema/dereference';
+import { sample } from '@vx-oss/docs-api/schema/sample';
+import { dereferenceShallow } from '@vx-oss/docs-api/schema/dereference';
 import { getRaw } from '@scalar/json-magic/magic-proxy';
 
 export interface ExampleMessageItem {

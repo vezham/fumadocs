@@ -1,5 +1,5 @@
 {
-  "name": "fumadocs-python",
+  "name": "@vx-oss/docs-python",
   "version": "1.0.0",
   "description": "The built-in Python docgen for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/python"
+  },
   "files": [
     "fumapy",
     "pyproject.toml",
@@ -66,16 +70,16 @@
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "vitest": "^4.1.11",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/hast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
     "react": "19.x.x",
-    "@vezham/docs-core": "^1.0.0",
-    "@vezham/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0",
+    "@vx-oss/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/hast": {

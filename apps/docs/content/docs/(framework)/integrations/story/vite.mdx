@@ -6,21 +6,21 @@ description: Configure Fumadocs Story for Vite-based frameworks.
 ## Installation
 
 ```npm
-npm i @vezham/docs-story
+npm i @vx-oss/docs-story
 ```
 
 Add the Tailwind CSS preset.
 
 ```css title="Tailwind CSS"
 /* [!code ++] */
-@import '@vezham/docs-story/css/preset.css';
+@import '@vx-oss/docs-story/css/preset.css';
 ```
 
 Add the Vite plugin:
 
 ```ts title="vite.config.ts"
 import { defineConfig } from 'vite';
-import story from '@vezham/docs-story/vite';
+import story from '@vx-oss/docs-story/vite';
 
 export default defineConfig({
   plugins: [story()],
@@ -32,7 +32,7 @@ export default defineConfig({
 Create a story factory to store your global settings:
 
 ```ts title="lib/story.ts"
-import { defineStoryFactory } from '@vezham/docs-story/vite/client';
+import { defineStoryFactory } from '@vx-oss/docs-story/vite/client';
 
 export const { defineStory } = defineStoryFactory();
 ```

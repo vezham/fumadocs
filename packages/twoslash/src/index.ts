@@ -173,7 +173,7 @@ function renderMarkdown(this: ShikiTransformerContextCommon, md: string): Elemen
 
             if (e instanceof Error) {
               console.error(
-                `[fumadocs-twoslash] encountered an error when highlighting codeblock in a Twoslash popup: ${e.message}`,
+                `[@vx-oss/docs-twoslash] encountered an error when highlighting codeblock in a Twoslash popup: ${e.message}`,
               );
             }
 

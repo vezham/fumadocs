@@ -19,8 +19,8 @@
     "react-dom": "^19.2.8",
     "sharp": "^0.35.4",
     "takumi-js": "^2.12.0",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.3",

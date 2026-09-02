@@ -1,4 +1,4 @@
-## @fumadocs/base-ui@16.15.4
+## @vx-oss/docs-base-ui@16.15.4
 
 ### Fix Next.js `<Link>` not scrolling to top under docs layouts
 
@@ -6,23 +6,23 @@ The page container rendered `<main style="display: contents">`, which Next.js' s
 
 The `<main>` element in Docs, Notebook and Flux page containers is now a real grid item (`display: grid; grid-area: main`) wrapping the unchanged `#nd-page` article, which centers via the grid instead of `mx-auto`. Rendering is identical, but if your custom CSS has element rules on `main` that were previously inert, they now apply.
 
-## @fumadocs/base-ui@16.15.2
+## @vx-oss/docs-base-ui@16.15.2
 
 ### Improve Vitepress theme
 
 More contrast & aligned to Vitepress.
 
-## @fumadocs/base-ui@16.14.5
+## @vx-oss/docs-base-ui@16.14.5
 
 ### Add a `main` landmark to docs, notebook and flux pages
 
 The page container slot now wraps `<article id="nd-page">` in a `<main class="contents">` in the docs, notebook and flux layouts. All props, `id="nd-page"` and the layout classes stay on the `<article>`, so existing selectors and refs keep working.
 
-## @fumadocs/base-ui@16.14.3
+## @vx-oss/docs-base-ui@16.14.3
 
 ### Fix TOC overscroll
 
-## @fumadocs/base-ui@16.14.2
+## @vx-oss/docs-base-ui@16.14.2
 
 ### Fix crash in `DynamicCodeBlock` when `options` is undefined
 
@@ -30,7 +30,7 @@ The page container slot now wraps `<article id="nd-page">` in a `<main class="co
 
 `options` is now read with optional chaining, so an undefined `options` behaves the same as omitting the prop entirely.
 
-## @fumadocs/base-ui@16.14.0
+## @vx-oss/docs-base-ui@16.14.0
 
 ### Replace Orama with ZBSearch, zero-config i18n search
 
@@ -66,7 +66,7 @@ const client = staticClient({ locale });
 - The exported static search data is now a ZBSearch database (i18n exports became a single unified database), so server and client should be on the same fumadocs-core version.
 - `@orama/orama` and `@orama/tokenizers` can be removed from your dependencies unless you use them directly. Orama **Cloud** integrations (`fumadocs-core/search/orama-cloud`) are unaffected.
 
-## @fumadocs/base-ui@16.13.0
+## @vx-oss/docs-base-ui@16.13.0
 
 ### Add hotkey for toggling light/dark mode
 
@@ -74,11 +74,11 @@ Press <kbd>D</kbd> to toggle between light and dark mode. It is ignored while ty
 
 Customise it with the `theme.hotKey` option of `<RootProvider />`, or pass `false` to disable.
 
-## @fumadocs/base-ui@16.12.1
+## @vx-oss/docs-base-ui@16.12.1
 
 ### Fix bugs in Flux layout
 
-## @fumadocs/base-ui@16.12.0
+## @vx-oss/docs-base-ui@16.12.0
 
 ### Fix invalid list semantics in Home layout navbar
 
@@ -92,13 +92,13 @@ A new layout for docs, a smooth, beautiful variant built around floating, transl
 
 Styled `Tabs` previously kept every tab panel mounted in the DOM (hidden with `display: none`). Inactive panels are now unmounted by default, following the underlying primitive.
 
-You can still opt back into keeping panels mounted per tab with `forceMount` (`fumadocs-ui`) or `keepMounted` (`@fumadocs/base-ui`) on `Tab` / `TabsContent`.
+You can still opt back into keeping panels mounted per tab with `forceMount` (`fumadocs-ui`) or `keepMounted` (`@vx-oss/docs-base-ui`) on `Tab` / `TabsContent`.
 
 ### Open the tab containing a linked heading
 
 When a tab's content stays mounted (`forceMount` / `keepMounted`), navigating to a URL hash that points to an element inside a tab — such as a Table of Contents link to a heading — now opens the tab it belongs to and scrolls to the target. This runs on both initial load and `hashchange`.
 
-## @fumadocs/base-ui@16.11.5
+## @vx-oss/docs-base-ui@16.11.5
 
 ### Correct codeblock props
 
@@ -112,7 +112,7 @@ Previously, both the button opening the mobile sidebar and the one closing it we
 
 A new `Close Sidebar` translation key is available for customisation.
 
-## @fumadocs/base-ui@16.11.2
+## @vx-oss/docs-base-ui@16.11.2
 
 ### Add Astro framework support
 
@@ -122,13 +122,13 @@ Add Astro as a supported framework with React islands, including framework provi
 
 Ensure search dialog input to be focused even on touch devices.
 
-## @fumadocs/base-ui@16.11.1
+## @vx-oss/docs-base-ui@16.11.1
 
 ### Fix minor UI inconsistencies
 
 More aligned with original styles.
 
-## @fumadocs/base-ui@16.11.0
+## @vx-oss/docs-base-ui@16.11.0
 
 ### Updated the theme switch to use `document.startViewTransition()` for smoother theme transitions with graceful fallback.
 
@@ -142,25 +142,25 @@ Internal packages & templates now use Base UI rather than Radix UI.
 
 Use `noCopy` to remove copy button from codeblocks.
 
-## @fumadocs/base-ui@16.10.7
+## @vx-oss/docs-base-ui@16.10.7
 
 ### Fix Page Actions base path handling
 
 The `<PageActions />` component will handle base path for passed `markdownUrl`.
 
-## @fumadocs/base-ui@16.10.6
+## @vx-oss/docs-base-ui@16.10.6
 
 ### Migrate to `cnfast`
 
 Drop `tailwind-merge`.
 
-## @fumadocs/base-ui@16.10.5
+## @vx-oss/docs-base-ui@16.10.5
 
 ### Fix "Open in ChatGPT" page action URL
 
 ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so the page action link is built as `https://chatgpt.com/?prompt=...&hints=search` to open reliably.
 
-# @fumadocs/base-ui
+# @vx-oss/docs-base-ui
 
 ## 16.10.3
 
@@ -369,7 +369,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 - 2d8f596: fix `npm pack` skipping nested `node_modules`
 - Updated dependencies [2d8f596]
-  - @fumadocs/tailwind@0.0.5
+  - @vx-oss/docs-tailwind@0.0.5
   - fumadocs-core@16.7.14
 
 ## 16.7.13
@@ -378,7 +378,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 - 690ddb9: bundle more deps
 - Updated dependencies [690ddb9]
-  - @fumadocs/tailwind@0.0.4
+  - @vx-oss/docs-tailwind@0.0.4
   - fumadocs-core@16.7.13
 
 ## 16.7.12
@@ -576,7 +576,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 - 5453502: use Shiki.js v4
 - 8fc467a: fix home layout navbar
 - Updated dependencies [5453502]
-  - @fumadocs/tailwind@0.0.3
+  - @vx-oss/docs-tailwind@0.0.3
   - fumadocs-core@16.6.8
 
 ## 16.6.7
@@ -665,7 +665,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 - c22f6ee: bump tsdown
 - Updated dependencies [c22f6ee]
-  - @fumadocs/tailwind@0.0.2
+  - @vx-oss/docs-tailwind@0.0.2
   - fumadocs-core@16.5.2
 
 ## 16.5.1
@@ -675,7 +675,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 - c08364a: support Flux layout
 - 53ad20b: Pre-scan class names to optimize Tailwind CSS compilation performance
 - Updated dependencies [db93ebd]
-  - @fumadocs/tailwind@0.0.1
+  - @vx-oss/docs-tailwind@0.0.1
   - fumadocs-core@16.5.1
 
 ## 16.5.0

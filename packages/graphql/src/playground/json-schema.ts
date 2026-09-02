@@ -6,7 +6,7 @@ import {
   isScalarType,
   print,
 } from 'graphql';
-import type { ParsedSchema } from '@fumadocs/api-docs/schema';
+import type { ParsedSchema } from '@vx-oss/docs-api/schema';
 
 /**
  * Convert a GraphQL input type into JSON Schema, for the playground form.

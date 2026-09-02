@@ -1,4 +1,4 @@
-import { ServerCodeBlock } from '@vezham/docs-react/components/codeblock.rsc';
+import { ServerCodeBlock } from '@vx-oss/docs-react/components/codeblock.rsc';
 
 export function Installation({ name }: { name: string }) {
   return (
@@ -6,7 +6,7 @@ export function Installation({ name }: { name: string }) {
       <p className="font-medium">Install to your codebase</p>
       <p className="mt-1 mb-4 text-fd-muted-foreground">Easier customization & control.</p>
 
-      <ServerCodeBlock code={`npx @fumadocs/cli@latest add ${name}`} lang="bash" />
+      <ServerCodeBlock code={`npx @vx-oss/docs-cli@latest add ${name}`} lang="bash" />
     </div>
   );
 }

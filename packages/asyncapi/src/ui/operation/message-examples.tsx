@@ -5,7 +5,7 @@ import { ClientCodeBlock } from '@/ui/components/codeblock';
 import { getExampleMessages, type ExampleMessageItem } from '@/utils/get-example-messages';
 import { useTranslations } from '@fuma-translate/react';
 import { MessageObject } from '@/types';
-import { SelectTab, SelectTabs, SelectTabTrigger } from '@fumadocs/api-docs/components/select-tab';
+import { SelectTab, SelectTabs, SelectTabTrigger } from '@vx-oss/docs-api/components/select-tab';
 import { Markdown } from '../components/markdown';
 import { Heading } from '../components/heading';
 import {
@@ -13,7 +13,7 @@ import {
   CodeBlockTabs,
   CodeBlockTabsList,
   CodeBlockTabsTrigger,
-} from '@vezham/docs-react/components/codeblock';
+} from '@vx-oss/docs-react/components/codeblock';
 
 export function MessageExamples({
   message,

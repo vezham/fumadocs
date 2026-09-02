@@ -10,7 +10,7 @@ import {
   CodeBlockTabs,
   CodeBlockTabsList,
   CodeBlockTabsTrigger,
-} from '@vezham/docs-react/components/codeblock';
+} from '@vx-oss/docs-react/components/codeblock';
 import { ResponseTabs } from './response-tabs';
 import { useRenderContext, useServerContext } from '@/ui/contexts/api';
 import {
@@ -19,12 +19,12 @@ import {
   SelectValue,
   SelectContent,
   SelectItem,
-} from '@fumadocs/api-docs/components/select';
+} from '@vx-oss/docs-api/components/select';
 import { useState, useEffect, useMemo } from 'react';
 import { ClientCodeBlock } from '@/ui/components/codeblock';
 import { type ExampleUpdateListener, useOperationContext } from './context';
 import type { ExampleRequestItem } from '@/utils/get-example-requests';
-import { joinURL, resolveServerUrl } from '@fumadocs/api-docs/utils/url';
+import { joinURL, resolveServerUrl } from '@vx-oss/docs-api/utils/url';
 
 export function UsageTabs({
   method,

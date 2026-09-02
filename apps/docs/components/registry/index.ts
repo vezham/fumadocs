@@ -8,14 +8,14 @@ import type { CompileOptions, Registry } from 'fuma-cli/compiler';
 
 const baseDir = path.join(import.meta.dirname, '../../');
 
-// internal modules of `@vezham/docs-openapi` mapped to their public exports
+// internal modules of `@vx-oss/docs-openapi` mapped to their public exports
 const openapiExports = new Map([
-  ['ui/contexts/api.tsx', '@vezham/docs-openapi/ui'],
-  ['ui/operation/context.tsx', '@vezham/docs-openapi/ui'],
-  ['requests/generators/index.ts', '@vezham/docs-openapi/requests/generators'],
+  ['ui/contexts/api.tsx', '@vx-oss/docs-openapi/ui'],
+  ['ui/operation/context.tsx', '@vx-oss/docs-openapi/ui'],
+  ['requests/generators/index.ts', '@vx-oss/docs-openapi/requests/generators'],
   // types are re-exported from the package root
-  ['requests/media/adapter.ts', '@vezham/docs-openapi'],
-  ['types.ts', '@vezham/docs-openapi'],
+  ['requests/media/adapter.ts', '@vx-oss/docs-openapi'],
+  ['types.ts', '@vx-oss/docs-openapi'],
 ]);
 
 export const compileOptions: Partial<CompileOptions> = {
@@ -47,18 +47,18 @@ export const compileOptions: Partial<CompileOptions> = {
       file = path.relative(radixUi.registry.dir, ref.file);
       if (file.startsWith('contexts/') || file.startsWith('utils/use-')) {
         return {
-          dep: '@vezham/docs-react',
+          dep: '@vx-oss/docs-react',
           type: 'dependency',
-          specifier: `@vezham/docs-react/${removeExtname(file)}`,
+          specifier: `@vx-oss/docs-react/${removeExtname(file)}`,
         };
       }
 
       file = path.relative(baseUi.registry.dir, ref.file);
       if (file.startsWith('contexts/') || file.startsWith('utils/use-')) {
         return {
-          dep: '@fumadocs/base-ui',
+          dep: '@vx-oss/docs-base-ui',
           type: 'dependency',
-          specifier: `@fumadocs/base-ui/${removeExtname(file)}`,
+          specifier: `@vx-oss/docs-base-ui/${removeExtname(file)}`,
         };
       }
 
@@ -66,7 +66,7 @@ export const compileOptions: Partial<CompileOptions> = {
       const specifier = openapiExports.get(file);
       if (specifier) {
         return {
-          dep: '@vezham/docs-openapi',
+          dep: '@vx-oss/docs-openapi',
           type: 'dependency',
           specifier,
         };
@@ -90,15 +90,15 @@ export const compileOptions: Partial<CompileOptions> = {
 
         // other internal modules mirror the package's subpath exports
         return {
-          dep: '@fumadocs/api-docs',
+          dep: '@vx-oss/docs-api',
           type: 'dependency',
-          specifier: `@fumadocs/api-docs/${toSubpath(file)}`,
+          specifier: `@vx-oss/docs-api/${toSubpath(file)}`,
         };
       }
     }
 
     // map dep imports to actual components
-    if (ref.type === 'dependency' && ref.dep === '@vezham/docs-react') {
+    if (ref.type === 'dependency' && ref.dep === '@vx-oss/docs-react') {
       const match = /@vezham\/docs-react\/components\/ui\/(.*)/.exec(ref.specifier);
 
       if (match) {
@@ -270,8 +270,8 @@ export const registry: Registry = {
     },
   ],
   dependencies: {
-    '@vezham/docs-core': null,
-    '@vezham/docs-react': null,
+    '@vx-oss/docs-core': null,
+    '@vx-oss/docs-react': null,
   },
 };
 

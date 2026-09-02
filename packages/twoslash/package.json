@@ -1,5 +1,5 @@
 {
-  "name": "fumadocs-twoslash",
+  "name": "@vx-oss/docs-twoslash",
   "version": "3.3.0",
   "description": "Typescript Twoslash Integration for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/twoslash"
+  },
   "files": [
     "dist",
     "styles"
@@ -60,16 +64,16 @@
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "typescript": "^6.0.3",
-    "@vezham/docs-core": "workspace:*",
-    "@vezham/docs-react": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
     "@types/react": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "shiki": "4.x.x",
-    "@vezham/docs-core": "^1.0.0",
-    "@vezham/docs-react": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0",
+    "@vx-oss/docs-react": "^1.0.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {

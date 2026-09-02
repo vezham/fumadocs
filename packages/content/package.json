@@ -1,5 +1,5 @@
 {
-  "name": "@fumadocs/content",
+  "name": "@vx-oss/docs-content",
   "version": "0.1.0",
   "description": "The Fuma Content adapter for Fumadocs",
   "keywords": [
@@ -9,7 +9,11 @@
   "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/content"
+  },
   "files": [
     "dist"
   ],
@@ -38,10 +42,10 @@
     "react-dom": "^19.2.8",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "@vezham/docs-core": "workspace:*"
+    "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
     "fuma-content": "^1.2.3",
-    "@vezham/docs-core": "^1.0.0"
+    "@vx-oss/docs-core": "^1.0.0"
   }
 }

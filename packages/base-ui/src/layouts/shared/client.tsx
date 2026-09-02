@@ -1,6 +1,6 @@
 'use client';
-import { usePathname } from '@vezham/docs-core/framework';
-import Link from '@vezham/docs-core/link';
+import { usePathname } from '@vx-oss/docs-core/framework';
+import Link from '@vx-oss/docs-core/link';
 import { useI18n } from '@/contexts/i18n';
 import type { FC, ComponentProps } from 'react';
 import { isLinkItemActive, type BaseLayoutProps, type LinkItemType } from '.';

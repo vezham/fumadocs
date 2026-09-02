@@ -1,5 +1,5 @@
 import type { PortableTextBlock } from '@portabletext/react';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import type { ReactNode } from 'react';
 
 export function renderToc(opts: {

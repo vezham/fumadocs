@@ -7,7 +7,7 @@
 - [`0522660`](https://github.com/vezham/fumadocs/commit/05226609648c225863cc51d15b8474745c478326) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Update Vezham package repository metadata for npm provenance.
 
 - Updated dependencies [[`0522660`](https://github.com/vezham/fumadocs/commit/05226609648c225863cc51d15b8474745c478326)]:
-  - @vezham/docs-core@1.0.1
+  - @vx-oss/docs-core@1.0.1
 
 ## 1.0.1
 
@@ -16,7 +16,7 @@
 - [`31ccc75`](https://github.com/vezham/fumadocs/commit/31ccc75403db783088821eede56ef6b1f85e435b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Rename the forked docs packages under the @vezham scope.
 
 - Updated dependencies [[`31ccc75`](https://github.com/vezham/fumadocs/commit/31ccc75403db783088821eede56ef6b1f85e435b)]:
-  - @vezham/docs-core@1.0.1
+  - @vx-oss/docs-core@1.0.1
 
 ### Fix Next.js `<Link>` not scrolling to top under docs layouts
 
@@ -102,7 +102,7 @@ A new layout for docs, a smooth, beautiful variant built around floating, transl
 
 Styled `Tabs` previously kept every tab panel mounted in the DOM (hidden with `display: none`). Inactive panels are now unmounted by default, following the underlying primitive.
 
-You can still opt back into keeping panels mounted per tab with `forceMount` (`fumadocs-ui`) or `keepMounted` (`@fumadocs/base-ui`) on `Tab` / `TabsContent`.
+You can still opt back into keeping panels mounted per tab with `forceMount` (`fumadocs-ui`) or `keepMounted` (`@vx-oss/docs-base-ui`) on `Tab` / `TabsContent`.
 
 ### Open the tab containing a linked heading
 
@@ -366,7 +366,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 - 2d8f596: fix `npm pack` skipping nested `node_modules`
 - Updated dependencies [2d8f596]
-  - @fumadocs/tailwind@0.0.5
+  - @vx-oss/docs-tailwind@0.0.5
   - fumadocs-core@16.7.14
 
 ## 16.7.13
@@ -375,7 +375,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 - 690ddb9: bundle more deps
 - Updated dependencies [690ddb9]
-  - @fumadocs/tailwind@0.0.4
+  - @vx-oss/docs-tailwind@0.0.4
   - fumadocs-core@16.7.13
 
 ## 16.7.12
@@ -570,7 +570,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 - 5453502: use Shiki.js v4
 - Updated dependencies [5453502]
-  - @fumadocs/tailwind@0.0.3
+  - @vx-oss/docs-tailwind@0.0.3
   - fumadocs-core@16.6.8
 
 ## 16.6.7
@@ -659,7 +659,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 - c22f6ee: bump tsdown
 - Updated dependencies [c22f6ee]
-  - @fumadocs/tailwind@0.0.2
+  - @vx-oss/docs-tailwind@0.0.2
   - fumadocs-core@16.5.2
 
 ## 16.5.1
@@ -669,7 +669,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 - c08364a: support Flux layout
 - 53ad20b: Pre-scan class names to optimize Tailwind CSS compilation performance
 - Updated dependencies [db93ebd]
-  - @fumadocs/tailwind@0.0.1
+  - @vx-oss/docs-tailwind@0.0.1
   - fumadocs-core@16.5.1
 
 ## 16.5.0
@@ -1997,7 +1997,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
   @import "fumadocs-ui/css/neutral.css";
   @import "fumadocs-ui/css/preset.css";
   /* if you have Twoslash enabled */
-  @import "fumadocs-twoslash/twoslash.css";
+  @import "@vx-oss/docs-twoslash/twoslash.css";
 
   @source '../node_modules/fumadocs-ui/dist/**/*.js';
   /* if you have OpenAPI enabled */
@@ -2354,7 +2354,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
   import { HomeLayoutProps } from "fumadocs-ui/home-layout";
   ```
 
-- 9a10262: **Move Twoslash UI components to `fumadocs-twoslash`**
+- 9a10262: **Move Twoslash UI components to `@vx-oss/docs-twoslash`**
 
   **why:** Isolate logic from Fumadocs UI
 
@@ -2371,9 +2371,9 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
   After:
 
   ```ts
-  import "fumadocs-twoslash/twoslash.css";
+  import "@vx-oss/docs-twoslash/twoslash.css";
 
-  import { Popup } from "fumadocs-twoslash/ui";
+  import { Popup } from "@vx-oss/docs-twoslash/ui";
   ```
 
   **Tailwind CSS is now required for Twoslash integration.**
@@ -3493,15 +3493,15 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
 ### Major Changes
 
-- 321d1e1f: **Move Typescript integrations to `fumadocs-typescript`**
+- 321d1e1f: **Move Typescript integrations to `@vx-oss/docs-typescript`**
 
   why: It is now a stable feature
 
-  migrate: Use `fumadocs-typescript` instead.
+  migrate: Use `@vx-oss/docs-typescript` instead.
 
   ```diff
   - import { AutoTypeTable } from "fumadocs-ui/components/auto-type-table"
-  + import { AutoTypeTable } from "fumadocs-typescript/ui"
+  + import { AutoTypeTable } from "@vx-oss/docs-typescript/ui"
   ```
 
 ### Patch Changes
@@ -3698,7 +3698,7 @@ ChatGPT now uses the `prompt` query parameter (it redirects `q` to `prompt`), so
 
   `@fuma-docs/openapi` -> `fumadocs-openapi`
 
-  `create-next-docs-app` -> `create-fumadocs-app`
+  `create-next-docs-app` -> `create-vx-oss-docs`
 
 - 60db195: **Remove Nav component export**
 

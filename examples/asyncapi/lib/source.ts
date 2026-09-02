@@ -1,6 +1,6 @@
-import { loader } from '@vezham/docs-core/source';
-import { createAsyncAPI } from '@fumadocs/asyncapi/server';
-import { defineDocs } from '@vezham/docs-mdx/macro';
+import { loader } from '@vx-oss/docs-core/source';
+import { createAsyncAPI } from '@vx-oss/docs-asyncapi/server';
+import { defineDocs } from '@vx-oss/docs-mdx/macro';
 
 const docs = defineDocs({
   dir: 'content/docs',

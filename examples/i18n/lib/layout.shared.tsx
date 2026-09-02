@@ -1,7 +1,7 @@
-import type { BaseLayoutProps } from '@vezham/docs-react/layouts/shared';
+import type { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';
 import { i18n } from '@/lib/i18n';
-import { zhTW } from '@fumadocs/language/zh-tw';
-import { uiTranslations } from '@vezham/docs-react/i18n';
+import { zhTW } from '@vx-oss/docs-language/zh-tw';
+import { uiTranslations } from '@vx-oss/docs-react/i18n';
 
 export const translations = i18n.translations().extend(uiTranslations()).preset('cn', zhTW());
 

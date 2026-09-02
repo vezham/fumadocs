@@ -2,8 +2,8 @@ import type { contentConfigSchema } from '@/config/global';
 import fs from 'node:fs/promises';
 import { glob } from 'tinyglobby';
 import path from 'node:path';
-import { frontmatter as parseFrontmatter } from '@vezham/docs-core/content/md/frontmatter';
-import { metaSchema, pageSchema } from '@vezham/docs-core/source/schema';
+import { frontmatter as parseFrontmatter } from '@vx-oss/docs-core/content/md/frontmatter';
+import { metaSchema, pageSchema } from '@vx-oss/docs-core/source/schema';
 import { type NormalizedProjectConfig, normalizeProjects } from './config';
 import type z from 'zod';
 

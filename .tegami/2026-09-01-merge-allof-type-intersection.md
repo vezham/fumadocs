@@ -1,6 +1,6 @@
 ---
 packages:
-  npm:@fumadocs/api-docs: patch
+  npm:@vx-oss/docs-api: patch
 ---
 
 ## Keep overlapping `type` sets when merging `allOf`

@@ -21,7 +21,7 @@ import {
 import { Footer, type FooterProps } from './slots/footer';
 import { Breadcrumb, type BreadcrumbProps } from './slots/breadcrumb';
 import { Container } from './slots/container';
-import type { TOCItemType } from '@vezham/docs-core/toc';
+import type { TOCItemType } from '@vx-oss/docs-core/toc';
 import { buttonVariants } from '@/components/ui/button';
 import { Edit } from 'lucide-react';
 
@@ -94,7 +94,7 @@ export function useDocsPage() {
   const context = use(PageContext);
   if (!context)
     throw new Error(
-      'Please use page components under <DocsPage /> (`@vezham/docs-react/layouts/notebook/page`).',
+      'Please use page components under <DocsPage /> (`@vx-oss/docs-react/layouts/notebook/page`).',
     );
   return context;
 }

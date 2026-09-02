@@ -2,7 +2,7 @@ import { expect, test } from 'vitest';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createElement, type FC, type ReactNode } from 'react';
-import { asMarkdown, md, renderToMarkdown } from '@vezham/docs-core/server';
+import { asMarkdown, md, renderToMarkdown } from '@vx-oss/docs-core/server';
 import { compileMdx } from '@/compile';
 import { applySatteriPreset } from '@/preset';
 import { remarkInclude } from '@/remark-include';
@@ -56,7 +56,7 @@ test('remark-llms keeps the authored source form', async () => {
       '## Title [#custom]',
       '',
       '```npm',
-      'npm i @vezham/docs-core',
+      'npm i @vx-oss/docs-core',
       '```',
       '',
       '![alt](/img.png)',
@@ -70,7 +70,7 @@ test('remark-llms keeps the authored source form', async () => {
     "## Title [#custom]
 
     \`\`\`npm
-    npm i @vezham/docs-core
+    npm i @vx-oss/docs-core
     \`\`\`
 
     ![alt](/img.png)

@@ -73,7 +73,7 @@ You can find similar prompts under the relevant component docs, indicating the c
 For **layout components** (which often composes multiple components), Fumadocs CLI has a special `customize` command with granular choices.
 
 ```npm
-npx @fumadocs/cli@latest customize
+npx @vx-oss/docs-cli@latest customize
 ```
 
 Despite installing the entire layout component, you can choose to install a **slot** (a replaceable part of the layout component).
@@ -83,7 +83,7 @@ When installed, make sure to use the installed types over the types exported fro
 
 ```tsx
 // [!code --]
-import type { DocsLayoutProps } from '@vezham/docs-react/layouts/docs';
+import type { DocsLayoutProps } from '@vx-oss/docs-react/layouts/docs';
 // [!code ++]
 import type { DocsLayoutProps } from '@/components/layout/docs';
 ```
