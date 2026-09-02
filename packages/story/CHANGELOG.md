@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- [`0522660`](https://github.com/vezham/fumadocs/commit/05226609648c225863cc51d15b8474745c478326) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Update Vezham package repository metadata for npm provenance.
+
+## 1.0.1
+
+### Patch Changes
+
 - [`31ccc75`](https://github.com/vezham/fumadocs/commit/31ccc75403db783088821eede56ef6b1f85e435b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Rename the forked docs packages under the @vezham scope.
 
 ### Default to Base UI
