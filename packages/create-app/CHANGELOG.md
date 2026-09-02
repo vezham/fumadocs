@@ -1,11 +1,18 @@
 ## create-vx-oss-docs@16.1.10
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569)]:
+  - @vx-oss/docs-cli@1.0.2
+
 ### Replace Orama with ZBSearch, zero-config i18n search
 
 The built-in search engine moved from `@orama/orama` to [ZBSearch](https://www.zbsearch.dev), a near drop-in successor. All module paths and APIs are unchanged, and search now works with **every language out of the box**: the new default `multilingual` mode uses Unicode word segmentation, so i18n search needs zero config.
 
 ```ts
-import { createFromSource } from 'fumadocs-core/search/server';
+import { createFromSource } from "fumadocs-core/search/server";
 
 // no `localeMap`, no `@orama/tokenizers`, CJK included
 export const { GET } = createFromSource(source);
@@ -14,7 +21,7 @@ export const { GET } = createFromSource(source);
 All locales now share a single search database — results are filtered by the locale of your pages at query time. Same for static mode:
 
 ```ts
-import { staticClient } from 'fumadocs-core/search/client/orama-static';
+import { staticClient } from "fumadocs-core/search/client/orama-static";
 
 const client = staticClient({ locale });
 ```

@@ -1,5 +1,14 @@
 ## @vx-oss/docs-local-html@0.1.2
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
+- Updated dependencies [[`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569)]:
+  - @vx-oss/docs-local-content@1.0.2
+
 ### Read structured data from `page.data.structuredData()`
 
 Search indexing no longer falls back to `(await page.data.load()).structuredData`. Runtime content sources expose `structuredData()` on page data instead, sharing the compile with `load()`:

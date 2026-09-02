@@ -1,5 +1,11 @@
 ## @vx-oss/docs-typescript@5.3.0
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
@@ -158,6 +164,7 @@ Drop `tailwind-merge`.
   This is necessary to support async cache adapter.
 
 - 9a3e2e8: **Remove deprecated APIs**
+
   - removed standalone `generateDocumentation()` function, create a generator instead.
   - removed `generateFiles` & MDX generation APIs, use `remarkAutoTypeTable` instead.
 
@@ -440,6 +447,7 @@ Drop `tailwind-merge`.
 - f75287d: **Introduce `@vx-oss/docs-docgen` package.**
 
   Offer a better authoring experience for advanced use cases.
+
   - Move `remark-dynamic-content` and `remark-install` plugins to the new package `@vx-oss/docs-docgen`.
   - Support Typescript generator by default
 

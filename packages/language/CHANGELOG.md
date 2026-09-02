@@ -1,5 +1,11 @@
 ## @vx-oss/docs-language@0.2.4
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
 ### Support HTTP Basic client authentication in OAuth password flow
 
 Some OAuth servers require client credentials in an HTTP Basic `Authorization` header instead of the request body. The password flow dialog now offers a Client Authentication select to choose between the two methods, as described in [RFC 6749, section 2.3.1](https://www.rfc-editor.org/rfc/rfc6749#section-2.3.1).

@@ -1,5 +1,14 @@
 ## @vx-oss/docs-api@0.2.6
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
+- Updated dependencies [[`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569)]:
+  - @vx-oss/docs-stf@1.0.2
+
 ### Fix OpenAPI 3.0 `example` in external files crashing `OpenAPIPage`
 
 The version upgrader ran after external documents were embedded under `x-ext`, where it can no longer classify schemas by their JSON path: a schema-level `example` from an external 3.0 file became an Example Object map instead of the JSON Schema `examples` array, crashing the schema UI with `schema.examples is not iterable`.
@@ -23,7 +32,7 @@ Fix [#3506](https://github.com/fuma-nama/fumadocs/issues/3506)
 ```yaml
 amount:
   allOf:
-    - $ref: '#/components/schemas/Money'
+    - $ref: "#/components/schemas/Money"
     - description: Property-specific description
 ```
 
@@ -42,30 +51,30 @@ A Reference Object whose target eventually refers back to it overflowed the stac
 Generate API reference docs from your GraphQL schemas, similar to the OpenAPI/AsyncAPI integration.
 
 ```ts
-import { createGraphQL } from '@vx-oss/docs-graphql/server';
+import { createGraphQL } from "@vx-oss/docs-graphql/server";
 
 export const graphql = createGraphQL({
-  input: ['./schema.graphql'],
+  input: ["./schema.graphql"],
 });
 ```
 
 Add the generated pages to your source:
 
 ```ts
-import { loader } from 'fumadocs-core/source';
+import { loader } from "fumadocs-core/source";
 
 export const source = loader(
   {
     docs: docs.toFumadocsSource(),
     graphql: await graphql.staticSource({
-      baseDir: 'graphql',
+      baseDir: "graphql",
       meta: true,
     }),
   },
   {
-    baseUrl: '/docs',
+    baseUrl: "/docs",
     plugins: [graphql.loaderPlugin()],
-  },
+  }
 );
 ```
 
@@ -74,7 +83,7 @@ And render them with `createGraphQLPage` from `@vx-oss/docs-graphql/ui`, with an
 ```tsx
 export const GraphQLPage = createGraphQLPage({
   playground: {
-    url: 'https://api.example.com/graphql',
+    url: "https://api.example.com/graphql",
   },
 });
 ```

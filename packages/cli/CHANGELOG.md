@@ -1,5 +1,11 @@
 ## @vx-oss/docs-cli@1.4.1
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
 ### Add Astro framework support
 
 Add Astro as a supported framework with React islands, including framework providers, an example app, create-app template support, search integration, OG image generation, and documentation.
