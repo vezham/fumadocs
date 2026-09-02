@@ -1,5 +1,16 @@
 ## @vx-oss/docs-satteri@0.5.0
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
+- Updated dependencies [[`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569)]:
+  - @vx-oss/docs-image-size@1.0.2
+  - @vx-oss/docs-local-content@1.0.2
+  - @vx-oss/docs-typescript@1.0.2
+
 ### Remark LLMs: export a component with `output: "function"`
 
 With `output: "function"`, `_markdown` becomes a component instead of a string: Markdown content is still stringified at compile time, while JSX elements stay as JSX, receiving their original props.
@@ -14,16 +25,20 @@ postprocess: {
 Render it with `renderToMarkdown` from `fumadocs-core/server`. Elements resolve from `props.components`: a component can call `asMarkdown()` to output its own Markdown form, other components (including missing ones) are serialized as JSX syntax.
 
 ```tsx
-import { renderToMarkdown } from 'fumadocs-core/server';
+import { renderToMarkdown } from "fumadocs-core/server";
 
 const { _markdown: Content } = await page.data.load();
-const text = await renderToMarkdown(<Content components={getMDXComponents()} />);
+const text = await renderToMarkdown(
+  <Content components={getMDXComponents()} />
+);
 ```
 
 `getText('processed')` keeps working: it renders the component for you, with an optional components map:
 
 ```ts
-const text = await page.data.getText('processed', { components: getMDXComponents() });
+const text = await page.data.getText("processed", {
+  components: getMDXComponents(),
+});
 ```
 
 Supported in bundler collections with both compilers, and in `dynamic: true` collections & `@vx-oss/docs-satteri/local-md` with the Sätteri compiler.
@@ -82,10 +97,10 @@ The renderer returned by `load()` still carries `structuredData`, existing code 
 **Breaking:** `ExtraPluginHooks.beforeToJs` was removed. Seed `ctx.data` from a Sätteri `before` hook on the plugin definition instead — it also receives the document root:
 
 ```ts
-import { defineMdastPlugin } from 'satteri';
+import { defineMdastPlugin } from "satteri";
 
 defineMdastPlugin({
-  name: 'my-plugin',
+  name: "my-plugin",
   before(root, ctx) {
     ctx.data.myValue ??= [];
   },
@@ -99,10 +114,10 @@ defineMdastPlugin({
 A fork of [probe-image-size](https://github.com/nodeca/probe-image-size) with no dependencies of its own.
 
 ```ts
-import { probe, imageSize } from '@vx-oss/docs-image-size';
+import { probe, imageSize } from "@vx-oss/docs-image-size";
 
-await probe('./public/banner.png'); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
-await probe('https://example.com/banner.png', { timeout: 5000 });
+await probe("./public/banner.png"); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
+await probe("https://example.com/banner.png", { timeout: 5000 });
 
 imageSize(bytes); // the same result, or `null`
 ```
@@ -120,8 +135,6 @@ Sequential scanning stops after 512 KB, but that never loses an image: the one f
 Use Satteri to load local MD/MDX files as content sources.
 
 ### Extract shared local content source logic to `@vx-oss/docs-local-content`
-
-
 
 ### Fix math rendering
 

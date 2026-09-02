@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-content",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Fuma Content adapter for Fumadocs",
   "keywords": [
     "Docs",

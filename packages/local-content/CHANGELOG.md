@@ -1,5 +1,11 @@
 ## @vx-oss/docs-local-content@0.2.1
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
 ### Simplify cache
 
 ## @vx-oss/docs-local-content@0.2.0
@@ -13,7 +19,7 @@ Content sources can hook into the static loader they are attached to, and dynami
 ```ts
 export function createMySource(): DynamicSource {
   return {
-    cache: 'custom',
+    cache: "custom",
     async files() {
       return loadFiles();
     },

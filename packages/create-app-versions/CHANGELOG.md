@@ -1,5 +1,14 @@
 ## create-vx-oss-docs-versions@16.1.0
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569)]:
+  - @vx-oss/docs-core@1.0.2
+  - @vx-oss/docs-mdx@1.0.2
+  - @vx-oss/docs-react@1.0.2
+
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.

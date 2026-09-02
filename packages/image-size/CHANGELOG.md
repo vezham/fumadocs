@@ -1,14 +1,20 @@
 ## @vx-oss/docs-image-size@0.1.0
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
 ### Introduce `@vx-oss/docs-image-size`, replacing `image-size` in `remarkImage`
 
 A fork of [probe-image-size](https://github.com/nodeca/probe-image-size) with no dependencies of its own.
 
 ```ts
-import { probe, imageSize } from '@vx-oss/docs-image-size';
+import { probe, imageSize } from "@vx-oss/docs-image-size";
 
-await probe('./public/banner.png'); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
-await probe('https://example.com/banner.png', { timeout: 5000 });
+await probe("./public/banner.png"); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
+await probe("https://example.com/banner.png", { timeout: 5000 });
 
 imageSize(bytes); // the same result, or `null`
 ```

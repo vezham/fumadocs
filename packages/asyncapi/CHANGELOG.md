@@ -1,5 +1,15 @@
 ## @vx-oss/docs-asyncapi@0.3.0
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
+- Updated dependencies [[`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569)]:
+  - @vx-oss/docs-api@1.0.2
+  - @vx-oss/docs-stf@1.0.2
+
 ### Redesign source API
 
 Content sources can hook into the static loader they are attached to, and dynamic sources can opt out of the loader's in-memory file cache.
@@ -9,7 +19,7 @@ Content sources can hook into the static loader they are attached to, and dynami
 ```ts
 export function createMySource(): DynamicSource {
   return {
-    cache: 'custom',
+    cache: "custom",
     async files() {
       return loadFiles();
     },

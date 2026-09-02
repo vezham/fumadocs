@@ -1,5 +1,15 @@
 ## @vx-oss/docs-graphql@0.2.4
 
+## 1.0.2
+
+### Patch Changes
+
+- [`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bomp
+
+- Updated dependencies [[`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569)]:
+  - @vx-oss/docs-api@1.0.2
+  - @vx-oss/docs-stf@1.0.2
+
 ### Require `graphql` v17
 
 The peer range now correctly requires `^17.0.0`.
@@ -15,7 +25,7 @@ Content sources can hook into the static loader they are attached to, and dynami
 ```ts
 export function createMySource(): DynamicSource {
   return {
-    cache: 'custom',
+    cache: "custom",
     async files() {
       return loadFiles();
     },
@@ -62,30 +72,30 @@ Use GraphQL.js v18.
 Generate API reference docs from your GraphQL schemas, similar to the OpenAPI/AsyncAPI integration.
 
 ```ts
-import { createGraphQL } from '@vx-oss/docs-graphql/server';
+import { createGraphQL } from "@vx-oss/docs-graphql/server";
 
 export const graphql = createGraphQL({
-  input: ['./schema.graphql'],
+  input: ["./schema.graphql"],
 });
 ```
 
 Add the generated pages to your source:
 
 ```ts
-import { loader } from 'fumadocs-core/source';
+import { loader } from "fumadocs-core/source";
 
 export const source = loader(
   {
     docs: docs.toFumadocsSource(),
     graphql: await graphql.staticSource({
-      baseDir: 'graphql',
+      baseDir: "graphql",
       meta: true,
     }),
   },
   {
-    baseUrl: '/docs',
+    baseUrl: "/docs",
     plugins: [graphql.loaderPlugin()],
-  },
+  }
 );
 ```
 
@@ -94,7 +104,7 @@ And render them with `createGraphQLPage` from `@vx-oss/docs-graphql/ui`, with an
 ```tsx
 export const GraphQLPage = createGraphQLPage({
   playground: {
-    url: 'https://api.example.com/graphql',
+    url: "https://api.example.com/graphql",
   },
 });
 ```

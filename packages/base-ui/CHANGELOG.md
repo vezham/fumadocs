@@ -1,5 +1,13 @@
 ## @vx-oss/docs-base-ui@16.15.4
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [[`fe2966f`](https://github.com/vezham/fumadocs/commit/fe2966fbf1dcaf02b677679fde50f253de87b569)]:
+  - @vx-oss/docs-core@1.0.2
+  - @vx-oss/docs-tailwind@1.0.2
+
 ### Fix Next.js `<Link>` not scrolling to top under docs layouts
 
 The page container rendered `<main style="display: contents">`, which Next.js' scroll handler treats as a hidden element: `display: contents` generates no box, so its `getBoundingClientRect()` is all-zero, indistinguishable from `display: none`. The handler skips it (and the sticky TOC siblings) without ever descending into children, dropping the scroll-to-top on navigation entirely.
@@ -37,7 +45,7 @@ The page container slot now wraps `<article id="nd-page">` in a `<main class="co
 The built-in search engine moved from `@orama/orama` to [ZBSearch](https://www.zbsearch.dev), a near drop-in successor. All module paths and APIs are unchanged, and search now works with **every language out of the box**: the new default `multilingual` mode uses Unicode word segmentation, so i18n search needs zero config.
 
 ```ts
-import { createFromSource } from 'fumadocs-core/search/server';
+import { createFromSource } from "fumadocs-core/search/server";
 
 // no `localeMap`, no `@orama/tokenizers`, CJK included
 export const { GET } = createFromSource(source);
@@ -46,7 +54,7 @@ export const { GET } = createFromSource(source);
 All locales now share a single search database — results are filtered by the locale of your pages at query time. Same for static mode:
 
 ```ts
-import { staticClient } from 'fumadocs-core/search/client/orama-static';
+import { staticClient } from "fumadocs-core/search/client/orama-static";
 
 const client = staticClient({ locale });
 ```
@@ -131,8 +139,6 @@ More aligned with original styles.
 ## @vx-oss/docs-base-ui@16.11.0
 
 ### Updated the theme switch to use `document.startViewTransition()` for smoother theme transitions with graceful fallback.
-
-
 
 ### Default to Base UI
 
