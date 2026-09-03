@@ -32,6 +32,7 @@
       "@vx-oss/docs-openapi",
       "@vx-oss/docs-preview",
       "@vx-oss/docs-python",
+      "@vx-oss/docs-radix-ui",
       "@vx-oss/docs-react",
       "@vx-oss/docs-sanity",
       "@vx-oss/docs-satteri",

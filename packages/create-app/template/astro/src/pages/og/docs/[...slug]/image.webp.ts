@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 import { createElement } from 'react';
 import { ImageResponse } from 'takumi-js/response';
-import { generate as DefaultImage } from '@vezham/docs-react/og/takumi';
+import { generate as DefaultImage } from '@vx-oss/docs-react/og/takumi';
 import { source } from '@/lib/source';
 
 export function getStaticPaths() {

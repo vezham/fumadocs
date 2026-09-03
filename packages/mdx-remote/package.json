@@ -60,7 +60,7 @@
     "@types/mdx": "*",
     "@types/react": "*",
     "react": "18.x.x || 19.x.x",
-    "@vx-oss/docs-core": "^1.0.1"
+    "@vx-oss/docs-core": "^1.0.4"
   },
   "peerDependenciesMeta": {
     "@types/mdx": {

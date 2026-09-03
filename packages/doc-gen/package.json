@@ -71,7 +71,7 @@
     "@types/hast": "*",
     "@types/mdast": "*",
     "mdast-util-mdx": "*",
-    "@vx-oss/docs-core": "^1.0.1"
+    "@vx-oss/docs-core": "^1.0.4"
   },
   "peerDependenciesMeta": {
     "mdast-util-mdx": {

@@ -60,7 +60,7 @@
     "next-sanity": "^12.4.0 || ^13.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "@vx-oss/docs-core": "^1.0.1"
+    "@vx-oss/docs-core": "^1.0.4"
   },
   "peerDependenciesMeta": {
     "@sanity/types": {

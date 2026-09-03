@@ -1,17 +1,17 @@
 ---
 name: radix-base-ui-sync
-description: Keep packages/radix-ui (@vx-oss/docs-react) and packages/base-ui in sync. Use when editing either package, adding features, or fixing bugs so both UI variants stay consistent.
+description: Keep packages/radix-ui (@vx-oss/docs-radix-ui) and packages/base-ui in sync. Use when editing either package, adding features, or fixing bugs so both UI variants stay consistent.
 ---
 
 # Radix UI vs Base UI Package Sync
 
-`packages/radix-ui` (@vx-oss/docs-react) and `packages/base-ui` (@vx-oss/docs-base-ui) are two variants of Fumadocs UI. They share the same layout structure, components, and public API; only the underlying primitives differ. When changing one package, consider the other.
+`packages/radix-ui` (@vx-oss/docs-radix-ui) and `packages/base-ui` (@vx-oss/docs-base-ui) are two variants of Fumadocs UI. They share the same layout structure, components, and public API; only the underlying primitives differ. When changing one package, consider the other.
 
 ## Package identity
 
 |                  | radix-ui                | base-ui                |
 | ---------------- | ----------------------- | ---------------------- |
-| **Package name** | `@vx-oss/docs-react`           | `@vx-oss/docs-base-ui`    |
+| **Package name** | `@vx-oss/docs-radix-ui`           | `@vx-oss/docs-base-ui`    |
 | **Primitives**   | `@radix-ui/*`           | `@base-ui/react`       |
 | **Config key**   | `uiLibrary: 'radix-ui'` | `uiLibrary: 'base-ui'` |
 

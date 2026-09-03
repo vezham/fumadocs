@@ -25,7 +25,7 @@ export function useSidebar() {
   const ctx = use(SidebarContext);
   if (!ctx)
     throw new Error(
-      'the component must be wrapped under <SidebarProvider /> (@vx-oss/docs-react/legacy/sidebar)',
+      'the component must be wrapped under <SidebarProvider /> (@vx-oss/docs-radix-ui/legacy/sidebar)',
     );
   return ctx;
 }

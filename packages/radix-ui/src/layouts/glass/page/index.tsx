@@ -30,7 +30,7 @@ export function useDocsPage() {
   const context = use(PageContext);
   if (!context)
     throw new Error(
-      'Please use page components under <DocsPage /> (`@vx-oss/docs-react/layouts/glass/page`).',
+      'Please use page components under <DocsPage /> (`@vx-oss/docs-radix-ui/layouts/glass/page`).',
     );
   return context;
 }

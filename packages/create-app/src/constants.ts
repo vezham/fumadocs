@@ -3,6 +3,8 @@ import versionPkg from '../../create-app-versions/package.json';
 import * as corePkg from '../../core/package.json';
 import * as mdxPkg from '../../mdx/package.json';
 import * as basePkg from '../../base-ui/package.json';
+import * as radixPkg from '../../radix-ui/package.json';
+import * as reactPkg from '../../react/package.json';
 
 export const sourceDir = fileURLToPath(new URL(`../`, import.meta.url).href);
 
@@ -87,7 +89,7 @@ export const templates: TemplateInfo[] = [
   },
 ];
 
-const workspaces = [corePkg, mdxPkg, basePkg];
+const workspaces = [corePkg, mdxPkg, basePkg, radixPkg, reactPkg];
 
 export const depVersions: Record<string, string> = { ...versionPkg.dependencies };
 
@@ -95,10 +97,16 @@ for (const workspace of workspaces) {
   depVersions[workspace.name] = workspace.version;
 }
 
-depVersions['@vx-oss/docs-react'] = `npm:${basePkg.name}@${basePkg.version}`;
-
 export function resolvePublicDependency(name: string, version: string): [string, string] {
   const realName = name.replace(/^@vezham\/docs-/, '@vx-oss/docs-');
+  if (
+    realName === '@vx-oss/docs-react' ||
+    realName === '@vx-oss/docs-base-ui' ||
+    realName === '@vx-oss/docs-radix-ui'
+  ) {
+    return [realName, version];
+  }
+
   const publicName = realName.replace(/^@vx-oss\/docs-/, '@vezham/docs-');
 
   if (realName === publicName) return [name, version];

@@ -45,12 +45,12 @@
     "@vx-oss/docs-story": "workspace:*"
   },
   "peerDependencies": {
-    "@vx-oss/docs-api": "^1.0.1",
-    "@vx-oss/docs-asyncapi": "^1.0.1",
-    "@vx-oss/docs-core": "^1.0.1",
-    "@vx-oss/docs-openapi": "^1.0.1",
-    "@vx-oss/docs-react": "^1.0.1",
-    "@vx-oss/docs-story": "^1.0.1"
+    "@vx-oss/docs-api": "^1.0.4",
+    "@vx-oss/docs-asyncapi": "^1.0.4",
+    "@vx-oss/docs-core": "^1.0.4",
+    "@vx-oss/docs-openapi": "^1.0.4",
+    "@vx-oss/docs-react": "^1.0.4",
+    "@vx-oss/docs-story": "^1.0.4"
   },
   "peerDependenciesMeta": {
     "@vx-oss/docs-api": {

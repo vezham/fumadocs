@@ -6,23 +6,7 @@ icon: Library
 
 ## Overview
 
-Fumadocs UI maintains support for both [Base UI](https://base-ui.com) and [Radix UI](https://radix-ui.com/primitives), while it uses Base UI by default.
-
-The configuration may be different if you use Fumadocs CLI for customising components.
-
-### Base UI
-
-Base UI is the default component library. If you install manually, alias `@vx-oss/docs-react` to the `@vx-oss/docs-base-ui` package:
-
-```json title="package.json"
-{
-  "dependencies": {
-    "@vx-oss/docs-react": "npm:@vx-oss/docs-base-ui@latest",
-    // make sure Base UI is already installed
-    "@base-ui/react": "..."
-  }
-}
-```
+`@vx-oss/docs-react` is the public React UI package. It currently uses [Base UI](https://base-ui.com) internally, so apps can keep one stable import path while the underlying component implementation can change later.
 
 For Fumadocs CLI, this is the default `uiLibrary` value:
 
@@ -34,7 +18,7 @@ For Fumadocs CLI, this is the default `uiLibrary` value:
 
 ### Radix UI
 
-You can opt-in to use Radix UI by installing the `@vx-oss/docs-react` package directly:
+The Radix UI implementation remains available for registry generation and compatibility work, but app code should keep importing from `@vx-oss/docs-react`:
 
 ```json title="package.json"
 {

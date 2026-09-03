@@ -381,7 +381,7 @@ export const registry: Registry = {
   ],
   dependencies: {
     '@vx-oss/docs-core': null,
-    '@vx-oss/docs-react': null,
+    '@vx-oss/docs-radix-ui': null,
     react: null,
   },
 };

@@ -46,7 +46,7 @@ const paper = tegami({
     },
   },
   packages: {
-    '@vx-oss/docs-react': { group: 'fumadocs' },
+    '@vx-oss/docs-radix-ui': { group: 'fumadocs' },
     '@vx-oss/docs-base-ui': { group: 'fumadocs' },
     '@vx-oss/docs-core': { group: 'fumadocs' },
     'create-vx-oss-docs': { group: 'cli' },
@@ -66,7 +66,7 @@ function updateStackblitzVersions() {
   const packageDirs = {
     '@vx-oss/docs-core': 'packages/core',
     '@vx-oss/docs-mdx': 'packages/mdx',
-    '@vx-oss/docs-react': 'packages/radix-ui',
+    '@vx-oss/docs-radix-ui': 'packages/radix-ui',
   };
 
   const stackblitzPath = join(root, 'examples/stackblitz/package.json');

@@ -56,9 +56,9 @@ export const compileOptions: Partial<CompileOptions> = {
       file = path.relative(baseUi.registry.dir, ref.file);
       if (file.startsWith('contexts/') || file.startsWith('utils/use-')) {
         return {
-          dep: '@vx-oss/docs-base-ui',
+          dep: '@vx-oss/docs-react',
           type: 'dependency',
-          specifier: `@vx-oss/docs-base-ui/${removeExtname(file)}`,
+          specifier: `@vx-oss/docs-react/${removeExtname(file)}`,
         };
       }
 
@@ -99,7 +99,9 @@ export const compileOptions: Partial<CompileOptions> = {
 
     // map dep imports to actual components
     if (ref.type === 'dependency' && ref.dep === '@vx-oss/docs-react') {
-      const match = /@vezham\/docs-react\/components\/ui\/(.*)/.exec(ref.specifier);
+      const match = /@vx-oss\/docs-react\/components\/ui\/(.*)/.exec(
+        ref.specifier,
+      );
 
       if (match) {
         return {

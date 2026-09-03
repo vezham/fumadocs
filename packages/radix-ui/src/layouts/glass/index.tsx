@@ -61,7 +61,7 @@ export function useGlassLayout() {
   const context = use(LayoutContext);
   if (!context)
     throw new Error(
-      'Please use Glass layout components under <GlassLayout /> (`@vx-oss/docs-react/layouts/glass`).',
+      'Please use Glass layout components under <GlassLayout /> (`@vx-oss/docs-radix-ui/layouts/glass`).',
     );
   return context;
 }

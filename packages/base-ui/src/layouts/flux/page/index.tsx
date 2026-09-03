@@ -78,7 +78,7 @@ export function useDocsPage() {
   const context = use(PageContext);
   if (!context)
     throw new Error(
-      'Please use page components under <DocsPage /> (`@vx-oss/docs-react/layouts/flux/page`).',
+      'Please use page components under <DocsPage /> (`@vx-oss/docs-base-ui/layouts/flux/page`).',
     );
   return context;
 }

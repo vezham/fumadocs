@@ -58,7 +58,7 @@
     "@vx-oss/docs-core": "workspace:*"
   },
   "peerDependencies": {
-    "@vx-oss/docs-core": "^1.0.1"
+    "@vx-oss/docs-core": "^1.0.4"
   },
   "engines": {
     "node": ">=18"

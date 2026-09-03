@@ -1,0 +1,74 @@
+{
+  "name": "@vx-oss/docs-react",
+  "version": "1.0.4",
+  "description": "Compatibility React UI entry for Vezham Docs",
+  "keywords": [
+    "Docs",
+    "Fumadocs",
+    "react"
+  ],
+  "homepage": "https://vezham.com",
+  "license": "MIT",
+  "author": "Fuma Nama",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/react"
+  },
+  "files": [
+    "css",
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    "./mdx": {
+      "types": "./dist/mdx.d.ts",
+      "node": "./dist/mdx.server.js",
+      "import": "./dist/mdx.js"
+    },
+    "./style.css": "./dist/style.css",
+    "./components/image-zoom2.css": "./dist/components/image-zoom2.css",
+    "./css/*": "./css/*",
+    "./package.json": "./package.json",
+    "./*": {
+      "types": "./dist/*.d.ts",
+      "import": "./dist/*.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/sync.mjs",
+    "clean": "rimraf dist css",
+    "dev": "node scripts/sync.mjs",
+    "lint": "oxlint .",
+    "types:check": "node scripts/sync.mjs"
+  },
+  "dependencies": {
+    "@vx-oss/docs-base-ui": "workspace:*"
+  },
+  "peerDependencies": {
+    "@types/mdx": "*",
+    "@types/react": "*",
+    "@vx-oss/docs-core": "^1.0.4",
+    "next": "16.x.x",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "takumi-js": "*"
+  },
+  "peerDependenciesMeta": {
+    "@types/mdx": {
+      "optional": true
+    },
+    "@types/react": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    },
+    "takumi-js": {
+      "optional": true
+    }
+  }
+}

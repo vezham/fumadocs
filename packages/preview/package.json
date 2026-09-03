@@ -91,7 +91,7 @@
     "@vx-oss/docs-react": "workspace:*"
   },
   "peerDependencies": {
-    "@vx-oss/docs-react": "^1.0.1"
+    "@vx-oss/docs-react": "^1.0.4"
   },
   "peerDependenciesMeta": {
     "@vx-oss/docs-react": {

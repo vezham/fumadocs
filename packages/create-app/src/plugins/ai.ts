@@ -103,7 +103,7 @@ async function addAIChat({ template, appDir }: TemplatePluginContext) {
       namedImports: ['cn'],
     },
     {
-      moduleSpecifier: '@vezham/docs-react/components/ui/button',
+      moduleSpecifier: '@vx-oss/docs-react/components/ui/button',
       namedImports: ['buttonVariants'],
     },
   ]);

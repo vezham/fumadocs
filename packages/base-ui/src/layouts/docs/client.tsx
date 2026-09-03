@@ -65,7 +65,7 @@ export function useDocsLayout() {
   const context = use(LayoutContext);
   if (!context)
     throw new Error(
-      'Please use <DocsPage /> (`@vx-oss/docs-react/layouts/docs/page`) under <DocsLayout /> (`@vx-oss/docs-react/layouts/docs`).',
+      'Please use <DocsPage /> (`@vx-oss/docs-base-ui/layouts/docs/page`) under <DocsLayout /> (`@vx-oss/docs-base-ui/layouts/docs`).',
     );
   return context;
 }

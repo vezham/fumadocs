@@ -94,7 +94,7 @@ export function useDocsPage() {
   const context = use(PageContext);
   if (!context)
     throw new Error(
-      'Please use page components under <DocsPage /> (`@vx-oss/docs-react/layouts/notebook/page`).',
+      'Please use page components under <DocsPage /> (`@vx-oss/docs-base-ui/layouts/notebook/page`).',
     );
   return context;
 }
