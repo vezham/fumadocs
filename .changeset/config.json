@@ -40,7 +40,8 @@
       "@vx-oss/docs-story",
       "@vx-oss/docs-tailwind",
       "@vx-oss/docs-twoslash",
-      "@vx-oss/docs-typescript"
+      "@vx-oss/docs-typescript",
+      "@vx-oss/docs-vite"
     ]
   ],
   "linked": [],
