@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-graphql",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate docs for your GraphQL schema",
   "keywords": [
     "Docs",
