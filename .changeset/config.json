@@ -40,8 +40,7 @@
       "@vx-oss/docs-story",
       "@vx-oss/docs-tailwind",
       "@vx-oss/docs-twoslash",
-      "@vx-oss/docs-typescript",
-      "create-vx-oss-docs"
+      "@vx-oss/docs-typescript"
     ]
   ],
   "linked": [],
@@ -53,6 +52,8 @@
   },
   "ignore": [
     "docs",
-    "example-*"
+    "example-*",
+    "tsconfig",
+    "create-vx-oss-*"
   ]
 }
