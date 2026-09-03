@@ -1,5 +1,14 @@
 ## @vx-oss/docs-local-html@0.1.2
 
+## 1.0.3
+
+### Patch Changes
+
+- [`2500600`](https://github.com/vezham/fumadocs/commit/25006003a3ca66348183334d34f21885ce02bee9) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
+- Updated dependencies [[`2500600`](https://github.com/vezham/fumadocs/commit/25006003a3ca66348183334d34f21885ce02bee9)]:
+  - @vx-oss/docs-local-content@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
