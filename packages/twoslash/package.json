@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-twoslash",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Typescript Twoslash Integration for Fumadocs",
   "keywords": [
     "Docs",
