@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "@vx/ws:clean:cache": "find . \\( -name '.turbo' -o -name '.next' -o -name 'dist' -o -name 'node_modules' -o -name '.source' -o -name '.contentlayer' -o -name 'pnpm-lock.yaml' \\) -prune -exec rm -rf '{}' +",
     "@vx/ws:changeset": "changeset",
     "build": "turbo run build --filter=!./examples/* --filter=!docs",
     "clean": "turbo run clean",
