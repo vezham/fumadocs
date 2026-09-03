@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-image-size",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Read image dimensions without downloading the whole image. Zero dependencies.",
   "keywords": [
     "dimensions",
