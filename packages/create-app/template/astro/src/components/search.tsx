@@ -10,8 +10,8 @@ import {
   SearchDialogOverlay,
   type SharedProps,
 } from '@vx-oss/docs-react/components/dialog/search';
-import { useDocsSearch } from '@vezham/docs-core/search/client';
-import { staticClient } from '@vezham/docs-core/search/client/orama-static';
+import { useDocsSearch } from '@vx-oss/docs-core/search/client';
+import { staticClient } from '@vx-oss/docs-core/search/client/orama-static';
 import { useI18n } from '@vx-oss/docs-react/contexts/i18n';
 
 export default function DefaultSearchDialog(props: SharedProps) {

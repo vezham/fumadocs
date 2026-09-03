@@ -2,7 +2,7 @@ import type { MetaData, PageData, Source } from '@vx-oss/docs-core/source';
 import type { StructuredData } from '@vx-oss/docs-core/mdx-plugins/remark-structure';
 import type { MDXContent, MDXProps } from 'mdx/types';
 import { createElement, use } from 'react';
-import { server, toFumadocsSource } from './server';
+import { server, toDocsSource } from './server';
 import type { DocData, DocMethods, MetaMethods } from './types';
 
 export interface BrowserDocMethods {
@@ -49,7 +49,11 @@ export interface MacroDocCollection<Frontmatter = unknown, Extra = unknown> {
    * get an entry by its file path (relative to collection directory)
    */
   get: (path: string) => MacroDocEntry<Frontmatter, Extra> | undefined;
-  toFumadocsSource: (options?: ToFumadocsSourceOptions) => Source<{
+  toDocsSource: (options?: ToDocsSourceOptions) => Source<{
+    pageData: MacroDocEntry<Frontmatter, Extra>;
+    metaData: MetaData;
+  }>;
+  toFumadocsSource: (options?: ToDocsSourceOptions) => Source<{
     pageData: MacroDocEntry<Frontmatter, Extra>;
     metaData: MetaData;
   }>;
@@ -62,7 +66,11 @@ export interface MacroAsyncDocCollection<Frontmatter = unknown, Extra = unknown>
    * get an entry by its file path (relative to collection directory)
    */
   get: (path: string) => MacroAsyncDocEntry<Frontmatter, Extra> | undefined;
-  toFumadocsSource: (options?: ToFumadocsSourceOptions) => Source<{
+  toDocsSource: (options?: ToDocsSourceOptions) => Source<{
+    pageData: MacroAsyncDocEntry<Frontmatter, Extra>;
+    metaData: MetaData;
+  }>;
+  toFumadocsSource: (options?: ToDocsSourceOptions) => Source<{
     pageData: MacroAsyncDocEntry<Frontmatter, Extra>;
     metaData: MetaData;
   }>;
@@ -77,7 +85,7 @@ export interface MacroMetaCollection<Data = unknown> {
   get: (path: string) => MacroMetaEntry<Data> | undefined;
 }
 
-interface ToFumadocsSourceOptions {
+interface ToDocsSourceOptions {
   /** base directory for virtual file paths */
   baseDir?: string;
 }
@@ -93,7 +101,11 @@ export interface MacroDocsCollection<
   getPage: (path: string) => MacroDocEntry<Frontmatter, Extra> | undefined;
   getMeta: (path: string) => MacroMetaEntry<Meta> | undefined;
 
-  toFumadocsSource: (options?: ToFumadocsSourceOptions) => Source<{
+  toDocsSource: (options?: ToDocsSourceOptions) => Source<{
+    pageData: MacroDocEntry<Frontmatter, Extra>;
+    metaData: MacroMetaEntry<Meta>;
+  }>;
+  toFumadocsSource: (options?: ToDocsSourceOptions) => Source<{
     pageData: MacroDocEntry<Frontmatter, Extra>;
     metaData: MacroMetaEntry<Meta>;
   }>;
@@ -110,7 +122,11 @@ export interface MacroAsyncDocsCollection<
   getPage: (path: string) => MacroAsyncDocEntry<Frontmatter, Extra> | undefined;
   getMeta: (path: string) => MacroMetaEntry<Meta> | undefined;
 
-  toFumadocsSource: (options?: ToFumadocsSourceOptions) => Source<{
+  toDocsSource: (options?: ToDocsSourceOptions) => Source<{
+    pageData: MacroAsyncDocEntry<Frontmatter, Extra>;
+    metaData: MacroMetaEntry<Meta>;
+  }>;
+  toFumadocsSource: (options?: ToDocsSourceOptions) => Source<{
     pageData: MacroAsyncDocEntry<Frontmatter, Extra>;
     metaData: MacroMetaEntry<Meta>;
   }>;
@@ -208,8 +224,11 @@ export async function doc(args: BaseArgs & { entries: GlobEntries }): Promise<Ma
 
   return {
     ...accessor(entries),
+    toDocsSource(options) {
+      return toDocsSource(entries, [], options);
+    },
     toFumadocsSource(options) {
-      return toFumadocsSource(entries, [], options);
+      return toDocsSource(entries, [], options);
     },
   };
 }
@@ -223,8 +242,11 @@ export async function docAsync(
 
   return {
     ...accessor(entries),
+    toDocsSource(options) {
+      return toDocsSource(entries, [], options);
+    },
     toFumadocsSource(options) {
-      return toFumadocsSource(entries, [], options);
+      return toDocsSource(entries, [], options);
     },
   };
 }
@@ -254,8 +276,11 @@ export async function docs(
     meta: metaEntries,
     getPage: getDoc.get,
     getMeta: getMeta.get,
+    toDocsSource(options) {
+      return toDocsSource(docEntries, metaEntries, options);
+    },
     toFumadocsSource(options) {
-      return toFumadocsSource(docEntries, metaEntries, options);
+      return toDocsSource(docEntries, metaEntries, options);
     },
   };
 }
@@ -277,8 +302,11 @@ export async function docsAsync(
     meta: metaEntries,
     getPage: getDoc.get,
     getMeta: getMeta.get,
+    toDocsSource(options) {
+      return toDocsSource(docEntries, metaEntries, options);
+    },
     toFumadocsSource(options) {
-      return toFumadocsSource(docEntries, metaEntries, options);
+      return toDocsSource(docEntries, metaEntries, options);
     },
   };
 }
