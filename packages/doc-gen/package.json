@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-docgen",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Useful remark utilities and plugins",
   "keywords": [
     "Docs",

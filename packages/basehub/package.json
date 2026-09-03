@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-basehub",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The official BaseHub integration for Fumadocs",
   "keywords": [
     "Docs",

@@ -1,5 +1,16 @@
 ## @vx-oss/docs-satteri@0.5.0
 
+## 1.0.4
+
+### Patch Changes
+
+- [`ba2428c`](https://github.com/vezham/fumadocs/commit/ba2428c7184ef00307043e93cc844534736fa24b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
+- Updated dependencies [[`ba2428c`](https://github.com/vezham/fumadocs/commit/ba2428c7184ef00307043e93cc844534736fa24b)]:
+  - @vx-oss/docs-image-size@1.0.4
+  - @vx-oss/docs-local-content@1.0.4
+  - @vx-oss/docs-typescript@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

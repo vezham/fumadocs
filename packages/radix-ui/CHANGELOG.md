@@ -1,5 +1,15 @@
 ## fumadocs-ui@16.15.4
 
+## 1.0.4
+
+### Patch Changes
+
+- [`ba2428c`](https://github.com/vezham/fumadocs/commit/ba2428c7184ef00307043e93cc844534736fa24b) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
+- Updated dependencies [[`ba2428c`](https://github.com/vezham/fumadocs/commit/ba2428c7184ef00307043e93cc844534736fa24b)]:
+  - @vx-oss/docs-core@1.0.4
+  - @vx-oss/docs-tailwind@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes
