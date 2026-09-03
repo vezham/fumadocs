@@ -1,22 +1,17 @@
-import { access, cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
+import { access, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(fileURLToPath(new URL('..', import.meta.url)));
-const baseRoot = path.resolve(root, '../base-ui');
+const sourceRoot = path.resolve(root, '../vezham-ui');
 const distDir = path.join(root, 'dist');
 const cssDir = path.join(root, 'css');
-const basePackageName = '@vx-oss/docs-base-ui';
-const defaultExports = new Set([
-  './components/dialog/search-algolia',
-  './components/dialog/search-default',
-  './components/dialog/search-orama',
-  './mdx',
-]);
+const sourcePackageName = '@vx-oss/docs-vezham-ui';
 
-const basePackage = JSON.parse(await readFile(path.join(baseRoot, 'package.json'), 'utf8'));
-const entries = Object.keys(basePackage.exports).filter(
+const sourcePackage = JSON.parse(await readFile(path.join(sourceRoot, 'package.json'), 'utf8'));
+const entries = Object.keys(sourcePackage.exports).filter(
   (subpath) =>
+    subpath !== '.' &&
     subpath !== './package.json' &&
     subpath !== './style.css' &&
     subpath !== './css/*' &&
@@ -27,35 +22,26 @@ await rm(distDir, { force: true, recursive: true });
 await rm(cssDir, { force: true, recursive: true });
 await mkdir(distDir, { recursive: true });
 
+await writeWrapper('.', path.join(distDir, 'index.js'));
+await writeWrapper('.', path.join(distDir, 'index.d.ts'));
+
 for (const subpath of entries) {
   await writeWrapper(subpath, path.join(distDir, `${subpath.slice(2)}.js`));
   await writeWrapper(subpath, path.join(distDir, `${subpath.slice(2)}.d.ts`));
 }
 
-await writeWrapper('./mdx', path.join(distDir, 'mdx.server.js'));
-await writeWrapper('./mdx', path.join(distDir, 'mdx.server.d.ts'));
-
-await cp(path.join(baseRoot, 'css'), cssDir, { recursive: true });
 await copyIfExists(
-  path.join(baseRoot, 'dist/style.css'),
+  path.join(sourceRoot, 'dist/style.css'),
   path.join(distDir, 'style.css'),
-  `@import '${basePackageName}/style.css';\n`,
-);
-await copyIfExists(
-  path.join(baseRoot, 'dist/components/image-zoom2.css'),
-  path.join(distDir, 'components/image-zoom2.css'),
-  `@import '${basePackageName}/components/image-zoom2.css';\n`,
+  `@import '${sourcePackageName}/style.css';\n`,
 );
 
 async function writeWrapper(subpath, outputPath) {
   await mkdir(path.dirname(outputPath), { recursive: true });
 
-  const specifier = `${basePackageName}/${subpath.slice(2)}`;
+  const specifier =
+    subpath === '.' ? sourcePackageName : `${sourcePackageName}/${subpath.slice(2)}`;
   const lines = [`export * from '${specifier}';`];
-
-  if (defaultExports.has(subpath)) {
-    lines.push(`export { default } from '${specifier}';`);
-  }
 
   await writeFile(outputPath, `${lines.join('\n')}\n`);
 }
@@ -65,7 +51,8 @@ async function copyIfExists(from, to, fallback) {
 
   try {
     await access(from);
-    await cp(from, to);
+    const content = await readFile(from, 'utf8');
+    await writeFile(to, content);
   } catch {
     await writeFile(to, fallback);
   }

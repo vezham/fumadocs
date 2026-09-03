@@ -42,6 +42,7 @@
       "@vx-oss/docs-tailwind",
       "@vx-oss/docs-twoslash",
       "@vx-oss/docs-typescript",
+      "@vx-oss/docs-vezham-ui",
       "@vx-oss/docs-vite"
     ]
   ],
@@ -52,10 +53,5 @@
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
-  "ignore": [
-    "docs",
-    "example-*",
-    "tsconfig",
-    "create-vx-oss-*"
-  ]
+  "ignore": ["docs", "example-*", "tsconfig", "create-vx-oss-*"]
 }

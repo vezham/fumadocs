@@ -5,6 +5,7 @@ import * as mdxPkg from '../../mdx/package.json';
 import * as basePkg from '../../base-ui/package.json';
 import * as radixPkg from '../../radix-ui/package.json';
 import * as reactPkg from '../../react/package.json';
+import * as vezhamUiPkg from '../../vezham-ui/package.json';
 
 export const sourceDir = fileURLToPath(new URL(`../`, import.meta.url).href);
 
@@ -89,7 +90,7 @@ export const templates: TemplateInfo[] = [
   },
 ];
 
-const workspaces = [corePkg, mdxPkg, basePkg, radixPkg, reactPkg];
+const workspaces = [corePkg, mdxPkg, basePkg, radixPkg, reactPkg, vezhamUiPkg];
 
 export const depVersions: Record<string, string> = { ...versionPkg.dependencies };
 
@@ -101,6 +102,7 @@ export function resolvePublicDependency(name: string, version: string): [string,
   const realName = name.replace(/^@vezham\/docs-/, '@vx-oss/docs-');
   if (
     realName === '@vx-oss/docs-react' ||
+    realName === '@vx-oss/docs-vezham-ui' ||
     realName === '@vx-oss/docs-base-ui' ||
     realName === '@vx-oss/docs-radix-ui'
   ) {

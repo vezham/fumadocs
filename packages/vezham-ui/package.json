@@ -1,10 +1,11 @@
 {
-  "name": "@vx-oss/docs-react",
+  "name": "@vx-oss/docs-vezham-ui",
   "version": "1.0.4",
-  "description": "Compatibility React UI entry for Vezham Docs",
+  "description": "Vezham UI implementation package for Vezham Docs",
   "keywords": [
     "Docs",
     "Fumadocs",
+    "Vezham",
     "react"
   ],
   "homepage": "https://vezham.com",
@@ -13,10 +14,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/vezham/fumadocs",
-    "directory": "packages/react"
+    "directory": "packages/vezham-ui"
   },
   "files": [
-    "css",
     "dist"
   ],
   "type": "module",
@@ -32,35 +32,23 @@
     "access": "public"
   },
   "scripts": {
-    "build": "node scripts/sync.mjs",
-    "clean": "rimraf dist css",
-    "dev": "node scripts/sync.mjs",
+    "build": "node scripts/build.mjs",
+    "clean": "rimraf dist",
+    "dev": "node scripts/build.mjs",
     "lint": "oxlint .",
-    "types:check": "node scripts/sync.mjs"
+    "types:check": "node scripts/build.mjs"
   },
   "dependencies": {
-    "@vx-oss/docs-vezham-ui": "workspace:*"
+    "@vezham/react-v3": "npm:@heroui/react@3.2.4",
+    "@vezham/styles-v3": "npm:@heroui/styles@3.2.4"
   },
   "peerDependencies": {
-    "@types/mdx": "*",
     "@types/react": "*",
-    "@vx-oss/docs-core": "^1.0.4",
-    "next": "16.x.x",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "takumi-js": "*"
+    "react-dom": "^19.2.0"
   },
   "peerDependenciesMeta": {
-    "@types/mdx": {
-      "optional": true
-    },
     "@types/react": {
-      "optional": true
-    },
-    "next": {
-      "optional": true
-    },
-    "takumi-js": {
       "optional": true
     }
   }
