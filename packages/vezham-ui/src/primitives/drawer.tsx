@@ -1,11 +1,11 @@
 'use client';
 
-import { Drawer as HeroDrawer } from '@vezham/react-v3';
+import { Drawer } from '@vezham/react-v3';
 import { createContext, use, useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { PrimitiveProps } from './shared';
 import { renderPrimitive } from './shared';
 
-const DrawerPrimitive = HeroDrawer as any;
+const DrawerPrimitive = Drawer as any;
 
 export interface Handle<T = unknown> {
   close: () => void;

@@ -1,10 +1,10 @@
 'use client';
 
-import { Link as HeroLink } from '@vezham/react-v3';
+import { Link as VezhamLink } from '@vezham/react-v3';
 import type { PrimitiveProps } from './shared';
 import { getClassName, renderPrimitive } from './shared';
 
-const LinkPrimitive = HeroLink as any;
+const LinkPrimitive = VezhamLink as any;
 
 export function Root({ className, ...props }: Root.Props) {
   return <nav className={getClassName(className, { open: false })} {...props} />;

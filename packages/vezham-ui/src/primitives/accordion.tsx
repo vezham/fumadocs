@@ -1,10 +1,10 @@
 'use client';
 
-import { Accordion as HeroAccordion } from '@vezham/react-v3';
+import { Accordion } from '@vezham/react-v3';
 import type { PrimitiveProps } from './shared';
 import { getClassName } from './shared';
 
-const AccordionPrimitive = HeroAccordion as any;
+const AccordionPrimitive = Accordion as any;
 
 export function Root({ className, ...props }: Root.Props) {
   return <AccordionPrimitive className={getClassName(className, {})} {...props} />;

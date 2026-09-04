@@ -1,10 +1,10 @@
 'use client';
 
-import { Tabs as HeroTabs } from '@vezham/react-v3';
+import { Tabs } from '@vezham/react-v3';
 import type { PrimitiveProps } from './shared';
 import { getClassName } from './shared';
 
-const TabsPrimitive = HeroTabs as any;
+const TabsPrimitive = Tabs as any;
 
 export function Root({ className, value, onValueChange, ...props }: Root.Props) {
   return (

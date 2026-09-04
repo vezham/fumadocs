@@ -1,10 +1,10 @@
 'use client';
 
-import { Disclosure as HeroDisclosure } from '@vezham/react-v3';
+import { Disclosure } from '@vezham/react-v3';
 import type { PrimitiveProps } from './shared';
 import { getClassName } from './shared';
 
-const DisclosurePrimitive = HeroDisclosure as any;
+const DisclosurePrimitive = Disclosure as any;
 
 export function Root({ className, open, onOpenChange, ...props }: Root.Props) {
   return (

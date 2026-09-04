@@ -1,10 +1,10 @@
 'use client';
 
-import { Popover as HeroPopover } from '@vezham/react-v3';
+import { Popover } from '@vezham/react-v3';
 import type { PrimitiveProps } from './shared';
 import { getClassName, renderPrimitive } from './shared';
 
-const PopoverPrimitive = HeroPopover as any;
+const PopoverPrimitive = Popover as any;
 
 export function Root({ className, ...props }: Root.Props) {
   return <PopoverPrimitive className={getClassName(className, {})} {...props} />;
