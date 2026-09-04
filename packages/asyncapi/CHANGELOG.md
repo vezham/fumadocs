@@ -1,5 +1,15 @@
 ## @vx-oss/docs-asyncapi@0.3.0
 
+## 1.0.6
+
+### Patch Changes
+
+- [`38e3b1f`](https://github.com/vezham/fumadocs/commit/38e3b1f5f78c5bfce7894cdcf2e7dd9a3ac15f9f) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
+- Updated dependencies [[`38e3b1f`](https://github.com/vezham/fumadocs/commit/38e3b1f5f78c5bfce7894cdcf2e7dd9a3ac15f9f)]:
+  - @vx-oss/docs-api@1.0.6
+  - @vx-oss/docs-stf@1.0.6
+
 ## 1.0.5
 
 ### Patch Changes
