@@ -1,5 +1,11 @@
 ## @vx-oss/docs-mdx-remote@1.5.1
 
+## 1.0.7
+
+### Patch Changes
+
+- [`9119a0b`](https://github.com/vezham/fumadocs/commit/9119a0b3a54e0ef96724909c4100eb05f350fa4a) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
 ## 1.0.6
 
 ### Patch Changes

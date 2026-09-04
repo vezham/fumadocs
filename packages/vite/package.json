@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-vite",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Internal configs for Fumadocs + Vite",
   "keywords": [
     "Docs",

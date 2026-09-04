@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-epub",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "EPUB export for Fumadocs documentation",
   "keywords": [
     "documentation",

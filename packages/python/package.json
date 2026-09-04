@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-python",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The built-in Python docgen for Fumadocs",
   "keywords": [
     "Docs",
