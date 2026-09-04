@@ -1,5 +1,14 @@
 ## fumadocs-core@16.15.7
 
+## 1.0.7
+
+### Patch Changes
+
+- [`9119a0b`](https://github.com/vezham/fumadocs/commit/9119a0b3a54e0ef96724909c4100eb05f350fa4a) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
+- Updated dependencies [[`9119a0b`](https://github.com/vezham/fumadocs/commit/9119a0b3a54e0ef96724909c4100eb05f350fa4a)]:
+  - @vx-oss/docs-image-size@1.0.7
+
 ### Async `_fd_prepare` hook for Shiki transformers
 
 `rehype-code` awaits `transformer._fd_prepare(code, options)` on every transformer before highlighting a code block. Transformers can run async work (or coalesce work across the code blocks being highlighted concurrently) and serve it from the synchronous Shiki hooks afterwards.
@@ -42,7 +51,7 @@ Layout tabs are now grouped by the root folders on the current page's path, with
 Find the structural projection of a page in another root folder, the page at the same file path relative to the root folder:
 
 ```ts
-import { findProjection } from 'fumadocs-core/page-tree';
+import { findProjection } from "fumadocs-core/page-tree";
 
 findProjection(v1, v2, page)?.url;
 ```

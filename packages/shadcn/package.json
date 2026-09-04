@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-shadcn",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Shadcn UI integration for Fumadocs.",
   "keywords": [
     "Fumadocs"

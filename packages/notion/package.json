@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-notion",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The official Notion integration for Fumadocs",
   "keywords": [
     "Docs",

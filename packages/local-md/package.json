@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-local-md",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "The local Markdown files content source for Fumadocs",
   "keywords": [
     "Docs",

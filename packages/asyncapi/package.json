@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-asyncapi",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Generate docs for your AsyncAPI spec",
   "keywords": [
     "Docs",
