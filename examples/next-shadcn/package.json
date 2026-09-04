@@ -9,16 +9,16 @@
     "types:check": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@vx-oss/docs-shadcn": "workspace:*",
-    "lucide-react": "^1.34.0",
-    "next": "16.3.3",
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-mdx": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*",
+    "lucide-react": "^1.39.0",
+    "next": "16.3.4",
     "react": "^19.2.8",
     "react-day-picker": "^10.0.1",
     "react-dom": "^19.2.8",
-    "shadcn": "4.19.0",
-    "@vx-oss/docs-core": "workspace:*",
-    "@vx-oss/docs-mdx": "workspace:*",
-    "@vx-oss/docs-react": "workspace:*"
+    "shadcn": "4.19.1",
+    "@vx-oss/docs-shadcn": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
@@ -27,6 +27,6 @@
     "@types/react-dom": "^19.2.5",
     "postcss": "^8.5.26",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   }
 }

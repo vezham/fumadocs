@@ -38,29 +38,29 @@
     "@portabletext/react": "^8.0.1"
   },
   "devDependencies": {
-    "@sanity/client": "^8.3.0",
-    "@sanity/types": "^6.11.0",
-    "@types/node": "26.3.0",
+    "@sanity/client": "^8.4.0",
+    "@sanity/types": "^6.12.0",
+    "@types/node": "26.4.1",
     "@types/react": "^19.2.18",
     "fuma-cli": "^0.1.1",
-    "next-sanity": "^13.3.3",
+    "@vx-oss/docs-core": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*",
+    "next-sanity": "^13.3.4",
     "react": "^19.2.8",
-    "sanity": "^6.11.0",
+    "sanity": "^6.12.0",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.11",
-    "@vx-oss/docs-core": "workspace:*",
-    "@vx-oss/docs-react": "workspace:*"
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
   },
   "peerDependencies": {
     "@sanity/client": "^7.22.0 || ^8.0.0",
     "@sanity/types": "*",
     "@types/react": "*",
+    "@vx-oss/docs-core": "^1.0.6",
     "next-sanity": "^12.4.0 || ^13.0.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "@vx-oss/docs-core": "^1.0.4"
+    "react-dom": "^19.2.0"
   },
   "peerDependenciesMeta": {
     "@sanity/types": {

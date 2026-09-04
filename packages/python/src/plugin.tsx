@@ -1,4 +1,4 @@
-import { cn } from 'cnfast';
+import { cn } from 'cn';
 import type { LoaderPlugin } from '@vx-oss/docs-core/source';
 import { badgeVariants } from './badge';
 import type { PythonPage } from './source';

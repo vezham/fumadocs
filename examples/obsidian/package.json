@@ -4,17 +4,17 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "@vx-oss/docs-obsidian dev -- next dev",
+    "dev": "fumadocs-obsidian dev -- next dev",
     "start": "next start",
     "types:check": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@vx-oss/docs-obsidian": "workspace:*",
-    "next": "16.3.3",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
     "@vx-oss/docs-core": "workspace:*",
-    "@vx-oss/docs-react": "workspace:*"
+    "@vx-oss/docs-obsidian": "workspace:*",
+    "@vx-oss/docs-react": "workspace:*",
+    "next": "16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
@@ -23,6 +23,6 @@
     "@types/react-dom": "^19.2.5",
     "postcss": "^8.5.26",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3"
+    "typescript": "^7.0.2"
   }
 }

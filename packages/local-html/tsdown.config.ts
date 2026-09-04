@@ -8,7 +8,7 @@ export default defineConfig({
   format: 'esm',
   exports: {
     bin: {
-      'local-html': './src/bin.ts',
+      'vx-oss-docs-local-html': './src/bin.ts',
     },
     exclude: ['bin'],
   },

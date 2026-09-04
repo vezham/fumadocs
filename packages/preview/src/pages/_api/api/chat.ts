@@ -6,6 +6,7 @@ import {
   stepCountIs,
   streamText,
   tool,
+  type Tool,
   type UIMessage,
 } from 'ai';
 import { z } from 'zod';
@@ -144,7 +145,9 @@ export async function POST(req: Request) {
   });
 }
 
-const searchTool = tool({
+export type SearchTool = Tool<{ query: string; limit: number }, unknown>;
+
+const searchTool: SearchTool = tool({
   description: 'Search the docs content and return raw JSON results.',
   inputSchema: z.object({
     query: z.string(),
@@ -158,5 +161,3 @@ const searchTool = tool({
     return await search.searchAsync(query, { limit, merge: true, enrich: true });
   },
 });
-
-export type SearchTool = typeof searchTool;

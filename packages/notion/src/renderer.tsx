@@ -1,5 +1,5 @@
 import type { RichTextItemResponse } from '@notionhq/client';
-import { cn } from 'cnfast';
+import { cn } from 'cn';
 import type { HighlightOptions } from '@vx-oss/docs-core/highlight';
 import { CalloutContainer } from '@vx-oss/docs-react/components/callout';
 import { CodeBlock, Pre } from '@vx-oss/docs-react/components/codeblock';

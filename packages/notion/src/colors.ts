@@ -1,4 +1,4 @@
-import { cn } from 'cnfast';
+import { cn } from 'cn';
 import type { CalloutType } from '@vx-oss/docs-react/components/callout';
 import type { NotionColor } from './blocks';
 

@@ -36,27 +36,30 @@
   "devDependencies": {
     "@vx-oss/docs-api": "workspace:*",
     "@vx-oss/docs-asyncapi": "workspace:*",
-    "tsconfig": "workspace:*",
-    "tsdown": "0.22.14",
-    "typescript": "^6.0.3",
+    "@vx-oss/docs-story": "workspace:*",
     "@vx-oss/docs-core": "workspace:*",
     "@vx-oss/docs-openapi": "workspace:*",
     "@vx-oss/docs-react": "workspace:*",
-    "@vx-oss/docs-story": "workspace:*"
+    "tsconfig": "workspace:*",
+    "tsdown": "0.22.14",
+    "typescript": "^7.0.2"
   },
   "peerDependencies": {
-    "@vx-oss/docs-api": "^1.0.4",
-    "@vx-oss/docs-asyncapi": "^1.0.4",
-    "@vx-oss/docs-core": "^1.0.4",
-    "@vx-oss/docs-openapi": "^1.0.4",
-    "@vx-oss/docs-react": "^1.0.4",
-    "@vx-oss/docs-story": "^1.0.4"
+    "@vx-oss/docs-api": "^1.0.6",
+    "@vx-oss/docs-asyncapi": "^1.0.6",
+    "@vx-oss/docs-story": "^1.0.6",
+    "@vx-oss/docs-core": "^1.0.6",
+    "@vx-oss/docs-openapi": "^1.0.6",
+    "@vx-oss/docs-react": "^1.0.6"
   },
   "peerDependenciesMeta": {
     "@vx-oss/docs-api": {
       "optional": true
     },
     "@vx-oss/docs-asyncapi": {
+      "optional": true
+    },
+    "@vx-oss/docs-story": {
       "optional": true
     },
     "@vx-oss/docs-core": {
@@ -66,9 +69,6 @@
       "optional": true
     },
     "@vx-oss/docs-react": {
-      "optional": true
-    },
-    "@vx-oss/docs-story": {
       "optional": true
     }
   }

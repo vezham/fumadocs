@@ -6,7 +6,13 @@ import { FumadocsLogo } from '@/components/logo';
 import type { BaseLayoutProps } from '@vx-oss/docs-react/layouts/shared';
 import { getConfigRuntime } from '@/config/load-runtime';
 
-export function layoutConfig(config: ParsedAppConfig) {
+interface LayoutConfig {
+  base: () => Promise<BaseLayoutProps>;
+  docs: () => Promise<DocsLayoutProps>;
+  home: () => Promise<HomeLayoutProps>;
+}
+
+export function layoutConfig(config: ParsedAppConfig): LayoutConfig {
   const { base } = config.layout;
 
   return {

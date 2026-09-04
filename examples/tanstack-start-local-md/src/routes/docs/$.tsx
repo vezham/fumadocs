@@ -16,6 +16,15 @@ import { useFumadocsLoader } from '@vx-oss/docs-core/source/client';
 import { useMemo } from 'react';
 import { useMDXComponents } from '@/components/mdx';
 import { rendererFromSerialized } from '@vx-oss/docs-local-md/client';
+import type { MarkdownRendererSerializedOptions } from '@vx-oss/docs-local-md';
+
+// TanStack Start validates that server function results are serializable, but its type-level
+// check cannot verify the HAST tree inside the payload: register it as a serializable type.
+declare module '@tanstack/router-core' {
+  interface SerializableExtensions {
+    fumadocsMarkdownRenderer: MarkdownRendererSerializedOptions;
+  }
+}
 
 export const Route = createFileRoute('/docs/$')({
   component: Page,

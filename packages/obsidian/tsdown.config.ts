@@ -14,7 +14,7 @@ export default defineConfig({
   },
   exports: {
     bin: {
-      '@vx-oss/docs-obsidian': './src/bin.ts',
+      'vx-oss-docs-obsidian': './src/bin.ts',
     },
     exclude: ['bin'],
     customExports(v) {

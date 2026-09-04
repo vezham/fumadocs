@@ -14,6 +14,9 @@ export default defineConfig({
   },
   exports: {
     enabled: true,
+    bin: {
+      'vx-oss-docs-cli': './src/index.ts',
+    },
     exclude: ['./index'],
   },
   async onSuccess() {

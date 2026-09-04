@@ -2,16 +2,16 @@
   "name": "create-vx-oss-docs-versions",
   "version": "1.0.0",
   "private": true,
-  "description": "Used to track dependency versions in create-vx-oss-docs",
+  "description": "Used to track dependency versions in create-fumadocs-app",
   "dependencies": {
-    "@biomejs/biome": "^2.5.10",
+    "@biomejs/biome": "^2.5.11",
     "@orama/core": "^1.2.19",
-    "oxlint": "^1.80.0",
-    "react": "^19.2.8",
-    "takumi-js": "^2.12.0",
     "@vx-oss/docs-core": "workspace:*",
     "@vx-oss/docs-mdx": "workspace:*",
-    "@vx-oss/docs-react": "workspace:*"
+    "@vx-oss/docs-react": "workspace:*",
+    "oxlint": "^1.81.0",
+    "react": "^19.2.8",
+    "takumi-js": "^2.13.4"
   },
   "repository": {
     "type": "git",

@@ -13,7 +13,7 @@ export default defineConfig({
   format: 'esm',
   exports: {
     bin: {
-      'local-md': './src/bin.ts',
+      'vx-oss-docs-local-md': './src/bin.ts',
     },
     exclude: ['bin'],
   },

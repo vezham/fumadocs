@@ -78,20 +78,20 @@
     "unist-util-visit": "^5.1.0",
     "vfile": "^6.0.3",
     "yaml": "^2.9.0",
-    "yuku-analyzer": "^0.9.1",
-    "zod": "^4.4.3"
+    "yuku-analyzer": "^0.9.3",
+    "zod": "^4.5.4"
   },
   "devDependencies": {
     "@vx-oss/docs-satteri": "workspace:*",
-    "@vx-oss/docs-vite": "workspace:*",
     "@types/bun": "^1.4.0",
     "@types/mdast": "^4.0.4",
     "@types/mdx": "^2.0.14",
-    "@types/node": "^26.3.0",
+    "@types/node": "^26.4.1",
     "@types/picomatch": "^4.0.3",
     "@types/react": "^19.2.18",
+    "@vx-oss/docs-core": "workspace:*",
     "mdast-util-directive": "^3.1.0",
-    "next": "^16.3.3",
+    "next": "^16.3.4",
     "react": "^19.2.8",
     "remark": "^15.0.1",
     "remark-directive": "^4.0.0",
@@ -101,21 +101,21 @@
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "vite": "^8.2.2",
-    "webpack": "^5.109.2",
-    "@vx-oss/docs-core": "workspace:*"
+    "webpack": "^5.110.3",
+    "@vx-oss/docs-vite": "workspace:*"
   },
   "peerDependencies": {
-    "@vx-oss/docs-satteri": "^1.0.4",
+    "@vx-oss/docs-satteri": "^1.0.6",
     "@types/mdast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
+    "@vx-oss/docs-core": "^1.0.6",
     "mdast-util-directive": "*",
     "next": "^15.3.0 || ^16.0.0",
     "react": "^19.2.0",
     "rolldown": "*",
     "satteri": "^0.10.5",
-    "vite": "7.x.x || 8.x.x",
-    "@vx-oss/docs-core": "^1.0.4"
+    "vite": "7.x.x || 8.x.x"
   },
   "peerDependenciesMeta": {
     "@vx-oss/docs-satteri": {
