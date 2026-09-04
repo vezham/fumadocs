@@ -5,6 +5,8 @@ import { createElement, use } from 'react';
 import { server, toDocsSource } from './server';
 import type { DocData, DocMethods, MetaMethods } from './types';
 
+// wjdlz/NOTE: vx-oss ref on source handling
+
 export interface BrowserDocMethods {
   /**
    * Preload the content, so it can be rendered synchronously afterwards.
@@ -221,15 +223,13 @@ export async function doc(args: BaseArgs & { entries: GlobEntries }): Promise<Ma
   const entries = withPreload(
     (await create().doc('doc', args.base, args.entries)) as (DocData & DocMethods)[],
   ) as MacroDocEntry<unknown, unknown>[];
+  const source: MacroDocCollection['toDocsSource'] = (options) =>
+    toDocsSource(entries, [], options);
 
   return {
     ...accessor(entries),
-    toDocsSource(options) {
-      return toDocsSource(entries, [], options);
-    },
-    toFumadocsSource(options) {
-      return toDocsSource(entries, [], options);
-    },
+    toDocsSource: source,
+    toFumadocsSource: source,
   };
 }
 
@@ -239,15 +239,13 @@ export async function docAsync(
   const entries = asyncEntries(
     (await create().docLazy('doc', args.base, args.head, args.body)) as RawAsyncEntry[],
   );
+  const source: MacroAsyncDocCollection['toDocsSource'] = (options) =>
+    toDocsSource(entries, [], options);
 
   return {
     ...accessor(entries),
-    toDocsSource(options) {
-      return toDocsSource(entries, [], options);
-    },
-    toFumadocsSource(options) {
-      return toDocsSource(entries, [], options);
-    },
+    toDocsSource: source,
+    toFumadocsSource: source,
   };
 }
 
@@ -270,18 +268,16 @@ export async function docs(
   const docEntries = withPreload(rawDocEntries) as MacroDocEntry<PageData>[];
   const getDoc = accessor(docEntries);
   const getMeta = accessor(metaEntries);
+  const source: MacroDocsCollection['toDocsSource'] = (options) =>
+    toDocsSource(docEntries, metaEntries, options);
 
   return {
     docs: docEntries,
     meta: metaEntries,
     getPage: getDoc.get,
     getMeta: getMeta.get,
-    toDocsSource(options) {
-      return toDocsSource(docEntries, metaEntries, options);
-    },
-    toFumadocsSource(options) {
-      return toDocsSource(docEntries, metaEntries, options);
-    },
+    toDocsSource: source,
+    toFumadocsSource: source,
   };
 }
 
@@ -296,17 +292,15 @@ export async function docsAsync(
   const docEntries = asyncEntries(rawDocEntries) as MacroAsyncDocEntry<PageData>[];
   const getDoc = accessor(docEntries);
   const getMeta = accessor(metaEntries);
+  const source: MacroAsyncDocsCollection['toDocsSource'] = (options) =>
+    toDocsSource(docEntries, metaEntries, options);
 
   return {
     docs: docEntries,
     meta: metaEntries,
     getPage: getDoc.get,
     getMeta: getMeta.get,
-    toDocsSource(options) {
-      return toDocsSource(docEntries, metaEntries, options);
-    },
-    toFumadocsSource(options) {
-      return toDocsSource(docEntries, metaEntries, options);
-    },
+    toDocsSource: source,
+    toFumadocsSource: source,
   };
 }

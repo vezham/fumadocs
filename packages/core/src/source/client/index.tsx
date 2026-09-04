@@ -59,6 +59,7 @@ export function useFumadocsLoader<V>(serialized: V): Serialized<V> {
   }, [serialized]);
 }
 
+// wjdlz/NOTE: vx-oss ref
 export { useFumadocsLoader as useDocsLoader }
 
 function isSerializedPageTree(v: unknown): v is SerializedPageTree {

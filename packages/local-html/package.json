@@ -15,7 +15,7 @@
     "directory": "packages/local-html"
   },
   "bin": {
-    "local-html": "./dist/bin.js"
+    "vx-oss-docs-local-html": "./dist/bin.js"
   },
   "files": [
     "dist"

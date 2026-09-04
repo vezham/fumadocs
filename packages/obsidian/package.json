@@ -16,7 +16,7 @@
     "directory": "packages/obsidian"
   },
   "bin": {
-    "@vx-oss/docs-obsidian": "./dist/bin.js"
+    "vx-oss-docs-obsidian": "./dist/bin.js"
   },
   "files": [
     "css",

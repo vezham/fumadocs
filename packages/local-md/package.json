@@ -15,7 +15,7 @@
     "directory": "packages/local-md"
   },
   "bin": {
-    "local-md": "./dist/bin.js"
+    "vx-oss-docs-local-md": "./dist/bin.js"
   },
   "files": [
     "dist"

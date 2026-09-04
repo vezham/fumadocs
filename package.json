@@ -8,7 +8,6 @@
     "@vx/ws:changeset": "changeset",
     "build": "turbo run build --filter=!./examples/* --filter=!docs",
     "clean": "turbo run clean",
-    "clean:cache": "find . \\( -name '.turbo' -o -name '.next' -o -name 'dist' -o -name 'node_modules' -o -name '.source' -o -name '.contentlayer' -o -name 'pnpm-lock.yaml' \\) -prune -exec rm -rf '{}' +",
     "dev": "turbo run dev",
     "dev:examples": "turbo run dev --filter=./examples/*",
     "lint": "turbo run lint",

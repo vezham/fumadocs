@@ -41,8 +41,7 @@ export function toDocsSource<
   return out;
 }
 
-export { toDocsSource as toFumadocsSource };
-
+// wjdlz/NOTE: vx-oss ref
 export function docsStore<
   Mdx extends MDXStoreData<PageData> | MDXStoreLazyData<PageData, unknown> = MDXStoreData<
     PageData,
@@ -50,12 +49,10 @@ export function docsStore<
   >,
   Meta extends { data: MetaData } = { data: MetaData },
 >(mdxStore: FileCollectionStore<Mdx>, metaStore: FileCollectionStore<Meta>) {
+  const source = () => toDocsSource(mdxStore, metaStore);
+
   return {
-    toDocsSource() {
-      return toDocsSource(mdxStore, metaStore);
-    },
-    toFumadocsSource() {
-      return toDocsSource(mdxStore, metaStore);
-    },
+    toDocsSource: source,
+    toFumadocsSource: source,
   };
 }

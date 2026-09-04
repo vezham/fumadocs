@@ -15,7 +15,7 @@
     "directory": "packages/cli"
   },
   "bin": {
-    "docs-cli": "./dist/index.js"
+    "vx-oss-docs-cli": "./dist/index.js"
   },
   "files": [
     "dist"
