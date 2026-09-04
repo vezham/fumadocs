@@ -45,12 +45,12 @@
     "typescript": "^7.0.2"
   },
   "peerDependencies": {
-    "@vx-oss/docs-api": "^1.0.6",
-    "@vx-oss/docs-asyncapi": "^1.0.6",
-    "@vx-oss/docs-story": "^1.0.6",
-    "@vx-oss/docs-core": "^1.0.6",
-    "@vx-oss/docs-openapi": "^1.0.6",
-    "@vx-oss/docs-react": "^1.0.6"
+    "@vx-oss/docs-api": "*",
+    "@vx-oss/docs-asyncapi": "*",
+    "@vx-oss/docs-story": "*",
+    "@vx-oss/docs-core": "*",
+    "@vx-oss/docs-openapi": "*",
+    "@vx-oss/docs-react": "*"
   },
   "peerDependenciesMeta": {
     "@vx-oss/docs-api": {

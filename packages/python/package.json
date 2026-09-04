@@ -77,8 +77,8 @@
     "@types/hast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
-    "@vx-oss/docs-core": "^1.0.6",
-    "@vx-oss/docs-react": "^1.0.6",
+    "@vx-oss/docs-core": "*",
+    "@vx-oss/docs-react": "*",
     "react": "19.x.x"
   },
   "peerDependenciesMeta": {

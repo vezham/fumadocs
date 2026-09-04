@@ -47,7 +47,7 @@
   "peerDependencies": {
     "@types/react": "*",
     "basehub": "9.x.x",
-    "@vx-oss/docs-core": "^1.0.6",
+    "@vx-oss/docs-core": "*",
     "react": "^19.2.0"
   },
   "peerDependenciesMeta": {

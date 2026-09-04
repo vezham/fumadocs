@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "cn": "^0.2.4",
-    "@vx-oss/docs-core": "^1.0.4",
-    "@vx-oss/docs-mdx": "^1.0.4",
-    "@vx-oss/docs-react": "^1.0.4",
+    "@vx-oss/docs-core": "^1.0.6",
+    "@vx-oss/docs-mdx": "^1.0.6",
+    "@vx-oss/docs-react": "^1.0.6",
     "lucide-react": "^1.16.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",

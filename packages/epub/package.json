@@ -58,7 +58,7 @@
     "vfile": "^6.0.3"
   },
   "peerDependencies": {
-    "@vx-oss/docs-core": "^1.0.6"
+    "@vx-oss/docs-core": "*"
   },
   "engines": {
     "node": ">=18"

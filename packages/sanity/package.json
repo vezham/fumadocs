@@ -57,7 +57,7 @@
     "@sanity/client": "^7.22.0 || ^8.0.0",
     "@sanity/types": "*",
     "@types/react": "*",
-    "@vx-oss/docs-core": "^1.0.6",
+    "@vx-oss/docs-core": "*",
     "next-sanity": "^12.4.0 || ^13.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

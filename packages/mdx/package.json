@@ -105,11 +105,11 @@
     "@vx-oss/docs-vite": "workspace:*"
   },
   "peerDependencies": {
-    "@vx-oss/docs-satteri": "^1.0.6",
+    "@vx-oss/docs-satteri": "*",
     "@types/mdast": "*",
     "@types/mdx": "*",
     "@types/react": "*",
-    "@vx-oss/docs-core": "^1.0.6",
+    "@vx-oss/docs-core": "*",
     "mdast-util-directive": "*",
     "next": "^15.3.0 || ^16.0.0",
     "react": "^19.2.0",

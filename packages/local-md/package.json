@@ -79,7 +79,7 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "unified": "*",
-    "@vx-oss/docs-core": "^1.0.6"
+    "@vx-oss/docs-core": "*"
   },
   "peerDependenciesMeta": {
     "unified": {
