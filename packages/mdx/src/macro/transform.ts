@@ -7,7 +7,12 @@ import type {
   NodeType,
 } from 'yuku-analyzer';
 import { createCodegen, slash } from '@/utils/codegen';
-import { MacroModuleId } from './options';
+import {
+  MacroModuleId,
+  getMacroRuntimeModuleId,
+  isMacroModuleId,
+  type MacroModuleIdValue,
+} from './options';
 
 type YukuNode = NodeOfType<NodeType>;
 
@@ -40,6 +45,7 @@ interface ParsedMacroModule {
   program: Node;
   imports: Node[];
   calls: MacroCall[];
+  macroModuleId: MacroModuleIdValue | undefined;
 }
 
 export interface MacroTransformOptions {
@@ -221,12 +227,13 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
 
   const macroSymbols = new Map<YukuSymbol, MacroFn>();
   const imports: Node[] = [];
+  let macroModuleId: MacroModuleIdValue | undefined;
 
   for (const statement of program.body as Node[]) {
     if (
       (statement.type === 'ExportNamedDeclaration' || statement.type === 'ExportAllDeclaration') &&
       isNode(statement.source) &&
-      statement.source.value === MacroModuleId
+      isMacroModuleId(statement.source.value)
     ) {
       throw new MacroTransformError(
         file,
@@ -238,7 +245,8 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
 
     if (statement.type !== 'ImportDeclaration') continue;
     const source = statement.source as Node;
-    if (source.value !== MacroModuleId) continue;
+    if (!isMacroModuleId(source.value)) continue;
+    macroModuleId ??= source.value;
     if (statement.importKind === 'type') {
       imports.push(statement);
       continue;
@@ -268,7 +276,7 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
   }
 
   if (macroSymbols.size === 0) {
-    return imports.length > 0 ? { module, program, imports, calls: [] } : null;
+    return imports.length > 0 ? { module, program, imports, calls: [], macroModuleId } : null;
   }
 
   // a macro collection is identified by its variable name, so it must be the initializer of a
@@ -346,7 +354,7 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
     }
   }
 
-  return { module, program, imports, calls };
+  return { module, program, imports, calls, macroModuleId };
 }
 
 function topLevelStatement(module: YukuModule, node: Node): Node | undefined {
@@ -561,7 +569,7 @@ export async function transformMacroModule({
   }
 
   const banner = [
-    `import * as ${runtimeName} from "@vx-oss/docs-mdx/runtime/macro";`,
+    `import * as ${runtimeName} from ${JSON.stringify(getMacroRuntimeModuleId(parsed.macroModuleId ?? MacroModuleId))};`,
     // hoisted glob imports (target: 'import')
     ...codegen.lines,
     '',

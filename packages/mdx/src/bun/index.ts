@@ -13,7 +13,7 @@ import { toBun } from '@/loaders/adapter';
 import { mdxLoaderGlob, metaLoaderGlob } from '@/loaders';
 import type { MacroEvaluatorOptions } from '@/macro/eval';
 import {
-  MacroModuleId,
+  hasMacroModuleId,
   resolveMacroOptions,
   type MacroPluginOption,
   type ResolvedMacroOptions,
@@ -112,7 +112,7 @@ export function createMdxPlugin(options: MdxPluginOptions = {}): BunPlugin {
           const [file, query = ''] = args.path.split('?', 2);
           const loader = bunLoader(file);
           const source = await Bun.file(file).text();
-          if (!source.includes(MacroModuleId)) return { contents: source, loader };
+          if (!hasMacroModuleId(source)) return { contents: source, loader };
 
           const token = new URLSearchParams(query).get(EvalQueryKey);
           const transform = token ? pendingEvals.get(token) : undefined;

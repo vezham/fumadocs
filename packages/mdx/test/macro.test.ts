@@ -48,6 +48,34 @@ describe('transform', () => {
     await expect(result!.code).toMatchFileSnapshot('./fixtures/macro-vite.output.ts');
   });
 
+  test('vite target supports the @vezham macro import', async () => {
+    const result = await transformMacroModule({
+      code: `import { defineDocs } from '@vezham/docs-mdx/macro';
+export const docs = defineDocs({ dir: 'test/fixtures/generate-index-docs' });`,
+      file: sourceFile,
+      root,
+      target: 'vite',
+    });
+
+    expect(result).not.toBeNull();
+    expect(result!.code).toContain('@vezham/docs-mdx/runtime/macro');
+    expect(result!.code).not.toContain('@vx-oss/docs-mdx/runtime/macro');
+  });
+
+  test('config target supports the @vezham macro import', async () => {
+    const result = await transformMacroConfigModule({
+      code: `import { defineDocs } from '@vezham/docs-mdx/macro';
+export const docs = defineDocs({ dir: 'test/fixtures/generate-index-docs' });`,
+      file: sourceFile,
+      cfg: path.relative(root, sourceFile),
+      registerKey: '@vx-oss/docs-mdx:test',
+    });
+
+    expect(result).not.toBeNull();
+    expect(result).not.toContain('@vezham/docs-mdx/macro');
+    expect(result).toContain('globalThis[Symbol.for');
+  });
+
   test('import target', async () => {
     const result = await transformMacroModule({
       code: await fs.readFile(sourceFile, 'utf-8'),

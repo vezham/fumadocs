@@ -11,7 +11,7 @@ import path from 'node:path';
 import fs from 'node:fs/promises';
 import { mdxLoaderGlob, metaLoaderGlob } from '@/loaders';
 import type { MacroEvaluator } from '@/macro/eval';
-import { MacroModuleId, resolveMacroOptions, type MacroPluginOption } from '@/macro/options';
+import { MacroModuleIdPattern, resolveMacroOptions, type MacroPluginOption } from '@/macro/options';
 import type { GlobalConfig } from '@/config';
 
 function createMacroEvaluator(root: string): MacroEvaluator {
@@ -157,7 +157,7 @@ export default function mdx(
             order: 'pre',
             filter: {
               id: { include: macroOptions.include, exclude: macroOptions.exclude },
-              code: MacroModuleId,
+              code: MacroModuleIdPattern,
             },
             async handler(code, id) {
               const [file] = id.split('?', 2);

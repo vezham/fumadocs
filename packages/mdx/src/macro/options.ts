@@ -16,6 +16,27 @@ export interface MacroOptions {
 export type MacroPluginOption = MacroOptions | false;
 
 export const MacroModuleId = '@vx-oss/docs-mdx/macro';
+export const VezhamMacroModuleId = '@vezham/docs-mdx/macro';
+export const MacroModuleIds = [MacroModuleId, VezhamMacroModuleId] as const;
+export const MacroRuntimeModuleIds = {
+  [MacroModuleId]: '@vx-oss/docs-mdx/runtime/macro',
+  [VezhamMacroModuleId]: '@vezham/docs-mdx/runtime/macro',
+} as const;
+export const MacroModuleIdPattern = /['"](?:@vx-oss|@vezham)\/docs-mdx\/macro['"]/;
+
+export type MacroModuleIdValue = (typeof MacroModuleIds)[number];
+
+export function isMacroModuleId(value: unknown): value is MacroModuleIdValue {
+  return typeof value === 'string' && (MacroModuleIds as readonly string[]).includes(value);
+}
+
+export function hasMacroModuleId(code: string): boolean {
+  return MacroModuleIds.some((id) => code.includes(id));
+}
+
+export function getMacroRuntimeModuleId(moduleId: MacroModuleIdValue): string {
+  return MacroRuntimeModuleIds[moduleId];
+}
 
 export interface ResolvedMacroOptions {
   include: string[];

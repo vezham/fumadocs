@@ -6,7 +6,7 @@ import { createIntegratedConfigLoader } from '@/loaders/config';
 import { createMdxLoader } from '@/loaders/mdx';
 import { createMetaLoader } from '@/loaders/meta';
 import { createNodeEvaluator, MacroCollector } from '@/macro/eval';
-import { MacroModuleId, resolveMacroOptions, type MacroPluginOption } from '@/macro/options';
+import { MacroModuleIdPattern, resolveMacroOptions, type MacroPluginOption } from '@/macro/options';
 import { slash } from '@/utils/codegen';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -61,7 +61,7 @@ export default async function mdx(
             include: macroOptions.include.map((pattern) => slash(path.resolve(root, pattern))),
             exclude: macroOptions.exclude,
           },
-          code: MacroModuleId,
+          code: MacroModuleIdPattern,
         },
         async handler(code, id) {
           const [file] = id.split('?', 2);
