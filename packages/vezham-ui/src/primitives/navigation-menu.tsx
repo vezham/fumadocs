@@ -1,6 +1,6 @@
 'use client';
 
-import { Link as VezhamLink } from '@vezham/react-v3';
+import { Link as VezhamLink } from '@vezham/react-v3/link';
 import type { PrimitiveProps } from './shared';
 import { getClassName, renderPrimitive } from './shared';
 

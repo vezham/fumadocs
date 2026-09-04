@@ -1,6 +1,6 @@
 'use client';
 
-import { Popover } from '@vezham/react-v3';
+import { Popover } from '@vezham/react-v3/popover';
 import type { PrimitiveProps } from './shared';
 import { getClassName, renderPrimitive } from './shared';
 

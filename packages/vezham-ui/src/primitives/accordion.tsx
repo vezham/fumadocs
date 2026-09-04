@@ -1,6 +1,6 @@
 'use client';
 
-import { Accordion } from '@vezham/react-v3';
+import { Accordion } from '@vezham/react-v3/accordion';
 import type { PrimitiveProps } from './shared';
 import { getClassName } from './shared';
 

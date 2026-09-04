@@ -1,6 +1,6 @@
 'use client';
 
-import { Drawer } from '@vezham/react-v3';
+import { Drawer } from '@vezham/react-v3/drawer';
 import { createContext, use, useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { PrimitiveProps } from './shared';
 import { renderPrimitive } from './shared';

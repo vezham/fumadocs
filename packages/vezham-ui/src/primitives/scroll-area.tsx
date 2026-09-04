@@ -1,6 +1,6 @@
 'use client';
 
-import { ScrollShadow } from '@vezham/react-v3';
+import { ScrollShadow } from '@vezham/react-v3/scroll-shadow';
 import type { PrimitiveProps } from './shared';
 import { getClassName, renderPrimitive } from './shared';
 

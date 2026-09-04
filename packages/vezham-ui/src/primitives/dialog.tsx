@@ -1,6 +1,6 @@
 'use client';
 
-import { Modal } from '@vezham/react-v3';
+import { Modal } from '@vezham/react-v3/modal';
 import { createContext, use, useEffect, useMemo, useState, type ReactNode } from 'react';
 import type { PrimitiveProps } from './shared';
 import { renderPrimitive } from './shared';

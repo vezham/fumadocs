@@ -1,6 +1,6 @@
 'use client';
 
-import { Disclosure } from '@vezham/react-v3';
+import { Disclosure } from '@vezham/react-v3/disclosure';
 import type { PrimitiveProps } from './shared';
 import { getClassName } from './shared';
 

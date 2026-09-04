@@ -1,6 +1,6 @@
 'use client';
 
-import { Tabs } from '@vezham/react-v3';
+import { Tabs } from '@vezham/react-v3/tabs';
 import type { PrimitiveProps } from './shared';
 import { getClassName } from './shared';
 
