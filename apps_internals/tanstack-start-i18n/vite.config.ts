@@ -1,0 +1,39 @@
+import react from '@vitejs/plugin-react';
+import { tanstackStart } from '@tanstack/react-start/plugin/vite';
+import { defineConfig } from 'vite';
+import tailwindcss from '@tailwindcss/vite';
+import { fumadocsMdx } from '@vx-oss/docs-mdx/vite';
+import { i18n } from './src/lib/i18n.js';
+import story from '@vx-oss/docs-story/vite';
+
+export default defineConfig({
+  server: {
+    port: 3000,
+  },
+  plugins: [
+    story(),
+    fumadocsMdx(),
+    tailwindcss(),
+    tanstackStart({
+      prerender: {
+        enabled: true,
+      },
+      pages: [
+        ...i18n.languages.map((lang) => ({
+          path: `/${lang}`,
+        })),
+        {
+          path: '/',
+          prerender: { enabled: false },
+        },
+      ],
+    }),
+    react(),
+  ],
+  resolve: {
+    tsconfigPaths: true,
+    alias: {
+      tslib: 'tslib/tslib.es6.js',
+    },
+  },
+});

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Playground Docs">
+  <rect width="128" height="128" rx="24" fill="#111827" />
+  <path
+    fill="#ffffff"
+    d="M30 34h42c14 0 25 11 25 25s-11 25-25 25H51v18H30V34Zm21 18v14h19c4 0 7-3 7-7s-3-7-7-7H51Z"
+  />
+  <path
+    fill="#38bdf8"
+    d="M82 77c8-4 14-12 14-22 0-7-3-14-8-18 14 5 22 17 22 32 0 18-13 32-32 35 5-6 7-14 4-27Z"
+  />
+</svg>

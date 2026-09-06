@@ -1,0 +1,14 @@
+@import 'tailwindcss';
+@import '@vx-oss/docs-react/css/neutral.css';
+@import '@vx-oss/docs-react/css/preset.css';
+@import '@vx-oss/docs-story/css/preset.css';
+@import '@vx-oss/docs-openapi/css/preset.css';
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
