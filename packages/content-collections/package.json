@@ -45,13 +45,13 @@
     "@content-collections/core": "0.15.2",
     "@content-collections/mdx": "^0.2.2",
     "@types/node": "26.4.1",
-    "fumadocs-core": "workspace:*",
+    "fumadocs-core": "workspace:@vx-oss/docs-core@*",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14"
   },
   "peerDependencies": {
     "@content-collections/core": "0.x.x",
     "@content-collections/mdx": "0.x.x",
-    "fumadocs-core": "15.x.x || 16.x.x"
+    "fumadocs-core": "*"
   }
 }

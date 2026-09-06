@@ -6,8 +6,8 @@
   "dependencies": {
     "@biomejs/biome": "^2.5.11",
     "@orama/core": "^1.2.19",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-mdx": "workspace:*",
+    "fumadocs-core": "workspace:@vx-oss/docs-core@*",
+    "fumadocs-mdx": "workspace:@vx-oss/docs-mdx@*",
     "fumadocs-ui": "workspace:*",
     "oxlint": "^1.81.0",
     "react": "^19.2.8",

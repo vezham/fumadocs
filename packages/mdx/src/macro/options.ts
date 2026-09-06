@@ -16,6 +16,16 @@ export interface MacroOptions {
 export type MacroPluginOption = MacroOptions | false;
 
 export const MacroModuleId = 'fumadocs-mdx/macro';
+export const MacroModuleIds = [MacroModuleId, '@vx-oss/docs-mdx/macro'] as const;
+export const MacroModuleIdPattern = /(?:fumadocs-mdx|@vx-oss\/docs-mdx)\/macro/;
+
+export function isMacroModuleId(value: unknown): value is (typeof MacroModuleIds)[number] {
+  return typeof value === 'string' && (MacroModuleIds as readonly string[]).includes(value);
+}
+
+export function hasMacroModuleReference(code: string): boolean {
+  return MacroModuleIdPattern.test(code);
+}
 
 export interface ResolvedMacroOptions {
   include: string[];

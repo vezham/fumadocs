@@ -1,15 +1,19 @@
 {
-  "name": "fumadocs-openapi",
-  "version": "11.4.1",
+  "name": "@vx-oss/docs-openapi",
+  "version": "1.0.7",
   "description": "Generate MDX docs for your OpenAPI spec",
   "keywords": [
     "Docs",
     "fumadocs"
   ],
-  "homepage": "https://fumadocs.dev",
+  "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/openapi"
+  },
   "files": [
     "css",
     "dist"
@@ -71,8 +75,8 @@
     "@types/react": "^19.2.18",
     "fast-content-type-parse": "^4.0.0",
     "fuma-cli": "^0.1.1",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-ui": "workspace:@fumadocs/base-ui@*",
+    "fumadocs-core": "workspace:@vx-oss/docs-core@*",
+    "fumadocs-ui": "workspace:@vx-oss/docs-base-ui@*",
     "json-schema-typed": "^8.0.2",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
@@ -81,8 +85,8 @@
   "peerDependencies": {
     "@scalar/api-client-react": "^2.0.20",
     "@types/react": "*",
-    "fumadocs-core": "^16.15.0",
-    "fumadocs-ui": "^16.15.0",
+    "fumadocs-core": "*",
+    "fumadocs-ui": "*",
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

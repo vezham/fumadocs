@@ -55,7 +55,7 @@
     "@types/hast": "^3.0.5",
     "@types/mdast": "^4.0.4",
     "@types/node": "26.4.1",
-    "fumadocs-core": "workspace:*",
+    "fumadocs-core": "workspace:@vx-oss/docs-core@*",
     "mdast-util-mdx": "^3.0.0",
     "remark": "^15.0.1",
     "tsconfig": "workspace:*",
@@ -66,7 +66,7 @@
     "@types/estree": "*",
     "@types/hast": "*",
     "@types/mdast": "*",
-    "fumadocs-core": "^15.7.2 || ^16.0.0",
+    "fumadocs-core": "*",
     "mdast-util-mdx": "*"
   },
   "peerDependenciesMeta": {

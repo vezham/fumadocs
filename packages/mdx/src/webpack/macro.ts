@@ -1,7 +1,7 @@
 import type { LoaderDefinitionFunction } from 'webpack';
 import type { WebpackLoaderOptions } from '@/webpack';
 import { transformMacroModule } from '@/macro/transform';
-import { MacroModuleId } from '@/macro/options';
+import { hasMacroModuleReference } from '@/macro/options';
 
 /**
  * Expand macro calls (`fumadocs-mdx/macro`) into static imports of content files.
@@ -16,7 +16,7 @@ const loader: LoaderDefinitionFunction<WebpackLoaderOptions> = function (source)
   const { type } = this.getOptions();
 
   void (async () => {
-    if (type === 'webpack' && !source.includes(MacroModuleId)) {
+    if (type === 'webpack' && !hasMacroModuleReference(source)) {
       callback(undefined, source);
       return;
     }

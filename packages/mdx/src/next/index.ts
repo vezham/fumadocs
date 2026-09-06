@@ -12,7 +12,12 @@ import { type Core, CoreOptions, createCore } from '@/core';
 import { mdxLoaderGlob, metaLoaderFileGlob, metaLoaderQueryGlob } from '@/loaders';
 import type { IndexFilePluginOptions } from '@/plugins/index-file';
 import indexFile from '@/plugins/index-file';
-import { createMacroMatcher, resolveMacroOptions, type MacroPluginOption } from '@/macro/options';
+import {
+  MacroModuleIdPattern,
+  createMacroMatcher,
+  resolveMacroOptions,
+  type MacroPluginOption,
+} from '@/macro/options';
 
 export interface CreateMDXOptions extends Pick<CoreOptions, 'configPath' | 'outDir'> {
   /**
@@ -66,7 +71,7 @@ export function createMDX(options: CreateMDXOptions = {}) {
                 pattern,
                 {
                   condition: {
-                    content: /['"]fumadocs-mdx\/macro['"]/,
+                    content: MacroModuleIdPattern,
                   },
                   loaders: [
                     {

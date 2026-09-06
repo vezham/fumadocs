@@ -1,18 +1,22 @@
 {
-  "name": "fumadocs-core",
-  "version": "16.15.7",
+  "name": "@vx-oss/docs-core",
+  "version": "1.0.7",
   "description": "The React.js library for building a documentation website",
   "keywords": [
     "Docs",
     "Fumadocs"
   ],
-  "homepage": "https://fumadocs.dev",
+  "homepage": "https://vezham.com",
   "bugs": {
     "url": "https://github.com/fuma-nama/fumadocs/issues"
   },
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/core"
+  },
   "files": [
     "dist"
   ],

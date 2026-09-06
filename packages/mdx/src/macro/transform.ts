@@ -7,7 +7,7 @@ import type {
   NodeType,
 } from 'yuku-analyzer';
 import { createCodegen, slash } from '@/utils/codegen';
-import { MacroModuleId } from './options';
+import { MacroModuleId, isMacroModuleId } from './options';
 
 type YukuNode = NodeOfType<NodeType>;
 
@@ -40,6 +40,7 @@ interface ParsedMacroModule {
   program: Node;
   imports: Node[];
   calls: MacroCall[];
+  macroModuleId: string;
 }
 
 export interface MacroTransformOptions {
@@ -125,6 +126,10 @@ async function analyzeModule(code: string, file: string): Promise<YukuModule> {
 
 function isNode(value: unknown): value is Node {
   return typeof value === 'object' && value !== null && typeof (value as Node).type === 'string';
+}
+
+function macroRuntimeModuleId(macroModuleId: string): string {
+  return `${macroModuleId.slice(0, -'/macro'.length)}/runtime/macro`;
 }
 
 /**
@@ -221,24 +226,26 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
 
   const macroSymbols = new Map<YukuSymbol, MacroFn>();
   const imports: Node[] = [];
+  let macroModuleId: string | undefined;
 
   for (const statement of program.body as Node[]) {
+    const source = isNode(statement.source) ? statement.source : undefined;
     if (
       (statement.type === 'ExportNamedDeclaration' || statement.type === 'ExportAllDeclaration') &&
-      isNode(statement.source) &&
-      statement.source.value === MacroModuleId
+      source &&
+      isMacroModuleId(source.value)
     ) {
       throw new MacroTransformError(
         file,
         code,
         statement.start,
-        `re-exporting from ${MacroModuleId} is not supported.`,
+        `re-exporting from ${source.value} is not supported.`,
       );
     }
 
     if (statement.type !== 'ImportDeclaration') continue;
-    const source = statement.source as Node;
-    if (source.value !== MacroModuleId) continue;
+    if (!source || !isMacroModuleId(source.value)) continue;
+    macroModuleId ??= source.value;
     if (statement.importKind === 'type') {
       imports.push(statement);
       continue;
@@ -251,7 +258,7 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
           file,
           code,
           spec.start,
-          `only named imports are supported for ${MacroModuleId}.`,
+          `only named imports are supported for ${source.value}.`,
         );
       }
 
@@ -268,7 +275,9 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
   }
 
   if (macroSymbols.size === 0) {
-    return imports.length > 0 ? { module, program, imports, calls: [] } : null;
+    return imports.length > 0 && macroModuleId
+      ? { module, program, imports, calls: [], macroModuleId }
+      : null;
   }
 
   // a macro collection is identified by its variable name, so it must be the initializer of a
@@ -346,7 +355,7 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
     }
   }
 
-  return { module, program, imports, calls };
+  return { module, program, imports, calls, macroModuleId: macroModuleId ?? MacroModuleId };
 }
 
 function topLevelStatement(module: YukuModule, node: Node): Node | undefined {
@@ -561,7 +570,7 @@ export async function transformMacroModule({
   }
 
   const banner = [
-    `import * as ${runtimeName} from "fumadocs-mdx/runtime/macro";`,
+    `import * as ${runtimeName} from ${JSON.stringify(macroRuntimeModuleId(parsed.macroModuleId))};`,
     // hoisted glob imports (target: 'import')
     ...codegen.lines,
     '',

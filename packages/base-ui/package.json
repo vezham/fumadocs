@@ -1,15 +1,19 @@
 {
-  "name": "@fumadocs/base-ui",
-  "version": "16.15.7",
+  "name": "@vx-oss/docs-base-ui",
+  "version": "1.0.7",
   "description": "The Base UI version of Fumadocs UI",
   "keywords": [
     "Docs",
     "Fumadocs"
   ],
-  "homepage": "https://fumadocs.dev",
+  "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/base-ui"
+  },
   "files": [
     "css",
     "dist"
@@ -155,7 +159,7 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.5",
     "fuma-cli": "^0.1.1",
-    "fumadocs-core": "workspace:*",
+    "fumadocs-core": "workspace:@vx-oss/docs-core@*",
     "react-medium-image-zoom": "^5.4.9",
     "tailwindcss": "^4.3.3",
     "tsconfig": "workspace:*",
@@ -165,7 +169,7 @@
   "peerDependencies": {
     "@types/mdx": "*",
     "@types/react": "*",
-    "fumadocs-core": "workspace:*",
+    "fumadocs-core": "*",
     "next": "16.x.x",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

@@ -46,7 +46,7 @@
   "devDependencies": {
     "@types/mdast": "^4.0.4",
     "@types/node": "26.4.1",
-    "fumadocs-core": "workspace:*",
+    "fumadocs-core": "workspace:@vx-oss/docs-core@*",
     "rimraf": "^6.0.0",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
@@ -54,7 +54,7 @@
     "vfile": "^6.0.3"
   },
   "peerDependencies": {
-    "fumadocs-core": "^16.8.0"
+    "fumadocs-core": "*"
   },
   "engines": {
     "node": ">=18"

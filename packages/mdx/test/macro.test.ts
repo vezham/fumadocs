@@ -9,7 +9,12 @@ import {
   MacroTransformError,
 } from '@/macro/transform';
 import { createNodeEvaluator, MacroCollector } from '@/macro/eval';
-import { createMacroMatcher, MacroModuleId, resolveMacroOptions } from '@/macro/options';
+import {
+  createMacroMatcher,
+  hasMacroModuleReference,
+  MacroModuleId,
+  resolveMacroOptions,
+} from '@/macro/options';
 import { macroFilter } from '@/bun';
 import { docs as macroDocs, docsAsync as macroDocsAsync } from '@/runtime/macro';
 import { createMdxLoader } from '@/loaders/mdx';
@@ -58,6 +63,22 @@ describe('transform', () => {
 
     expect(result).not.toBeNull();
     await expect(result!.code).toMatchFileSnapshot('./fixtures/macro-import.output.ts');
+  });
+
+  test('supports scoped workspace macro package name', async () => {
+    const result = await transformMacroModule({
+      code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';
+export const docs = defineDocs({
+  dir: 'test/fixtures/generate-index-docs',
+});`,
+      file: sourceFile,
+      root,
+      target: 'vite',
+    });
+
+    expect(result).not.toBeNull();
+    expect(result!.code).toContain('from "@vx-oss/docs-mdx/runtime/macro"');
+    expect(result!.code).not.toContain('@vx-oss/docs-mdx/macro');
   });
 
   test('config target retains only macro dependencies', async () => {
@@ -210,6 +231,16 @@ describe('options', () => {
     expect(resolveMacroOptions(false)).toBeUndefined();
     expect(resolveMacroOptions({})!.include).toHaveLength(6);
     expect(resolveMacroOptions({ include: '**/source.ts' })!.include).toEqual(['**/source.ts']);
+  });
+
+  test('macro source detector covers public and scoped package names', () => {
+    expect(hasMacroModuleReference(`import { defineDocs } from 'fumadocs-mdx/macro';`)).toBe(true);
+    expect(hasMacroModuleReference(`import { defineDocs } from '@vx-oss/docs-mdx/macro';`)).toBe(
+      true,
+    );
+    expect(hasMacroModuleReference(`import { defineDocs } from '@other/docs-mdx/macro';`)).toBe(
+      false,
+    );
   });
 
   test('webpack/node matcher covers project files but never node_modules', () => {

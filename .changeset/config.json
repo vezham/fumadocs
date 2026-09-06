@@ -1,0 +1,27 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@2.3.0/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "vezham/fumadocs"
+    }
+  ],
+  "commit": false,
+  "fixed": [
+    [
+      "@vx-oss/docs-base-ui",
+      "@vx-oss/docs-core",
+      "@vx-oss/docs-mdx",
+      "@vx-oss/docs-openapi",
+      "@vx-oss/docs-story"
+    ]
+  ],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "timeline",
+  "updateInternalDependencies": "patch",
+  "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
+    "onlyUpdatePeerDependentsWhenOutOfRange": true
+  },
+  "ignore": ["@fumadocs/*", "fumadocs-*", "docs", "example-*", "tsconfig", "create-*"]
+}

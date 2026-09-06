@@ -6,7 +6,8 @@
   "scripts": {
     "@vx/ws:clean:cache": "find . \\( -name '.turbo' -o -name '.next' -o -name '.vercel' -o -name 'build' -o -name 'dist' -o -name 'node_modules' -o -name '.source' -o -name '.contentlayer' -o -name 'pnpm-lock.yaml' \\) -prune -exec rm -rf '{}' +",
     "@vx/ws:changeset": "changeset",
-    "build": "turbo run build --filter=!./examples/* --filter=!docs",
+    "build": "turbo run build --filter=!./examples/* --filter=!vx-example-tanstack-start-i18n",
+    "build:old": "turbo run build --filter=!./examples/* --filter=!docs",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
     "dev:examples": "turbo run dev --filter=./examples/*",

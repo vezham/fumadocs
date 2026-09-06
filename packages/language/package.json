@@ -32,10 +32,10 @@
   "devDependencies": {
     "@fumadocs/api-docs": "workspace:*",
     "@fumadocs/asyncapi": "workspace:*",
-    "@fumadocs/story": "workspace:*",
-    "fumadocs-core": "workspace:*",
-    "fumadocs-openapi": "workspace:*",
-    "fumadocs-ui": "workspace:@fumadocs/base-ui@*",
+    "@fumadocs/story": "workspace:@vx-oss/docs-story@*",
+    "fumadocs-core": "workspace:@vx-oss/docs-core@*",
+    "fumadocs-openapi": "workspace:@vx-oss/docs-openapi@*",
+    "fumadocs-ui": "workspace:@vx-oss/docs-base-ui@*",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
     "typescript": "^7.0.2"

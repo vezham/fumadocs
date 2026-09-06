@@ -35,13 +35,13 @@
   "devDependencies": {
     "@types/node": "^26.4.1",
     "fuma-content": "^1.4.0",
-    "fumadocs-core": "workspace:*",
+    "fumadocs-core": "workspace:@vx-oss/docs-core@*",
     "react-dom": "^19.2.8",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14"
   },
   "peerDependencies": {
     "fuma-content": "^1.2.3",
-    "fumadocs-core": "^16.6.17"
+    "fumadocs-core": "*"
   }
 }
