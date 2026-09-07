@@ -7,6 +7,7 @@ import { Popover, PopoverTrigger, PopoverContent } from '@/components/ui/popover
 import { buttonVariants } from '@/components/ui/button';
 import { usePathname } from 'fumadocs-core/framework';
 import { useTranslations } from '@fuma-translate/react';
+import { writeClipboardText } from '@/utils/clipboard';
 
 const cache = new Map<string, Promise<string>>();
 
@@ -26,18 +27,14 @@ export function MarkdownCopyButton({
   const [isLoading, setLoading] = useState(false);
   const [checked, onClick] = useCopyButton(async () => {
     const cached = cache.get(markdownUrl);
-    if (cached) return navigator.clipboard.writeText(await cached);
+    if (cached) return writeClipboardText(await cached);
 
     setLoading(true);
 
     try {
       const promise = fetch(withBasePath(markdownUrl)).then((res) => res.text());
       cache.set(markdownUrl, promise);
-      await navigator.clipboard.write([
-        new ClipboardItem({
-          'text/plain': promise,
-        }),
-      ]);
+      await writeClipboardText(await promise);
     } finally {
       setLoading(false);
     }

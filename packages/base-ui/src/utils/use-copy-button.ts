@@ -14,12 +14,16 @@ export function useCopyButton(
     if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
     const res = Promise.resolve(callbackRef.current());
 
-    void res.then(() => {
-      setChecked(true);
-      timeoutRef.current = window.setTimeout(() => {
+    void res
+      .then(() => {
+        setChecked(true);
+        timeoutRef.current = window.setTimeout(() => {
+          setChecked(false);
+        }, 1500);
+      })
+      .catch(() => {
         setChecked(false);
-      }, 1500);
-    });
+      });
   }, []);
 
   // Avoid updates after being unmounted

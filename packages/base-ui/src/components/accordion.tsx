@@ -7,6 +7,7 @@ import { useCopyButton } from '@/utils/use-copy-button';
 import { buttonVariants } from '@/components/ui/button';
 import { mergeRefs } from '@/utils/merge-refs';
 import { useTranslations } from '@fuma-translate/react';
+import { writeClipboardText } from '@/utils/clipboard';
 import {
   Accordion as Root,
   AccordionContent,
@@ -84,7 +85,7 @@ function CopyButton({ id }: { id: string }) {
     const url = new URL(window.location.href);
     url.hash = id;
 
-    return navigator.clipboard.writeText(url.toString());
+    return writeClipboardText(url.toString());
   });
 
   return (

@@ -5,6 +5,7 @@ import { cn } from '@/utils/cn';
 import { buttonVariants } from './ui/button';
 import { useCopyButton } from '@/utils/use-copy-button';
 import { useTranslations } from '@fuma-translate/react';
+import { writeClipboardText } from '@/utils/clipboard';
 
 type Types = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 type HeadingProps<T extends Types> = Omit<ComponentPropsWithoutRef<T>, 'as'> & {
@@ -19,7 +20,7 @@ export function Heading<T extends Types = 'h1'>({ as, ...props }: HeadingProps<T
 
     const url = new URL(window.location.href);
     url.hash = props.id;
-    return navigator.clipboard.writeText(url.href);
+    return writeClipboardText(url.href);
   });
 
   if (!props.id) return <As {...props} />;
