@@ -226,6 +226,7 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
 
   const macroSymbols = new Map<YukuSymbol, MacroFn>();
   const imports: Node[] = [];
+  let firstMacroModuleId: string | undefined;
   let macroModuleId: string | undefined;
 
   for (const statement of program.body as Node[]) {
@@ -245,7 +246,7 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
 
     if (statement.type !== 'ImportDeclaration') continue;
     if (!source || !isMacroModuleId(source.value)) continue;
-    macroModuleId ??= source.value;
+    firstMacroModuleId ??= source.value;
     if (statement.importKind === 'type') {
       imports.push(statement);
       continue;
@@ -268,15 +269,18 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
       if (name !== 'defineDocs' && name !== 'defineCollections') continue;
 
       const symbol = module.symbolOf(spec.local as unknown as YukuNode);
-      if (symbol) macroSymbols.set(symbol, name);
+      if (symbol) {
+        macroSymbols.set(symbol, name);
+        macroModuleId ??= source.value;
+      }
     }
 
     imports.push(statement);
   }
 
   if (macroSymbols.size === 0) {
-    return imports.length > 0 && macroModuleId
-      ? { module, program, imports, calls: [], macroModuleId }
+    return imports.length > 0 && firstMacroModuleId
+      ? { module, program, imports, calls: [], macroModuleId: firstMacroModuleId }
       : null;
   }
 
@@ -349,13 +353,19 @@ async function parseMacroModule(code: string, file: string): Promise<ParsedMacro
           file,
           code,
           reference.node.start,
-          `macros from ${MacroModuleId} can only be called as the initializer of a top-level \`const\` declaration, like \`const docs = defineDocs({ ... })\`.`,
+          `macros from ${macroModuleId ?? MacroModuleId} can only be called as the initializer of a top-level \`const\` declaration, like \`const docs = defineDocs({ ... })\`.`,
         );
       }
     }
   }
 
-  return { module, program, imports, calls, macroModuleId: macroModuleId ?? MacroModuleId };
+  return {
+    module,
+    program,
+    imports,
+    calls,
+    macroModuleId: macroModuleId ?? firstMacroModuleId ?? MacroModuleId,
+  };
 }
 
 function topLevelStatement(module: YukuModule, node: Node): Node | undefined {

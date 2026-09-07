@@ -82,6 +82,9 @@ export function fumadocsMdx(options?: FumadocsMdxOptions) {
   return mdx(options?.forcedConfig, options);
 }
 
+// wjdlz/NOTE: vx-oss ref
+export { fumadocsMdx as docsMdx };
+
 export default function mdx(
   forcedConfig?: Record<string, unknown> | Promise<Record<string, unknown>> | undefined,
   pluginOptions: PluginOptions = {},

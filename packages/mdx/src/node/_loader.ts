@@ -11,7 +11,7 @@ import { mdxLoaderGlob, metaLoaderGlob } from '@/loaders';
 import { createNodeEvaluator, MacroCollector } from '@/macro/eval';
 import {
   createMacroMatcher,
-  hasMacroModuleReference,
+  hasMacroModuleId,
   resolveMacroOptions,
   type ResolvedMacroOptions,
 } from '@/macro/options';
@@ -32,7 +32,7 @@ function toNodeMacro(options: ResolvedMacroOptions, root: string): LoadHook {
     const loaded = await nextLoad(url, context);
     const code = loaded.source?.toString();
 
-    if (!code || !hasMacroModuleReference(code)) return loaded;
+    if (!code || !hasMacroModuleId(code)) return loaded;
 
     const { transformMacroModule } = await import('@/macro/transform');
     const result = await transformMacroModule({

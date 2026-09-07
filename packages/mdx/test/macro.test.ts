@@ -11,8 +11,9 @@ import {
 import { createNodeEvaluator, MacroCollector } from '@/macro/eval';
 import {
   createMacroMatcher,
-  hasMacroModuleReference,
-  MacroModuleId,
+  hasMacroModuleId,
+  isMacroModuleId,
+  MacroModuleIds,
   resolveMacroOptions,
 } from '@/macro/options';
 import { macroFilter } from '@/bun';
@@ -66,8 +67,27 @@ describe('transform', () => {
   });
 
   test('supports scoped workspace macro package name', async () => {
+    for (const moduleId of ['@vx-oss/docs-mdx/macro', '@vezham/docs-mdx/macro'] as const) {
+      const result = await transformMacroModule({
+        code: `import { defineDocs } from '${moduleId}';
+export const docs = defineDocs({
+  dir: 'test/fixtures/generate-index-docs',
+});`,
+        file: sourceFile,
+        root,
+        target: 'vite',
+      });
+
+      expect(result).not.toBeNull();
+      expect(result!.code).toContain(`from "${moduleId.replace('/macro', '/runtime/macro')}"`);
+      expect(result!.code).not.toContain(moduleId);
+    }
+  });
+
+  test('uses the macro function package for generated runtime imports', async () => {
     const result = await transformMacroModule({
-      code: `import { defineDocs } from '@vx-oss/docs-mdx/macro';
+      code: `import type { DefineDocsOptions } from 'fumadocs-mdx/macro';
+import { defineDocs } from '@vezham/docs-mdx/macro';
 export const docs = defineDocs({
   dir: 'test/fixtures/generate-index-docs',
 });`,
@@ -77,8 +97,8 @@ export const docs = defineDocs({
     });
 
     expect(result).not.toBeNull();
-    expect(result!.code).toContain('from "@vx-oss/docs-mdx/runtime/macro"');
-    expect(result!.code).not.toContain('@vx-oss/docs-mdx/macro');
+    expect(result!.code).toContain('from "@vezham/docs-mdx/runtime/macro"');
+    expect(result!.code).not.toContain('from "fumadocs-mdx/runtime/macro"');
   });
 
   test('config target retains only macro dependencies', async () => {
@@ -234,13 +254,12 @@ describe('options', () => {
   });
 
   test('macro source detector covers public and scoped package names', () => {
-    expect(hasMacroModuleReference(`import { defineDocs } from 'fumadocs-mdx/macro';`)).toBe(true);
-    expect(hasMacroModuleReference(`import { defineDocs } from '@vx-oss/docs-mdx/macro';`)).toBe(
-      true,
-    );
-    expect(hasMacroModuleReference(`import { defineDocs } from '@other/docs-mdx/macro';`)).toBe(
-      false,
-    );
+    for (const moduleId of MacroModuleIds) {
+      expect(isMacroModuleId(moduleId)).toBe(true);
+      expect(hasMacroModuleId(`import { defineDocs } from '${moduleId}';`)).toBe(true);
+    }
+
+    expect(hasMacroModuleId(`import { defineDocs } from '@other/docs-mdx/macro';`)).toBe(false);
   });
 
   test('webpack/node matcher covers project files but never node_modules', () => {
@@ -366,7 +385,7 @@ describe('config evaluation', () => {
           await evaluator({
             entry: consumerFile,
             async transform(code, file) {
-              if (!code.includes(MacroModuleId)) return null;
+              if (!hasMacroModuleId(code)) return null;
 
               return transformMacroConfigModule({
                 code,
@@ -620,7 +639,8 @@ describe('runtime', () => {
     // eagerly loaded entries offer `preload()` as a no-op, for compatibility with async collections
     await expect(collection.getPage('index.mdx')!.preload()).resolves.toBeUndefined();
 
-    const source = collection.toFumadocsSource();
+    const source = collection.toDocsSource();
+    expect(source).toEqual(collection.toFumadocsSource());
     expect(source.files).toHaveLength(2);
   });
 

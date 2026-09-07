@@ -20,7 +20,7 @@ export type DocCollectionEntry<
   TC extends InternalTypeConfig = InternalTypeConfig,
 > = DocData & DocMethods & Frontmatter & TC['DocData'][Name];
 
-interface ToFumadocsSourceOptions {
+interface ToDocsSourceOptions {
   /** base directory for virtual file paths */
   baseDir?: string;
 }
@@ -43,7 +43,11 @@ export interface DocsCollectionEntry<
 > {
   docs: DocCollectionEntry<Name, Frontmatter, TC>[];
   meta: MetaCollectionEntry<Meta>[];
-  toFumadocsSource: (options?: ToFumadocsSourceOptions) => Source<{
+  toDocsSource: (options?: ToDocsSourceOptions) => Source<{
+    pageData: DocCollectionEntry<Name, Frontmatter, TC>;
+    metaData: MetaCollectionEntry<Meta>;
+  }>;
+  toFumadocsSource: (options?: ToDocsSourceOptions) => Source<{
     pageData: DocCollectionEntry<Name, Frontmatter, TC>;
     metaData: MetaCollectionEntry<Meta>;
   }>;
@@ -57,7 +61,11 @@ export interface AsyncDocsCollectionEntry<
 > {
   docs: AsyncDocCollectionEntry<Name, Frontmatter, TC>[];
   meta: MetaCollectionEntry<Meta>[];
-  toFumadocsSource: (options?: ToFumadocsSourceOptions) => Source<{
+  toDocsSource: (options?: ToDocsSourceOptions) => Source<{
+    pageData: AsyncDocCollectionEntry<Name, Frontmatter, TC>;
+    metaData: MetaCollectionEntry<Meta>;
+  }>;
+  toFumadocsSource: (options?: ToDocsSourceOptions) => Source<{
     pageData: AsyncDocCollectionEntry<Name, Frontmatter, TC>;
     metaData: MetaCollectionEntry<Meta>;
   }>;
@@ -195,12 +203,14 @@ export function server<Config, TC extends InternalTypeConfig>() {
           : never
         : never
     > {
+      const docs = await this.doc(name, base, docGlob);
+      const meta = await this.meta(name, base, metaGlob);
+      const source = (options?: ToDocsSourceOptions) => toDocsSource(docs, meta, options);
       const entry = {
-        docs: await this.doc(name, base, docGlob),
-        meta: await this.meta(name, base, metaGlob),
-        toFumadocsSource(options) {
-          return toFumadocsSource(this.docs, this.meta, options);
-        },
+        docs,
+        meta,
+        toDocsSource: source,
+        toFumadocsSource: source,
       } satisfies DocsCollectionEntry;
 
       return entry as never;
@@ -225,12 +235,14 @@ export function server<Config, TC extends InternalTypeConfig>() {
           : never
         : never
     > {
+      const docs = await this.docLazy(name, base, docHeadGlob, docBodyGlob);
+      const meta = await this.meta(name, base, metaGlob);
+      const source = (options?: ToDocsSourceOptions) => toDocsSource(docs, meta, options);
       const entry = {
-        docs: await this.docLazy(name, base, docHeadGlob, docBodyGlob),
-        meta: await this.meta(name, base, metaGlob),
-        toFumadocsSource(options) {
-          return toFumadocsSource(this.docs, this.meta, options);
-        },
+        docs,
+        meta,
+        toDocsSource: source,
+        toFumadocsSource: source,
       } satisfies AsyncDocsCollectionEntry;
 
       return entry as never;
@@ -238,13 +250,13 @@ export function server<Config, TC extends InternalTypeConfig>() {
   };
 }
 
-export function toFumadocsSource<
+export function toDocsSource<
   Page extends DocMethods & PageData,
   Meta extends MetaMethods & MetaData,
 >(
   pages: Page[],
   metas: Meta[],
-  options?: ToFumadocsSourceOptions,
+  options?: ToDocsSourceOptions,
 ): Source<{
   pageData: Page;
   metaData: Meta;
@@ -277,6 +289,9 @@ export function toFumadocsSource<
     files,
   };
 }
+
+// wjdlz/NOTE: vx-oss ref
+export { toDocsSource as toFumadocsSource };
 
 function createDocMethods(
   info: FileInfo,
