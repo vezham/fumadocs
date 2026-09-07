@@ -7,11 +7,8 @@
     "fumadocs"
   ],
   "homepage": "https://vezham.com",
-  "bugs": {
-    "url": "https://github.com/vezham/fumadocs/issues"
-  },
   "license": "MIT",
-  "author": "Fuma Nama",
+  "author": "Vx OSS Devs <oss-developers@vezham.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/vezham/fumadocs",
