@@ -3,6 +3,7 @@
   "version": "1.0.7",
   "description": "Story integration to Fumadocs.",
   "keywords": [],
+  "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
   "repository": {
@@ -40,7 +41,7 @@
   "dependencies": {
     "@base-ui/react": "^1.7.0",
     "@fuma-translate/react": "^1.0.2",
-    "@fumari/stf": "workspace:*",
+    "@fumari/stf": "workspace:@vx-oss/docs-stf@*",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.2.4",
     "lucide-react": "^1.39.0",

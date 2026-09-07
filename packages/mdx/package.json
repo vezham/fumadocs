@@ -82,7 +82,7 @@
     "zod": "^4.5.4"
   },
   "devDependencies": {
-    "@fumadocs/satteri": "workspace:*",
+    "@fumadocs/satteri": "workspace:@vx-oss/docs-satteri@*",
     "@fumadocs/vite": "workspace:*",
     "@types/bun": "^1.4.0",
     "@types/mdast": "^4.0.4",

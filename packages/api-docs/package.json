@@ -1,15 +1,19 @@
 {
-  "name": "@fumadocs/api-docs",
+  "name": "@vx-oss/docs-api",
   "version": "0.2.8",
   "description": "Shared utils for API docs generation",
   "keywords": [
     "Docs",
     "Fumadocs"
   ],
-  "homepage": "https://fumadocs.dev",
+  "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/api-docs"
+  },
   "files": [
     "css",
     "dist"
@@ -57,7 +61,7 @@
   "dependencies": {
     "@base-ui/react": "^1.7.0",
     "@fuma-translate/react": "^1.0.2",
-    "@fumari/stf": "workspace:*",
+    "@fumari/stf": "workspace:@vx-oss/docs-stf@*",
     "@scalar/json-magic": "^0.13.3",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.2.4",

@@ -1,15 +1,19 @@
 {
-  "name": "@fumadocs/local-content",
+  "name": "@vx-oss/docs-local-content",
   "version": "0.2.1",
   "description": "Shared building blocks for local content sources in Fumadocs",
   "keywords": [
     "Docs",
     "fumadocs"
   ],
-  "homepage": "https://fumadocs.dev",
+  "homepage": "https://vezham.com",
   "license": "MIT",
   "author": "Fuma Nama",
-  "repository": "github:fuma-nama/fumadocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vezham/fumadocs",
+    "directory": "packages/local-content"
+  },
   "files": [
     "dist"
   ],

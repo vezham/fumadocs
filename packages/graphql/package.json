@@ -36,8 +36,8 @@
   },
   "dependencies": {
     "@fuma-translate/react": "^1.0.2",
-    "@fumadocs/api-docs": "workspace:*",
-    "@fumari/stf": "workspace:*",
+    "@fumadocs/api-docs": "workspace:@vx-oss/docs-api@*",
+    "@fumari/stf": "workspace:@vx-oss/docs-stf@*",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.2.4",
     "github-slugger": "^2.0.0",

@@ -41,7 +41,7 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fumadocs/local-content": "workspace:*",
+    "@fumadocs/local-content": "workspace:@vx-oss/docs-local-content@*",
     "@standard-schema/spec": "^1.1.0",
     "cn": "^0.2.4",
     "github-slugger": "^2.0.0",

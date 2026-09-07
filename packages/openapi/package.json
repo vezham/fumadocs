@@ -52,9 +52,9 @@
   },
   "dependencies": {
     "@fuma-translate/react": "^1.0.2",
-    "@fumadocs/api-docs": "workspace:*",
+    "@fumadocs/api-docs": "workspace:@vx-oss/docs-api@*",
     "@fumari/json-schema-ts": "^1.0.2",
-    "@fumari/stf": "workspace:*",
+    "@fumari/stf": "workspace:@vx-oss/docs-stf@*",
     "@scalar/json-magic": "^0.13.3",
     "chokidar": "^5.0.0",
     "class-variance-authority": "^0.7.1",

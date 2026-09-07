@@ -116,7 +116,7 @@
     "types:check": "tsc --noEmit"
   },
   "dependencies": {
-    "@fumari/image-size": "workspace:^",
+    "@fumari/image-size": "workspace:@vx-oss/docs-image-size@^",
     "estree-util-value-to-estree": "^3.5.0",
     "github-slugger": "^2.0.0",
     "hast-util-to-estree": "^3.1.3",

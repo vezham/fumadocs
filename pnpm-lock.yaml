@@ -115,7 +115,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@fumari/stf':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-stf@*
         version: link:../stf
       '@scalar/json-magic':
         specifier: ^0.13.3
@@ -179,13 +179,13 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@fumadocs/api-docs':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-api@*
         version: link:../api-docs
       '@fumari/json-schema-ts':
         specifier: ^1.0.2
         version: 1.0.2(json-schema-typed@8.0.2)
       '@fumari/stf':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-stf@*
         version: link:../stf
       '@scalar/json-magic':
         specifier: ^0.13.3
@@ -264,7 +264,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@fumadocs/tailwind':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-tailwind@*
         version: link:../tailwind
       class-variance-authority:
         specifier: ^0.7.1
@@ -478,7 +478,7 @@ importers:
   packages/core:
     dependencies:
       '@fumari/image-size':
-        specifier: workspace:^
+        specifier: workspace:@vx-oss/docs-image-size@^
         version: link:../image-size
       estree-util-value-to-estree:
         specifier: ^3.5.0
@@ -687,8 +687,8 @@ importers:
         specifier: workspace:@vx-oss/docs-mdx@*
         version: link:../mdx
       fumadocs-ui:
-        specifier: workspace:*
-        version: link:../radix-ui
+        specifier: workspace:@vx-oss/docs-base-ui@*
+        version: link:../base-ui
       oxlint:
         specifier: ^1.81.0
         version: 1.81.0
@@ -818,10 +818,10 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@fumadocs/api-docs':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-api@*
         version: link:../api-docs
       '@fumari/stf':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-stf@*
         version: link:../stf
       class-variance-authority:
         specifier: ^0.7.1
@@ -903,7 +903,7 @@ importers:
   packages/language:
     devDependencies:
       '@fumadocs/api-docs':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-api@*
         version: link:../api-docs
       '@fumadocs/asyncapi':
         specifier: workspace:*
@@ -979,7 +979,7 @@ importers:
   packages/local-html:
     dependencies:
       '@fumadocs/local-content':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-local-content@*
         version: link:../local-content
       '@standard-schema/spec':
         specifier: ^1.1.0
@@ -1034,7 +1034,7 @@ importers:
   packages/local-md:
     dependencies:
       '@fumadocs/local-content':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-local-content@*
         version: link:../local-content
       '@mdx-js/mdx':
         specifier: ^3.1.1
@@ -1168,7 +1168,7 @@ importers:
         version: 4.5.4
     devDependencies:
       '@fumadocs/satteri':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-satteri@*
         version: link:../satteri
       '@fumadocs/vite':
         specifier: workspace:*
@@ -1326,7 +1326,7 @@ importers:
   packages/obsidian:
     dependencies:
       '@fumadocs/local-content':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-local-content@*
         version: link:../local-content
       '@standard-schema/spec':
         specifier: ^1.1.0
@@ -1414,13 +1414,13 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@fumadocs/api-docs':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-api@*
         version: link:../api-docs
       '@fumari/json-schema-ts':
         specifier: ^1.0.2
         version: 1.0.2(json-schema-typed@8.0.2)
       '@fumari/stf':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-stf@*
         version: link:../stf
       '@scalar/json-magic':
         specifier: ^0.13.3
@@ -1738,7 +1738,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@fumadocs/tailwind':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-tailwind@*
         version: link:../tailwind
       '@radix-ui/react-accordion':
         specifier: ^1.2.20
@@ -1917,10 +1917,10 @@ importers:
   packages/satteri:
     dependencies:
       '@fumadocs/local-content':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-local-content@*
         version: link:../local-content
       '@fumari/image-size':
-        specifier: workspace:^
+        specifier: workspace:@vx-oss/docs-image-size@^
         version: link:../image-size
       '@standard-schema/spec':
         specifier: ^1.1.0
@@ -1929,7 +1929,7 @@ importers:
         specifier: ^2.0.0
         version: 2.0.0
       fumadocs-typescript:
-        specifier: workspace:^
+        specifier: workspace:@vx-oss/docs-typescript@^
         version: link:../typescript
       github-slugger:
         specifier: ^2.0.0
@@ -2098,7 +2098,7 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@fumari/stf':
-        specifier: workspace:*
+        specifier: workspace:@vx-oss/docs-stf@*
         version: link:../stf
       class-variance-authority:
         specifier: ^0.7.1

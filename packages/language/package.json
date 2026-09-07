@@ -30,7 +30,7 @@
     "types:check": "tsc --noEmit"
   },
   "devDependencies": {
-    "@fumadocs/api-docs": "workspace:*",
+    "@fumadocs/api-docs": "workspace:@vx-oss/docs-api@*",
     "@fumadocs/asyncapi": "workspace:*",
     "@fumadocs/story": "workspace:@vx-oss/docs-story@*",
     "fumadocs-core": "workspace:@vx-oss/docs-core@*",
