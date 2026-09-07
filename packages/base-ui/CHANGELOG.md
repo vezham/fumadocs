@@ -1,5 +1,11 @@
 ## @fumadocs/base-ui@16.15.6
 
+## 1.0.11
+
+### Patch Changes
+
+- [`b3f7256`](https://github.com/vezham/fumadocs/commit/b3f7256a893347a09e838c31c0d365fa7afa6476) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
 ## 1.0.10
 
 ### Patch Changes
