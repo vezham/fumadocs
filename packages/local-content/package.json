@@ -1,6 +1,6 @@
 {
   "name": "@vx-oss/docs-local-content",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Shared building blocks for local content sources in Fumadocs",
   "keywords": [
     "Docs",

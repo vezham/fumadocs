@@ -1,14 +1,20 @@
 ## @fumari/image-size@0.1.0
 
+## 1.0.8
+
+### Patch Changes
+
+- [#11](https://github.com/vezham/fumadocs/pull/11) [`64c5a62`](https://github.com/vezham/fumadocs/commit/64c5a625f937169fac2c8a0f56a938de40e6f40a) Thanks [@github-actions](https://github.com/apps/github-actions)! - ver bump
+
 ### Introduce `@fumari/image-size`, replacing `image-size` in `remarkImage`
 
 A fork of [probe-image-size](https://github.com/nodeca/probe-image-size) with no dependencies of its own.
 
 ```ts
-import { probe, imageSize } from '@fumari/image-size';
+import { probe, imageSize } from "@fumari/image-size";
 
-await probe('./public/banner.png'); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
-await probe('https://example.com/banner.png', { timeout: 5000 });
+await probe("./public/banner.png"); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
+await probe("https://example.com/banner.png", { timeout: 5000 });
 
 imageSize(bytes); // the same result, or `null`
 ```

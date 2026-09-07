@@ -1,5 +1,11 @@
 ## @fumadocs/local-content@0.2.1
 
+## 1.0.8
+
+### Patch Changes
+
+- [#11](https://github.com/vezham/fumadocs/pull/11) [`64c5a62`](https://github.com/vezham/fumadocs/commit/64c5a625f937169fac2c8a0f56a938de40e6f40a) Thanks [@github-actions](https://github.com/apps/github-actions)! - ver bump
+
 ### Simplify cache
 
 ## @fumadocs/local-content@0.2.0
@@ -13,7 +19,7 @@ Content sources can hook into the static loader they are attached to, and dynami
 ```ts
 export function createMySource(): DynamicSource {
   return {
-    cache: 'custom',
+    cache: "custom",
     async files() {
       return loadFiles();
     },
