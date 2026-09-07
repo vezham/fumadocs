@@ -1,5 +1,11 @@
 ## fumadocs-openapi@11.4.1
 
+## 1.0.13
+
+### Patch Changes
+
+- [`6985a19`](https://github.com/vezham/fumadocs/commit/6985a19c26826fbeb9897df3e09c1bc33b786bf6) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - Resolve clipboard utilities through the Base UI package instead of the upstream Radix UI peer dependency.
+
 ## 1.0.12
 
 ## 1.0.11
