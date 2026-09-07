@@ -23,5 +23,5 @@
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
-  "ignore": ["@fumadocs/*", "fumadocs-*", "docs", "example-*", "tsconfig", "create-*"]
+  "ignore": ["@fumadocs/*", "fumadocs-*", "tsconfig", "create-*"]
 }
