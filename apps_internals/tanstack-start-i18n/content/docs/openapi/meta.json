@@ -1,0 +1,7 @@
+{
+  "icon": "server-minimalistic",
+  "pages": [
+    "index",
+    "...(generated)"
+  ]
+}

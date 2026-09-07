@@ -1,0 +1,13 @@
+{
+  "title": "Planets",
+  "description": "Everything about planets",
+  "pages": [
+    "getAllData",
+    "createPlanet",
+    "getPlanet",
+    "deletePlanet",
+    "updatePlanet",
+    "uploadImage",
+    "newplanet"
+  ]
+}
