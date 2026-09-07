@@ -16,6 +16,7 @@ export default defineConfig({
     './src/layouts/*/page/index.tsx',
     './src/layouts/**/slots/*',
     './src/layouts/home/{navbar,not-found}.tsx',
+    './src/utils/clipboard.ts',
     './src/utils/use-*.{ts,tsx}',
   ],
   fixedExtension: false,
@@ -42,6 +43,7 @@ export default defineConfig({
     customExports: {
       './style.css': './dist/style.css',
       './css/*': './css/*',
+      './utils/clipboard': './dist/utils/clipboard.js',
       './mdx': {
         types: './dist/mdx.d.ts',
         node: './dist/mdx.server.js',

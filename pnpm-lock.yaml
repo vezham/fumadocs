@@ -126,6 +126,9 @@ importers:
       cn:
         specifier: ^0.2.4
         version: 0.2.5
+      fumadocs-ui:
+        specifier: workspace:@vx-oss/docs-base-ui@*
+        version: link:../base-ui
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -160,9 +163,6 @@ importers:
       fumadocs-core:
         specifier: workspace:@vx-oss/docs-core@*
         version: link:../core
-      fumadocs-ui:
-        specifier: workspace:@vx-oss/docs-base-ui@*
-        version: link:../base-ui
       json-schema-typed:
         specifier: ^8.0.2
         version: 8.0.2
@@ -1434,6 +1434,9 @@ importers:
       cn:
         specifier: ^0.2.4
         version: 0.2.5
+      fumadocs-ui:
+        specifier: workspace:@vx-oss/docs-base-ui@*
+        version: link:../base-ui
       github-slugger:
         specifier: ^2.0.0
         version: 2.0.0
@@ -1486,9 +1489,6 @@ importers:
       fumadocs-core:
         specifier: workspace:@vx-oss/docs-core@*
         version: link:../core
-      fumadocs-ui:
-        specifier: workspace:@vx-oss/docs-base-ui@*
-        version: link:../base-ui
       json-schema-typed:
         specifier: ^8.0.2
         version: 8.0.2

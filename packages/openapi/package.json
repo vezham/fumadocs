@@ -59,6 +59,7 @@
     "chokidar": "^5.0.0",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.2.4",
+    "fumadocs-ui": "workspace:@vx-oss/docs-base-ui@*",
     "github-slugger": "^2.0.0",
     "hast-util-to-jsx-runtime": "^2.3.6",
     "lucide-react": "^1.39.0",
@@ -76,7 +77,6 @@
     "fast-content-type-parse": "^4.0.0",
     "fuma-cli": "^0.1.1",
     "fumadocs-core": "workspace:@vx-oss/docs-core@*",
-    "fumadocs-ui": "workspace:@vx-oss/docs-base-ui@*",
     "json-schema-typed": "^8.0.2",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14",
@@ -86,7 +86,6 @@
     "@scalar/api-client-react": "^2.0.20",
     "@types/react": "*",
     "fumadocs-core": "*",
-    "fumadocs-ui": "*",
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"

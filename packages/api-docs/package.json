@@ -65,6 +65,7 @@
     "@scalar/json-magic": "^0.13.3",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.2.4",
+    "fumadocs-ui": "workspace:@vx-oss/docs-base-ui@*",
     "github-slugger": "^2.0.0",
     "lucide-react": "^1.39.0"
   },
@@ -76,7 +77,6 @@
     "@types/react-dom": "^19.2.5",
     "fuma-cli": "^0.1.1",
     "fumadocs-core": "workspace:@vx-oss/docs-core@*",
-    "fumadocs-ui": "workspace:@vx-oss/docs-base-ui@*",
     "json-schema-typed": "^8.0.2",
     "tsconfig": "workspace:*",
     "tsdown": "0.22.14"
@@ -84,7 +84,6 @@
   "peerDependencies": {
     "@types/react": "*",
     "fumadocs-core": "*",
-    "fumadocs-ui": "*",
     "json-schema-typed": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
