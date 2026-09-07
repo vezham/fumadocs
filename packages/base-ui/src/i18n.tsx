@@ -13,14 +13,16 @@ export function uiTranslations(): TranslationExtension<keyof Translations> {
   return { keys: translationKeys as never };
 }
 
-export function i18nProvider(translations: SingularTranslationsAPI): I18nProviderProps;
-export function i18nProvider<Languages extends string>(
-  translations: TranslationsAPI<Languages>,
+export function i18nProvider<Keys extends string>(
+  translations: SingularTranslationsAPI<Keys>,
+): I18nProviderProps;
+export function i18nProvider<Languages extends string, Keys extends string>(
+  translations: TranslationsAPI<Languages, Keys>,
   lang?: NoInfer<Languages> | (string & {}),
 ): I18nProviderProps;
 
 export function i18nProvider(
-  translations: SingularTranslationsAPI | TranslationsAPI,
+  translations: SingularTranslationsAPI<string> | TranslationsAPI<string, string>,
   lang?: string,
 ): I18nProviderProps {
   const t = translations.extend(uiTranslations());
