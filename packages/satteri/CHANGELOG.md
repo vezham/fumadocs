@@ -1,5 +1,11 @@
 ## @fumadocs/satteri@0.5.0
 
+## 1.0.9
+
+### Patch Changes
+
+- [`f2b8198`](https://github.com/vezham/fumadocs/commit/f2b8198368cd18e6495f4637a5a6a97bcafe7061) Thanks [@vx-vigneshwaran](https://github.com/vx-vigneshwaran)! - ver bump
+
 ## 1.0.8
 
 ### Patch Changes
