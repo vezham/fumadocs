@@ -1,5 +1,11 @@
 ## @fumadocs/api-docs@0.2.8
 
+## 1.0.8
+
+### Patch Changes
+
+- [#11](https://github.com/vezham/fumadocs/pull/11) [`64c5a62`](https://github.com/vezham/fumadocs/commit/64c5a625f937169fac2c8a0f56a938de40e6f40a) Thanks [@github-actions](https://github.com/apps/github-actions)! - ver bump
+
 ### Replace `cnfast` with `cn`
 
 Internal refactor only.
@@ -41,7 +47,7 @@ Fix [#3506](https://github.com/fuma-nama/fumadocs/issues/3506)
 ```yaml
 amount:
   allOf:
-    - $ref: '#/components/schemas/Money'
+    - $ref: "#/components/schemas/Money"
     - description: Property-specific description
 ```
 
@@ -60,30 +66,30 @@ A Reference Object whose target eventually refers back to it overflowed the stac
 Generate API reference docs from your GraphQL schemas, similar to the OpenAPI/AsyncAPI integration.
 
 ```ts
-import { createGraphQL } from '@fumadocs/graphql/server';
+import { createGraphQL } from "@fumadocs/graphql/server";
 
 export const graphql = createGraphQL({
-  input: ['./schema.graphql'],
+  input: ["./schema.graphql"],
 });
 ```
 
 Add the generated pages to your source:
 
 ```ts
-import { loader } from 'fumadocs-core/source';
+import { loader } from "fumadocs-core/source";
 
 export const source = loader(
   {
     docs: docs.toFumadocsSource(),
     graphql: await graphql.staticSource({
-      baseDir: 'graphql',
+      baseDir: "graphql",
       meta: true,
     }),
   },
   {
-    baseUrl: '/docs',
+    baseUrl: "/docs",
     plugins: [graphql.loaderPlugin()],
-  },
+  }
 );
 ```
 
@@ -92,7 +98,7 @@ And render them with `createGraphQLPage` from `@fumadocs/graphql/ui`, with an op
 ```tsx
 export const GraphQLPage = createGraphQLPage({
   playground: {
-    url: 'https://api.example.com/graphql',
+    url: "https://api.example.com/graphql",
   },
 });
 ```

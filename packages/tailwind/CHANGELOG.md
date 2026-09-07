@@ -1,5 +1,11 @@
 ## @fumadocs/tailwind@0.1.1
 
+## 1.0.8
+
+### Patch Changes
+
+- [#11](https://github.com/vezham/fumadocs/pull/11) [`64c5a62`](https://github.com/vezham/fumadocs/commit/64c5a625f937169fac2c8a0f56a938de40e6f40a) Thanks [@github-actions](https://github.com/apps/github-actions)! - ver bump
+
 ### Support scalable prose typography
 
 Scale prose typography with the unitless `--tw-prose-size` variable and add a `prose-sm` modifier for optically adjusted small text.

@@ -1,5 +1,11 @@
 ## fumadocs-typescript@5.4.0
 
+## 1.0.8
+
+### Patch Changes
+
+- [#11](https://github.com/vezham/fumadocs/pull/11) [`64c5a62`](https://github.com/vezham/fumadocs/commit/64c5a625f937169fac2c8a0f56a938de40e6f40a) Thanks [@github-actions](https://github.com/apps/github-actions)! - ver bump
+
 ### Generate type tables with the native TypeScript compiler
 
 `fumadocs-typescript` no longer uses ts-morph. It drives the TypeScript 7 native compiler (`tsgo`) through the `typescript/unstable/sync` API, bundled as a dependency, so it works regardless of the TypeScript version of your project, including TypeScript 7 before its programmatic API is stable.
@@ -172,6 +178,7 @@ Drop `tailwind-merge`.
   This is necessary to support async cache adapter.
 
 - 9a3e2e8: **Remove deprecated APIs**
+
   - removed standalone `generateDocumentation()` function, create a generator instead.
   - removed `generateFiles` & MDX generation APIs, use `remarkAutoTypeTable` instead.
 
@@ -454,6 +461,7 @@ Drop `tailwind-merge`.
 - f75287d: **Introduce `fumadocs-docgen` package.**
 
   Offer a better authoring experience for advanced use cases.
+
   - Move `remark-dynamic-content` and `remark-install` plugins to the new package `fumadocs-docgen`.
   - Support Typescript generator by default
 

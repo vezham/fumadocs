@@ -1,5 +1,11 @@
 ## fumadocs-core@16.15.7
 
+## 1.0.8
+
+### Patch Changes
+
+- [#11](https://github.com/vezham/fumadocs/pull/11) [`64c5a62`](https://github.com/vezham/fumadocs/commit/64c5a625f937169fac2c8a0f56a938de40e6f40a) Thanks [@github-actions](https://github.com/apps/github-actions)! - ver bump
+
 ### Async `_fd_prepare` hook for Shiki transformers
 
 `rehype-code` awaits `transformer._fd_prepare(code, options)` on every transformer before highlighting a code block. Transformers can run async work (or coalesce work across the code blocks being highlighted concurrently) and serve it from the synchronous Shiki hooks afterwards.
@@ -42,7 +48,7 @@ Layout tabs are now grouped by the root folders on the current page's path, with
 Find the structural projection of a page in another root folder, the page at the same file path relative to the root folder:
 
 ```ts
-import { findProjection } from 'fumadocs-core/page-tree';
+import { findProjection } from "fumadocs-core/page-tree";
 
 findProjection(v1, v2, page)?.url;
 ```
@@ -69,16 +75,20 @@ postprocess: {
 Render it with `renderToMarkdown` from `fumadocs-core/server`. Elements resolve from `props.components`: a component can call `asMarkdown()` to output its own Markdown form, other components (including missing ones) are serialized as JSX syntax.
 
 ```tsx
-import { renderToMarkdown } from 'fumadocs-core/server';
+import { renderToMarkdown } from "fumadocs-core/server";
 
 const { _markdown: Content } = await page.data.load();
-const text = await renderToMarkdown(<Content components={getMDXComponents()} />);
+const text = await renderToMarkdown(
+  <Content components={getMDXComponents()} />
+);
 ```
 
 `getText('processed')` keeps working: it renders the component for you, with an optional components map:
 
 ```ts
-const text = await page.data.getText('processed', { components: getMDXComponents() });
+const text = await page.data.getText("processed", {
+  components: getMDXComponents(),
+});
 ```
 
 Supported in bundler collections with both compilers, and in `dynamic: true` collections & `@fumadocs/satteri/local-md` with the Sätteri compiler.
@@ -88,10 +98,10 @@ Supported in bundler collections with both compilers, and in `dynamic: true` col
 The Markdown renderer of Fumapress is now part of Fumadocs core. `renderToMarkdown()` converts RSC output into Markdown, and calling `asMarkdown()` is how a server component opts in with its own Markdown form:
 
 ```tsx
-import { asMarkdown, md, renderToMarkdown } from 'fumadocs-core/server';
+import { asMarkdown, md, renderToMarkdown } from "fumadocs-core/server";
 
 async function Callout({ title, children }) {
-  if (asMarkdown()) return md.linePrefix('> ')`**${title}**\n${children}`;
+  if (asMarkdown()) return md.linePrefix("> ")`**${title}**\n${children}`;
 
   return <div className="callout">...</div>;
 }
@@ -99,7 +109,7 @@ async function Callout({ title, children }) {
 const text = await renderToMarkdown(
   <Callout title="Note">
     <p>Hello</p>
-  </Callout>,
+  </Callout>
 );
 // > **Note**
 // >
@@ -113,8 +123,6 @@ Components that never call `asMarkdown()` are kept as JSX syntax with their seri
 ## fumadocs-core@16.15.1
 
 ### Forward dynamic loader from `fumadocs-core/source`
-
-
 
 ### Read structured data from `page.data.structuredData()`
 
@@ -137,7 +145,7 @@ Content sources can hook into the static loader they are attached to, and dynami
 ```ts
 export function createMySource(): DynamicSource {
   return {
-    cache: 'custom',
+    cache: "custom",
     async files() {
       return loadFiles();
     },
@@ -190,7 +198,7 @@ The `slugs` option now receives a `next` function as its second argument, which 
 ```ts
 loader({
   slugs(file, next) {
-    if (file.path.startsWith('blog/')) return ['blog', ...next()];
+    if (file.path.startsWith("blog/")) return ["blog", ...next()];
     // return `undefined` to generate default slugs
   },
 });
@@ -205,10 +213,10 @@ loader({
 A fork of [probe-image-size](https://github.com/nodeca/probe-image-size) with no dependencies of its own.
 
 ```ts
-import { probe, imageSize } from '@fumari/image-size';
+import { probe, imageSize } from "@fumari/image-size";
 
-await probe('./public/banner.png'); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
-await probe('https://example.com/banner.png', { timeout: 5000 });
+await probe("./public/banner.png"); // { width: 1200, height: 630, type: 'png', mime: 'image/png' }
+await probe("https://example.com/banner.png", { timeout: 5000 });
 
 imageSize(bytes); // the same result, or `null`
 ```
@@ -228,10 +236,10 @@ The search engine rejects a `language` alongside a custom `tokenizer`, since the
 `language` is now omitted when a tokenizer is present (from either `tokenizer` or `components.tokenizer`), and i18n servers no longer overwrite a caller-supplied `language`. Attaching a stemmer to the default multilingual segmentation works as documented:
 
 ```ts
-import { stemmer } from '@zbsearch/stemmers/english';
+import { stemmer } from "@zbsearch/stemmers/english";
 
 createFromSource(source, {
-  tokenizer: { language: 'multilingual', stemming: true, stemmer },
+  tokenizer: { language: "multilingual", stemming: true, stemmer },
 });
 ```
 
@@ -242,7 +250,7 @@ createFromSource(source, {
 The built-in search engine moved from `@orama/orama` to [ZBSearch](https://www.zbsearch.dev), a near drop-in successor. All module paths and APIs are unchanged, and search now works with **every language out of the box**: the new default `multilingual` mode uses Unicode word segmentation, so i18n search needs zero config.
 
 ```ts
-import { createFromSource } from 'fumadocs-core/search/server';
+import { createFromSource } from "fumadocs-core/search/server";
 
 // no `localeMap`, no `@orama/tokenizers`, CJK included
 export const { GET } = createFromSource(source);
@@ -251,7 +259,7 @@ export const { GET } = createFromSource(source);
 All locales now share a single search database — results are filtered by the locale of your pages at query time. Same for static mode:
 
 ```ts
-import { staticClient } from 'fumadocs-core/search/client/orama-static';
+import { staticClient } from "fumadocs-core/search/client/orama-static";
 
 const client = staticClient({ locale });
 ```
@@ -896,6 +904,7 @@ The peer dependencies now include v8, note that previous versions can also work 
   migrate: The original component is mostly a wrapper of `react-remove-scroll`, you can use Shadcn UI for pre-built sidebars.
 
 - 4049ccc: **Remove `fumadocs-core/server` export**
+
   - **`getGithubLastEdit`:** Moved to `fumadocs-core/content/github`.
   - **`getTableOfContents`:** Moved to `fumadocs-core/content/toc`.
   - **`PageTree` and page tree utilities:** Moved to `fumadocs-core/page-tree`.
@@ -905,6 +914,7 @@ The peer dependencies now include v8, note that previous versions can also work 
 - 429c41a: **Switch to Shiki JavaScript Regex engine by default**
 
   This is important for Cloudflare Worker compatibility, JavaScript engine is the new default over Oniguruma (WASM).
+
   - `rehype-code`: replaced the `experimentalJSEngine` option with `engine: js | oniguruma`.
   - `fumadocs-core/highlight`: use JS engine by default, drop custom engine support, use Shiki directly instead.
 
@@ -915,6 +925,7 @@ The peer dependencies now include v8, note that previous versions can also work 
   As a consequence, Next.js 16 is now the minimal version when using Fumadocs UI because Next.js always uses the internal canary version of React.js.
 
 - 42f09c3: **Remove deprecated APIs**
+
   - `fumadocs-ui/page`:
     - removed `<DocsCategory />`.
     - removed `breadcrumbs.full` option from `<DocsPage />`.
@@ -925,7 +936,7 @@ The peer dependencies now include v8, note that previous versions can also work 
       export function createFromSource<S extends LoaderOutput<LoaderConfig>>(
         source: S,
         pageToIndexFn?: (page: InferPageType<S>) => Awaitable<AdvancedIndex>,
-        options?: Omit<Options<S>, "buildIndex">,
+        options?: Omit<Options<S>, "buildIndex">
       ): SearchAPI;
       ```
     - remove deprecated parameters in `useSearch()`, pass them in the client object instead.
@@ -988,6 +999,7 @@ The peer dependencies now include v8, note that previous versions can also work 
   It will be removed on Fumadocs 16, as some APIs under the `/server` export are actually available (and even used) under browser environment.
 
   A more modularized design will be introduced over the original naming.
+
   - **`getGithubLastEdit`:** Moved to `fumadocs-core/content/github`.
   - **`getTableOfContents`:** Moved to `fumadocs-core/content/toc`.
   - **`PageTree` and page tree utilities:** Moved to `fumadocs-core/page-tree`.
@@ -1502,7 +1514,7 @@ The peer dependencies now include v8, note that previous versions can also work 
     }),
     {
       // options
-    },
+    }
   );
 
   // to
@@ -2435,6 +2447,7 @@ The peer dependencies now include v8, note that previous versions can also work 
 - f75287d: **Introduce `fumadocs-docgen` package.**
 
   Offer a better authoring experience for advanced use cases.
+
   - Move `remark-dynamic-content` and `remark-install` plugins to the new package `fumadocs-docgen`.
   - Support Typescript generator by default
 
@@ -2586,6 +2599,7 @@ The peer dependencies now include v8, note that previous versions can also work 
 ### Major Changes
 
 - 2ea9437: **Migrate to rehype-shikiji**
+
   - Dropped support for inline code syntax highlighting
   - Use notation-based word/line highlighting instead of meta string
 

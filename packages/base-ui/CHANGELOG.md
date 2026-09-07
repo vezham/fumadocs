@@ -1,5 +1,11 @@
 ## @fumadocs/base-ui@16.15.6
 
+## 1.0.8
+
+### Patch Changes
+
+- [#11](https://github.com/vezham/fumadocs/pull/11) [`64c5a62`](https://github.com/vezham/fumadocs/commit/64c5a625f937169fac2c8a0f56a938de40e6f40a) Thanks [@github-actions](https://github.com/apps/github-actions)! - ver bump
+
 ### Replace `cnfast` with `cn`
 
 Internal refactor only.
@@ -42,7 +48,7 @@ Layout tabs are now grouped by the root folders on the current page's path, with
 Find the structural projection of a page in another root folder, the page at the same file path relative to the root folder:
 
 ```ts
-import { findProjection } from 'fumadocs-core/page-tree';
+import { findProjection } from "fumadocs-core/page-tree";
 
 findProjection(v1, v2, page)?.url;
 ```
@@ -86,7 +92,7 @@ The page container slot now wraps `<article id="nd-page">` in a `<main class="co
 The built-in search engine moved from `@orama/orama` to [ZBSearch](https://www.zbsearch.dev), a near drop-in successor. All module paths and APIs are unchanged, and search now works with **every language out of the box**: the new default `multilingual` mode uses Unicode word segmentation, so i18n search needs zero config.
 
 ```ts
-import { createFromSource } from 'fumadocs-core/search/server';
+import { createFromSource } from "fumadocs-core/search/server";
 
 // no `localeMap`, no `@orama/tokenizers`, CJK included
 export const { GET } = createFromSource(source);
@@ -95,7 +101,7 @@ export const { GET } = createFromSource(source);
 All locales now share a single search database — results are filtered by the locale of your pages at query time. Same for static mode:
 
 ```ts
-import { staticClient } from 'fumadocs-core/search/client/orama-static';
+import { staticClient } from "fumadocs-core/search/client/orama-static";
 
 const client = staticClient({ locale });
 ```
@@ -180,8 +186,6 @@ More aligned with original styles.
 ## @fumadocs/base-ui@16.11.0
 
 ### Updated the theme switch to use `document.startViewTransition()` for smoother theme transitions with graceful fallback.
-
-
 
 ### Default to Base UI
 

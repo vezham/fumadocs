@@ -1,5 +1,11 @@
 ## fumadocs-openapi@11.4.1
 
+## 1.0.8
+
+### Patch Changes
+
+- [#11](https://github.com/vezham/fumadocs/pull/11) [`64c5a62`](https://github.com/vezham/fumadocs/commit/64c5a625f937169fac2c8a0f56a938de40e6f40a) Thanks [@github-actions](https://github.com/apps/github-actions)! - ver bump
+
 ### Replace `cnfast` with `cn`
 
 Internal refactor only.
@@ -90,7 +96,7 @@ Content sources can hook into the static loader they are attached to, and dynami
 ```ts
 export function createMySource(): DynamicSource {
   return {
-    cache: 'custom',
+    cache: "custom",
     async files() {
       return loadFiles();
     },
@@ -159,8 +165,6 @@ More aligned with original styles.
 
 ### Add Rust codegen for OpenAPI examples
 
-
-
 ### Default to Base UI
 
 Internal packages & templates now use Base UI rather than Radix UI.
@@ -180,8 +184,6 @@ Change behaviour for multi-line value in schema tags.
 ## fumadocs-openapi@11.0.3
 
 ### Fix style warning in usage tabs
-
-
 
 ### Fix TypeScript definitions name
 
@@ -211,6 +213,7 @@ The type name now reflect on the actual meaning.
 ### Major Changes
 
 - f027706: **Unify RSC & client APIs**
+
   - `createAPIPage()` & `createClientAPIPage()` unify into `createOpenAPIPage()`:
     - no longer accepts an `OpenAPIServer` & `client` option.
     - requires `api-page.tsx` to be a client component.
@@ -218,17 +221,20 @@ The type name now reflect on the actual meaning.
   - Remove subpath exports: `ui/client`.
 
   **Server & loader**
+
   - `getSchema()` no longer includes the dereferenced document.
   - `input`: drop the whole-map factory `() => SchemaMap`. Use a record instead: `[k: string]: string | Document | (() => Awaitable<string | Document>)`.
 
   **Customization callbacks**
 
   More context will be available to callbacks:
+
   - `generateCodeSamples`: `(method: MethodInformation)` → `({ operation, method, pathItem })`.
   - `renderOperationLayout`: `(slots, ctx, method)` → `(slots, { operation, method, pathItem, ctx })`.
   - `playground.render`: `method: MethodInformation` → `({ operation, method, pathItem })`.
 
   **Drop deprecated APIs**
+
   - `transformerOpenAPI()`: use `openapiPlugin()` instead.
   - `createCodeSample()`: use `CodeUsageGenerator` API instead.
   - `generateTypeScriptSchema()`: use `generateTypeScriptDefinitions()` instead.
@@ -237,6 +243,7 @@ The type name now reflect on the actual meaning.
   - `groupStyle` option: use `folderStyle` instead.
 
   **Other**
+
   - `generateFiles` & `beforeWrite` context: remove `documents` field, access from the OpenAPI server instead.
 
 ### Minor Changes
@@ -1011,6 +1018,7 @@ The type name now reflect on the actual meaning.
   ```
 
 - aa4e1ad: **Redesign `createOpenAPI` usage**
+
   1. Isolate API page and API server.
 
   Before:
@@ -1819,6 +1827,7 @@ The type name now reflect on the actual meaning.
 - bdef238: **Redesign `generateFiles`**
 
   This redesign will finalize the behaviour of `generateFiles` to make it simpler, consistent across different versions of Fumadocs OpenAPI.
+
   - Abandoned `groupByFolder`, it's deprecated long time ago and can be replaced with `groupBy`.
   - Improved type safety, `groupBy` is now only available with `per` set to `operation`.
   - `name` usage changed (see below).
@@ -1870,6 +1879,7 @@ The type name now reflect on the actual meaning.
   ```
 
   With `per: operation`, you can use `groupBy` to group pages:
+
   - tag: `{tag}/{file}`
   - route: `{endpoint}/{method}` (it will ignore the `name` option)
   - none: `{file}` (default)
@@ -3444,6 +3454,7 @@ The type name now reflect on the actual meaning.
   **migrate:**
 
   Changed the output of MDX files, the new structure requires components:
+
   - Root
   - API
   - APIInfo
