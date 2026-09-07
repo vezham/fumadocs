@@ -115,6 +115,7 @@
     "./provider/react-router": "./dist/provider/react-router.js",
     "./provider/tanstack": "./dist/provider/tanstack.js",
     "./provider/waku": "./dist/provider/waku.js",
+    "./utils/clipboard": "./dist/utils/clipboard.js",
     "./utils/use-copy-button": "./dist/utils/use-copy-button.js",
     "./utils/use-footer-items": "./dist/utils/use-footer-items.js",
     "./utils/use-is-scroll-top": "./dist/utils/use-is-scroll-top.js",

@@ -26,6 +26,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '../popover';
 import { cn } from '@/utils/cn';
 import { cva } from 'class-variance-authority';
 import { useAnchorId } from '@/auto-anchor/client';
+import { writeClipboardText } from 'fumadocs-ui/utils/clipboard';
 import { useCopyButton } from 'fumadocs-ui/utils/use-copy-button';
 import { mergeRefs } from '@/utils/merge-refs';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../select';
@@ -229,7 +230,7 @@ function ObjectProperty({
     url.hash = `#${rootId}`;
     url.searchParams.set('s-highlight', name);
     url.searchParams.set('path', encodePath(path));
-    return navigator.clipboard.writeText(url.href);
+    return writeClipboardText(url.href);
   });
 
   return (

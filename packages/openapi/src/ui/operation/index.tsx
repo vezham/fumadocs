@@ -31,6 +31,7 @@ import { AnchorSection } from '@fumadocs/api-docs/auto-anchor/client';
 import { Heading } from '@/ui/components/heading';
 import { Markdown } from '../components/markdown';
 import { ServerProvider, useRenderContext } from '../contexts/api';
+import { writeClipboardText } from 'fumadocs-ui/utils/clipboard';
 import { useCopyButton } from 'fumadocs-ui/utils/use-copy-button';
 import { buttonVariants } from 'fumadocs-ui/components/ui/button';
 import { Check, Copy } from 'lucide-react';
@@ -667,7 +668,7 @@ function CopyTypeScriptPanel({
   className?: string;
 }) {
   const [isChecked, onCopy] = useCopyButton(() => {
-    void navigator.clipboard.writeText(code);
+    return writeClipboardText(code);
   });
   const t = useTranslations({ note: 'TypeScript definitions' });
   return (
