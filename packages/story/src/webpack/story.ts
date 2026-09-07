@@ -1,6 +1,7 @@
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import type { LoaderDefinitionFunction } from 'webpack';
-import { createControlsProject } from '@/utils/generate';
+import { createControlsProject, getStoryClientModes } from '@/utils/generate';
 import { transformStoryFile } from '@/utils/transform';
 import type { Project } from '@/utils/generate';
 
@@ -28,7 +29,7 @@ const loader: LoaderDefinitionFunction<StoryLoaderOptions> = function (source) {
 
     try {
       const transformed = transformStoryFile(
-        '@fumadocs/story/next/client',
+        getStoryClientModes('next', fileURLToPath(new URL('../next/client.js', import.meta.url))),
         source,
         this.resourcePath,
         await projectPromise!,

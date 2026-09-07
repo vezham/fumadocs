@@ -4,7 +4,12 @@ import {
   type ObjectLiteralExpression,
   type SourceFile,
 } from 'typescript/unstable/ast';
-import { generateControls, getControlsAlias, type Mode, type Project } from './generate';
+import {
+  generateControlsWithMode,
+  getControlsAlias,
+  type ModeInput,
+  type Project,
+} from './generate';
 import type { TypeNode } from '../type-tree/types';
 import { findDefineStoryCalls } from './parse';
 import { serialize } from '@/utils/serialization';
@@ -68,7 +73,7 @@ function applyEdits(code: string, edits: TextEdit[]): string {
 }
 
 export function transformStoryFile(
-  mode: Mode,
+  mode: ModeInput,
   code: string,
   id: string,
   project: Project,
@@ -83,10 +88,7 @@ export function transformStoryFile(
   if (calls.length === 0) return;
 
   // type alias declarations are appended to the end, positions of `code` stay valid.
-  const aliases = calls
-    .map((parsed) => getControlsAlias(mode, parsed.exportName))
-    .filter((alias) => !code.includes(alias.code));
-  const content = [code, ...aliases.map((alias) => alias.code)].join('\n');
+  const aliases: ReturnType<typeof getControlsAlias>[] = [];
   const edits: TextEdit[] = [];
 
   for (const parsed of calls) {
@@ -94,11 +96,18 @@ export function transformStoryFile(
 
     if (!isObjectLiteralExpression(optionsArg)) {
       throw new Error(
-        'defineStory() options must be an object literal to inject controls from @fumadocs/story.',
+        'defineStory() options must be an object literal to inject controls from docs-story.',
       );
     }
 
-    const controls = generateControls(mode, project, id, parsed.exportName, content);
+    const generated = generateControlsWithMode(mode, project, id, parsed.exportName, code);
+    const alias = getControlsAlias(generated.mode, parsed.exportName);
+
+    if (!code.includes(alias.code)) {
+      aliases.push(alias);
+    }
+
+    const controls = generated.controls;
     edits.push(injectControls(loaded.sourceFile, optionsArg, parsed.exportName, controls));
   }
 

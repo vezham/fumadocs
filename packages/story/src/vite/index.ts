@@ -1,6 +1,7 @@
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import type { Plugin } from 'vite';
-import { createControlsProject } from '@/utils/generate';
+import { createControlsProject, getStoryClientModes } from '@/utils/generate';
 import { transformStoryFile } from '@/utils/transform';
 import type { Project } from '@/utils/generate';
 
@@ -36,7 +37,12 @@ export default function story(pluginOptions: StoryPluginOptions = {}): Plugin {
       async handler(code, id) {
         projectPromise ??= createControlsProject(tsconfigPath);
 
-        return transformStoryFile('@fumadocs/story/vite/client', code, id, await projectPromise);
+        return transformStoryFile(
+          getStoryClientModes('vite', fileURLToPath(new URL('./client.js', import.meta.url))),
+          code,
+          id,
+          await projectPromise,
+        );
       },
     },
   };

@@ -6,7 +6,7 @@ import type { ComponentPropsWithoutRef, FC } from 'react';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { deepmerge } from '@fastify/deepmerge';
-import { createControlsProject, generateControls } from './utils/generate';
+import { createControlsProject, generateControls, getStoryClientModes } from './utils/generate';
 import type { VariantInfo, WithControlProps } from './client/with-control';
 
 type Awaitable<T> = T | Promise<T>;
@@ -97,7 +97,13 @@ export function defineStoryFactory(factoryOptions: StoryFactoryOptions = {}): St
 
     return cached(cache, getHash(`controls:${filePath}:${name}:${fileContent}`), async () => {
       const project = await initProject();
-      return generateControls('@fumadocs/story/next/client', project, filePath, name, fileContent);
+      return generateControls(
+        getStoryClientModes('next', fileURLToPath(new URL('./next/client.js', import.meta.url))),
+        project,
+        filePath,
+        name,
+        fileContent,
+      );
     });
   }
 

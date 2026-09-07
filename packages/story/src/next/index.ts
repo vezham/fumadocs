@@ -2,6 +2,7 @@ import type { NextConfig } from 'next';
 import type { Configuration } from 'webpack';
 import type { TurbopackLoaderOptions, TurbopackOptions } from 'next/dist/server/config-shared';
 import type { StoryLoaderOptions } from '@/webpack/story';
+import { fileURLToPath } from 'node:url';
 
 export interface NextStoryOptions extends StoryLoaderOptions {
   /**
@@ -14,6 +15,7 @@ export interface NextStoryOptions extends StoryLoaderOptions {
 
 export function createNextStory(createOptions: NextStoryOptions = {}) {
   const { filter = '*.story.{js,jsx,ts,tsx}', tsconfigPath } = createOptions;
+  const storyLoaderPath = fileURLToPath(new URL('../webpack/story.js', import.meta.url));
 
   return (nextConfig: NextConfig = {}): NextConfig => {
     const loaderOptions: StoryLoaderOptions = {};
@@ -28,7 +30,7 @@ export function createNextStory(createOptions: NextStoryOptions = {}) {
         [filter]: {
           loaders: [
             {
-              loader: '@fumadocs/story/webpack/story',
+              loader: storyLoaderPath,
               options: loaderOptions as unknown as TurbopackLoaderOptions,
             },
           ],
@@ -47,7 +49,7 @@ export function createNextStory(createOptions: NextStoryOptions = {}) {
           enforce: 'pre',
           use: [
             {
-              loader: '@fumadocs/story/webpack/story',
+              loader: storyLoaderPath,
               options: loaderOptions,
             },
           ],
