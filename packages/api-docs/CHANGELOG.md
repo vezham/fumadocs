@@ -1,5 +1,11 @@
 ## @fumadocs/api-docs@0.2.8
 
+## 1.0.15
+
+### Patch Changes
+
+- [`ff5c29f`](https://github.com/vezham/fumadocs/commit/ff5c29f7e34418dc634ade152dee4cf45a08bd59) Thanks [@suresh-vtpl](https://github.com/suresh-vtpl)! - Version Bump
+
 ## 1.0.14
 
 ### Patch Changes
