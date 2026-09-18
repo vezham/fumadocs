@@ -27,10 +27,16 @@ describe('typography', () => {
     expect(css).toContain('font-size: calc(var(--text-3xl) * var(--tw-prose-size));');
     expect(css).toContain('padding: calc(3px * var(--tw-prose-size));');
     expect(css).toContain('padding: calc(var(--spacing) * 2.5 * var(--tw-prose-size));');
-    expect(css).toContain('border: solid 1px;');
-    expect(css).toContain('border-radius: 5px;');
+    expect(css).not.toContain('border: solid 1px;');
+    expect(css).not.toContain('border-radius: 5px;');
+    expect(css).toContain('font-weight: 800;');
+    expect(css).toContain('content: open-quote;');
     expect(css).not.toContain('border: solid calc(1px * var(--tw-prose-size));');
     expect(css).not.toContain('border-radius: calc(5px * var(--tw-prose-size));');
+
+    const codeCss = css.slice(css.indexOf(':where(code)'), css.indexOf(':where(a code)'));
+    expect(codeCss).toContain('font-weight: 400;');
+    expect(codeCss).toContain('font-weight: 800;');
   });
 
   it('generates a small prose modifier with adjusted weight', async () => {

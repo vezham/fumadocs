@@ -2,9 +2,18 @@ import { ScrollArea as Primitive } from '@base-ui/react/scroll-area';
 import * as React from 'react';
 import { cn } from '@/utils/cn';
 
-export function ScrollArea({ children, ...props }: React.ComponentProps<typeof Primitive.Root>) {
+export function ScrollArea({
+  children,
+  className,
+  ...props
+}: React.ComponentProps<typeof Primitive.Root>) {
   return (
-    <Primitive.Root {...props}>
+    <Primitive.Root
+      className={(s) =>
+        cn('group/scroll-area', typeof className === 'function' ? className(s) : className)
+      }
+      {...props}
+    >
       {children}
       <Primitive.Corner />
       <ScrollBar orientation="vertical" />
@@ -43,7 +52,7 @@ export function ScrollBar({
       className={(s) =>
         cn(
           'flex select-none transition-opacity',
-          !s.hovering && 'opacity-0',
+          !s.hovering && 'opacity-0 group-focus-within/scroll-area:opacity-100',
           orientation === 'vertical' && 'h-full w-1.5',
           orientation === 'horizontal' && 'h-1.5 flex-col',
           typeof className === 'function' ? className(s) : className,

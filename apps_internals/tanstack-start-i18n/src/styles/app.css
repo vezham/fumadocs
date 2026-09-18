@@ -4,6 +4,13 @@
 @import '@vx-oss/docs-story/css/preset.css';
 @import '@vx-oss/docs-openapi/css/preset.css';
 
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html {
   scrollbar-gutter: stable;
 }
@@ -11,4 +18,41 @@ html {
 html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
+}
+
+/* Keep CJK phrases intact while still allowing long URLs and identifiers to wrap. */
+#nd-sidebar a,
+#nd-sidebar p,
+#nd-sidebar-mobile a,
+#nd-sidebar-mobile p {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Give prose code panels the available viewport height instead of a fixed pixel cap. */
+#nd-page [role='region'].fd-scroll-container {
+  max-height: 75vh;
+}
+
+@media (min-width: 48rem) {
+  #nd-docs-layout {
+    --fd-sidebar-width: 220px;
+  }
+}
+
+@media (min-width: 80rem) {
+  #nd-docs-layout {
+    --fd-toc-width: 240px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

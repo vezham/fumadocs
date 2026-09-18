@@ -28,24 +28,26 @@ export function Heading<T extends Types = 'h1'>({ as, ...props }: HeadingProps<T
   return (
     <As
       {...props}
-      className={cn('group/heading flex scroll-m-28 flex-row items-center gap-1', props.className)}
+      className={cn('group flex scroll-m-28 flex-row items-center gap-1', props.className)}
     >
+      <div className="absolute">
+        <button
+          aria-label={t('Copy Anchor Link', { note: 'aria-label' })}
+          className={cn(
+            buttonVariants({
+              variant: 'ghost',
+              size: 'icon-xs',
+            }),
+            'not-prose -ml-6 shrink-0 text-fd-muted-foreground opacity-0 transition-opacity group-hover:opacity-100',
+          )}
+          onClick={onCopy}
+        >
+          {isChecked ? <CopyCheckIcon /> : <LinkIcon />}
+        </button>
+      </div>
       <a data-card="" href={`#${props.id}`}>
         {props.children}
       </a>
-      <button
-        aria-label={t('Copy Anchor Link', { note: 'aria-label' })}
-        className={cn(
-          buttonVariants({
-            variant: 'ghost',
-            size: 'icon-xs',
-          }),
-          'not-prose shrink-0 text-fd-muted-foreground opacity-0 transition-opacity group-hover/heading:opacity-100',
-        )}
-        onClick={onCopy}
-      >
-        {isChecked ? <CopyCheckIcon /> : <LinkIcon />}
-      </button>
     </As>
   );
 }
